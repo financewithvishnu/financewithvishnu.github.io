@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 76. Portfolio Theory and Factor Investing - Finance With Vishnu</title>
+<meta content="Portfolio theory and factor investing: Markowitz's efficient frontier, CAPM and beta, the factor zoo of value momentum quality size and low volatility, smart-beta funds in India, the theory's limits, with an honest value-momentum back-test and a factor fund's full-decade audit." name="description"/>
+<meta content="Markowitz efficient frontier explained, CAPM beta alpha, factor investing value momentum quality, smart beta funds India, Nifty strategy indices momentum, factor premium drought, limits of modern portfolio theory, value momentum blend backtest India" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 76. Portfolio Theory and Factor Investing", "description": "Markowitz made the portfolio one object, risk and return chosen on a frontier; CAPM priced only beta and invented alpha; the factor zoo, value, momentum, quality, size, low vol, charges patience for its premiums. Smart-beta wraps factors retail, cheap and transparent, with crowding and regime risk attached. The theory's limits are estimated inputs, wrong tails, and a human agent. Cases: a value-momentum blend surviving the honesty checklist as a 10-20% tilt, and a factor fund whose decade beat the index while its average investor, arriving late and leaving in the drought, did not.", "keywords": ["Markowitz efficient frontier explained", "CAPM beta alpha", "factor investing value momentum quality", "smart beta funds India", "Nifty strategy indices momentum", "factor premium drought", "limits of modern portfolio theory", "value momentum blend backtest India"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part XIV · Portfolio Management and Wealth</p>
+<h1>Chapter 76. Portfolio Theory and Factor Investing</h1>
+<p class="count">Chapter 76 of 85 · about 20 minutes</p>
+<p class="lede">Modern finance was born when someone finally asked the right question: not "which stock will rise?" but "what is a portfolio?" The answers, Markowitz's frontier, the CAPM's beta, the factor zoo that followed, are the operating system under every fund factsheet you have ever read. This chapter installs it, then honestly reports its bugs.</p>
+<h3><span class="sn">76.1</span>Markowitz and the efficient frontier</h3>
+<p>In 1952, Harry Markowitz published the idea that won him a Nobel: a portfolio is not a bag of securities but a single object with an expected return and a variance, and the magic lives in the gaps between the holdings. Because assets do not move in lockstep, combining them can cut risk faster than it cuts return, the free lunch of Chapter 75's correlations, formalised. Trace every possible mix and the good ones trace a curve, the <strong>efficient frontier</strong>: the most return buyable at each level of risk. The investor's two lessons survive every critique. Risk and return are chosen, not found: where you sit on the frontier is a decision about yourself, Chapter 75's allocation. And diversification's benefit is a measurable quantity, the portfolio's variance is mostly covariance, so what matters about a new holding is not what it is but how it moves with what you own. Every portfolio tool since, optimisers, risk models, target-date funds, is Markowitz with better plumbing.</p>
+<h3><span class="sn">76.2</span>CAPM, beta and what the market pays for</h3>
+<p>The CAPM drew the starkest line in finance: the market pays only for <strong>beta</strong>, exposure to the market's own risk, because stock-specific risk can be diversified away for free, and nobody pays for what is free. Expected return equals the risk-free rate plus beta times the market's premium; a stock with beta 1.5 should earn the risk-free rate plus one-and-a-half premiums, no more, no less. As description, the model fails its exams, small and cheap stocks earned more than beta allows, which is where Section 76.3 comes from, and as measurement, beta is a rear-view regression that mutates exactly when you lean on it. As framework, it is permanent: it separated <em>market</em> return from <em>skill</em> return, invented the alpha that every fund now claims, and installed the question this whole book keeps asking: which part of your return was paid risk, and which was earned? If you cannot split the two, you do not know what you are paying your manager for.</p>
+<h3><span class="sn">76.3</span>Factor investing: value, momentum, quality, size, low volatility</h3>
+<p>The anomalies outgrew the model and became an industry: characteristics that historically earned more than beta permits, each with a story about why the premium should persist. <strong>Value</strong>, cheap by earnings or assets, pays the patient for buying the unloved; <strong>momentum</strong>, recent winners keep winning, pays for underwriting the crowd's slow underreaction, with crash risk in the small print; <strong>quality</strong>, profitable, low-debt, durable businesses, pays for boredom; <strong>size</strong>, small beats large across the decades, pays for illiquidity and neglect; <strong>low volatility</strong>, the dull outperform per unit of risk, pays for being unownable by the benchmark-hugging careerist. Two disciplines keep the zoo honest. Every premium has a behavioural or structural story and a <em>cost</em>, decades of drought, as value's 2010s showed, and a factor you cannot hold through its drought is a factor you do not own. And crowded factors decay: the premium is paid by whoever is on the other side of the trade, so when the whole market tilts the same way, the tilts stop paying. Factors are risk and behaviour, not magic, and they bill you in patience.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 280" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="240.0" y2="240.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="244.0">0%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="128.0" y2="128.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="132.0">9%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="16.0" y2="16.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="20.0">18%</text><rect fill="#4e8a67" height="196.6" rx="4" width="70" x="82.4" y="43.4"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="117.4" y="37.4">15.8%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="117.4" y="256">Momentum</text><rect fill="#4e8a67" height="176.7" rx="4" width="70" x="213.2" y="63.3"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="248.2" y="57.3">14.2%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="248.2" y="256">Quality</text><rect fill="#7a6f62" height="161.8" rx="4" width="70" x="344.0" y="78.2"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="379.0" y="72.2">13%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="379.0" y="256">Nifty 50 TRI</text><rect fill="#b08d3c" height="156.8" rx="4" width="70" x="474.8" y="83.2"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="509.8" y="77.2">12.6%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="509.8" y="256">Low volatility</text><rect fill="#b0633c" height="143.1" rx="4" width="70" x="605.6" y="96.9"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="640.6" y="90.9">11.5%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="640.6" y="256">Value</text></svg>
+<h3><span class="sn">76.4</span>Smart-beta products in India and abroad</h3>
+<p>The wrapper that brought factors retail is the <strong>smart-beta</strong> fund: an index, but weighted or selected by a factor rule rather than market value, momentum indices, quality indices, low-volatility indices, value-and-momentum combinations, now an entire shelf on Indian exchanges beside their American elders. The honest scorecard. The costs are genuinely low versus active funds, expense ratios in the tenths, and the rules are transparent, which answers Chapter 40's two worst problems. The capacity and crowding question is real in a narrower market: an Indian momentum index holds a few dozen mid-caps, and its own flows now move its constituents. And the tracking record is short and regime-stained: India's factor indices shone in back-tests built mostly on the 2010-2020 regime, and their live years have included stretches of drought exactly as theory predicted. Use them as the factsheet never says: as a deliberate, permanent tilt of a slice of the portfolio, one or two factors whose story you accept and whose drought you have pre-agreed to endure, not as a league table to chase quarterly.</p>
+<h3><span class="sn">76.5</span>The limits of theory: models vs the real world</h3>
+<p>The framework earns its keep only with its failure modes printed on the box. The inputs are <strong>estimates</strong>: expected returns, volatilities and correlations are measured from a past that will not repeat, and optimisers, given garbage estimates, are error-maximisation machines that concentrate into whatever was mismeasured. The distributions are <strong>wrong-tailed</strong>: returns arrive with crashes no bell curve prices, and variance is an incomplete word for risk when the left tail is what bankrupts. And the agent is <strong>human</strong>: the model assumes you hold the frontier portfolio, while Chapter 77 documents what you actually do, so a theoretically perfect allocation you abandon in year two loses to a theoretically dull one you hold for thirty. The working synthesis this book lands on: use the theory for its architecture, diversify, price risk, suspect free lunches, distrust single-number risk, and use humility for the inputs, wide ranges, simple rules, and a preference for portfolios that fail gracefully over portfolios that optimise beautifully.</p>
+<h3><span class="sn">76.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: back-testing a value-momentum mix on Indian data</p>
+<p>The experiment many data vendors will happily run for you: an equal blend of a Nifty value index and a Nifty momentum index, rebalanced annually, against the plain Nifty, two decades, illustrative results. The blend's back-test gleams, a point or two of annual outperformance, drawdowns no worse, and the vendor slide concludes. Run Chapter 54's honesty checklist on it. The indices were <em>designed</em> on the same history they are tested on, selection bias baked at birth. The blend ignores costs: momentum's annual churn in mid-caps carries impact the index never pays. The two factors' droughts alternate, value died in the late 2010s while momentum feasted, then reversed violently in the 2020-21 rotation, so the blend's smoothness is partly the luck of this particular two decades. And capacity caps the whole game if the strategy wins disciples. The verdict is not rejection but sizing: the evidence supports a modest, permanent tilt, a satellite of 10-20% of the equity sleeve, with the expectation written down in advance, a point or two over long horizons, with years of underperformance as the admission price, and any back-test promising more is selling you the past.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: a factor fund's decade vs its benchmark</p>
+<p>Follow one smart-beta fund through a full cycle, a composite drawn from real Indian and global factor-fund histories. Years one to three: the factor works, the fund beats the Nifty by four points a year, inflows quintuple, the marketing writes itself. Years four to six: the drought, value unloved or momentum whipsawed, and the fund trails by three points a year; the commentary blames the regime; two-thirds of the inflows leave, near the bottom, as inflows do. Years seven to ten: the premium returns, as premiums do, and the full-decade scorecard lands where the research said, a point or two ahead of the benchmark after costs. Now the audit that matters: the fund earned its decade, but the average <em>investor</em> in the fund earned a fraction of it, because they bought after year three and sold in year six, the gap between fund return and investor return that Chapter 77 prices. The lesson lands on both sides: factor premiums are real, patient money; the product wrapper cannot supply the patience; and the correct holding period for any factor is the one you wrote down before the drought, or it is not a strategy, it is a mood.</p>
+</div>
+<h3><span class="sn">76.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>What single object did Markowitz make the portfolio into, and why is its variance mostly covariance?</li>
+<li>What does CAPM say the market pays for, and what did the anomalies do to that claim?</li>
+<li>Match each major factor to the behaviour or structure that pays it.</li>
+<li>Which three cautions govern smart-beta use in India?</li>
+<li>Name the three failure modes of the theory: inputs, tails, agent.</li>
+<li>In Case 2, what separated the fund's decade from its average investor's?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-75-asset-allocation.html">← Chapter 75: Asset Allocation and Diversification</a>
+<a href="finance-reference-77-behavioural-finance.html">Chapter 77: Behavioural Finance: The Investor's Own Worst Enemy →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
