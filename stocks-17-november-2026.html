@@ -53,6 +53,12 @@
     nav.file-nav { gap: 20px; }
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 20px; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; white-space: nowrap; }
+  .scan-nav a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -107,8 +113,15 @@
     <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a></nav>
   </header>
   <main>
-    <h1>Stocks to Study</h1>
-    <p class="count">17 November 2026 &middot; 13 stocks</p>
+    <div class="scan-head">
+      <div>
+        <h1>Stocks to Study</h1>
+          <p class="count">17 November 2026 &middot; 13 stocks</p>
+      </div>
+      <nav class="scan-nav" aria-label="Scan dates">
+      <a href="stocks-18-november-2026.html">Next: 18 November 2026 &rarr;</a>
+      </nav>
+    </div>
     <ol class="rows">
           <li class="row">
             <span class="num">1.</span>
