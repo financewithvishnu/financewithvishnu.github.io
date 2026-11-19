@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 2. Interest Rates, Inflation and the Time Value of Money - Finance With Vishnu</title>
+<meta name="description" content="Simple vs compound interest, present and future value, inflation and the Rule of 72, real vs nominal returns, and the risk-free rate, with charts, worked examples and recall questions.">
+<meta name="keywords" content="compound interest India, time value of money, present value future value, inflation CPI India, rule of 72, real vs nominal returns, risk-free rate India, repo rate RBI, SIP compounding chart, expense ratio cost">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 2. Interest Rates, Inflation and the Time Value of Money", "description": "Interest is rent for money over time; compounding makes the money earn alongside you; present and future value are one equation in two directions; inflation is the leak in money's store of value; real return is nominal minus inflation; the risk-free rate is the base of every other return. Cases: Rs 1 lakh over 20 years at 6/12/18%, and cash losing purchasing power at 7% inflation.", "keywords": ["compound interest India", "time value of money", "present value future value", "inflation CPI India", "rule of 72", "real vs nominal returns", "risk-free rate India", "repo rate RBI", "SIP compounding chart", "expense ratio cost"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div id="fwv-notice" role="dialog" aria-modal="true" aria-labelledby="fwv-notice-title" hidden>
+  <div class="fwv-card">
+    <h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+    <p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+    <p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+    <p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+    <p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+    <p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+    <button type="button" id="fwv-notice-accept">I understand and accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+
+<!--NOTICE_END-->
+  <header class="topbar">
+    <span class="brand">Finance With Vishnu</span>
+    <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+  </header>
+  <main>
+
+    <p class="part-tag">Part I &middot; Foundations of Money</p>
+    <h1>Chapter 2. Interest Rates, Inflation and the Time Value of Money</h1>
+    <p class="count">Chapter 2 of 85 &middot; about 20 minutes</p>
+    <p class="lede">Which would you rather have: &#8377;1,00,000 today or &#8377;1,00,000 five years from now? Everyone picks today, and almost nobody can say exactly why, or by how much. That "why and by how much" is the single most used idea in this entire book. Master this chapter and you can price an FD, see through a loan offer, and understand why the Reserve Bank's six meetings a year move every market you will ever touch.</p>
+
+    <h3><span class="sn">2.1</span>Simple vs compound interest, and why compounding runs the world</h3>
+    <p>From first principles: interest is the rent paid for money over <strong>time</strong>. Simple interest computes the rent on the original sum only. Compound interest computes it on the original sum plus all past rent, so the money itself starts earning alongside you.</p>
+    <div class="example">
+      <p class="ex-title">The two, side by side</p>
+      <p>&#8377;1,00,000 at 10% simple interest for 20 years earns &#8377;10,000 every year: total &#8377;3,00,000.</p>
+      <p>The same at 10% compounded earns &#8377;10,000 the first year, &#8377;11,000 the second, and &#8377;61,159 in the twentieth year alone: total &#8377;6,72,750. Same rate, same time, more than double the result. The difference is entirely the second half of the curve, which is why compounding rewards people who start early more than people who start big.</p>
+    </div>
+    <p>Albert Einstein probably never called compounding the eighth wonder of the world; the quote is a myth. The curve needs no myth. Look at what three realistic Indian rates do to one lakh over twenty years:</p>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;"><line x1="56" y1="266.0" x2="706" y2="266.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="270.0" text-anchor="end" font-size="11" fill="#7a6f62">0L</text><line x1="56" y1="204.0" x2="706" y2="204.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="208.0" text-anchor="end" font-size="11" fill="#7a6f62">7L</text><line x1="56" y1="142.0" x2="706" y2="142.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="146.0" text-anchor="end" font-size="11" fill="#7a6f62">14L</text><line x1="56" y1="80.0" x2="706" y2="80.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="84.0" text-anchor="end" font-size="11" fill="#7a6f62">21L</text><line x1="56" y1="18.0" x2="706" y2="18.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="22.0" text-anchor="end" font-size="11" fill="#7a6f62">28L</text><text x="56.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">0</text><text x="153.5" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">3</text><text x="251.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">6</text><text x="348.5" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">9</text><text x="446.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">12</text><text x="543.5" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">15</text><text x="641.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">18</text><polyline points="56.0,257.1 88.5,256.6 121.0,256.1 153.5,255.5 186.0,254.8 218.5,254.1 251.0,253.4 283.5,252.7 316.0,251.9 348.5,251.0 381.0,250.1 413.5,249.2 446.0,248.2 478.5,247.1 511.0,246.0 543.5,244.7 576.0,243.5 608.5,242.2 641.0,240.8 673.5,239.2 706.0,237.6" fill="none" stroke="#7a6f62" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="706.0" cy="237.6" r="3.4" fill="#7a6f62"/><polyline points="56.0,257.1 88.5,256.1 121.0,254.9 153.5,253.6 186.0,252.1 218.5,250.4 251.0,248.6 283.5,246.4 316.0,244.0 348.5,241.5 381.0,238.5 413.5,235.2 446.0,231.5 478.5,227.4 511.0,222.7 543.5,217.6 576.0,211.7 608.5,205.2 641.0,197.9 673.5,189.7 706.0,180.5" fill="none" stroke="#4e8a67" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="706.0" cy="180.5" r="3.4" fill="#4e8a67"/><polyline points="56.0,257.1 88.5,255.5 121.0,253.7 153.5,251.5 186.0,248.8 218.5,245.7 251.0,242.1 283.5,237.7 316.0,232.7 348.5,226.7 381.0,219.7 413.5,211.3 446.0,201.4 478.5,189.8 511.0,176.1 543.5,160.0 576.0,140.8 608.5,118.4 641.0,91.8 673.5,60.4 706.0,23.4" fill="none" stroke="#8a5a2a" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="706.0" cy="23.4" r="3.4" fill="#8a5a2a"/><rect x="62" y="6" width="10" height="3.4" fill="#7a6f62"/><text x="77" y="11" font-size="11.5" fill="#332619">6% a year</text><rect x="163.8" y="6" width="10" height="3.4" fill="#4e8a67"/><text x="178.8" y="11" font-size="11.5" fill="#332619">12% a year</text><rect x="272.8" y="6" width="10" height="3.4" fill="#8a5a2a"/><text x="287.8" y="11" font-size="11.5" fill="#332619">18% a year</text></svg>
+    <p style="color:var(--ink-2);font-size:13px;">Growth of &#8377;1 lakh at 6%, 12% and 18% a year, compounded annually. Illustrative, before tax and inflation.</p>
+    <p>Read the gaps: 6% gives &#8377;3.2 lakh, 12% gives &#8377;9.6 lakh, 18% gives &#8377;27.4 lakh. Three times the rate is eight and a half times the money. Every fee you pay and every year you delay works on this same curve, against you.</p>
+
+    <h3><span class="sn">2.2</span>Present value and future value: the two directions of every calculation</h3>
+    <p>Compounding moves money forward in time: future value = present value x (1 + rate) ^ years. Discounting is the same engine in reverse: present value = future value / (1 + rate) ^ years. Between them, they are the whole grammar of pricing anything that pays later: bonds, pensions, insurance, business valuation.</p>
+    <div class="example">
+      <p class="ex-title">Worked example: a goal seen from both directions</p>
+      <p>You want &#8377;20,00,000 for a child's education 10 years from now, and your investments earn 10% a year. What must you invest today? PV = 20,00,000 / 1.10^10 = 20,00,000 / 2.594 = about &#8377;7,71,000.</p>
+      <p>Check it forward: 7,71,000 x 1.10^10 = &#8377;20,00,000. Two directions, one equation. Whenever someone quotes you a future number, discount it before you admire it.</p>
+    </div>
+
+    <h3><span class="sn">2.3</span>Inflation: measurement, causes and what it does to savings</h3>
+    <p>Inflation is the leak in money's third job, storing value. India measures it mainly through the Consumer Price Index, a basket of what households actually buy, food, fuel, housing, services, priced month after month. When the RBI targets 4% inflation with a 2% band on either side, this is the number it watches.</p>
+    <p>Causes, at root: too much money chasing too few goods (demand), costlier inputs like oil (supply), or a weaker rupee making imports dearer. For the saver, only one number matters: how fast the leak runs. A handy approximation is the Rule of 72: at 6% inflation, prices double in about 72 / 6 = 12 years. The &#8377;500 thali of today is a &#8377;1,000 thali by the time a newborn is in class six.</p>
+
+    <h3><span class="sn">2.4</span>Real vs nominal returns</h3>
+    <p>Nominal return is what the statement shows. Real return is what is left after the leak: roughly nominal minus inflation. An FD paying 6% in a year of 6% inflation has a real return of zero; the balance grew and the purchasing power did not. Before tax, many Indian savers have spent entire decades running hard on this treadmill.</p>
+    <p>This single idea separates savers from investors. A saver asks "is my money safe?" An investor asks "is my purchasing power growing?" The second question is the only one that pays for retirement.</p>
+
+    <h3><span class="sn">2.5</span>The risk-free rate and why every other return is measured against it</h3>
+    <p>Lend to the Government of India for 91 days and the return is about as close to certain as finance allows: the government can print the rupees it owes you. That yield is the <strong>risk-free rate</strong>, the pure price of time with risk stripped out. In India the 91-day treasury bill and the 10-year government bond yield play this role; the US Treasury does it for the world.</p>
+    <p>Every other return is quoted as risk-free <em>plus something</em>: plus a premium for company risk in a corporate bond, plus a bigger premium for equity, plus a splash of desperation in a chit fund. When the RBI raises the repo rate, the base of this whole stack rises, which is why its decisions reprice everything from your home loan to the Nifty within days. Over the past decade India's repo rate has spent most of its time between 4% and 7%; treat any "guaranteed" offer far above that band as carrying risk it is not mentioning.</p>
+
+    <h3><span class="sn">2.6</span>Worked examples and cases</h3>
+    <div class="example">
+      <p class="ex-title">Case 1: what Rs 1 lakh becomes in 20 years</p>
+      <p>From the chart above: &#8377;1,00,000 left alone for 20 years becomes about &#8377;3,21,000 at 6%, &#8377;9,65,000 at 12% and &#8377;27,39,000 at 18%. Now add behaviour: a 1% annual fee on the 12% path cuts the ending value to about &#8377;7,93,000, a difference of &#8377;1,72,000 paid for one small number in a factsheet. This is why the mutual fund chapters obsess over expense ratios.</p>
+    </div>
+    <div class="example">
+      <p class="ex-title">Case 2: the cost of holding cash through high inflation</p>
+      <p>&#8377;10,00,000 kept at home through five years of 7% inflation still counts out to &#8377;10,00,000, but buys what &#8377;7,13,000 bought at the start (10,00,000 / 1.07^5). The notes did not change; the world did. Cash is a position with a guaranteed negative real return in any year inflation runs above zero, which is why the personal-finance part of this book gives cash exactly one job: the emergency fund.</p>
+    </div>
+
+    <h3><span class="sn">2.7</span>Active-recall questions for this section</h3>
+    <ol class="recall">
+      <li>In one sentence each: what does compounding do that simple interest does not, and why does its effect hide in the later years?</li>
+      <li>You need &#8377;50 lakh in 15 years and expect 11% a year. Which direction of the time-value engine gives the monthly saving needed, and what is it roughly? (Estimate, then check with a calculator: about &#8377;11,000 a month.)</li>
+      <li>Prices double in 12 years at today's inflation. What annual inflation rate does the Rule of 72 imply?</li>
+      <li>Your FD pays 7% and inflation is 6%. What is your real return before tax, and after 30% tax on the interest?</li>
+      <li>Why can the Government of India's 91-day borrowing be called risk-free when no company's borrowing can?</li>
+      <li>A scheme offers 15% a year, "assured". Using the risk-free stack, what is the first question you ask?</li>
+    </ol>
+
+    <div class="scan-nav" style="padding-top:34px;">
+      <a href="finance-reference-01-money-banking.html">&larr; Chapter 1: Money and Banking</a>
+      <a href="finance-reference-03-risk-return.html">Chapter 3: Risk and Return &rarr;</a>
+    </div>
+
+  </main>
+  <footer>Finance With Vishnu &middot; For research and education only, not investment advice.</footer>
+</body>
+</html>
