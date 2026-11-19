@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 48. Options II: Pricing, Greeks and Advanced Strategies - Finance With Vishnu</title>
+<meta content="Option pricing explained: intrinsic vs time value, the Black-Scholes idea inputs and limits, the Greeks with worked Nifty numbers, implied volatility and India VIX, straddles strangles condors and calendars, with theta-decay and event-selling cases." name="description"/>
+<meta content="Black-Scholes explained simply, option Greeks delta gamma theta vega, implied volatility India VIX, theta decay option buying, straddle strangle iron condor calendar spread, option time value intrinsic value, selling options event risk" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 48. Options II: Pricing, Greeks and Advanced Strategies", "description": "An option's premium is intrinsic value plus time value, and time value decays on a clock that speeds up near expiry. Black-Scholes prices the option as the cost of manufacturing its payoff from the underlying; its unobservable input, volatility, is where all option arguments live. The Greeks turn a position into readable exposures. Implied volatility is the market's fear forecast, aggregated in the India VIX. Advanced structures bet on the shape of movement, not its direction. Cases: a Nifty call losing 30% while the index is flat, and selling a straddle into a budget.", "keywords": ["Black-Scholes explained simply", "option Greeks delta gamma theta vega", "implied volatility India VIX", "theta decay option buying", "straddle strangle iron condor calendar spread", "option time value intrinsic value", "selling options event risk"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
+<h1>Chapter 48. Options II: Pricing, Greeks and Advanced Strategies</h1>
+<p class="count">Chapter 48 of 85 · about 21 minutes</p>
+<p class="lede">Chapter 47 showed what an option pays; this one shows what it costs and why. The price of an option is not mysterious: it is the price of a recipe that reproduces the payoff, and understanding that recipe, even without the mathematics, tells you what makes options expensive, what silently eats them, and why the most dangerous sentence in trading is "the market was flat and I still lost money."</p>
+<h3><span class="sn">48.1</span>What drives an option's price: intrinsic value and time value</h3>
+<p>Every premium splits into two parts. <strong>Intrinsic value</strong> is what exercise is worth right now: a 24,000 call with the Nifty at 24,300 is worth at least 300. <strong>Time value</strong> is everything above that, the price of the possibilities still alive before expiry. Time value is largest at the money, where the outcome is most uncertain, and shrinks as the option goes deep in or far out of the money, where the verdict is nearly in. And time value has a clock: it decays to zero at expiry, slowly at first and then violently in the final days. That decay is the seller's harvest and the buyer's headwind, and it is why an option can lose value every single day the market stands still.</p>
+<h3><span class="sn">48.2</span>Black-Scholes: the idea, the inputs, the limits</h3>
+<p>The Black-Scholes insight, worth two Nobel prizes between its authors and Merton, is that an option's payoff can be manufactured continuously from the underlying and cash: hold the right fraction of the asset, rebalance as it moves, and you have built the option. Anything that can be built has a cost of construction, and that cost is the fair price. Five inputs run the machine: the spot price, the strike, the interest rate, the time to expiry, and volatility, the only input not directly observable, which is why all option arguments are, at bottom, arguments about volatility. For a Nifty at 24,000, a 24,000 call, 30 days, a 6.5% rate and 12% volatility, the machine says about ₹396. Respect the limits: the model assumes smooth, continuous, normally distributed moves with constant volatility, and real markets gap, crash and change their temperament. Black-Scholes is the grammar of option prices, not a promise about the world.</p>
+<h3><span class="sn">48.3</span>The Greeks: delta, gamma, theta, vega, rho</h3>
+<p>The Greeks are the model's sensitivities, the answer to "if one input moves, what happens to my option's price?" They convert a position into a set of exposures you can read on one line.</p>
+<table class="num">
+<tr><th>Greek</th><th>Measures</th><th class="r">Nifty 24,000 call, 30 days, IV 12%</th><th>Trader's translation</th></tr>
+<tr><td>Delta</td><td>₹ change per 1-point move</td><td class="r">≈0.57</td><td>Your share count: behaves like half a lot of Nifty</td></tr>
+<tr><td>Gamma</td><td>Change in delta per point</td><td class="r">≈0.00048</td><td>How fast your exposure mutates; explodes near expiry</td></tr>
+<tr><td>Theta</td><td>₹ lost per day, all else equal</td><td class="r">≈−8/day</td><td>The rent the buyer pays the seller</td></tr>
+<tr><td>Vega</td><td>₹ per 1 vol-point rise</td><td class="r">≈27</td><td>Your exposure to the fear gauge itself</td></tr>
+<tr><td>Rho</td><td>₹ per 1 rate-point rise</td><td class="r">small</td><td>Usually ignorable for short-dated index options</td></tr>
+</table>
+<p>Read the table as a trading diary in advance. Bought the call for ₹396: a 100-point Nifty rally earns roughly 57 points at first, then more as gamma grows your delta; each quiet day costs about ₹8; a two-point jump in implied volatility adds roughly ₹54. The buyer is long delta, long gamma, long vega, and short theta: paying rent to own convexity. The seller holds the mirror and must respect gamma most of all, because near expiry it is the Greek that turns small moves into large ones overnight.</p>
+<h3><span class="sn">48.4</span>Implied volatility and the India VIX</h3>
+<p>Run Black-Scholes backwards, take the market's price and solve for volatility, and you get <strong>implied volatility</strong>: the market's own forecast of coming turbulence, quoted per year. The <strong>India VIX</strong> aggregates the implied volatilities of near-term Nifty options into one fear gauge: readings of 11-14 mark complacency, the high teens mark attention, and the spikes, 25, 40, in 2020 briefly above 80, mark panic. Two disciplines follow. Since premium scales with IV, the same insurance costs double in a scare, so the time to buy protection is when nobody wants it, in the low-VIX quiet, and the time to sell it is when everyone is paying up, provided you can survive being the insurer. And compare IV with what actually arrives: options systematically price a little more fear than history delivers, which is the seller's long-run edge and the buyer's long-run toll, the small print of Chapter 47's casualty statistics.</p>
+<h3><span class="sn">48.5</span>Advanced structures: straddles, strangles, condors, calendar spreads</h3>
+<p>Combine calls and puts and you stop betting on direction and start betting on the shape of the future. A <strong>straddle</strong>, buying the at-the-money call and put together, profits if the market moves far in either direction and loses both premiums if it dozes: a pure bet on movement, and the standard trade before budgets, elections and verdicts. A <strong>strangle</strong> buys out-of-the-money options on both sides: cheaper, but the market must travel further before you earn. An <strong>iron condor</strong> sells a strangle and buys a wider one for protection: it profits precisely from stillness, collecting premium if the index stays inside a band, a bet on boredom with bounded risk. A <strong>calendar spread</strong> sells the near month and buys the far month at the same strike: a bet that near-term time decay, your harvest, outruns far-term decay. Each structure is a sentence about volatility, not direction. If you cannot state, in one clause, what must happen for yours to win, you do not have a strategy; you have a position.</p>
+<h3><span class="sn">48.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: how an option loses money while the market is flat</p>
+<p>Buy the 24,000 call for ₹396 with 30 days to run, Nifty at 24,000. Two weeks pass. The Nifty has not moved. Surely you are even? The machine says the call is now worth about ₹276: you are down 30% with the underlying unchanged, because half the life, and with it half the possibilities the premium was paying for, has expired. Hold to the final two days with the Nifty still flat and the call is worth barely ₹89. This is theta, and it is the single most common way retail option money dies: not wrong about direction, just early, or right by too little. The buyer of an at-the-money option needs the market to move, soon, and far. Failing any one of the three, the rent consumes the ticket. Sellers live on the other side of this arithmetic, which is exactly why they accept gamma risk to stand there.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: selling options around an event, and what can go wrong</p>
+<p>Before a union budget, with the India VIX elevated, the 24,000 straddle costs, say, ₹620: the market is pricing a roughly 2.6% move. Selling it collects ₹620 and wins if the budget is a yawn. Two things can ruin the trade, and both have happened. The market moves 4%, as it has on wild budget days, and the straddle pays out far more than collected: your ₹620 of income meets a ₹960 liability, the classic insurer's year. Or the gap arrives through a closed market, an overnight global shock, and you are filled at the new price before any stop-loss can act, because options cannot be exited in a closed market and gap risk is the seller's permanent companion. The lessons generalise beyond events. Short option positions earn small, frequent, visible profits and pay out rare, large, sometimes unlimited losses; sizing must assume the payout, not the pattern. The premium is never free money; it is the market paying you to carry a tail it wants to be rid of, and some year, that tail arrives.</p>
+</div>
+<h3><span class="sn">48.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Split any premium into its two parts and state where time value is largest and how it dies.</li>
+<li>What is the Black-Scholes insight, which of its five inputs is unobservable, and which two assumptions fail in real markets?</li>
+<li>Define delta, gamma, theta and vega, and name the buyer's sign on each.</li>
+<li>What is implied volatility, what does the India VIX aggregate, and why is insurance best bought in quiet markets?</li>
+<li>For a straddle, a strangle, an iron condor and a calendar spread, state in one clause each what must happen to win.</li>
+<li>In Case 1, trace the ₹396 call to ₹276 with the Nifty flat, and name the Greek responsible.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-47-options-i.html">← Chapter 47: Options I: Payoffs and Basic Strategies</a>
+<a href="finance-reference-49-swaps.html">Chapter 49: Swaps: Interest Rate, Currency and Credit →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
