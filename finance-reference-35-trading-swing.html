@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 35. Trading Stocks: Swing and Positional Trading - Finance With Vishnu</title>
+<meta content="Swing trading Indian stocks: the days-to-weeks timeframe, pullback and breakout entries, failed-breakout traps, delivery-based setups, trade management with partials and trailing stops, and a complete journaled trade." name="description"/>
+<meta content="swing trading India, positional trading stocks, pullback entry strategy, breakout trading, failed breakout, trailing stop loss, partial profit booking, delivery based trading, swing trade journal, how to swing trade NSE" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 35. Trading Stocks: Swing and Positional Trading", "description": "Swing trading harvests the days-to-weeks band where costs are payable and decisions are few. Pullbacks buy temporary weakness in persistent strength with the stop at the level that breaks the story; breakouts need volume and a confirmed close, and failed breakouts are exits, never investments. Indian specifics: delivery not leverage, respect circuits and results day, prefer liquid mid-caps. Management makes the expectancy: structural targets, partial exits, trailing stops, never widening. Case: sixteen days, 1,200 shares, +2.4R, four-line journal.", "keywords": ["swing trading India", "positional trading stocks", "pullback entry strategy", "breakout trading", "failed breakout", "trailing stop loss", "partial profit booking", "delivery based trading", "swing trade journal", "how to swing trade NSE"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 35. Trading Stocks: Swing and Positional Trading</h1>
+<p class="count">Chapter 35 of 85 · about 20 minutes</p>
+<p class="lede">Swing trading is the middle path of active trading: positions held for days to weeks, decisions made on daily charts after the market closes, no screen-watching at the open, no year-long holding through crashes. It is the timeframe best suited to the Indian retail trader with a day job, and it is also where Chapter 34's discipline either becomes habit or becomes an epitaph. This chapter walks through one complete trade, from screen to exit.</p>
+<h3><span class="sn">35.1</span>The swing timeframe: holding days to weeks</h3>
+<p>Why days-to-weeks works structurally: the noise that dominates minutes averages out over days, and the fundamental re-ratings that drive months have not yet arrived, so the swing trader harvests the middle band, earnings reactions, sector rotations, technical ranges, where price moves are large enough to pay costs and slow enough to manage with a job. The timeframe also fixes the toolkit: daily charts, delivery-based positions (no intraday leverage needed), overnight risk accepted and sized for, and two or three decisions a day at most. The swing trader's edge is not speed or information; it is selectivity, the freedom to take only the dozen setups a month that genuinely fit the rules.</p>
+<h3><span class="sn">35.2</span>Pullback entries in established trends</h3>
+<p>The bread-and-butter setup. A stock in a confirmed uptrend, higher highs and higher lows above a rising 50-day average, pulls back for two to five days on falling volume toward the average or a prior breakout level. The pullback is profit-taking inside an intact trend, and the entry is the resumption: the first strong daily close back in the trend's direction. The stop goes below the pullback's low, the level whose violation proves the trend is broken, which keeps risk tight and the position honest. The setup's whole logic is asymmetry: you buy temporary weakness in persistent strength, with a nearby line that tells you when you are wrong. Most professional swing accounts are, at bottom, this one setup executed a thousand times with unchanging rules.</p>
+<h3><span class="sn">35.3</span>Breakout entries and failed-breakout traps</h3>
+<p>The mirror setup: buy the stock clearing a multi-week range or resistance zone on expanding volume. Breakouts pay when the range was accumulation and the market agrees with force; they fail constantly in choppy markets, and the failure is itself information. The disciplines that keep breakouts honest: require the volume, because a breakout on ordinary volume is a rumour; buy the confirmed close, not the intraday spike; and treat the <strong>failed breakout</strong>, price closing back inside the range within a day or two, as an immediate exit, not a hope. The failed breakout is also a trade in its own right for the experienced: the trapped breakout buyers become your sellers, and the snap back into the range is often fast. What you may never do is convert a failed breakout into a "long-term investment". A trade that changes its story is a loss being negotiated.</p>
+<h3><span class="sn">35.4</span>Delivery-based swing setups in Indian stocks</h3>
+<p>Indian specifics worth internalising. Trade delivery, not intraday leverage: the swing timeframe does not need it, and T+1 settlement plus STT makes leveraged churn expensive. Respect the ban list and circuit filters: stocks in the F&amp;O ban or near circuit limits are telling you the volatility is already public. Watch the calendar: results day is a coin flip with a wide tail, so either exit before it or size the position as the gamble it is. And prefer liquid mid-caps to illiquid small-caps for trading, Chapter 32's liquidity lesson with a shorter fuse: a swing trade you cannot exit is not a trade, it is a donation. The NSE's own data, delivery percentages, bulk deals, volatility, is free and tells you whether the move you are riding has genuine participation behind it.</p>
+<h3><span class="sn">35.5</span>Managing the trade: targets, trailing stops, partial exits</h3>
+<p>The entry is the easy half; management is where the expectancy is made. A robust template: define the target from the structure, the prior swing high, the measured range height, not from what you paid; take a <strong>partial exit</strong>, a third to a half, at the first target, paying yourself and converting the trade's psychology; trail the stop on the remainder below each new higher low, letting the trend itself decide when the story ends; and never widen a stop, the one act that converts a managed loss into an unmanaged one. The underlying principle: the exit rules must be as mechanical as the entry rules, written before the trade, because in the trade you are no longer the person who made the plan. You are a shareholder of your own emotions, and they trade terribly.</p>
+<h3><span class="sn">35.6</span>Worked example: a complete swing trade, screen to exit, with the journal</h3>
+<div class="example">
+<p class="ex-title">Case: sixteen days, one pullback, every decision written down</p>
+<p>The chart is the trade, illustrative numbers on a real-shaped setup. Screen: a liquid mid-cap in a three-month uptrend pulls back from 107 to 102 over four days on drying volume, holding above its rising 50-day average. Plan, written before entry: buy the resumption above 104, stop below 100 (the pullback low), risk 0.8% of a ₹6,00,000 account = ₹4,800, so 1,200 shares at ₹104. Target 1: 112 (prior swing high). Target 2: trailing.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="235.0" y2="235.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="239.0">100</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="173.0" y2="173.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="177.0">110</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="111.0" y2="111.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="115.0">120</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="49.0" y2="49.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="53.0">130</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">D1</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="142.7" y="288"></text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="229.3" y="288"></text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="316.0" y="288">D7</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="402.7" y="288"></text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="489.3" y="288"></text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="576.0" y="288">D13</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="662.7" y="288"></text><polyline fill="none" points="56.0,235.0 99.3,216.4 142.7,191.6 186.0,204.0 229.3,222.6 272.7,210.2 316.0,185.4 359.3,160.6 402.7,173.0 446.0,148.2 489.3,123.4 532.7,135.8 576.0,111.0 619.3,86.2 662.7,98.6 706.0,73.8" stroke="#332619" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="73.8" fill="#332619" r="3.4"></circle><rect fill="#332619" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">Stock price (illustrative)</text></svg>
+<p>Execution: filled at 104.2 on day 6. Day 8: hits 112, sell half at 111.8, bank roughly 1.9R on that half, move stop to entry. Day 13: new high 120, trail stop to 115. Day 16: the trend stutters at 126 and closes below the trailing stop's level next session; exit the rest at 123. The journal entry, written that evening, is four lines: setup and why it qualified; size and the arithmetic; the exits and whether rules were followed (yes, except the stop was moved to entry a day late, noted); and the result, about +2.4R blended. Two hundred such entries are a strategy. This one is a brick.</p>
+</div>
+<h3><span class="sn">35.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Why is days-to-weeks the structurally kind timeframe for a trader with a day job?</li>
+<li>Describe the pullback setup and the exact logic of its stop placement.</li>
+<li>What confirms a breakout, and why is a failed breakout an exit and sometimes a trade?</li>
+<li>Name four Indian-specific rules for delivery-based swing trading.</li>
+<li>Write the trade-management template: targets, partials, trailing, and the one forbidden act.</li>
+<li>From the case: reconstruct the position size from account, risk fraction and stop distance.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-34-trading-discipline.html">← Chapter 34: Trading Stocks: The Trader's Discipline</a>
+<a href="finance-reference-36-trading-intraday.html">Chapter 36: Trading Stocks: Intraday and Scalping →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
