@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 43. Government Securities and the Yield Curve - Finance With Vishnu</title>
+<meta content="Indian government securities explained: T-bills, G-secs, SDLs, the three yield-curve shapes and what inversion predicts, sovereign ratings, RBI Retail Direct vs gilt and target-maturity funds, US Treasuries, and building a G-sec ladder." name="description"/>
+<meta content="G-sec investing India, RBI Retail Direct, yield curve explained, inverted yield curve recession, treasury bills India, state development loans, 10 year benchmark yield, gilt funds, target maturity funds, government bond ladder" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 43. Government Securities and the Yield Curve", "description": "The government's borrowing cost is the foundation under every rate in your life. T-bills are the cash end, dated G-secs the long end, SDLs the states' premium. The curve's shape is the bond market's forecast: inversion says tight money cannot last and a slowdown is being priced. Rupee G-secs are default-safe but inflation- and price-risky. Retail Direct, gilt funds and target-maturity funds serve three different investors. The ladder converts rate forecasting into a habit. Cases: reading 2019-style inversion and a four-rung ladder.", "keywords": ["G-sec investing India", "RBI Retail Direct", "yield curve explained", "inverted yield curve recession", "treasury bills India", "state development loans", "10 year benchmark yield", "gilt funds", "target maturity funds", "government bond ladder"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VI · Fixed Income and Credit</p>
+<h1>Chapter 43. Government Securities and the Yield Curve</h1>
+<p class="count">Chapter 43 of 85 · about 20 minutes</p>
+<p class="lede">Every interest rate in your financial life, your home loan, your FD, your bond fund, your company's cost of debt, is priced off one foundation: what the Government of India pays to borrow. That foundation has a shape, the yield curve, and the shape is one of the most reliable economic signals ever recorded. This chapter teaches you the instruments, the shape, and how an ordinary investor can now hold the foundation directly.</p>
+<h3><span class="sn">43.1</span>Treasury bills, dated securities and state development loans</h3>
+<p>The government's borrowing shelf has three levels. <strong>Treasury bills</strong> are the short end: 91, 182 and 364-day paper sold at a discount to face value, the closest thing in India to pure cash. <strong>Dated securities</strong>, the famous G-secs, are the long end: fixed-coupon bonds from 2 to 40 years, auctioned by the RBI on the government's behalf every week; the 10-year's yield is the number the entire market watches. <strong>State development loans</strong> are the states' own bonds, paying a small premium over the centre's for a small amount of extra risk and a lot less liquidity. All three are sovereign promises in rupees, which makes them the definition of default-safe in India, and, per Chapter 42, not remotely price-safe at the long end.</p>
+<h3><span class="sn">43.2</span>The yield curve: shapes and what each predicts</h3>
+<p>Plot the government's borrowing cost against maturity and you get the yield curve, the bond market's collective economic forecast drawn as a line. The <strong>normal</strong> shape slopes up: longer money costs more, reflecting growth, inflation risk and the price of waiting. The <strong>flat</strong> shape says the market expects the present not to last. The <strong>inverted</strong> shape, short rates above long, says the central bank is braking hard now and the market expects it to be cutting later, because a slowdown is coming; inversion has preceded nearly every modern recession across countries, India's shallow inversions included, not as magic but as logic: the bond market is voting that today's tight money cannot be sustained. The chart shows all three. Reading the curve will not tell you when; it reliably tells you which way the pressure builds.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="227.8" y2="227.8"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="231.8">3%</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="189.7" y2="189.7"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="193.7">4%</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="151.5" y2="151.5"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="155.5">5%</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="113.4" y2="113.4"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="117.4">6%</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="75.2" y2="75.2"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="79.2">7%</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="37.1" y2="37.1"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="41.1">8%</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">3M</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="148.9" y="288">1Y</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="241.7" y="288">2Y</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="334.6" y="288">3Y</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="427.4" y="288">5Y</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="520.3" y="288">7Y</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="613.1" y="288">10Y</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="706.0" y="288">15Y</text><polyline fill="none" points="56.0,227.8 148.9,182.1 241.7,143.9 334.6,113.4 427.4,90.5 520.3,75.2 613.1,63.8 706.0,56.2" stroke="#4e8a67" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="56.2" fill="#4e8a67" r="3.4"></circle><polyline fill="none" points="56.0,94.3 148.9,86.7 241.7,82.9 334.6,79.0 427.4,75.2 520.3,75.2 613.1,71.4 706.0,71.4" stroke="#a8894e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="71.4" fill="#a8894e" r="3.4"></circle><polyline fill="none" points="56.0,52.3 148.9,56.2 241.7,63.8 334.6,71.4 427.4,79.0 520.3,86.7 613.1,94.3 706.0,98.1" stroke="#8a4e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="98.1" fill="#8a4e4e" r="3.4"></circle><rect fill="#4e8a67" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">Normal curve</text><rect fill="#a8894e" height="3.4" width="10" x="185.4" y="6"></rect><text fill="#332619" font-size="11.5" x="200.4" y="11">Flat curve</text><rect fill="#8a4e4e" height="3.4" width="10" x="294.4" y="6"></rect><text fill="#332619" font-size="11.5" x="309.4" y="11">Inverted curve</text></svg>
+<h3><span class="sn">43.3</span>Sovereign ratings and the meaning of risk-free</h3>
+<p>India's sovereign rating sits at the bottom rung of investment grade, a verdict that mixes genuine strengths, a democracy that has never defaulted on its rupee debt, deep domestic savings, with genuine constraints, high public debt, low per-capita income, a narrow tax base. "Risk-free" therefore means something precise and narrow: the government prints the currency the debt is denominated in, so outright rupee default is near-unthinkable; the risks that remain are inflation, which taxes every fixed coupon quietly, and price risk, Chapter 42's seesaw. Foreign-currency sovereign debt is a different, genuinely riskier animal, as Sri Lanka's 2022 default reminded the neighbourhood. Hold the distinction: rupee G-secs are default-safe and purchasing-power-risky; that second risk is the one that actually reaches you.</p>
+<h3><span class="sn">43.4</span>How to buy G-secs: RBI Retail Direct and the fund routes</h3>
+<p>Since 2021, any Indian resident can open an <strong>RBI Retail Direct</strong> account and buy government securities at the same weekly auctions as the institutions, no intermediary, no fund fee, face values from ₹10,000. The catch is the one Chapter 42 taught: a directly held 30-year G-sec is default-safe but its market price swings, and selling early means taking the seesaw's current seat. The gentler routes: <strong>gilt funds</strong>, which hold the same paper with daily liquidity and a small fee, and <strong>target-maturity funds</strong>, index-style debt funds that hold bonds to a fixed maturity date, giving you something close to a direct bond's certainty with a fund's convenience. The choice map: hold to maturity and want zero fees, Retail Direct; want liquidity and simplicity, gilt funds; want a known maturity with fund convenience, target-maturity funds.</p>
+<h3><span class="sn">43.5</span>Global sovereigns: US Treasuries as the world's benchmark</h3>
+<p>The world's yield curve is America's. The US Treasury market is the deepest pool of safe money on earth, its 10-year yield the discount rate inside every global valuation, your Indian stocks included: when Treasury yields jump, the world's cost of equity rises, foreign flows leave emerging markets, and the Nifty feels a meeting held in Washington. The dollar's reserve status lets the US borrow what no one else can, and every emerging-market crisis of the modern era has had a Treasury-yield spike in its opening scene. You do not need to trade Treasuries; you need to know that their yield is the tide level in which all other boats, including Indian G-secs, float.</p>
+<h3><span class="sn">43.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: reading an inverted curve before a slowdown</p>
+<p>The 2019 rehearsal, pattern repeated worldwide in 2022-23: the central bank has hiked through a year of inflation, short rates have climbed past long rates, and the curve inverts. The commentary divides into "this time is different" and "the signal has spoken". The disciplined reading is narrower and more useful: inversion says the bond market expects cuts, and cuts come when the economy weakens; it does not say the market falls tomorrow, equities often rally for months after inversion, but it raises the probability that the next two years contain a slowdown, and it argues, concretely, for locking long yields while they exist and for holding the portfolio that survives Chapter 18's act four. The curve is a weather report. You do not cancel the picnic on a forecast; you do pack the umbrella.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: building a G-sec ladder</p>
+<p>The construction for an investor who wants sovereign certainty without rate-timing, illustrative numbers via Retail Direct:</p>
+<table class="num">
+<tr><th>Rung</th><th>Instrument (illustrative)</th><th class="r">Yield</th><th>Matures</th></tr>
+<tr><td>1</td><td>182-day T-bill</td><td class="r">6.8%</td><td>6 months</td></tr>
+<tr><td>2</td><td>2-year G-sec</td><td class="r">7.0%</td><td>2 years</td></tr>
+<tr><td>3</td><td>5-year G-sec</td><td class="r">7.1%</td><td>5 years</td></tr>
+<tr><td>4</td><td>10-year G-sec</td><td class="r">7.2%</td><td>10 years</td></tr>
+<tr><td colspan="4">As each rung matures, reinvest at the then-current long end: the ladder rolls, and rate timing stops being your problem.</td></tr>
+</table>
+<p>The ladder's quiet genius: some rung is always maturing, so reinvestment happens at whatever rates then prevail, high rates get locked, low rates touch only one rung, and the investor never once has to answer "where are rates going?". Duration is matched to the actual spending horizon, the coupons arrive as scheduled income, and Chapter 42's seesaw becomes scenery rather than danger. It is the fixed-income version of the SIP: a machine that converts a forecasting problem into a habit.</p>
+</div>
+<h3><span class="sn">43.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Name the three levels of Indian government paper and the role of each.</li>
+<li>Draw the three yield-curve shapes from memory and state what inversion actually claims.</li>
+<li>In what precise sense are rupee G-secs risk-free, and which risk reaches you anyway?</li>
+<li>Map the three routes to owning G-secs to the three kinds of investor.</li>
+<li>Why does the US 10-year yield reach into the Nifty's valuation?</li>
+<li>How does a ladder convert rate forecasting into a habit?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-42-bonds-pricing-yields-duration.html">← Chapter 42: Bonds: Pricing, Yields and Duration</a>
+<a href="finance-reference-44-corporate-credit.html">Chapter 44: Corporate Credit and Debt Funds →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
