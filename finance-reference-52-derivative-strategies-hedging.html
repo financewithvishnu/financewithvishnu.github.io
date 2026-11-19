@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 52. Derivative Strategies: Hedging and Income - Finance With Vishnu</title>
+<meta content="Derivative strategies for hedging and income: futures puts and collars compared, short strangles and iron condors and the tail behind the income, expiry-day and event option trades, Greeks in live management, with a 24-month iron condor P&amp;L case." name="description"/>
+<meta content="portfolio hedging with index futures and puts, collar strategy India, iron condor Nifty, short strangle risk, option selling income real returns, expiry day option trading, vol crush event trading, Greeks trade management" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 52. Derivative Strategies: Hedging and Income", "description": "Three honest options businesses exist: insuring holdings, selling insurance, and arbitrage. Hedging runs from futures (cheap, upside surrendered) through puts (costly, upside kept) to collars (funded by selling the call). Premium selling harvests a real volatility risk premium paid as small steady wins against rare large losses, and expiry-day and event trades are where that tail concentrates. Manage delta, gamma and vega live, not in hindsight. Cases: a 24-month iron condor that halved eighteen months of income in one gap, and the true cost-adjusted P&L of an option seller.", "keywords": ["portfolio hedging with index futures and puts", "collar strategy India", "iron condor Nifty", "short strangle risk", "option selling income real returns", "expiry day option trading", "vol crush event trading", "Greeks trade management"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
+<h1>Chapter 52. Derivative Strategies: Hedging and Income</h1>
+<p class="count">Chapter 52 of 85 · about 20 minutes</p>
+<p class="lede">Part VII has given you the instruments; this chapter and the next assemble them into what traders actually do. There are only three honest businesses in options: insuring what you own, selling insurance to others, and, in Chapter 53, exploiting mispricing. Each can be done well. Each has a failure mode that looks, for months or years, exactly like success.</p>
+<h3><span class="sn">52.1</span>Hedging a portfolio: futures, puts and collars with Indian instruments</h3>
+<p>Three hedges, three prices. <strong>Short index futures</strong> against the portfolio: the cheapest hedge to run, near-perfect against beta risk, but you surrender the upside too and fund daily margin through the fall, Chapter 46's treasurer problem. <strong>Protective puts</strong>: the only hedge that keeps the upside, paid for with a premium that runs 1.5-2% a quarter for sensible strikes, so permanent put protection costs 6-8% a year and turns an equity portfolio into a mediocre one; the craft is buying puts selectively, when implied volatility is cheap or a specific event genuinely threatens. The <strong>collar</strong> splits the difference: buy the put, sell a call above the market to fund it, often for near-zero net premium. You keep the range between the strikes and give away everything above the call. For most long-term Indian investors the honest answer is hierarchical: the first hedge is asset allocation, the second is time horizon, and derivatives are the third, for the specific windows when the first two cannot help.</p>
+<h3><span class="sn">52.2</span>Selling premium: strangles, iron condors and the risk behind the income</h3>
+<p>The mirror business is selling insurance. The <strong>short strangle</strong>, selling an out-of-the-money call and put, collects two premiums and wins if the index stays between the strikes; the <strong>iron condor</strong> buys further-out wings to cap the catastrophe, converting unlimited risk into a bounded, marginable trade. The economics are real: implied volatility usually exceeds realised volatility, so sellers harvest a genuine risk premium, on average, over time. The distribution is the catch: small, steady, monthly wins punctuated by losses that can erase a year or more of premiums in days. This is not a flaw in the strategy; it is the strategy. You are being paid a salary to carry tail risk, and the tail arrives on its own schedule, not yours. The practitioners who survive share three rules: size so the worst case is a bad quarter, never a career; buy the wings, because unlimited-risk income is a contradiction; and keep some premium in reserve for the month the market gaps, because that month is when the best fills of the year appear, if you still have capital and nerve.</p>
+<h3><span class="sn">52.3</span>Expiry-day and weekly option strategies</h3>
+<p>Weekly expiries created a cottage industry of expiry-day trades, and the honest description is a game of extreme theta and extreme gamma. On expiry morning, options carry hours of life and prices that move 50% on a hiccup: sellers farm the terminal decay, buyers punt on the final pin or breakout. The maths is unforgiving. Terminal gamma means the underlying can outrun any premium in minutes; a 0.5% index move in the last hour routinely pays or takes five times the day's collected theta. Add brokerage, exchange charges and the STT on exercised options, and the structural edge belongs to whoever has the lowest costs and the fastest execution, which is not the retail screen. SEBI's 2024 curbs, one weekly expiry per exchange, larger lot sizes, higher expiry-day margins, were aimed precisely here. Treat expiry day as what it is: the casino's busiest floor, where the house edge is wearing a risk premium's clothes.</p>
+<h3><span class="sn">52.4</span>Buying options around events: results, budget, elections</h3>
+<p>The seductive mirror: if sellers bleed on event days, should buyers feast? Buy the straddle before results, before the budget, before the verdict, and harvest the gap. Sometimes, spectacularly: the 2024 election-count day moved the Nifty through ranges that paid straddle buyers multiples. But the market prices the event in advance: implied volatility doubles into the date, so the straddle already costs the expected move, and the instant the news lands, IV collapses, the <strong>vol crush</strong>, and the buyer who got a 2% move off a 3%-priced event loses money on a correct call. Event buying pays only when the outcome lies outside what IV priced, the genuinely surprising result, which is by definition the case you cannot schedule. The professional version is therefore selective and small: events with a real two-sided tail, sized as lottery tickets, and never funded by the rent money. If the premium assumes the surprise, you are not buying the surprise.</p>
+<h3><span class="sn">52.5</span>Greeks in live trade management</h3>
+<p>Chapter 48 defined the Greeks; live management is their grammar. Every open position should be readable in one line: "I am short 200 delta, short 4 vega, long theta 800 a day, gamma risk to 24,600." Three management habits follow. <strong>Manage delta, not hope:</strong> decide in advance the delta at which you adjust or exit, because a strangle whose short strike is being approached is a position changing character, from income trade to directional bet, whether or not you re-label it. <strong>Respect gamma near expiry:</strong> the same position that felt gentle at three weeks is a different animal at three days, and rolling early is cheaper than learning why. <strong>Watch vega, not just price:</strong> after a scare, implied vol falls as price recovers, and short-premium positions can profit from the decline even while the price moves against you, and lose while moving for you. The Greeks are not diagnostics to run after the trade goes wrong; they are the trade's dashboard while it is going right.</p>
+<h3><span class="sn">52.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: an iron condor, month by month, until the tail</p>
+<p>A trader sells a monthly Nifty iron condor: strikes 4% either side of spot, wings 2% beyond that, collecting about ₹10,000 a month on ₹1.5 lakh of margin, risking at most ₹1 lakh on the bounded structure. The chart shows two years of the trade. Eighteen months of premiums compound to about ₹182 thousand, a beautiful, smooth, 6%-a-month-looking equity curve, the kind that fills social media. Then a month with a genuine gap: the index blows through the short strike to the wing, the bounded loss of roughly ₹92 thousand lands, and in one month eighteen months of income halve. The two-year total is still positive, about ₹142 thousand on the margin posted, because this trader sized the worst case at survivable. The lesson is not that selling premium fails; it is that the P&amp;L of an option seller is an annuity with a deductible that comes due at random. Judge it over five years and a full cycle, never over a smooth year, and never by the monthly win rate, which in this trade was 96% and still nearly ended the story.</p>
+</div>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="266.0" y2="266.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="270.0">-100k</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="183.3" y2="183.3"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="187.3">0k</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="100.7" y2="100.7"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="104.7">100k</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="18.0" y2="18.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="22.0">200k</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">M1</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="140.8" y="288">M4</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="225.6" y="288">M7</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="310.3" y="288">M10</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="395.1" y="288">M13</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="479.9" y="288">M16</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="564.7" y="288">M19</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="649.5" y="288">M22</text><polyline fill="none" points="56.0,175.9 84.3,166.8 112.5,160.2 140.8,151.9 169.0,142.0 197.3,134.6 225.6,126.3 253.8,117.2 282.1,109.8 310.3,99.0 338.6,90.7 366.9,84.1 395.1,75.0 423.4,67.6 451.7,59.3 479.9,49.4 508.2,42.0 536.4,32.9 564.7,108.9 593.0,100.7 621.2,90.7 649.5,83.3 677.7,74.2 706.0,65.9" stroke="#4e8a67" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="65.9" fill="#4e8a67" r="3.4"></circle><rect fill="#4e8a67" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">Cumulative P&amp;L (Rs thousand)</text></svg>
+<div class="example">
+<p class="ex-title">Case 2: the true P&amp;L curve of an option seller</p>
+<p>Aggregate the Indian index-option seller's economics and a shape emerges: win rate 75-85%, average win small and capped by the premium, average loss several times the win, worst loss bounded only if wings were bought. Before costs, the expectancy is modestly positive, the market does pay for carried risk. After brokerage, STT, exchange fees, stamp duty and the bid-ask spread on four legs a month, a large slice of that expectancy transfers to the infrastructure, which is why the same SEBI study that counted the buyers' losses found persistent profits concentrated among a thin layer of institutions and proprietary desks with the lowest costs. The practical translation for an individual. If you sell premium, do it with wings, at sizes where the worst month is a line item, with costs you have actually summed, and with the written expectation of giving back a year of income in a bad month without flinching. If any clause of that sentence is unacceptable, the income was never really on offer to you.</p>
+</div>
+<h3><span class="sn">52.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Compare futures, puts and collars as hedges on cost, upside retention and cash demands.</li>
+<li>What risk premium do premium sellers harvest, and what is the shape of its distribution?</li>
+<li>Why is expiry-day trading structurally hostile to retail, and what did SEBI's 2024 curbs change?</li>
+<li>Explain the vol crush and why a correct event call can still lose money.</li>
+<li>What does "manage delta, not hope" demand you decide before entering a trade?</li>
+<li>In Case 1, what did the 96% win rate conceal, and what made the tail survivable?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-51-clearing-margining.html">← Chapter 51: Clearing, Margining and Derivatives Risk in India</a>
+<a href="finance-reference-53-derivative-strategies-arbitrage.html">Chapter 53: Derivative Strategies: Arbitrage and Event-Driven Trading →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
