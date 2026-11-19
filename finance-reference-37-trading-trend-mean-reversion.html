@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 37. Trading Stocks: Trend Following and Mean Reversion - Finance With Vishnu</title>
+<meta content="The two faiths of systematic trading compared: trend following and mean reversion, moving-average vs Donchian systems, overbought/oversold tools by regime, and why each style fails at maximum size." name="description"/>
+<meta content="trend following strategy, mean reversion trading, Donchian channel system, moving average system India, RSI overbought oversold, Bollinger band strategy, systematic trading Nifty, regime detection trading, whipsaw trading losses, trading system expectancy" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 37. Trading Stocks: Trend Following and Mean Reversion", "description": "Trend following (lose small often, win enormously rarely) and mean reversion (win small often, lose catastrophically rarely) are both right in their own regimes. Oscillators are regime instruments: overbought fades the range and feeds the trend. Each style attracts maximum capital just before its own hell. The answer is construction: run both, size each to survive its worst case, and distrust the smoothest equity curve. Case: Donchian vs Bollinger on Indian indices, 38% vs 68% win rates, opposite pains.", "keywords": ["trend following strategy", "mean reversion trading", "Donchian channel system", "moving average system India", "RSI overbought oversold", "Bollinger band strategy", "systematic trading Nifty", "regime detection trading", "whipsaw trading losses", "trading system expectancy"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 37. Trading Stocks: Trend Following and Mean Reversion</h1>
+<p class="count">Chapter 37 of 85 · about 19 minutes</p>
+<p class="lede">All systematic trading divides into two faiths. Trend following says the move continues; mean reversion says it snaps back. Both are right, in different regimes, on different timeframes, and each faith's faithful are bankrupted by the other's market. This chapter puts both systems on the table, rules, statistics and failure modes, because the choice between them is really a choice about which kind of pain you can endure without breaking your own rules.</p>
+<h3><span class="sn">37.1</span>Trend following: the oldest systematic edge</h3>
+<p>Trend following is momentum (Chapter 30) made into machinery: define the trend, enter in its direction, exit when it ends, never predict. Its intellectual pedigree runs from the Turtle traders of the 1980s through modern CTAs managing billions, and its evidence base is long: mechanical trend rules have made money across decades, asset classes and countries, Indian indices included. The edge's shape is psychologically engineered to be hard to hold: the system loses small, often, in choppy markets, wrong two trades out of three, and then catches one move so large it pays for everything. The trend follower is paid, in the end, for enduring a long sequence of small humiliations without improvising. Almost nobody can, which is precisely why the edge persists.</p>
+<h3><span class="sn">37.2</span>Moving-average and channel-breakout systems</h3>
+<p>The two classic constructions. <strong>Moving-average systems</strong>: trade in the direction of the slope, enter on the shorter average crossing the longer (Chapter 17's cross), exit on the reverse cross. Smooth, always defined, and whipsawed to death in ranges. <strong>Channel breakouts</strong>, the Donchian construction: buy the N-day high, exit on the M-day low. Cruder, and historically tougher, because it buys strength itself rather than a smoothed average of it. Both share the design truths: the exit matters more than the entry; the parameters matter less than their consistency, the difference between a 19-day and a 21-day channel is noise, while the difference between following and skipping is the whole return; and the system's statistics, win rate, payoff, longest losing streak, must be known <em>before</em> capital is committed, because you will meet that losing streak personally.</p>
+<h3><span class="sn">37.3</span>When prices snap back: the logic of mean reversion</h3>
+<p>The opposing faith rests on equally solid observation: over short horizons, in range-bound markets, prices overreact and then return toward their average. The reversion trader sells strength and buys weakness against the local mean, harvesting the market's habit of round-tripping its own excitement. The style's virtues are seductive: high win rates, frequent payoffs, the warm feeling of being right most of the time. Its danger is structural and absolute: the losses, when they come, are the trend days, the crashes, the gap-throughs, where the thing that "always comes back" does not come back. Mean reversion is selling insurance on regime change. The premiums are real; so is the occasional catastrophe; and the strategy lives or dies entirely on whether the catastrophe is priced, capped and survived.</p>
+<h3><span class="sn">37.4</span>Overbought/oversold tools, used properly</h3>
+<p>RSI above 70, price above the upper Bollinger band, an oscillator at extremes: the retail reflex reads each as "sell". The professional reading is conditional. In a <strong>range</strong>, overbought genuinely marks the top of the distribution, and fading it is the strategy. In a <strong>trend</strong>, overbought is the description of strength, and fading it is stepping in front of the train; RSI can pin above 70 for weeks in a real bull leg, and Chapter 17 said so. The tools are not signals; they are regime instruments. The sequence that makes them honest: first classify the regime, trending or ranging, by the trend's own evidence (slope, structure, ADX-style measures), then let the oscillator time entries <em>within</em> that verdict. Used in that order, the tools are genuinely useful. Used in the retail order, oscillator first, they are a systematic way to short bull markets.</p>
+<h3><span class="sn">37.5</span>Why each style fails exactly when size is biggest</h3>
+<p>The deepest and least-taught symmetry in trading: both styles attract maximum capital at maximum danger. Trend following shines in long trending years; the money pours in after them, and arrives for the choppy year that follows. Mean reversion shines in long quiet ranges; the money pours into the calm, and the crash, which is when reversion systems die, is statistically born from that same calm, as low volatility lulls everyone into leverage. The defence is not prediction but construction: run both styles together, since their bad regimes are opposite; size each so that its historical worst case is a survivable event, not a terminal one; and distrust the equity curve most when it has been smoothest. In systematic trading, comfort is the risk report.</p>
+<h3><span class="sn">37.6</span>Worked example: two systems on Indian indices, honestly compared</h3>
+<div class="example">
+<p class="ex-title">Case: the turtle and the fader, same decade</p>
+<p>Run both constructions on Nifty and Bank Nifty daily data across a representative decade, costs included, illustrative statistics of the shape such tests reliably show:</p>
+<table class="num">
+<tr><th></th><th class="r">Donchian trend system</th><th class="r">Bollinger reversion system</th></tr>
+<tr><td>Rule</td><td>Buy 20-day high breakouts, exit on 10-day low</td><td>Buy touches of the lower band in a flat market, exit at the mean</td></tr>
+<tr><td>Win rate</td><td class="r">35-40%</td><td class="r">65-70%</td></tr>
+<tr><td>Avg win / avg loss</td><td class="r">3-4 to 1</td><td class="r">0.7 to 1</td></tr>
+<tr><td>Feel</td><td>Wrong often, right enormously</td><td>Right often, wrong catastrophically</td></tr>
+<tr><td>Bad regime</td><td>Sideways years: death by whipsaw</td><td>Crash days: the falling knife is real</td></tr>
+<tr><td>Long-run expectancy</td><td class="r">Positive, lumpy</td><td class="r">Positive, fragile</td></tr>
+</table>
+<p>Neither row is the answer; the pair is. The trend system's 38%-win-rate equity curve looks like a mistake for eighteen months and then doubles; the reversion system's smooth 68% looks like genius until one October takes back two years. The portfolio that holds both, sized so each can survive its own hell, produces something neither delivers alone: a return stream whose worst years are merely bad. That construction, not any indicator, is what "systematic" actually buys.</p>
+</div>
+<h3><span class="sn">37.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>State the two faiths of systematic trading and the regime in which each is right.</li>
+<li>What is trend following's payoff shape, and why does that shape protect the edge from arbitrage?</li>
+<li>Contrast moving-average and Donchian construction, and name the two design truths they share.</li>
+<li>Why is mean reversion "selling insurance on regime change", and what decides its survival?</li>
+<li>How should RSI-above-70 be read in a range versus in a trend?</li>
+<li>Why does each style attract maximum capital at maximum danger, and what is the construction defence?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-36-trading-intraday.html">← Chapter 36: Trading Stocks: Intraday and Scalping</a>
+<a href="finance-reference-38-mutual-funds-basics.html">Chapter 38: Mutual Funds: Structure, Types and Costs →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
