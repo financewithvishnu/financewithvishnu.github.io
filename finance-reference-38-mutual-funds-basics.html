@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 38. Mutual Funds: Structure, Types and Costs - Finance With Vishnu</title>
+<meta content="How Indian mutual funds actually work: AMC-trustee-custodian structure, NAV, scheme types, regular vs direct plans, expense ratios and exit loads, SEBI regulation, and the 20-year cost of 1% fees." name="description"/>
+<meta content="mutual fund basics India, how mutual funds work, NAV explained, regular vs direct plan, expense ratio TER, exit load mutual fund, SEBI mutual fund regulation, SIP cost of fees, direct plan savings, mutual fund types India" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 38. Mutual Funds: Structure, Types and Costs", "description": "A mutual fund is a trust that walls your money off from the manager: AMC manages, trustees oversee, the custodian holds, NAV prices daily. Scheme families: equity, debt, hybrid, solution. The regular-vs-direct gap, about a point a year, costs 14% of twenty-year wealth on an ordinary SIP, and far more over thirty. TER, exit load and portfolio turnover are the three factsheet numbers that matter. SEBI makes funds safe to own; only you can make them cheap to own.", "keywords": ["mutual fund basics India", "how mutual funds work", "NAV explained", "regular vs direct plan", "expense ratio TER", "exit load mutual fund", "SEBI mutual fund regulation", "SIP cost of fees", "direct plan savings", "mutual fund types India"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part V · Mutual Funds and ETFs</p>
+<h1>Chapter 38. Mutual Funds: Structure, Types and Costs</h1>
+<p class="count">Chapter 38 of 85 · about 20 minutes</p>
+<p class="lede">More Indian household money now reaches the stock market through mutual funds than through any other door, and most of it arrives without its owner ever learning what a mutual fund actually is. That gap costs real money: the difference between the industry's most and least honest products, compounded over a working life, is a flat in a good city. Part V begins with the machine itself: who holds your money, what the schemes are, and what they charge you.</p>
+<h3><span class="sn">38.1</span>How a mutual fund works: AMC, trustee, custodian, NAV</h3>
+<p>A mutual fund is a trust, not a company, and the structure exists to separate your money from the people managing it. The <strong>AMC</strong>, the asset management company, manages the portfolio and earns the fee. The <strong>trustees</strong> oversee the AMC on your behalf, legally required to act in unitholders' interest. The <strong>custodian</strong>, a separate institution, actually holds the securities, so the AMC cannot touch them. And the <strong>NAV</strong>, net asset value, is the daily price of one unit: the fund's total assets minus costs, divided by units, published every evening. The practical meaning: when you invest, you buy newly created units at that evening's NAV; when you redeem, the fund buys them back at NAV. Your money is pooled, priced daily, and legally walled off from the manager's own balance sheet, which is why even a failed AMC does not take your holdings with it.</p>
+<h3><span class="sn">38.2</span>Equity, debt, hybrid and solution-oriented schemes</h3>
+<p>The menu, in the order you will meet it. <strong>Equity funds</strong> own stocks: large-cap, mid-cap, small-cap, flexi-cap (the manager chooses the mix), sector and thematic (one industry or story, Chapter 31 in a wrapper), and ELSS, the tax-saving variant with a three-year lock-in. <strong>Debt funds</strong> own bonds and money-market paper, from overnight funds, nearly cash, to long-duration gilt funds, which are bond-price bets, Chapters 42-44 supply the grammar. <strong>Hybrid funds</strong> blend the two, from conservative, mostly debt, to aggressive, mostly equity, and include the popular balanced-advantage category that shifts with valuations. <strong>Solution-oriented</strong> schemes package retirement and children goals with lock-ins. The category label is a promise about the machine inside; read the actual portfolio before believing it, because "flexi" and "balanced" cover multitudes.</p>
+<h3><span class="sn">38.3</span>Regular vs direct plans: the cost difference over decades</h3>
+<p>Every Indian mutual fund scheme comes in two flavours with identical portfolios: the <strong>regular plan</strong>, bought through a distributor, which pays that distributor a commission from your money every year, forever; and the <strong>direct plan</strong>, bought from the AMC or a direct platform, which does not. The commission, typically 0.7-1.2 percentage points a year in equity schemes, sounds small and is not: it is a perpetual annual tax on your entire growing corpus. The chart below is the arithmetic on a ₹25,000 monthly SIP over twenty years at 12% market returns: the direct plan retires with roughly ₹30 lakh more, several years of the SIP itself, donated quietly to a distribution chain many investors never knew they were paying.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 280" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="240.0" y2="240.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="244.0">0 L</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="128.0" y2="128.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="132.0">130 L</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="16.0" y2="16.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="20.0">260 L</text><rect fill="#4e8a67" height="191.3" rx="4" width="70" x="180.5" y="48.7"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="215.5" y="42.7">222 L</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="215.5" y="256">Direct plan, 0.8% TER</text><rect fill="#8a4e4e" height="165.4" rx="4" width="70" x="507.5" y="74.6"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="542.5" y="68.6">192 L</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="542.5" y="256">Regular plan, 1.9% TER</text></svg>
+<p>Regular plans are not a scam; a good advisor can earn the fee many times over in behaviour coaching alone. But know the price, decide whether you are receiving the service, and never pay it by accident.</p>
+<h3><span class="sn">38.4</span>Expense ratios, exit loads and hidden costs</h3>
+<p>The <strong>total expense ratio</strong>, TER, is the all-in annual fee, deducted daily from the NAV invisibly: you never see a bill, which is precisely why it works. Equity TERs run from under 0.2% for index funds to 2%+ for small active schemes; every 0.5% of TER is roughly 10% of your twenty-five-year wealth. <strong>Exit loads</strong> penalise early redemption, commonly 1% within a year, and are disclosed, fair, and worth respecting. The quieter costs: the portfolio's own trading costs, not in the TER; cash drag in a fund holding 5% cash; and, in fund-of-funds, a second layer of fees. The habit to build: before buying any scheme, read three numbers in the factsheet, TER, exit load, and portfolio turnover, and compare them with the category's honest alternatives. Five minutes, once per fund, is among the highest-paid reading you will ever do.</p>
+<h3><span class="sn">38.5</span>How funds are regulated</h3>
+<p>SEBI's fund regulation is one of Indian finance's quiet successes. It mandates the trust structure, caps and standardises TERs by fund size, bans entry loads outright, forces daily NAV publication, standardises the category definitions so "large-cap" means the same thing at every AMC, requires skin-in-the-game from key employees, and polices mis-selling with increasing teeth. The result: outright fund fraud is rare in India; the industry's extraction happens legally, through costs and complexity, which is why this chapter's cost literacy matters more than any fraud fear. Abroad, the SEC plays the same role for US funds. Regulation makes funds safe to own; it cannot make them cheap to own. That part is still your job.</p>
+<h3><span class="sn">38.6</span>Worked example: the 20-year cost of 1% higher fees</h3>
+<div class="example">
+<p class="ex-title">Case: same SIP, same market, two plans</p>
+<p>₹25,000 a month, twenty years, market returns 12% a year. The direct plan at 0.8% TER compounds at 11.2% and ends near ₹2.22 crore. The regular plan at 1.9% TER compounds at 10.1% and ends near ₹1.92 crore. The 1.1-point annual difference, invisible in every statement, consumed ₹30 lakh, about 14% of the final wealth. And the rule scales: on a ₹50,000 SIP over thirty years the same percentage gap costs over ₹3 crore. Fee awareness is not frugality; it is the single largest investment decision most mutual fund investors will ever make, disguised as a rounding error.</p>
+</div>
+<h3><span class="sn">38.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Who are the AMC, trustee and custodian, and which separation protects you from a failed AMC?</li>
+<li>Name the four scheme families and the one member of each worth remembering.</li>
+<li>What exactly does the regular plan's commission tax, and for how long?</li>
+<li>Which three factsheet numbers do you read before buying any scheme?</li>
+<li>Why does fund fraud stay rare in India, and what does regulation not protect you from?</li>
+<li>Reproduce the case's arithmetic: how does a 1.1-point fee gap become a 14% wealth gap, and what does thirty years do to it?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-37-trading-trend-mean-reversion.html">← Chapter 37: Trading Stocks: Trend Following and Mean Reversion</a>
+<a href="finance-reference-39-index-funds-etfs.html">Chapter 39: Index Funds and ETFs →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
