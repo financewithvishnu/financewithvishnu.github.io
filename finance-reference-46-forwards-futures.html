@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 46. Forwards and Futures - Finance With Vishnu</title>
+<meta content="Forwards and futures explained: risk transfer and the hedger-speculator-arbitrageur triangle, counterparty risk vs exchange clearing, margin and daily mark-to-market, cost-of-carry pricing, NSE index and stock futures, with worked hedging cases." name="description"/>
+<meta content="futures and forwards difference, cost of carry futures pricing, mark to market margin explained, Nifty futures lot size, hedging with index futures, open interest and basis, cash and carry arbitrage, derivatives risk transfer" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 46. Forwards and Futures", "description": "Derivatives move risk rather than destroy it: hedgers buy certainty, speculators carry risk for pay, arbitrageurs keep prices honest. Forwards are private and bespoke, and inherit counterparty risk; futures standardise, clear through an exchange, and settle P&L in cash nightly via margin and mark-to-market. Fair futures price is spot plus cost of carry, not a forecast. Cases: a wheat farmer buying certainty at Rs 2,400 a quintal, and a Rs 20 crore portfolio hedged with about 183 Nifty futures.", "keywords": ["futures and forwards difference", "cost of carry futures pricing", "mark to market margin explained", "Nifty futures lot size", "hedging with index futures", "open interest and basis", "cash and carry arbitrage", "derivatives risk transfer"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
+<h1>Chapter 46. Forwards and Futures</h1>
+<p class="count">Chapter 46 of 85 · about 20 minutes</p>
+<p class="lede">A derivative is a promise about a price, and like every promise it can protect or it can destroy, depending on why it was made. Futures and forwards were invented so that a farmer could sleep before harvest and an airline could budget its fuel: insurance contracts, in essence. That the same contracts now host some of the most feverish speculation on earth says something about humans and nothing against the instrument. This chapter opens Part VII with the two simplest derivatives and the one formula that prices them.</p>
+<h3><span class="sn">46.1</span>Why derivatives exist: risk transfer, not casino (unless used as one)</h3>
+<p>Risk in an economy cannot be destroyed, only moved. The farmer carries the risk that wheat prices fall; the miller carries the risk that they rise; a contract between them deletes both risks at once, at the cost of giving up the lucky outcomes too. That is a hedge, and the party who takes the other side without an underlying need, the speculator, is not a villain but a paid risk-bearer: they absorb what the hedger cannot stomach, for an expected profit. A third actor, the arbitrageur, keeps the contract's price honest against the spot price. Hold this triangle, hedger, speculator, arbitrageur, in mind through all of Part VII. The same contract is insurance in the hedger's hands, a trade in the speculator's, and a calibration tool in the arbitrageur's. Whether a derivative is a casino chip is a property of the user, not the instrument.</p>
+<h3><span class="sn">46.2</span>Forwards: the private contract</h3>
+<p>A forward is a bespoke promise: two parties agree today the price, quantity and date of a future transaction. An exporter who will receive $500,000 in three months sells it forward to a bank at, say, ₹84.20, and the rupee's wanderings stop mattering to them. The strengths are exactly its privacy: any asset, any amount, any date. The weaknesses are also its privacy. Nobody stands between the parties, so <strong>counterparty risk</strong>, the other side simply failing to perform, is yours to assess; nothing settles until the end, so losses accumulate invisibly; and the contract is illiquid, because a bespoke promise fits no one else. Forwards remain the workhorse of corporate currency hedging precisely because companies want customisation more than they fear their bank. Retail investors will rarely touch one directly, but they live downstream of millions of them.</p>
+<h3><span class="sn">46.3</span>Futures: the exchange-traded standard, daily settlement and margin</h3>
+<p>A future is a forward rebuilt for strangers. Standardise the quantity, the date and the grade; list it on an exchange; and interpose the clearing corporation as the counterparty to both sides, so neither trader ever relies on the other. Two mechanisms make that safety work. <strong>Margin:</strong> both buyer and seller deposit a fraction of the contract value upfront, initial margin set by the volatility of the underlying, topped up if losses erode it. And <strong>mark-to-market:</strong> every evening, gains and losses are settled in cash at the closing price, so no debt can quietly accumulate. The flow below shows what that feels like.</p>
+<div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Buy 1 lot at 24,100</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Margin blocked, say ~Rs 1.4 lakh</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Day 1 close 23,900</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Loss 200 pts x 50 = Rs 10,000 debited tonight</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Day 2 close 24,300</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Gain 400 pts x 50 = Rs 20,000 credited tonight</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">You sell at 24,350</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Final 50 pts x 50 = Rs 2,500; margin released</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">Daily mark-to-market: futures P&amp;L settles in cash every night, win or lose. There is no waiting for expiry to find out.</p>
+<p>Daily settlement is the entire character of the instrument: a future pays or collects its P&amp;L every night, which is why a futures position can be right in direction and still bankrupt you on the path, a lesson every leveraged trader learns once.</p>
+<h3><span class="sn">46.4</span>Pricing futures: cost of carry</h3>
+<p>A future's fair price is not a forecast; it is an arithmetic identity. If you can buy the asset today and carry it to the delivery date, paying the funding cost and collecting any income it throws off, then the futures price must equal spot plus that net carry: F = S × e<sup>(r-q)T</sup>. Nifty at 24,000, a 6.5% short rate, one month out, dividends roughly negligible over a month: F ≈ 24,000 × e<sup>0.065/12</sup> ≈ ₹24,129. And if the market quotes something far off, the arbitrageur closes the gap: a future offered at 24,400 invites the cash-and-carry trade, borrow, buy the basket, sell the future, and pocket about ₹271 per index unit almost without risk. Carry cuts the other way when the income is large (stocks pay dividends, commodities charge storage), and futures can trade below spot, "backwardation", usually a sign of shortage or stress. The point to carry away: futures prices are plumbing, not prophecy. They embed the interest rate, not anyone's view of the future.</p>
+<h3><span class="sn">46.5</span>Index futures and single-stock futures on NSE</h3>
+<p>India's futures market is one of the world's busiest. <strong>Index futures</strong> on the Nifty and Bank Nifty are cash-settled (an index cannot be delivered, so the difference is paid in rupees), trade in fixed lots, and expire on a monthly cycle, with positions routinely "rolled", closed in the near month and reopened in the next, by those who want to stay hedged or exposed. <strong>Single-stock futures</strong> cover a few hundred large, liquid names, are physically settled since SEBI's 2019 move (hold a stock future to expiry and shares actually change hands), and concentrate leverage where SEBI can see it. Two vocabulary words matter for reading the market. The <strong>basis</strong>, futures minus spot, tells you about funding, dividends and mood; a persistently rich basis is bullish positioning, a discount often marks stress. And <strong>open interest</strong>, the count of live contracts, distinguishes a price move with fresh conviction (OI rising) from mere position shuffling (OI falling).</p>
+<h3><span class="sn">46.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: the farmer's hedge, and what it costs</p>
+<p>A wheat farmer expects 500 quintals at harvest and can lock in ₹2,400 per quintal in the futures market today. He sells the futures. Harvest arrives. If spot wheat is ₹2,100, he sells his crop cheap, but the futures gain, 300 × 500 = ₹1,50,000, restores him to ₹2,400 effective. If spot is ₹2,700, he sells dear and pays the same ₹1,50,000 back on the futures, netting ₹2,400 again. Notice the shape of the deal: the hedge did not make him money; it made him certain, in both directions. Complaining about the futures loss in the good year is complaining about the fire insurance because the house did not burn. Hedging is the purchase of certainty, and its price is the upside you will sometimes forfeit.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: hedging a ₹20 crore portfolio with Nifty futures</p>
+<p>A fund holds a ₹20 crore equity portfolio with a beta of 1.1 to the Nifty, which stands at 24,000 with a lot size of 50, one futures contract worth ₹12 lakh. The hedge ratio: (20 crore × 1.1) ÷ 12 lakh ≈ 183 contracts, sold short. The market then falls 5%. The portfolio, levered 1.1 times to the index, loses about 5.5%, ₹1.10 crore. The futures gain: 183 contracts × 50 × (24,000 × 5%) ≈ ₹1.10 crore. Net: roughly flat, precisely as designed. Three practical truths hide in the arithmetic. The hedge used beta, not hope, because a high-beta portfolio falls more than the index and must be insured for more. The futures gain arrived as daily cash through mark-to-market while the portfolio's loss stayed on paper, a liquidity mismatch the treasurer must fund. And the hedge caps regret in both directions: if the market had risen 5%, the futures would have eaten most of the gain. Insurance has a premium even when it costs nothing upfront.</p>
+</div>
+<h3><span class="sn">46.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Name the three actors a derivatives market needs and what each is paid for.</li>
+<li>Which two weaknesses of a forward follow directly from its privacy?</li>
+<li>How do margin and mark-to-market together remove counterparty risk from futures?</li>
+<li>Derive the fair one-month futures price for Nifty at 24,000 with a 6.5% rate, and describe the arbitrage if the quote is 24,400.</li>
+<li>What do the basis and open interest each tell you that the price alone does not?</li>
+<li>In Case 2, why does the fund sell 183 contracts rather than 167, and where does the cash-flow strain of a good hedge appear?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-45-money-markets.html">← Chapter 45: Money Markets and Cash Management</a>
+<a href="finance-reference-47-options-i.html">Chapter 47: Options I: Payoffs and Basic Strategies →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
