@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 42. Bonds: Pricing, Yields and Duration - Finance With Vishnu</title>
+<meta content="Bond fundamentals for Indian investors: coupon, face value, maturity, the price-yield seesaw with chart, YTM vs current yield, duration and convexity, callable bonds, and why long bonds fell in 2022." name="description"/>
+<meta content="bond basics India, bond price yield relationship, yield to maturity explained, modified duration, convexity bonds, callable bond yield to call, 10 year gsec yield, why bonds fell 2022, interest rate risk bonds, bond investing for beginners India" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 42. Bonds: Pricing, Yields and Duration", "description": "A bond is three promises, and bond investing is downside management because the best case is known. Price and yield seesaw through time value, with duration as the ruler: 7 duration means 7% per 1% rate move. YTM is the comparable return; current yield is the income. Callable bonds must be priced to the call date. Cases: a 10-year repriced at plus and minus 1%, and 2022, when duration risk stopped being theoretical.", "keywords": ["bond basics India", "bond price yield relationship", "yield to maturity explained", "modified duration", "convexity bonds", "callable bond yield to call", "10 year gsec yield", "why bonds fell 2022", "interest rate risk bonds", "bond investing for beginners India"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VI · Fixed Income and Credit</p>
+<h1>Chapter 42. Bonds: Pricing, Yields and Duration</h1>
+<p class="count">Chapter 42 of 85 · about 21 minutes</p>
+<p class="lede">Most Indian investors think of bonds as the boring half of the portfolio, something that pays 7% and never makes the news. Then a year like 2022 arrives, the world's safest bonds fall 20%, and everyone learns at once that a bond is a machine with moving parts. Part VI teaches the machine. This chapter is the core of it: what a bond is, why its price moves opposite to interest rates, and how to measure exactly how much it will move.</p>
+<h3><span class="sn">42.1</span>What a bond is: coupon, face value, maturity</h3>
+<p>From first principles, a bond is a standardised IOU. The issuer borrows the <strong>face value</strong>, typically ₹100 or ₹1,000 per unit, promises a fixed periodic interest payment, the <strong>coupon</strong>, and promises the face value back on the <strong>maturity</strong> date. Three numbers define the whole contract. Everything else in bondland, prices, yields, ratings, spreads, is commentary on those three promises: what they are worth today, and how sure they are. Note the deep difference from a stock: a bond's best case is known in advance, every coupon and the principal, so bond investing is the management of the downside, the rate moves and the missed payments, rather than the pursuit of the upside.</p>
+<h3><span class="sn">42.2</span>Price and yield: the seesaw every investor must feel</h3>
+<p>The single mechanic that runs all of fixed income: when market interest rates rise, existing bonds, paying their old, lower coupons, are worth less, so their prices fall; when rates fall, their prices rise. Price and yield sit on a seesaw, and no bond escapes it. The arithmetic is Chapter 2's time value: the bond is a list of future payments, and the market discounts them at the current rate. A 7% bond in an 8% world must sell below face value to compensate its buyer; at exactly what discount is the next section's job. The chart shows the seesaw's other half, the part that surprises people: the longer the bond, the longer the lever, and the harder the seesaw kicks.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="204.0" y2="204.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="208.0">90</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="142.0" y2="142.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="146.0">95</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="80.0" y2="80.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="84.0">100</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">+0.0</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="128.2" y="288">+0.1</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="200.4" y="288">+0.2</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="272.7" y="288">+0.3</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="344.9" y="288">+0.4</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="417.1" y="288">+0.5</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="489.3" y="288">+0.6</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="561.6" y="288">+0.7</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="633.8" y="288">+0.8</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="706.0" y="288">+0.9</text><polyline fill="none" points="56.0,80.0 128.2,97.4 200.4,114.7 272.7,130.8 344.9,147.0 417.1,163.1 489.3,178.0 561.6,192.8 633.8,207.7 706.0,221.4" stroke="#8a4e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="221.4" fill="#8a4e4e" r="3.4"></circle><polyline fill="none" points="56.0,80.0 128.2,82.5 200.4,85.0 272.7,87.4 344.9,89.9 417.1,92.4 489.3,94.9 561.6,97.4 633.8,99.8 706.0,102.3" stroke="#a8894e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="102.3" fill="#a8894e" r="3.4"></circle><rect fill="#8a4e4e" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">10-year bond price (yield 7% -&gt; 8%)</text><rect fill="#a8894e" height="3.4" width="10" x="351.0" y="6"></rect><text fill="#332619" font-size="11.5" x="366.0" y="11">2-year bond price (same rate rise)</text></svg>
+<h3><span class="sn">42.3</span>Yield to maturity and current yield</h3>
+<p>Two yields, two questions. <strong>Current yield</strong>, the coupon divided by today's price, answers "what income does this price buy me?": a 7% coupon at a price of 93 yields 7.5% currently. <strong>Yield to maturity</strong>, YTM, answers the deeper question: "what annual return do I lock in if I buy now and hold to the end, reinvesting coupons at the same rate?". YTM is the internal rate of return of the bond's whole payment list, the single number that makes two different bonds honestly comparable. When the business channel says "the 10-year yield is 7.2%", it means the YTM of the benchmark government bond, the price of the safest money in the country, from which every other interest rate in your life, your home loan included, is ultimately marked.</p>
+<h3><span class="sn">42.4</span>Duration and convexity: measuring interest-rate risk</h3>
+<p><strong>Duration</strong> converts the seesaw into a ruler. Modified duration, roughly the weighted average wait for the bond's cash flows, tells you the percentage price change for a 1% rate move: a 10-year government bond with duration near 7 loses about 7% when yields rise one point; a 2-year bond with duration near 2 loses about 2%. One number, and the entire risk of a bond portfolio is legible. <strong>Convexity</strong> is the correction term: the seesaw is not straight but curved, slightly in the holder's favour, so gains from falling rates slightly outrun losses from rising ones. The investor's working rules: match your bond holdings' duration to when you need the money; know that "safe" long bonds are safe in default terms and volatile in price terms; and never hold long duration through a tightening cycle by accident, which is what the world's bond funds did in 2022.</p>
+<h3><span class="sn">42.5</span>Embedded options: callable and puttable bonds</h3>
+<p>Some bonds carry a hidden player. A <strong>callable</strong> bond lets the issuer repay early, precisely when rates have fallen and you least want your high coupon back: the issuer holds an option against you, and you are paid for it with a higher yield. A <strong>puttable</strong> bond lets you hand it back early, your option, for which you accept a lower yield. Indian investors meet the callable species constantly, in bank perpetuals and corporate issues, and the discipline is one sentence: a callable bond's "yield to maturity" is a fiction; compute the yield to the call date, the worst case you are actually underwriting, and let that number carry the comparison.</p>
+<h3><span class="sn">42.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: pricing a 10-year bond as rates move 1%</p>
+<p>A ₹1,000 face-value bond, 7% coupon, ten years to run, bought at par when the market's rate is 7%. Rates rise to 8%: each future payment is now discounted harder, and the price falls to roughly ₹933, a 6.7% mark-to-market loss on the "safest" asset in the country. Rates fall to 6% instead, and the price rises to roughly ₹1,074. The holder to maturity, of course, receives every promised rupee either way; the price moves only matter to the seller. That sentence is the entire philosophy of bond laddering, Chapter 43's case, and of matching duration to your actual liabilities: the seesaw is only dangerous to those who must get off early.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: why long bonds fell in 2022</p>
+<p>Entering 2022, the world's central banks had pinned rates near zero and bought bonds by the trillion; the US 10-year yielded about 1.5%. Then inflation, declared transitory, proved structural, and the fastest tightening cycle in forty years drove that yield past 4%. The arithmetic of section 42.4 executed at scale: long-duration bond indices lost 15-20%, the worst year in modern bond history, and the 60/40 portfolio, built on the assumption that bonds zig when stocks zag, lost on both legs at once. India's version was gentler but rhymed: long gilt funds posted rare negative years. The lesson the year burned in: duration is risk, real and measurable, and "I hold government bonds" is a statement about default, not about price. The investor who knew his funds' durations read 2022 as arithmetic; everyone else read it as betrayal.</p>
+</div>
+<h3><span class="sn">42.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Define a bond by its three contract numbers, and state the deep difference from a stock.</li>
+<li>Explain the price-yield seesaw from first principles, and why the long end kicks harder.</li>
+<li>Which question does current yield answer, and which does YTM answer?</li>
+<li>What does a modified duration of 7 mean in rupees when yields rise 1%?</li>
+<li>Why is a callable bond's YTM a fiction, and what number replaces it?</li>
+<li>Using Case 2: what assumption broke the 60/40 portfolio in 2022?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-41-beyond-mutual-funds.html">← Chapter 41: Beyond Mutual Funds: PMS, AIFs, REITs and InvITs</a>
+<a href="finance-reference-43-gsecs-yield-curve.html">Chapter 43: Government Securities and the Yield Curve →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+                     </html>
