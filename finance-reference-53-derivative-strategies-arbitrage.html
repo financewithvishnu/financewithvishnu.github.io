@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 53. Derivative Strategies: Arbitrage and Event-Driven Trading - Finance With Vishnu</title>
+<meta content="Arbitrage and event-driven trading in India: the cash-futures basis trade priced with real costs, merger arbitrage and deal spreads, futures calendar spreads, index rebalancing and event trades, and why arb returns are small steady and crowded." name="description"/>
+<meta content="cash futures arbitrage India, basis trade Nifty, arbitrage mutual funds how they work, merger arbitrage deal spread, calendar spread futures, index rebalancing trade Nifty, event driven trading India, arbitrage returns small crowded" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 53. Derivative Strategies: Arbitrage and Event-Driven Trading", "description": "True arbitrage is convergence with an engineered exit: the cash-futures basis trade locks the premium above fair carry and earns the short rate plus a sliver, which is the whole economics of arbitrage funds. Merger arbitrage prices deal completion, with a downside to the pre-deal price. Calendar spreads trade the curve's shape; event trades pay only the gap between priced expectation and outcome. Arb returns are small, steady, crowded and capacity-constrained. Cases: a Nifty basis trade netted down from 0.92% to 0.77% a month after costs, and a merger arb that broke on a regulator's review.", "keywords": ["cash futures arbitrage India", "basis trade Nifty", "arbitrage mutual funds how they work", "merger arbitrage deal spread", "calendar spread futures", "index rebalancing trade Nifty", "event driven trading India", "arbitrage returns small crowded"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
+<h1>Chapter 53. Derivative Strategies: Arbitrage and Event-Driven Trading</h1>
+<p class="count">Chapter 53 of 85 · about 19 minutes</p>
+<p class="lede">Arbitrage is the most respectable word in trading and the most abused. True arbitrage buys the same thing cheap and sells it dear at the same instant; almost everything sold under the name is actually a bet on two prices converging, with a gap where the risk lives. This chapter prices the real thing, in rupees and paise, and shows why its returns are small, steady and forever under siege.</p>
+<h3><span class="sn">53.1</span>Cash-futures arbitrage and the basis trade in India</h3>
+<p>Chapter 46 priced a future as spot plus cost of carry. When the market quotes a future far above fair value, the arbitrage is mechanical: buy the underlying basket (or the stock), sell the future, and hold to expiry, where the two prices must, by the exchange's own settlement rule, become one. The profit is the excess of the quoted carry over your actual funding cost, and it is close to riskless, directionally flat: market up or down, the long and the short offset. In India this trade, run by institutions and arbitrage mutual funds, is the quiet engine that keeps futures honest, and it is also the reason <strong>arbitrage funds</strong> exist as a category: they run exactly this book, taxed as equity, earning roughly the short rate plus whatever richness the basis offers, with equity-market risk engineered out. When futures instead trade below spot, the reverse trade needs short selling, which Indian rules make awkward for cash stocks, so discounts persist longer than premiums: an asymmetry worth remembering whenever a "cheap" future tempts you.</p>
+<h3><span class="sn">53.2</span>Merger arbitrage and deal spreads</h3>
+<p>When a takeover is announced at ₹500 a share and the target trades at ₹470, the ₹30 gap is not a mispricing; it is the market's invoice for the chance the deal fails. The merger arbitrageur buys the target, and sometimes shorts the acquirer in a share-swap deal, to collect that spread if the deal completes. The economics are the economics of insurance again: many small spreads collected, occasional large losses when a deal breaks on financing, a shareholder vote, or a regulator. The skill is not finding announced deals, which is a news feed, but pricing completion probability: antitrust exposure, funding certainty, the acquirer's incentives to walk, and the downside to the pre-deal price if it all unwinds. A 6% spread on a deal with 95% completion odds and a 25% break-down loss is not obviously cheap, and that arithmetic, run honestly, is the entire craft.</p>
+<h3><span class="sn">53.3</span>Futures spreads and calendar positions</h3>
+<p>A <strong>calendar spread</strong> trades the same asset across expiries: long the near month, short the far month, or the reverse. Stripped of directional exposure, what remains is a bet on the <em>shape</em> of the futures curve, on whether the carry between months is rich or cheap, and a way to harvest the roll. When the far month trades unusually rich to the near, the spread locks in the convergence as the near expires into the far's starting point. These are the quietest trades on the exchange: low margin, because the exchange recognises the offset; small, grinding P&amp;L; and a clientele of professionals and market-makers. For the retail reader the calendar spread matters less as a trade than as a diagnostic: the spread between expiries is where the market's funding stress, dividend expectations and positioning show up first, a seismograph under the headline price.</p>
+<h3><span class="sn">53.4</span>Event trades: results, policy days, index rebalancing</h3>
+<p>Some calendar events move prices through channels mechanical enough to trade. <strong>Index rebalancing</strong>: when the Nifty adds and drops constituents, every passive fund tracking it must buy the addition and sell the deletion at the effective date's closing auction, a predictable burst of demand and supply that front-runners position for weeks ahead, compressing the very profit they chase. <strong>Results season</strong>: options-implied moves set the hurdle, and the trade, as Chapter 52 showed, is about realised versus implied, not direction. <strong>Policy days</strong>, RBI, budget, elections: the same implied-versus-realised game at macro scale. The shared anatomy: a known date, a priced expectation, and a payoff that exists only in the gap between what was priced and what arrives. Event trading is therefore information trading, and the question to ask before any event position is brutal and simple: what do I know about this outcome that the option prices do not already contain?</p>
+<h3><span class="sn">53.5</span>Why arbitrage returns are small, steady and crowded</h3>
+<p>Step back and the economics are almost disappointing, which is precisely the point. A near-riskless trade in a market watched by thousands of well-capitalised professionals cannot earn much more than the risk-free rate plus a thin spread for costs and the odd crisis. Arbitrage returns are <strong>small</strong>, because competition prices them down to funding plus a sliver. They are <strong>steady</strong>, because the risks are engineered away rather than borne. And they are <strong>crowded</strong>, because everyone wants them: the cash-futures basis collapses the moment too much capital chases it, merger spreads narrow when arbs are flush and gap when they are wounded, and the rebalancing trade shrinks a little every year as more money pre-positions. Capacity is the binding constraint: the rupees that fit into a genuine arbitrage are limited by the liquidity of the legs, which is why these strategies will never absorb your whole portfolio, and why anyone offering arbitrage-like returns at unlimited scale is describing something else.</p>
+<h3><span class="sn">53.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: a cash-futures arbitrage with real costs</p>
+<p>Nifty spot 24,000; the one-month future trades at 24,220. Fair carry at a 6.5% funding rate is about ₹130, so the future is roughly ₹90 rich. The trade: buy the index basket (or an index fund as the working leg), sell the future, hold one month to expiry convergence. Gross capture: ₹220 per unit, the full premium, since expiry settles future at spot. Now the honest ledger: brokerage and statutory charges on four legs, impact cost of buying a basket, and STT on the futures sale sum to roughly ₹36 per unit; funding the position at the short rate costs another slice already counted in fair value. Net capture: about ₹184 on ₹24,000 deployed, 0.77% for the month, roughly 9% annualised, against 6.5% risk-free. That gap is the entire economics of an arbitrage fund, and it explains the category's whole personality: returns a notch above liquid funds, volatility near zero, and no magic whatsoever. The day the basis narrows, the fund's return narrows with it, mechanically and without drama.</p>
+</div>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 280" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="240.0" y2="240.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="244.0">-1.058%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="128.0" y2="128.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="132.0">0%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="16.0" y2="16.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="20.0">1.058%</text><rect fill="#4e8a67" height="97.4" rx="4" width="70" x="126.0" y="30.6"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="161.0" y="24.6">0.92%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="161.0" y="256">Nifty futures rich by</text><rect fill="#b0633c" height="15.9" rx="4" width="70" x="344.0" y="128.0"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="379.0" y="157.9">-0.15%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="379.0" y="256">All-in costs</text><rect fill="#4e8a67" height="81.5" rx="4" width="70" x="562.0" y="46.5"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="597.0" y="40.5">0.77%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="597.0" y="256">Net monthly arb</text></svg>
+<div class="example">
+<p class="ex-title">Case 2: the merger arb that broke on a regulator's call</p>
+<p>A composite of real Indian episodes, numbers illustrative. An announced acquisition offers ₹500 a share in cash; the target trades at ₹470, a 6.4% gross spread for a deal expected to close in four months. An arb desk sizes the position for the visible risks: shareholder approval looks safe, financing is committed, both boards aligned. The risk that was underweighted sits in a filing with the competition regulator, which opens an extended review. Months pass; spreads widen as arbs with quarterly horizons bail; then the regulator's conditions arrive heavy enough that the parties renegotiate, and in the uncertainty the stock trades down to ₹380 before any resolution. The desk's arithmetic was: make ₹30 if right, lose ₹90 if wrong, an asymmetry that demands completion odds above 75% merely to break even, before costs, and the regulator had moved the true odds. Three lessons: the spread is the price of the specific risks, so enumerate them rather than admire the percentage; the downside in a broken deal is the pre-announcement price, not zero loss; and time is a cost, because a four-month deal that becomes a fourteen-month saga pays its 6.4% at a fraction of the annualised rate the spreadsheet promised.</p>
+</div>
+<h3><span class="sn">53.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Construct the cash-futures arbitrage and state exactly where its profit comes from.</li>
+<li>Why do futures discounts persist longer than premiums in India?</li>
+<li>What does a merger spread actually price, and what two numbers define the trade's asymmetry?</li>
+<li>What remains as the risk of a calendar spread once direction is stripped out?</li>
+<li>Why does index rebalancing create a predictable flow, and what erodes the profit in trading it?</li>
+<li>Explain "small, steady and crowded" as three separate consequences of competition.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-52-derivative-strategies-hedging.html">← Chapter 52: Derivative Strategies: Hedging and Income</a>
+<a href="finance-reference-54-algo-trading.html">Chapter 54: Systematic and Algorithmic Trading →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
