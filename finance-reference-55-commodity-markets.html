@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 55. Commodity Markets: The Indian Ecosystem - Finance With Vishnu</title>
+<meta content="Indian commodity markets mapped: spot vs futures and delivery convergence, MCX and NCDEX under SEBI, reading an MCX contract specification, contango backwardation and roll cost, who uses these markets, and one MCX gold contract traced from margin to delivery." name="description"/>
+<meta content="MCX commodity trading India, NCDEX agricultural commodities, commodity futures contract specification, contango backwardation roll cost, MCX gold contract margin, SEBI commodity derivatives regulation, gold mini lot size, delivery settlement commodity futures" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 55. Commodity Markets: The Indian Ecosystem", "description": "Commodity markets run in two layers: the physical spot market and the paper futures market, chained by delivery and convergence. MCX owns metals and energy, NCDEX agriculture, both under SEBI since 2015. A contract specification answers unit, quotation, tick and settlement before you trade. The curve tells the physical story: contango charges the roll, backwardation pays it. Hedgers justify the market; traders and arbitrageurs run it. Case: one MCX gold contract traced, Rs 72 lakh of value on Rs 4.3 lakh of margin, through its three possible endings.", "keywords": ["MCX commodity trading India", "NCDEX agricultural commodities", "commodity futures contract specification", "contango backwardation roll cost", "MCX gold contract margin", "SEBI commodity derivatives regulation", "gold mini lot size", "delivery settlement commodity futures"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VIII · Commodities: Indian Markets and Strategies</p>
+<h1>Chapter 55. Commodity Markets: The Indian Ecosystem</h1>
+<p class="count">Chapter 55 of 85 · about 19 minutes</p>
+<p class="lede">Commodities are the oldest markets on earth and the least sentimental: a tonne of copper pays no dividend, owes you nothing, and is worth exactly what the next industrial cycle says it is. India runs one of the world's larger commodity exchanges, and yet most Indian investors meet commodities only through gold. This chapter maps the ecosystem, and Part VIII then teaches its major commodities and strategies.</p>
+<h3><span class="sn">55.1</span>Physical vs paper commodities: spot and futures</h3>
+<p>Two markets trade every commodity. The <strong>spot</strong> market is the physical thing: wheat in the mandi, gold at the bullion dealer, crude at the refinery gate, with trucks, assays, warehouses and GST invoices. The <strong>futures</strong> market is a paper promise about that thing, standardised and exchange-traded, settled mostly in cash because almost nobody wants the truck. The two are chained together by delivery: a futures contract that drifts too far from spot invites delivery arbitrage, which is why, at expiry, the paper price must equal the physical one, the convergence every commodity strategy ultimately leans on. The investor's first decision is which market they belong in. Buying physical gold is a savings decision with storage and purity problems; buying gold futures is a leveraged price bet with daily cash settlement; conflating the two is how people end up accidentally owning, or margin-called out of, a kilogram of metal.</p>
+<h3><span class="sn">55.2</span>MCX, NCDEX and the regulators; global mirrors</h3>
+<p>India's commodity derivatives trade mainly on two exchanges. The <strong>MCX</strong> dominates metals and energy: gold, silver, copper, crude oil and natural gas, with Indian volumes in bullion among the world's largest. <strong>NCDEX</strong> is the agricultural exchange: guar, spices, oilseeds, chana and the like, where the farmer economy meets the futures market. Since 2015 both answer to <strong>SEBI</strong>, which absorbed the old Forward Markets Commission, one regulator now watching securities and commodity derivatives alike, which is why the margining, position-limit and surveillance machinery of Chapter 51 reads the same here. Indian prices do not float free: MCX gold is the international price translated through the rupee and import duty, MCX crude shadows NYMEX WTI and Brent, and base metals take their cue from the <strong>LME</strong>, with the <strong>CME</strong> group hosting the global benchmarks. An Indian commodity trader is always, whether they know it or not, trading a global price plus a currency plus a tax.</p>
+<h3><span class="sn">55.3</span>How a commodity futures contract is specified</h3>
+<p>Everything about a commodity future is written down in its specification, and reading one is a core skill. The MCX gold contract specifies the unit, one kilogram of 995-purity gold; the quotation, rupees per 10 grams; the tick, ₹1, worth ₹100 per contract; the expiry calendar and settlement, delivery into exchange-accredited vaults in specified cities; and the delivery logic, including quality standards and the option most traders take, squaring off in cash. Around the flagship sit the family: Gold Mini at 100 grams, and smaller retail denominations, because a one-kilogram contract at ₹72 lakh is wholesale money, and the mini contracts are how ordinary participants trade the same price. The specification answers, before you trade, the questions that matter: what exactly am I promising, in what quantity, quoted how, settled which way, and delivered where, if it comes to that.</p>
+<h3><span class="sn">55.4</span>Contango, backwardation and the roll cost</h3>
+<p>A commodity's futures curve, prices across expiries, tells the market's physical story. In <strong>contango</strong>, later months cost more: storage, insurance and funding are real, so future delivery costs more than today's, the normal state of gold and well-supplied markets. In <strong>backwardation</strong>, later months cost less: someone wants the physical now and will pay a premium for immediacy, the signature of shortage, common in oil and agricultural squeezes. The curve is not trivia for the investor, because a futures position must be <strong>rolled</strong>, the expiring contract sold and the next month bought, to stay exposed. In contango you sell cheap and buy dear, every month, a slow bleed called the <strong>roll cost</strong>; in backwardation the roll pays you. This is why "gold futures returned less than gold" is not a scandal but arithmetic, and why long-only commodity indices can bleed for years through quiet contango while spot prices look fine. Before holding any commodity on paper, ask what the curve charges you to wait.</p>
+<h3><span class="sn">55.5</span>Who uses these markets: hedgers, traders, arbitrageurs</h3>
+<p>The cast mirrors Chapter 46's triangle, with commodity colours. <strong>Hedgers</strong> are the reason the market exists: the jeweller fixing the gold price of next season's inventory, the refiner locking the crude-to-product margin, the farmer selling the harvest forward, the airline capping fuel. <strong>Traders and speculators</strong> take the other side, providing the liquidity hedgers pay for, and in Indian bullion they dominate volumes. <strong>Arbitrageurs</strong> stitch the markets together: spot against futures when the basis strays from fair carry, MCX against international prices through the import-parity calculation, one month against another along the curve. For a household, the usable version of this whole chapter is short: commodity futures are tools for those with commodity exposure, and exposure without a hedging need is speculation, a legitimate activity that should be entered knowingly, sized like the leveraged instrument it is, and never confused with owning the thing itself.</p>
+<h3><span class="sn">55.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case: tracing one MCX gold contract from margin to settlement</p>
+<p>Follow the flow above with numbers. Gold trades at ₹72,000 per 10 grams; one MCX contract is a kilogram, so the contract value is ₹72 lakh. You post about ₹4.3 lakh of margin, leverage of about 17 times, and from that moment every ₹1 tick in the price moves your account ₹100, so an ordinary ₹500-per-10g day, 0.7% in the metal, is ₹50,000, an 11.6% swing on your margin, settled in cash that night. Three paths now. You square off a week later at ₹73,200: profit ₹1,20,000, margin released, no gold anywhere in the story. You hold a losing position and watch the margin machinery of Chapter 51 operate on you. Or you hold to expiry and take delivery: you pay the full ₹72 lakh and a one-kilogram, 995-purity bar moves to your name in an accredited vault, assay certificate and all, at which point you have become the physical market, with storage and resale now your problem. Every commodity position is one of these three endings, chosen or forced, and the time to choose is before the margin is posted, not at expiry.</p>
+</div>
+<h3><span class="sn">55.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>What chains a futures price to the physical price at expiry?</li>
+<li>Which exchange dominates which commodities in India, and who regulates them since 2015?</li>
+<li>Read the MCX gold specification: unit, quotation, tick value, settlement.</li>
+<li>Define contango and backwardation as physical stories, and state what each does to a rolled long position.</li>
+<li>Why can a long-only commodity index fall in quiet contango while spot is flat?</li>
+<li>Which three actors use the commodity markets, and which one justifies their existence?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-54-algo-trading.html">← Chapter 54: Systematic and Algorithmic Trading</a>
+<a href="finance-reference-56-gold-energy-agriculture.html">Chapter 56: Gold, Energy and Agriculture →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
