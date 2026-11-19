@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 47. Options I: Payoffs and Basic Strategies - Finance With Vishnu</title>
+<meta content="Options basics for Indian markets: calls and puts as rights without obligations, payoff diagrams, strike premium and moneyness, covered calls protective puts and spreads, European cash-settled index options vs physical stock options, with worked cases." name="description"/>
+<meta content="call and put options explained, option payoff diagram, covered call strategy India, protective put insurance, bull call spread, Nifty options weekly expiry, SEBI F&amp;O study retail losses, in the money at the money out of the money" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 47. Options I: Payoffs and Basic Strategies", "description": "An option binds only the seller: the buyer pays a premium for a one-sided payoff, insured to the buyer, insurer to the seller. Payoff diagrams make the kink at the strike a reflex. Protective puts, covered calls and spreads cover most legitimate uses, each a decision about which tail to sell and which to buy. Index options are European and cash-settled; stock options are physically settled since 2019. SEBI found 93% of retail F&O traders lost money. Cases: insuring a Rs 10 lakh holding for 1.75%, and the right tail a covered call sells.", "keywords": ["call and put options explained", "option payoff diagram", "covered call strategy India", "protective put insurance", "bull call spread", "Nifty options weekly expiry", "SEBI F&O study retail losses", "in the money at the money out of the money"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
+<h1>Chapter 47. Options I: Payoffs and Basic Strategies</h1>
+<p class="count">Chapter 47 of 85 · about 20 minutes</p>
+<p class="lede">A future binds both parties; an option binds only one. That asymmetry, the right to walk away, is the most useful and the most mis-sold idea in the derivatives market. Used as designed, an option is an insurance policy with a quoted premium. Used as most Indian retail traders use it, it is a lottery ticket with a stock-exchange code. This chapter is about the design: payoffs, the language of strikes and premiums, and the three basic strategies that cover most legitimate needs.</p>
+<h3><span class="sn">47.1</span>Calls and puts: rights without obligations</h3>
+<p>A <strong>call</strong> is the right to buy at a fixed price; a <strong>put</strong> is the right to sell at a fixed price. The buyer pays a premium upfront and in exchange owns a one-sided payoff: the call buyer profits without limit as the price rises and loses only the premium as it falls; the put buyer, mirror-image. The seller (or "writer") collects the premium and accepts the mirror-image obligation: small certain income now, potentially large payment later. Keep the two archetypes in mind. The option buyer is the insured: pays rent, owns the tail. The option seller is the insurance company: collects rent, carries the tail. Both are honourable businesses. What is not a business is buying options because they are cheap, the way most retail money does it, because cheap things that expire worthless in a fortnight are expensive per unit of hope.</p>
+<h3><span class="sn">47.2</span>Payoff diagrams and the language of strike, premium, expiry</h3>
+<p>Four words define every option: the <strong>underlying</strong>, the <strong>strike</strong> (the fixed transaction price), the <strong>expiry</strong>, and the <strong>premium</strong> (the price of the right). An option whose right is already worth exercising is <strong>in the money</strong>; at the current price, <strong>at the money</strong>; worthless if exercised now, <strong>out of the money</strong>. The payoff chart below shows the two fundamental shapes, a Nifty 24,000 call bought for ₹180 and a 24,000 put bought for ₹150, profit or loss at expiry against the index level. Read them until they are reflexes: the buyer's line is flat at the loss of the premium on one side and climbs on the other; the kink sits at the strike; the flat segment is what the premium bought, the right to stop losing.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="247.6" y2="247.6"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="251.6">-1000</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="155.8" y2="155.8"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="159.8">0</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="63.9" y2="63.9"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="67.9">1000</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">23,3000</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="121.0" y="288">23,3250</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="186.0" y="288">23,3500</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="251.0" y="288">23,3750</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="316.0" y="288">24,4000</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="381.0" y="288">24,4250</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="446.0" y="288">24,4500</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="511.0" y="288">24,4750</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="576.0" y="288">25,5000</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="641.0" y="288">25,5250</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="706.0" y="288">25,5500</text><polyline fill="none" points="56.0,172.3 121.0,172.3 186.0,172.3 251.0,172.3 316.0,172.3 381.0,149.3 446.0,126.4 511.0,103.4 576.0,80.5 641.0,57.5 706.0,34.5" stroke="#4e8a67" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="34.5" fill="#4e8a67" r="3.4"></circle><polyline fill="none" points="56.0,77.7 121.0,100.7 186.0,123.6 251.0,146.6 316.0,169.6 381.0,169.6 446.0,169.6 511.0,169.6 576.0,169.6 641.0,169.6 706.0,169.6" stroke="#b0633c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="169.6" fill="#b0633c" r="3.4"></circle><rect fill="#4e8a67" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">Call buyer (premium 180)</text><rect fill="#b0633c" height="3.4" width="10" x="271.8" y="6"></rect><text fill="#332619" font-size="11.5" x="286.8" y="11">Put buyer (premium 150)</text></svg>
+<p>A worked reading: the index expires at 24,500. The call pays 500, profit 320 after the premium; the put expires worthless, loss the full 150. At 23,800 the call loses 180 and the put pays 200, profit 50. Notice that the put buyer was <em>right about direction</em> in the second outcome and still made almost nothing, because the premium is a hurdle the market must clear before the buyer earns a rupee. Chapter 48 prices that hurdle.</p>
+<h3><span class="sn">47.3</span>Covered calls, protective puts, spreads</h3>
+<p>Three combinations cover nearly every sane use. A <strong>protective put</strong> is stock plus a put: portfolio insurance with the premium as the explicit cost and the strike as the deductible. A <strong>covered call</strong> is stock plus a sold call: you rent out the upside beyond the strike, collecting premiums in quiet markets in exchange for capping your best months. A <strong>spread</strong> buys one option and sells another of the same type: a bull call spread, buying the 24,000 call and selling the 24,500 call, cuts the premium by more than half in exchange for capping the gain, turning "insurance plus lottery" into a clean, bounded bet on a range. The design principle is constant: every option you sell pays you for a risk you have decided you can afford; every option you buy costs you for a risk you have decided you cannot. Strategies are just those two decisions, combined.</p>
+<h3><span class="sn">47.4</span>European options and cash settlement in India</h3>
+<p>Two settlement facts shape Indian options. <strong>Index options</strong>, on the Nifty, Bank Nifty and the rest, are European (exercisable only at expiry, which matters little since they can be sold any day) and cash-settled, the difference paid in rupees, no shares moving. <strong>Stock options and futures</strong> have been physically settled since SEBI's phased move in 2019: hold an in-the-money stock option to expiry and shares change hands, which means a naked position can suddenly require delivery money many times the margin, a trap that has ambushed more than one retail trader in expiry week. The practical rules follow: know the settlement before you hold past the last few days; expect liquidity to migrate to expiry day, when Indian index volumes peak; and treat expiry-week gamma, the violent sensitivity of near-dead options, as a professional's arena.</p>
+<h3><span class="sn">47.5</span>Index options (Nifty, Bank Nifty) vs stock options</h3>
+<p>Index options are the mass market: deep liquidity, tight spreads, weekly expiries, and no single-stock surprises, since an index cannot be suspended, caught in fraud or halted on results. Stock options are the specialist's tool: wider spreads, richer premiums, event risk around earnings, and the physical-settlement obligation. One honest statistic belongs in every chapter on options: SEBI's 2024 study of individual F&amp;O traders found that about 93% lost money over FY22-FY24, with average losses around ₹2 lakh, and the losses concentrated exactly where the excitement is, in short-dated index options. The instrument that looks like a cheap leveraged bet on direction is, in aggregate, a transfer from retail buyers to institutions and sellers. That is not an argument against options; it is an argument for using them as this chapter teaches, as insurance and income against holdings, where the premium's drag is the known cost of a defined benefit, rather than as a directional lottery.</p>
+<h3><span class="sn">47.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: insuring a stock holding with a put</p>
+<p>You hold 500 shares of a company at ₹2,000, ₹10 lakh, and worry about the quarter but not the decade. You buy 500 of the three-month 1,900 puts at ₹35, costing ₹17,500, 1.75% of the holding. Now the floor: whatever happens, you can sell at 1,900, so your worst outcome is (1,900 − 35) = ₹1,865 per share, a bounded loss of 6.75% including the premium, against an unbounded loss uninsured. If the quarter is fine, the puts expire worthless and the ₹17,500 is gone, which you record the way you record your house insurance premium: the price of sleeping. Two judgment calls were embedded. The strike set the deductible, deeper out of the money is cheaper cover for bigger disasters only. And the cost recurs: insure a portfolio every quarter at roughly 1.5-2% and you spend 6-8% a year, which is why permanent insurance is a drag and selective insurance, around events that genuinely scare you, is the craft.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: the real cost of a covered call</p>
+<p>You own a stock at ₹1,000 and, unimpressed by near-term prospects, sell the one-month 1,050 call for ₹20. If the stock dozes at 990, you keep the ₹20, a 2% monthly yield on a dead asset, and feel clever. Do this for a year of dozing and the premiums stack impressively. Then the month comes when the stock gaps to ₹1,200 on a re-rating: your upside stops at 1,050 plus the premium, ₹70 of gain against the ₹200 the unhedged holder banks, and the year's cleverness is returned in one stroke. This is the covered call's true trade: it systematically sells the right tail, the rare months that drive most of equity returns, for a steady rent. That can still be worth doing, on a stock you would happily sell at the strike anyway, with eyes open about what is being sold. It is not free income. Nothing in Part VII is.</p>
+</div>
+<h3><span class="sn">47.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>State the buyer-seller asymmetry of an option in the language of insured and insurer.</li>
+<li>Define strike, premium, expiry, and the three moneyness states.</li>
+<li>The Nifty expires at 24,500 and at 23,800. Work both payoffs for the 24,000 call bought at 180 and the 24,000 put bought at 150.</li>
+<li>What does a protective put cost and cap; what does a covered call earn and give up; what does a bull call spread trade away?</li>
+<li>Which Indian options are cash-settled, which physically, and what trap does that set in expiry week?</li>
+<li>What did the SEBI study find about retail F&amp;O outcomes, and which usage of options escapes its logic?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-46-forwards-futures.html">← Chapter 46: Forwards and Futures</a>
+<a href="finance-reference-48-options-ii.html">Chapter 48: Options II: Pricing, Greeks and Advanced Strategies →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </html>
