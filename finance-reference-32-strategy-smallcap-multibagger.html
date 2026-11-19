@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 32. Stock Strategies: Small-Cap and Multibagger Hunting - Finance With Vishnu</title>
+<meta content="Small-cap investing in India: the base rates, the six-test multibagger checklist, liquidity and governance discipline, position sizing, exit rules, a 20-bagger anatomy and three zero autopsies." name="description"/>
+<meta content="small cap investing India, multibagger stocks checklist, how to find multibaggers, small cap risks liquidity, small cap governance red flags, position sizing small caps, when to sell small cap, 100 bagger stocks India, small cap fraud warning signs, BSE smallcap strategy" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 32. Stock Strategies: Small-Cap and Multibagger Hunting", "description": "Small-caps offer real arithmetic and structural inefficiency, but the minority that multiplies pays for the many that die, so exclusion is the core skill. The six-test funnel: size, runway, proven ROCE, clean promoter, passed forensics, survivable valuation. Size to real liquidity, treat governance warnings as eject buttons, and run a basket wide enough to survive its disasters. Exits are thesis-driven: broken story out, parabolic re-rating trimmed, love never. Cases: a 20-bagger's quiet decade, and three zeros, fraud, leverage, fashion, all visible in the checklist rows first.", "keywords": ["small cap investing India", "multibagger stocks checklist", "how to find multibaggers", "small cap risks liquidity", "small cap governance red flags", "position sizing small caps", "when to sell small cap", "100 bagger stocks India", "small cap fraud warning signs", "BSE smallcap strategy"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 32. Stock Strategies: Small-Cap and Multibagger Hunting</h1>
+<p class="count">Chapter 32 of 85 · about 21 minutes</p>
+<p class="lede">Every Indian investor knows a story about a stock that went up a hundred times. Fewer know the base rate: for each of those, dozens of small companies went nowhere, and a meaningful number went to zero with their promoters' reputations. Small-cap hunting is the highest-variance strategy in this book, the one where skill, luck and character separate most violently. This chapter gives you the checklist of the survivors and the obituaries of the rest.</p>
+<h3><span class="sn">32.1</span>Why small companies can return more, and why most do not</h3>
+<p>The case for small-caps is arithmetic and structure. Arithmetic: a ₹500 crore company can grow tenfold without needing the universe's permission; a ₹5 lakh crore company cannot. Structure: institutions cannot own the smallest stocks in size, analysts do not cover them, and so pricing is inefficient in a way it never is at the top of the Nifty. The case against is equally structural. Small companies die: one customer, one lender, one regulator can end them. Their promoters control both the business and the information about it. Their shares trade by appointment, so prices are opinions until you try to sell. The base rate from Indian history: a minority of small-caps generate nearly all the sector's excess return, and the skill that matters most is exclusion, removing the doomed from consideration before the promising are even compared.</p>
+<h3><span class="sn">32.2</span>The multibagger checklist</h3>
+<table class="num">
+<tr><th>Test</th><th>Pass mark</th><th>Why it is on the list</th></tr>
+<tr><td>Size</td><td>Market cap small enough to multiply, large enough to survive</td><td>The maths of multiplication needs a small base and a real business</td></tr>
+<tr><td>Runway</td><td>Addressable market many times current revenue</td><td>Ten-baggers need ten years of room</td></tr>
+<tr><td>Unit economics</td><td>ROCE above 15% already, not promised</td><td>The machine must work small before it works big</td></tr>
+<tr><td>Management</td><td>High holding, no pledging, clean history</td><td>In small-caps, the promoter is half the investment</td></tr>
+<tr><td>Accounts</td><td>Passes Chapter 10's checklist completely</td><td>Small-cap fraud is the rule's exception you must not own</td></tr>
+<tr><td>Valuation</td><td>A price that survives the growth slowing</td><td>Even the right company can be the wrong stock</td></tr>
+</table>
+<p>Read the table as a funnel, not a form: each row deletes most of what survives the row above, and that is the point. The two rows investors most often skip are the two that decide outcomes. Unit economics already proven, because a small company promising future ROCE is a venture investment, not an investment; and management quality, because in a company this size the promoter can legally enrich himself at your expense in a dozen documented ways, and the only protection is a track record of not doing so.</p>
+<h3><span class="sn">32.3</span>Liquidity, governance and position sizing in small-caps</h3>
+<p>Three disciplines keep the strategy's risks survivable. <strong>Liquidity:</strong> size every position to the actual traded volumes, assuming you may need weeks to exit and that the exit price will be worse than the screen price; the investor who cannot sell does not own a stock, he owns a stake in someone's private company. <strong>Governance:</strong> apply Chapter 10's checklist without the large-cap forgiveness, then add the small-cap specials: frequent name changes, auditor resignations, auditor shopping, sudden business pivots into whatever is fashionable, and equity dilution at any price are not flags, they are eject buttons. <strong>Sizing:</strong> many small positions, not few large ones, because the payoff distribution is a lottery you improve but never fix: a basket of twenty vetted small-caps can survive its five disasters; a concentrated bet on two cannot survive its one.</p>
+<h3><span class="sn">32.4</span>Exit discipline: when the story changes</h3>
+<p>Small-cap exits are decided by the thesis, not the price, and the discipline runs both directions. Sell when the story breaks: the runway proves smaller, the ROCE slides as competition arrives, the promoter does the thing you swore he would not. Sell also, partially, when the story outruns itself: a stock that re-rates from 15x to 60x earnings has paid you five years early, and trimming is how you keep the gain from being a loan. What you may not do is hold a broken story because the price fell, the "it will come back" that turns a mistake into an obituary. And you may not fall in love: the same promoter charisma that convinced you to buy will argue, eloquently, against ever selling. Chapter 14's one-page thesis, with its written kill criteria, is the entire apparatus. In small-caps, you do not marry the stock; you audit it, repeatedly.</p>
+<h3><span class="sn">32.5</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: anatomy of a 20-bagger</p>
+<p>Composite of real Indian small-cap successes, numbers illustrative. Year zero: a ₹300 crore market-cap company supplying a niche component, 18% ROCE, promoter owning 62% unpledged, revenue a tenth of its addressable niche, priced at 14x earnings because nobody covers it. The decade: the niche grows with formalisation, the company takes share from the unorganised sector, ROCE holds because the niche is defensible, earnings compound 25%, the market re-rates the stock to 35x, and the multiplication, 4x on earnings times 2.5x on the multiple, makes twenty times. Note what did not happen: no genius call, no timing, no drama. The buyer's whole job was the checklist, the sizing, and the refusal to sell a working story, three decisions repeated for ten years.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: three small-caps that went to zero</p>
+<p>Three composites, three distinct deaths. The <em>fraud</em>: beautiful growth, receivables growing faster, a small auditor, promoter pledges, then a confession-shaped silence and a 95% fall; every element was on Chapter 10's checklist two years early. The <em>leverage death</em>: a real business, genuinely growing, funded by debt that assumed the growth; one demand shock, one lender's refusal, and the equity was junior to a liquidation. The <em>fashion death</em>: a company that pivoted into every hot theme, announcements quarterly, revenue never; the stock gave back each pump until dilution finished what disappointment started. The shared lesson: the zeros were visible in the governance and balance-sheet rows of the checklist long before they reached the price row. Exclusion, applied early, is the cheapest insurance in this entire book.</p>
+</div>
+<h3><span class="sn">32.6</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Give the two-part case for small-caps and the three-part case against.</li>
+<li>Recite the six rows of the multibagger checklist and name the two most often skipped.</li>
+<li>Why must position sizing in small-caps assume the exit price is worse than the screen price?</li>
+<li>List the five small-cap governance eject buttons.</li>
+<li>When do you sell a winner, and what may never be the reason to hold a broken story?</li>
+<li>From Case 2: which checklist rows predicted each of the three deaths?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-31-strategy-thematic-contrarian.html">← Chapter 31: Stock Strategies: Thematic, Sector and Contrarian Strategies</a>
+<a href="finance-reference-33-strategy-formula-checklist.html">Chapter 33: Stock Strategies: Formula and Checklist Strategies →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
