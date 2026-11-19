@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 1. Money, Banking and the Financial System - Finance With Vishnu</title>
+<meta name="description" content="What money really is, how banks create most of it through lending, the five actors of the financial system, markets versus intermediaries, and why finance is regulated. With worked examples and recall questions.">
+<meta name="keywords" content="what is money, how banks create money, money multiplier India, cash reserve ratio, financial system India, RBI SEBI IRDAI PFRDA, bank deposits IOU, 2008 financial crisis trust, IL&FS crisis, markets vs intermediaries, DICGC deposit insurance">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 1. Money, Banking and the Financial System", "description": "Money is a trusted IOU; banks create most of it by lending deposits in a multiplier loop; the system has five actors (households, companies, banks, markets, the state); markets and intermediaries are the two routes from savers to borrowers; regulation exists for stability, fairness and confidence. Cases: a salary deposit becoming a home loan, and 2008 as a failure of trust.", "keywords": ["what is money", "how banks create money", "money multiplier India", "cash reserve ratio", "financial system India", "RBI SEBI IRDAI PFRDA", "bank deposits IOU", "2008 financial crisis trust", "IL&FS crisis", "markets vs intermediaries", "DICGC deposit insurance"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div id="fwv-notice" role="dialog" aria-modal="true" aria-labelledby="fwv-notice-title" hidden>
+  <div class="fwv-card">
+    <h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+    <p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+    <p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+    <p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+    <p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+    <p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+    <button type="button" id="fwv-notice-accept">I understand and accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+
+<!--NOTICE_END-->
+  <header class="topbar">
+    <span class="brand">Finance With Vishnu</span>
+    <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+  </header>
+  <main>
+
+    <p class="part-tag">Part I &middot; Foundations of Money</p>
+    <h1>Chapter 1. Money, Banking and the Financial System</h1>
+    <p class="count">Chapter 1 of 85 &middot; about 15 minutes</p>
+    <p class="lede">Your salary lands in your account on the first of the month. You pay the rent by UPI, the milkman by cash, and some of it quietly becomes part of a stranger's home loan in a city you have never visited. All of that happened inside a machine most people use daily and few can describe. This chapter opens the machine. Once you see money as a system of IOUs built on trust, everything else in finance, from the repo rate to a stock market crash, starts making sense.</p>
+
+    <h3><span class="sn">1.1</span>What money is: functions, forms and why trust makes it work</h3>
+    <p>From first principles: money is not notes and coins. Money is a <strong>trusted IOU</strong>. The note in your wallet is the state's IOU; the balance in your account is your bank's IOU to you. Both work only because the next person believes they will be accepted in turn.</p>
+    <p>That trusted IOU does three jobs, and anything that does all three can serve as money:</p>
+    <ul class="plain">
+      <li><strong>A medium of exchange:</strong> you hand it over and the deal is done, no barter needed.</li>
+      <li><strong>A unit of account:</strong> prices, salaries and debts are written in it, so a dosa and a data plan can be compared.</li>
+      <li><strong>A store of value:</strong> it carries today's earning power into next month, leaking only through inflation.</li>
+    </ul>
+    <p>Forms of money sit on a ladder of abstraction: cash at the bottom, then bank deposits, then the purely digital entries behind UPI and wallets. A UPI payment moves no cash at all; it edits IOUs between two banks. The chaiwala accepts it because he trusts the edit. When trust breaks, money breaks with it: in a bank run, the same deposit that was money yesterday becomes a queue outside a branch today. Hold on to this, because the 2008 crisis at the end of the chapter is exactly that story at world scale.</p>
+
+    <h3><span class="sn">1.2</span>How banks create money: deposits, loans and the multiplier</h3>
+    <p>Here is the fact that surprises even market regulars: most money is not printed by the government. It is created by banks when they lend.</p>
+    <p>Rebuild it from the primitives. Your deposit is the bank's IOU to you (<strong>money</strong>). The bank is allowed to lend most of that deposit out, keeping only a slice as reserve, the slice the RBI mandates through the cash reserve ratio, which in recent years has been in the low single digits. The borrower spends the loan, the seller deposits it, and now the same base money backs two deposits. Repeat the loop and deposits multiply:</p>
+    <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">You deposit</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">&#8377;1,00,000 in your savings account</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Bank keeps a reserve</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">say 10%, &#8377;10,000, set aside</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Bank lends the rest</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">&#8377;90,000 as someone's bike loan</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Borrower spends it</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">the shop deposits it in its own bank</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Cycle repeats</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">the same base money backs new deposits</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">The money-multiplier loop. Each round is smaller than the last, because every bank keeps a slice as reserve.</p>
+    <div class="example">
+      <p class="ex-title">Worked example: the multiplier with round numbers</p>
+      <p>Suppose the reserve is 10%. Your &#8377;1,00,000 lets the first bank lend &#8377;90,000, which returns as a new deposit, of which &#8377;81,000 is lent again, and so on. The chain 1,00,000 + 90,000 + 81,000 + ... adds up to &#8377;10,00,000 of deposits. Raise the reserve to 20% and the ceiling falls to &#8377;5,00,000.</p>
+      <p>Now you can read monetary policy without a textbook: when the RBI raises the reserve ratio or its policy rates, it is turning this multiplier down; when it cuts, it is turning the multiplier up. One lever, the whole money supply.</p>
+    </div>
+    <p>Two honest limits to the picture. Real banks lend only when they find creditworthy borrowers, so the multiplier is a ceiling, not a promise. And the deposit you "created" is still the bank's IOU: if the bank fails beyond the DICGC insurance limit (&#8377;5 lakh per depositor per bank), some of that money was never as real as it looked.</p>
+
+    <h3><span class="sn">1.3</span>The cast of the system: households, companies, banks, markets and the state</h3>
+    <p>Finance looks like thousands of institutions. It is five actors passing three things, money, risk and information, among themselves:</p>
+    <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Households</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">save, borrow, insure, invest</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Companies</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">raise money, hedge risks, pay wages</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Banks and NBFCs</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">take deposits, make loans</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Markets</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">NSE, BSE, bond and commodity exchanges</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">The state</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">RBI, SEBI, government: rules and the backstop</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">Every financial story is one of these five passing money, risk or information to another.</p>
+    <p>Households supply most of the savings and demand most of the loans. Companies do the reverse. Banks sit between the two, and markets let both deal with strangers instead of one counterparty. The state writes the rules and, in a crisis, becomes the lender and insurer of last resort. When you read any financial news, ask which actor is passing what to whom, and the story sorts itself.</p>
+
+    <h3><span class="sn">1.4</span>Financial markets vs intermediaries: where each fits</h3>
+    <p>There are two routes between a saver and a borrower, and India runs on both:</p>
+    <table class="num">
+      <tr><th></th><th>Through an intermediary</th><th>Through a market</th></tr>
+      <tr><td>Who stands between</td><td>A bank, NBFC or insurer takes your money and lends in its own name</td><td>Nobody; you buy the borrower's bond or share directly on an exchange</td></tr>
+      <tr><td>Who carries the risk</td><td>The intermediary, which is why its health matters to you</td><td>You do, which is why prices move</td></tr>
+      <tr><td>Can you exit early?</td><td>Usually on the intermediary's terms, like breaking an FD</td><td>Any day the market is open, at the market's price</td></tr>
+      <tr><td>Everyday examples</td><td>Savings accounts, FDs, loans, insurance policies</td><td>Shares, bonds, ETFs, government securities</td></tr>
+    </table>
+    <p>The two routes compete and complete each other. India's markets have grown explosively, yet most household money still sits with intermediaries, which is why a bank failure hurts this country more than a bad week on the Nifty.</p>
+
+    <h3><span class="sn">1.5</span>Why finance is regulated at all: stability, fairness and confidence</h3>
+    <p>Regulation feels like friction until you rebuild its reasons from the primitives:</p>
+    <ul class="plain">
+      <li><strong>Stability (money and risk):</strong> banks create money on trust, and trust is fragile. The RBI's reserves, capital rules and deposit insurance exist so that one bank's failure does not empty everyone's account.</li>
+      <li><strong>Fairness (information):</strong> a seller of financial products almost always knows more than the buyer. SEBI's disclosure and insider-trading rules narrow that gap.</li>
+      <li><strong>Confidence (exchange):</strong> markets only work if strangers dare to trade with each other. Clearing corporations and settlement rules make a trade with an anonymous counterparty safe.</li>
+    </ul>
+    <p>Every regulator you will meet in this book, RBI, SEBI, IRDAI, PFRDA, is a specialist in one of these three jobs.</p>
+
+    <h3><span class="sn">1.6</span>Worked examples and cases</h3>
+    <div class="example">
+      <p class="ex-title">Case 1: how a salary deposit becomes a home loan</p>
+      <p>An engineer in Pune is paid &#8377;1,20,000 on the 1st. Her bank now owes her &#8377;1,20,000. Keeping a small reserve, it lends within a pool that funds, among thousands of others, a family's &#8377;40 lakh home loan in Nagpur. The family's EMI, interest plus principal, flows back each month and pays, among thousands of others, the interest on her account and the UPI cashback she enjoyed.</p>
+      <p>Nothing moved but IOUs. Her deposit was never "kept" anywhere; it was transformed into claims on thousands of strangers' future incomes. That transformation is banking, and it works until too many strangers stop paying at once, which is what credit risk means.</p>
+    </div>
+    <div class="example">
+      <p class="ex-title">Case 2: the 2008 lesson on trust</p>
+      <p>In September 2008, Lehman Brothers, a 158-year-old American bank, failed. Within hours, money-market funds that held its IOUs "broke the buck", and banks across the world stopped lending to <em>each other</em>, because nobody knew whose IOUs were still good. The machine from section 1.2 ran in reverse: lending froze, deposits shrank, and only governments stepping in as the backstop restarted it.</p>
+      <p>India felt its own smaller echo in 2018 when IL&amp;FS, a giant infrastructure lender, defaulted, and for months the NBFC sector struggled to borrow. Same lesson, local accent: finance runs on trust, trust runs on information, and when information fails, money itself seizes up. Every crisis chapter later in this book is a variation on this paragraph.</p>
+    </div>
+
+    <h3><span class="sn">1.7</span>Active-recall questions for this section</h3>
+    <ol class="recall">
+      <li>Whose IOU is the balance in your savings account, and whose IOU is a &#8377;500 note?</li>
+      <li>Explain to a friend, in three sentences, why a bank run is rational for each person in the queue and ruinous for all of them together.</li>
+      <li>If the RBI raised the cash reserve ratio tomorrow, trace what happens to the money multiplier, to new loans, and to your FD's next renewal rate.</li>
+      <li>From the five-actor cast, who supplies savings and who demands them? Where do you sit in that map this year?</li>
+      <li>Name one product that goes through an intermediary and one that goes through a market. In each case, who carries the risk if the borrower fails?</li>
+      <li>Regulation exists for three reasons: stability, fairness, confidence. Attach one real institution or rule to each reason.</li>
+    </ol>
+
+    <div class="scan-nav" style="padding-top:34px;">
+      <a href="finance-reference-introduction.html">&larr; Introduction</a>
+      <a href="finance-reference-02-interest-inflation.html">Chapter 2: Interest Rates, Inflation and the Time Value of Money &rarr;</a>
+    </div>
+
+  </main>
+  <footer>Finance With Vishnu &middot; For research and education only, not investment advice.</footer>
+</body>
+  </html>
