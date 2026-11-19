@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 30. Stock Strategies: Momentum and Trend-Based Investing - Finance With Vishnu</title>
+<meta content="Momentum investing in India: the evidence, relative strength vs absolute momentum, dual momentum asset allocation, momentum crashes, Indian momentum funds, and a Nifty 500 backtest with costs." name="description"/>
+<meta content="momentum investing India, relative strength strategy, absolute momentum, dual momentum, momentum crash explained, momentum index funds India, Nifty 500 momentum backtest, trend following stocks, factor investing India, systematic trading strategies" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 30. Stock Strategies: Momentum and Trend-Based Investing", "description": "Momentum is the most replicated anomaly in finance: recent winners keep winning, powered by under-reaction and herding. Relative strength picks stocks, absolute momentum manages regime risk, and dual momentum combines both at the portfolio level. Momentum crashes strike at market bottoms, when last regime's winners miss the violent rebound; regime filters and partial sizing are the known mitigations. Indian momentum index funds package the mechanics at low cost. The Nifty 500 case shows the gross edge, the cost drag, and the temperament the survivors share.", "keywords": ["momentum investing India", "relative strength strategy", "absolute momentum", "dual momentum", "momentum crash explained", "momentum index funds India", "Nifty 500 momentum backtest", "trend following stocks", "factor investing India", "systematic trading strategies"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 30. Stock Strategies: Momentum and Trend-Based Investing</h1>
+<p class="count">Chapter 30 of 85 · about 20 minutes</p>
+<p class="lede">The most embarrassing fact in academic finance is that buying what went up works. Not always, not cheaply, and not without periodic disasters, but across two centuries of data and nearly every market studied, recent winners keep winning a little more often than chance allows. This chapter takes the effect seriously: what it is, why it persists, how to harvest it in India, and, just as honestly, how it periodically takes the harvest back.</p>
+<h3><span class="sn">30.1</span>The momentum effect: evidence across decades and countries</h3>
+<p>The finding, replicated more than almost any other in finance: stocks that outperformed over the past three to twelve months tend to outperform over the next three to twelve. It held in US data from the 1800s to today, in nearly every developed market, and in India across multiple independent studies of the NSE's history. The likely engine is behavioural and structural at once: investors under-react to news, so prices adjust in drifts rather than jumps; herding then overshoots the drift. Momentum is, in other words, the market's habit of arriving at the truth late and then running past it. Understanding this engine matters because it tells you both why the effect exists and when it will fail: anything that relies on crowds arriving late will break precisely when everyone arrives at once.</p>
+<h3><span class="sn">30.2</span>Relative strength and absolute momentum</h3>
+<p>Two flavours, often confused. <strong>Relative strength</strong> ranks stocks against each other: buy the top decile of six-month performers, hold, re-rank monthly or quarterly. It is a stock-selection tool, always fully invested, always long whatever is strongest. <strong>Absolute momentum</strong>, also called time-series momentum, compares an asset to its own past: hold the index while it trades above its ten-month average, step aside when below. It is a risk-management tool, sometimes in cash, and its promise is not higher return but smaller disaster, sidestepping the long grinding bears, as Chapter 17's moving-average system showed on the Nifty. The two combine naturally: relative strength picks the horses, absolute momentum decides whether the track is open.</p>
+<h3><span class="sn">30.3</span>Dual momentum and tactical asset allocation</h3>
+<p>Dual momentum applies both tests at the portfolio level: hold the strongest asset class (relative) only while it trends up (absolute), else move down a safety ladder into debt or gold. A simple Indian version, Nifty versus gold versus a debt fund, rebalanced monthly on those two rules, has historically given up little return in bulls and avoided the deep drawdowns in 2008 and 2020. The catch is not conceptual but behavioural: the system will sit in debt while your friends' portfolios rally, will whipsaw through choppy years taking small losses, and will be declared broken on social media twice a decade, usually just before it works again. Tactical rules earn their keep in decades and get judged in months; that gap is the real price of admission.</p>
+<h3><span class="sn">30.4</span>Momentum crashes and how to live with them</h3>
+<p>The strategy's signature disaster has a name and a shape. After a deep bear, when the market turns violently upward, the momentum portfolio is still holding the previous regime's winners, defensive, dull, falling knives avoided, while the new leaders are yesterday's most-hated junk, which now doubles in months. The result: momentum strategies suffer sudden, deep relative losses exactly at market bottoms, 2009 and mid-2020 both showed it in India. The mitigations are known: absolute momentum as a regime filter, partial allocations rather than all-in rules, rebalancing patiently rather than chasing the new leadership immediately. The honest summary: momentum is an insurance policy you collect in trends and pay for at turning points. Size it so the premiums do not bankrupt you between payouts.</p>
+<h3><span class="sn">30.5</span>Momentum products available in India</h3>
+<p>Indian investors no longer need to build the system by hand. Momentum index funds and ETFs, tracking NSE's momentum indices, package relative-strength selection with rules-based rebalancing at index-fund costs; factor indices combining momentum with quality or low volatility soften the crashes at some cost to the upside; and several PMS and smallcase offerings run the raw version with higher turnover and higher cost. The due diligence is Chapter 38's and 39's in miniature: read the index methodology (which lookback, which rebalancing, what buffers against turnover), compare the fund's tracking, and decide whether you want the pure exposure or a blended factor. The product handles the mechanics; only you can supply the temperament the strategy demands.</p>
+<h3><span class="sn">30.6</span>Worked example: a 12-month momentum portfolio on the Nifty 500, costs included</h3>
+<div class="example">
+<p class="ex-title">Case: the backtest with the costs left in</p>
+<p>Build the canonical strategy: each quarter, buy the fifty Nifty-500 stocks with the best prior twelve-month returns (skipping the most recent month, the standard tweak that avoids short-term reversal), hold one quarter, re-rank. Indian backtests of this shape, and the live history of the momentum indices, show the familiar pattern, illustrative figures below:</p>
+<table class="num">
+<tr><th>Line</th><th class="r">Momentum portfolio</th><th class="r">Nifty 500 buy-and-hold</th></tr>
+<tr><td>Annual return (gross)</td><td class="r">+4-6 pts above index</td><td class="r">Index</td></tr>
+<tr><td>Turnover per year</td><td class="r">100-200%</td><td class="r">~0%</td></tr>
+<tr><td>Cost drag (brokerage, STT, impact)</td><td class="r">1.5-3 pts</td><td class="r">~0.1 pt</td></tr>
+<tr><td>Worst drawdown behaviour</td><td class="r">Worse in crash rebounds</td><td class="r">The market's own</td></tr>
+<tr><td>Net of costs, long-run</td><td class="r">Still ahead, modestly</td><td class="r">The benchmark to beat</td></tr>
+</table>
+<p>Three honest lessons. The gross edge is real and large; the cost drag eats a third to a half of it, which is why the index-fund implementation matters more than the stock list. The drawdown profile is different, not better: you swap the market's crashes for momentum's own. And the strategy's edge net of everything, a few points a year, compounds to a fortune across decades and looks like nothing across quarters, which selects, brutally, for the investors who can hold a rule they did not invent through a year when it visibly fails.</p>
+</div>
+<h3><span class="sn">30.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>What is the momentum effect, and what two-part behavioural engine likely drives it?</li>
+<li>Contrast relative strength and absolute momentum: which selects stocks and which manages risk?</li>
+<li>Describe a dual-momentum rule for Nifty, gold and debt, and its behavioural price of admission.</li>
+<li>What is a momentum crash, when does it strike, and what mitigates it?</li>
+<li>What should you check in a momentum index fund's methodology before buying it?</li>
+<li>From the case: roughly what share of the gross edge do costs eat, and what does that imply for implementation?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-29-strategy-income-dividend.html">← Chapter 29: Stock Strategies: Income and Dividend Strategies</a>
+<a href="finance-reference-31-strategy-thematic-contrarian.html">Chapter 31: Stock Strategies: Thematic, Sector and Contrarian Strategies →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
