@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 45. Money Markets and Cash Management - Finance With Vishnu</title>
+<meta content="Money markets explained for Indian investors: treasury bills, commercial paper and CDs, repo and the RBI corridor, liquid and overnight funds, FD vs money-market funds, and how to structure an emergency fund." name="description"/>
+<meta content="money market India, treasury bills yield calculation, commercial paper vs certificate of deposit, repo rate corridor RBI, liquid funds vs overnight funds, fixed deposit vs liquid fund, sweep-in FD, emergency fund India where to keep" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 45. Money Markets and Cash Management", "description": "The money market is where cash is parked: T-bills for the sovereign, CP for companies, CDs for banks, all under a year, priced off the RBI's repo corridor. For investors it arrives as overnight and liquid funds, judged on credit quality, fee and boredom. FDs beat funds on certainty, lose on flexibility, and both are now taxed at slab. Cases: structuring a six-month emergency reserve, and the sweep-in setting worth Rs 12,000 a year.", "keywords": ["money market India", "treasury bills yield calculation", "commercial paper vs certificate of deposit", "repo rate corridor RBI", "liquid funds vs overnight funds", "fixed deposit vs liquid fund", "sweep-in FD", "emergency fund India where to keep"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VI · Fixed Income and Credit</p>
+<h1>Chapter 45. Money Markets and Cash Management</h1>
+<p class="count">Chapter 45 of 85 · about 19 minutes</p>
+<p class="lede">Every financial system needs a place to park money for a week, a month, a quarter, and it cannot be the stock market. That place is the money market: treasury bills, commercial paper, certificates of deposit and repos, instruments where the question is never "will it grow?" but only "will it be there?" This chapter is about that plumbing, and about the most practical question in personal finance: where your emergency fund should actually live.</p>
+<h3><span class="sn">45.1</span>Treasury bills, commercial paper and certificates of deposit</h3>
+<p>Three borrowers, three IOUs, all under a year. <strong>Treasury bills</strong> are the government's short borrowings, sold in 91, 182 and 364-day tenors, issued at a discount and redeemed at face: you buy a 91-day bill at ₹98.30 and receive ₹100 at maturity, the ₹1.70 being your interest, an annualised yield of (1.70 ÷ 98.30) × (365 ÷ 91) ≈ 6.94%. There is no coupon and essentially no default risk; the T-bill yield is the closest thing India has to a risk-free rate at the short end. <strong>Commercial paper</strong> is the same idea issued by companies: an unsecured, discounted promissory note, 7 days to a year, used by blue-chip corporates and NBFCs to fund working capital cheaper than a bank loan; it must be rated, and its yield sits above T-bills by the credit spread of Chapter 44. <strong>Certificates of deposit</strong> are bank deposits in tradable form: a CD is a fixed deposit that can change hands, which lets banks raise bulk short money and lets funds hold bank paper with liquidity. Read the three as one instrument with three issuers: sovereign, corporate, bank, in rising order of yield and risk.</p>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 280" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="240.0" y2="240.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="244.0">0%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="128.0" y2="128.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="132.0">4.025%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="16.0" y2="16.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="20.0">8.05%</text><rect fill="#7a6f62" height="83.5" rx="4" width="70" x="82.4" y="156.5"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="117.4" y="150.5">3%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="117.4" y="256">Savings a/c</text><rect fill="#4e8a67" height="194.8" rx="4" width="70" x="213.2" y="45.2"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="248.2" y="39.2">7%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="248.2" y="256">Sweep-in FD</text><rect fill="#4e8a67" height="192.0" rx="4" width="70" x="344.0" y="48.0"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="379.0" y="42.0">6.9%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="379.0" y="256">91-day T-bill</text><rect fill="#4e8a67" height="180.9" rx="4" width="70" x="474.8" y="59.1"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="509.8" y="53.1">6.5%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="509.8" y="256">Liquid fund</text><rect fill="#7a6f62" height="169.7" rx="4" width="70" x="605.6" y="70.3"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="640.6" y="64.3">6.1%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="640.6" y="256">Overnight fund</text></svg>
+<h3><span class="sn">45.2</span>Repo, reverse repo and the central bank corridor</h3>
+<p>A <strong>repo</strong> is a loan wearing a sale's clothes: you sell a security today with an agreement to buy it back tomorrow at a slightly higher price, the difference being the interest. It is collateralised lending, the safest kind, and it is how banks, funds and the RBI move cash around the system overnight. The RBI runs a corridor around this market. At the floor, the <strong>standing deposit facility</strong>, banks park surplus cash with the RBI at a rate a notch below the policy rate. At the ceiling, the <strong>marginal standing facility</strong>, they borrow against their G-secs a notch above it. In the middle sits the <strong>repo rate</strong>, the price at which the RBI lends against collateral, and the number the entire country watches every two months. When the MPC cuts the repo rate by 50 basis points, the whole money market, T-bills, CP, CDs, liquid-fund returns, re-prices within days, and Chapter 4's transmission mechanism then carries the cut, imperfectly, to loan and deposit rates. The corridor is the machine under every short rate you will ever earn.</p>
+<h3><span class="sn">45.3</span>Liquid and overnight funds: parking cash properly</h3>
+<p>For an investor, the money market arrives wrapped as two fund categories. <strong>Overnight funds</strong> lend for exactly one day, every day: near-zero rate risk, near-zero credit risk, returns that track the bottom of the corridor. <strong>Liquid funds</strong> hold paper maturing within 91 days: a little more yield, a little more sensitivity, and a small but real credit exposure, as investors learned in 2018 when a liquid fund holding IL&amp;FS paper took a visible knock. Both exist to be boring. Their returns are the short rate minus a fee of roughly 0.2-0.4%, their NAVs creep upward in a near-straight line, and redemption lands in a day. Judge them on three things only: the portfolio's credit quality (all sovereign and AAA is a choice, not a default), the expense ratio, and whether you can tolerate the once-in-a-decade credit bruise in exchange for the extra half percent over an overnight fund.</p>
+<h3><span class="sn">45.4</span>Fixed deposits vs money-market funds</h3>
+<p>The honest comparison has four rows. <strong>Certainty:</strong> the FD wins, a contracted rate and DICGC insurance up to ₹5 lakh per bank per depositor; the liquid fund's return is a path, not a promise. <strong>Flexibility:</strong> the fund wins, no lock-in and no breakage penalty; break an FD early and the bank docks the rate and charges a penalty. <strong>Return:</strong> at today's rates they are within a percent of each other, with FDs often a touch higher for locking in and liquid funds a touch lower for instant liquidity. <strong>Tax:</strong> after the 2023 rule change, both are taxed at your slab, so this is no longer a reason to choose. The practical synthesis most households land on: keep the transaction money in a savings account or sweep-in FD, keep the true emergency reserve in a liquid fund or a short FD ladder, and never let the pursuit of an extra half percent move emergency money into anything that can be locked, gated or marked down on the day you need it.</p>
+<h3><span class="sn">45.5</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: where a six-month emergency fund actually lives</p>
+<p>Suppose your household spends ₹1 lakh a month, so the target reserve is ₹6 lakh. A sensible structure: one month, ₹1 lakh, in the savings account or a sweep-in FD for same-hour access; the remaining ₹5 lakh split between a liquid fund and a couple of laddered FDs maturing a month apart. At illustrative rates, savings 3%, liquid fund 6.5%, the blended yield is about 5.9%, roughly ₹35,500 a year against ₹18,000 if it all sat in the savings account. Notice what this structure is not doing: it is not in equity ("the market is down exactly when jobs are lost" is the cruel correlation), not in locked products beyond the horizon, not in credit-risk funds chasing yield with money whose only job is to exist. An emergency fund is insurance that happens to earn interest. Underwrite it like insurance.</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: the sweep-in FD, one setting worth ₹12,000 a year</p>
+<p>Many salary accounts let you set a threshold, say ₹50,000, above which surplus is automatically parked in fixed deposits and automatically broken, newest first, when the account needs the money. Compare two identical households holding a ₹3 lakh average surplus. Without the sweep it idles at 3%: ₹9,000 a year. Swept into FDs at 7%: ₹21,000. The difference, ₹12,000 a year, costs one trip to the bank's settings page and nothing else, because liquidity is unchanged: the money comes back the day it is spent. The lesson generalises. Cash management is not investing; it is the removal of friction between your money and the rate it should be earning. Sweep-in FDs, liquid funds and RBI Retail Direct T-bill ladders are three versions of the same move, and the only wrong answer is the default one: a large balance earning the savings rate because nobody set the threshold.</p>
+</div>
+<h3><span class="sn">45.6</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>A 91-day T-bill costs ₹98.30. Compute the annualised yield and name the three money-market issuers in rising order of risk.</li>
+<li>What is a repo, and what three rates form the RBI's corridor?</li>
+<li>Distinguish overnight funds from liquid funds on rate risk, credit risk and yield.</li>
+<li>On which two dimensions does an FD beat a liquid fund, and on which two does it lose?</li>
+<li>Why does credit-risk chasing have no place inside an emergency fund, whatever the yield?</li>
+<li>Explain the sweep-in mechanism and the ₹12,000-a-year arithmetic in Case 2.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-44-corporate-credit.html">← Chapter 44: Corporate Credit and Debt Funds</a>
+<a href="finance-reference-46-forwards-futures.html">Chapter 46: Forwards and Futures →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+                                                                                                             </html>
