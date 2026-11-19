@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction: The First-Principles Approach - Finance With Vishnu</title>
+<meta name="description" content="Why this book teaches finance from first principles, the five primitives every instrument is built from (money, time, risk, exchange, information), and three worked rebuilds: a fixed deposit, an SIP and a Nifty option.">
+<meta name="keywords" content="first principles finance, learn finance basics, five primitives of finance, money time risk exchange information, how to learn investing, fixed deposit explained, SIP compounding example, Nifty option basics, finance book India">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Introduction: The First-Principles Approach", "description": "The opening chapter: what first-principles thinking is, the five primitives of finance (money, time, risk, exchange, information), how every instrument and strategy is assembled from them, and worked rebuilds of a fixed deposit, an SIP and a Nifty option.", "keywords": ["first principles finance", "learn finance basics", "five primitives of finance", "money time risk exchange information", "how to learn investing", "fixed deposit explained", "SIP compounding example", "Nifty option basics", "finance book India"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div id="fwv-notice" role="dialog" aria-modal="true" aria-labelledby="fwv-notice-title" hidden>
+  <div class="fwv-card">
+    <h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+    <p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+    <p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+    <p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+    <p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+    <p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+    <button type="button" id="fwv-notice-accept">I understand and accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+
+<!--NOTICE_END-->
+  <header class="topbar">
+    <span class="brand">Finance With Vishnu</span>
+    <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+  </header>
+  <main>
+
+    <p class="part-tag">The Complete Reference of Finance &middot; Introduction</p>
+    <h1>The First-Principles Approach of This Book</h1>
+    <p class="count">The unnumbered opening chapter &middot; read this first</p>
+    <p class="lede">Ask a room full of investors why a share has value and you will hear twenty rules: buy low, buy quality, buy the dip, never catch a falling knife. Now ask which of those rules still works when interest rates double, or when a new technology eats an industry. The room goes quiet. This book exists so that you are never that room. Instead of collecting rules, you will learn to rebuild any financial idea from five basic truths, the way an engineer rebuilds a machine from its parts. Once you can do that, no product, pitch or panic can fool you for long.</p>
+
+    <h2>0.1 What first-principles thinking is</h2>
+    <p>Most of us learn finance the way most of us learn to cook: by recipe. Do this, avoid that, follow the steps and hope. Recipes are fine until the ingredients change, and in finance the ingredients change constantly. Rates rise and fall, new instruments appear, old tricks stop working precisely because everyone knows them.</p>
+    <p>First-principles thinking is the cook who understands salt, heat and acid instead of memorising dishes. You start from what is provably true, the basic facts that no market can repeal, and you rebuild each idea from there. It is slower on day one and faster forever after, because every new topic becomes an assembly job, not a new subject to memorise.</p>
+    <p>This matters doubly in India right now. Crores of new investors have entered the market since 2020, and the products sold to them change every year: UPI, BNPL, fractional property, crypto, market-linked debentures. Nobody can memorise a rule for each. Everybody can learn the five blocks they are all built from.</p>
+
+    <h2>0.2 The five primitives of finance</h2>
+    <p>Everything in this book, from a savings account to a credit default swap, is assembled from five building blocks:</p>
+    <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Money</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">A trusted IOU. It stores value, measures prices and settles debts.</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Time</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Money today is worth more than money tomorrow. Every future promise gets discounted.</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Risk</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Outcomes are uncertain. Every return is payment for bearing some risk.</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Exchange</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Markets exist to match people who want opposite sides of a trade.</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Information</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Prices move on what people know, expect and believe.</div></div></div>
+    <p>Keep these five in front of you as you read. Each chapter starts by showing which blocks its subject is made of.</p>
+
+    <h2>0.3 How every instrument is assembled from the primitives</h2>
+    <p>An instrument is not a thing; it is a bundle of promises about money, time, risk, exchange and information. Lay the familiar ones side by side and the pattern shows:</p>
+    
+<table class="num">
+  <tr><th>Instrument</th><th>What it really is, in primitives</th></tr>
+  <tr><td>A fixed deposit</td><td>You lend money (money) for a fixed period (time) at almost no uncertainty (low risk), so you earn a small return.</td></tr>
+  <tr><td>A share</td><td>A slice of a business's future cash (money + time), with no promise attached (high risk), bought in a market (exchange) whose price reacts to news (information).</td></tr>
+  <tr><td>A bond</td><td>A loan with a schedule: money now against fixed payments later, priced by time and the borrower's risk.</td></tr>
+  <tr><td>A future</td><td>A promise to exchange something at a set price on a set date: exchange and time, with risk transferred from one side to the other.</td></tr>
+  <tr><td>An option</td><td>The right, not the duty, to exchange later. You pay a premium for protection against risk, and its price is mostly time and uncertainty.</td></tr>
+  <tr><td>A swap</td><td>Two parties exchange one stream of payments for another, say fixed for floating: pure exchange of risk over time.</td></tr>
+</table>
+    <p>Notice what this buys you. When someone offers you a new product you have never heard of, you do not need a rule about it. You ask five questions: whose money moves, over what time, who carries which risk, where does it trade, and what does the seller know that I do not. The Introduction's worked examples below show this questioning in action.</p>
+
+    <h2>0.4 How every strategy is a bet on one primitive</h2>
+    <p>Strategies feel like magic tricks with names: momentum, arbitrage, compounding, carry. Under the hood, each is a repeatable way to get paid for one primitive:</p>
+    
+<table class="num">
+  <tr><th>Strategy family</th><th>The primitive it bets on</th></tr>
+  <tr><td>Long-term compounding (SIPs, buy and hold)</td><td>Time: returns reinvested for decades snowball on themselves.</td></tr>
+  <tr><td>Value and risk-premium investing</td><td>Risk: you are paid for holding what others find scary, when the fear is overpriced.</td></tr>
+  <tr><td>Arbitrage</td><td>Exchange: the same thing priced differently in two places at once.</td></tr>
+  <tr><td>Research-based stock picking</td><td>Information: knowing something true that the price does not yet reflect.</td></tr>
+  <tr><td>Lending and carry strategies</td><td>Money and time: collecting interest for funding someone else's present.</td></tr>
+</table>
+    <p>When a strategy stops working, it is usually because its primitive got crowded or repriced. Reading strategies this way tells you in advance <em>why</em> each one should make money, which is the only honest test of whether it deserves your money.</p>
+
+    <h2>0.5 Why this method travels</h2>
+    <p>Rules are local. The five primitives are not. The same blocks rebuild a chit fund in Kerala, a Treasury bond in Washington and a bitcoin wallet anywhere. That is why this book can be India-first in its examples, the NSE, SEBI, the RBI, MCX, UPI, and still teach you to read any market on earth. Countries change the labels; they cannot change the blocks.</p>
+
+    <h2>0.6 How to use this book</h2>
+    <ul class="plain">
+      <li>Read this Introduction once, slowly. Everything else stands on it.</li>
+      <li>Each chapter then opens with its first-principles rebuild, deepens into practice, and closes with worked examples.</li>
+      <li>Every section ends with active-recall questions. Answer them out loud or on paper before moving on; recalling is what moves an idea from the page into your head.</li>
+      <li>If you are a beginner, read in order. If you already invest, jump to your weakest part, but read the chapter's rebuild section first.</li>
+    </ul>
+
+    <h2>0.7 Worked examples and cases: three rebuilds, side by side</h2>
+    <p>The method is only useful if it works on real products. Here are three everyday ones taken apart with the five questions.</p>
+
+    <div class="example">
+      <p class="ex-title">Rebuild 1: a bank fixed deposit</p>
+      <p><strong>Money:</strong> you hand the bank, say, &#8377;1,00,000. <strong>Time:</strong> locked for 5 years. <strong>Risk:</strong> nearly none, since the bank promises the return and deposits are insured up to &#8377;5 lakh per depositor per bank by DICGC. <strong>Exchange:</strong> none, there is no market; you deal only with the bank. <strong>Information:</strong> the rate is known in advance.</p>
+      <p>Conclusion without any rulebook: an FD pays modestly precisely because it strips out risk, exchange and information. What is left is time, so the return is roughly the price of time, the risk-free rate. If an FD-like product ever offers far more, some removed block has been quietly put back, usually risk.</p>
+    </div>
+
+    <div class="example">
+      <p class="ex-title">Rebuild 2: a monthly SIP in an equity index fund</p>
+      <p><strong>Money:</strong> &#8377;10,000 every month. <strong>Time:</strong> 20 years. <strong>Risk:</strong> the stock market's, in full. <strong>Exchange:</strong> you buy units through the fund, priced daily at NAV. <strong>Information:</strong> deliberately ignored; an index fund refuses to bet on anyone's stock insight.</p>
+      <p>The maths of time at work: at a 12% annual return, &#8377;10,000 a month for 20 years invests &#8377;24,00,000 and grows to roughly &#8377;99,00,000. About &#8377;75,00,000 of the result is the market paying you for time and risk, the two blocks you chose to supply. The SIP adds nothing clever; it simply keeps the supply of time and risk steady through every headline.</p>
+    </div>
+
+    <div class="example">
+      <p class="ex-title">Rebuild 3: a Nifty call option</p>
+      <p><strong>Money:</strong> a premium, say &#8377;80 per unit. <strong>Time:</strong> the option dies at expiry, and its price melts a little every day. <strong>Risk:</strong> asymmetric; you can lose only the premium, the seller can lose far more. <strong>Exchange:</strong> a live auction on the NSE. <strong>Information:</strong> the price embeds the market's collective guess about how violently the index will move, the implied volatility.</p>
+      <p>Now you can see why most option buyers lose: they are paying for time and uncertainty, both of which drain value daily, so they must be right about direction <em>and</em> timing before the clock wins. The derivatives part of this book rebuilds every option idea from exactly this footing.</p>
+    </div>
+
+    <h2>Active recall</h2>
+    <ol class="recall">
+      <li>Name the five primitives from memory, then check. Which two are missing from a plain bank deposit, and why does that make its return small?</li>
+      <li>A friend pitches a product paying 12% a year, "guaranteed". Using only the five questions, what do you ask first, and which block almost certainly hides the catch?</li>
+      <li>Match each to its primitive: arbitrage, compounding, an analyst's edge, a risk premium. Do it without looking back.</li>
+      <li>Take any instrument you own today and rebuild it: whose money, what time, whose risk, which exchange, whose information?</li>
+      <li>Why does a recipe-style rule like "never buy when the market is falling" fail exactly when you need it most?</li>
+      <li>In the SIP rebuild, roughly &#8377;75 lakh of the &#8377;99 lakh came from the market paying for two blocks. Which two?</li>
+    </ol>
+
+    <div class="scan-nav" style="padding-top:34px;">
+      <a href="finance-reference.html">&larr; Book index</a>
+      <a href="finance-reference-01-money-banking.html">Chapter 1: Money, Banking and the Financial System &rarr;</a>
+    </div>
+
+  </main>
+  <footer>Finance With Vishnu &middot; For research and education only, not investment advice.</footer>
+</body>
+</html>
