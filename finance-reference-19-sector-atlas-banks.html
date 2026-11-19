@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 19. Sector Atlas: Banks, NBFCs and Financial Services - Finance With Vishnu</title>
+<meta content="How Indian lenders make money: NIM, credit costs, GNPA, CASA, capital adequacy and ROA explained, credit cycles, RBI regulation, P/B vs ROE valuation, and a private bank vs PSU bank comparison." name="description"/>
+<meta content="bank stock analysis India, NIM explained, GNPA CASA CRAR ROA, how banks make money, credit cycle India, NBFC crisis 2018, RBI regulation banks, PSU bank vs private bank, price to book bank valuation, banking sector investing" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 19. Sector Atlas: Banks, NBFCs and Financial Services", "description": "A lender is a leveraged spread machine: NIM minus operating costs minus credit costs, on ten-to-one leverage, so underwriting quality is the master variable. Read GNPA with provisioning, CASA as the moat, CRAR as the fuel tank, ROA as the summary line. Indian credit cycles rhyme: bad loans are made in good times. RBI co-authors every bank P&L through capital, priority-sector and liquidity rules. Valuation is justified P/B on a clean, sustainable ROE. Case: a quality private bank vs a recovering PSU bank across eight metrics.", "keywords": ["bank stock analysis India", "NIM explained", "GNPA CASA CRAR ROA", "how banks make money", "credit cycle India", "NBFC crisis 2018", "RBI regulation banks", "PSU bank vs private bank", "price to book bank valuation", "banking sector investing"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 19. Sector Atlas: Banks, NBFCs and Financial Services</h1>
+<p class="count">Chapter 19 of 85 · about 23 minutes</p>
+<p class="lede">Open the Nifty's list of heavyweights and you will find a bank, an NBFC or an insurer every second name. Indian equity is, to an unusual degree, a leveraged bet on Indian credit, which makes lenders the one sector every investor must be able to read even if they never buy one. Lenders are also the sector where ordinary accounting misleads most, because the product is money, the raw material is money, and the profit is the difference between the two. This atlas chapter, the first of six, teaches you to read a lender's books the way a credit analyst does.</p>
+<h3><span class="sn">19.1</span>How lenders make money: NIM, credit costs and the loan book</h3>
+<p>From first principles, a lender is a spread machine with a quality problem. It borrows money at one rate (deposits, bonds, wholesale funding), lends at a higher rate, and keeps the difference: the <strong>net interest margin</strong>, NIM, interest earned minus interest paid as a share of earning assets, typically 2.5-4.5% for Indian lenders. Two costs then eat the spread. <strong>Operating costs</strong>, branches, people, technology, tracked by the cost-to-income ratio. And <strong>credit costs</strong>, the loans that do not come back, provisioned against profit. The lethal feature of the model is leverage: a bank runs on roughly ten rupees of assets per rupee of equity, so a 1% mistake on assets is a 10% hit to the owner's capital. This is why lending quality, not growth, is the master variable of the sector: any fool can grow a loan book, and in every Indian credit cycle, several do.</p>
+<h3><span class="sn">19.2</span>The metrics that matter: GNPA, CASA, capital adequacy, ROA</h3>
+<ul class="plain">
+<li><strong>GNPA, gross non-performing assets:</strong> the share of loans not being serviced. The sector's fever thermometer. Read it with the provision coverage ratio: a 4% GNPA fully provided for is a scar; a 2% GNPA thinly provided is a suspicion.</li>
+<li><strong>CASA ratio:</strong> current and savings account deposits as a share of total deposits. These are the cheapest funds in the system; a high CASA franchise is a structural cost advantage no competitor can quickly copy.</li>
+<li><strong>Capital adequacy (CRAR):</strong> the bank's own capital against its risk-weighted assets, floored by RBI at 9% plus buffers, so about 11.5% in practice. Capital is the shock absorber; growth consumes it, losses eat it, and a bank below comfort must either raise equity, diluting you, or stop growing.</li>
+<li><strong>ROA, return on assets:</strong> profit over total assets. The cleanest single summary of a lender: 1.8-2% is excellent in India, 1% is ordinary, below 0.5% is a value trap in a suit. ROE is ROA multiplied by leverage, which is why two banks with the same ROE can be entirely different risks.</li>
+</ul>
+<h3><span class="sn">19.3</span>Credit cycles and how they rhyme in India</h3>
+<p>Indian credit moves in long, rhyming cycles. The 2003-08 boom funded infrastructure with short money; the 2011-14 bust put those loans on the NPA books of the PSU banks that made them; the 2015-19 clean-up, bankruptcy code included, transferred the growth to private lenders and NBFCs; the 2018-19 NBFC stress re-priced wholesale funding; and the post-2020 cycle ran on retail credit. Each act features the same script: spreads look safest exactly when competition for growth is quietly weakening underwriting; the bad loans are made in the good times and only <em>recognised</em> in the bad. The investor's rule: judge a lender by the underwriting it did three years ago, which is the NPA book it owns today, and be most suspicious when its loan growth is most celebrated.</p>
+<h3><span class="sn">19.4</span>Regulation: RBI rules that shape bank economics</h3>
+<p>The RBI is not background noise in this sector; it is a co-author of every lender's P&amp;L. Capital floors set how much equity supports how much lending, and therefore the sector's maximum ROE. Priority-sector requirements direct a large share of credit to mandated segments, which is a tax by another name, priced into spreads. Liquidity requirements (the statutory liquidity ratio's government-bond pile and the cash reserve ratio's interest-free deposits with the RBI) earn below-market returns and quietly lower every bank's ROA. And supervision, prompt corrective action for weak banks, tightening rules on unsecured retail credit, caps on how NBFCs fund themselves, repeatedly redraws which business models are allowed to be profitable. Reading a lender without reading the current regulatory stance is reading half the book.</p>
+<h3><span class="sn">19.5</span>How to value a lender: P/B vs ROE done properly</h3>
+<p>Chapter 16 gave the identity: justified P/B = (ROE - g) / (r - g). This chapter supplies the judgement inside it. The ROE that matters is the <em>sustainable, clean</em> ROE: through-the-cycle credit costs, not this year's unusually low ones; fully provided books, not hopeful ones; and growth that the capital actually funds. A lender reporting 18% ROE while growing 25% a year on thin capital is borrowing its future ROE. The checklist synthesis: start with ROA and NIM for the engine, GNPA and provisioning for the brakes, CRAR for the fuel tank, CASA for the franchise's moat, and only then convert the honest ROE into a justified multiple. Price follows that identity over time, which is why the cheapest P/B in the sector is usually the most expensive mistake.</p>
+<h3><span class="sn">19.6</span>Worked example: a quality private bank vs a recovering PSU bank</h3>
+<div class="example">
+<p class="ex-title">Case: the same sector, two machines, metric by metric</p>
+<p>Two composites, both recognisably drawn from real Indian banks of the last decade, numbers illustrative:</p>
+<table class="num">
+<tr><th>Metric</th><th class="r">Quality private bank</th><th class="r">Recovering PSU bank</th><th>Reading</th></tr>
+<tr><td>NIM</td><td class="r">4.0%</td><td class="r">2.8%</td><td>Cheap deposits fund the spread</td></tr>
+<tr><td>CASA ratio</td><td class="r">42%</td><td class="r">38%</td><td>Both decent; the private one monetises it better</td></tr>
+<tr><td>GNPA</td><td class="r">1.5%</td><td class="r">4.0%</td><td>Legacy book still cleaning</td></tr>
+<tr><td>Credit cost</td><td class="r">0.6%</td><td class="r">1.5%</td><td>The difference falls straight to profit</td></tr>
+<tr><td>CRAR</td><td class="r">17%</td><td class="r">14%</td><td>Both above the regulatory floor</td></tr>
+<tr><td>ROA</td><td class="r">1.9%</td><td class="r">0.7%</td><td>The single best summary line</td></tr>
+<tr><td>ROE</td><td class="r">17%</td><td class="r">10%</td><td>Sets the justified P/B (Chapter 16)</td></tr>
+<tr><td>P/B (typical)</td><td class="r">2.2x</td><td class="r">0.7x</td><td>The market has read this table</td></tr>
+</table>
+<p>Read the table as one argument. The private bank's edge is not one metric but a system: CASA lowers funding cost, which funds better underwriting, which lowers credit costs, which produces ROA, which supports capital, which funds growth. The PSU bank's discount is not prejudice; at 0.7x book the market is pricing a 10% ROE against a 14% cost of equity, plus governance history, which Chapter 16's formula translates directly into the multiple. The recovery trade in such a bank is a bet on the ROE line, and it works exactly when credit costs normalise faster than the market believes, as the 2020-24 PSU re-rating showed. Both investments are legible; neither is mysterious. That is the whole point of a sector atlas.</p>
+</div>
+<h3><span class="sn">19.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Explain the lender's business model in one sentence using "spread" and "leverage".</li>
+<li>Why does a 1% asset mistake hit bank equity by roughly 10%?</li>
+<li>Define GNPA, CASA, CRAR and ROA, and give the one-line reading of each.</li>
+<li>Why are bad loans made in good times, and which year's underwriting does today's NPA book judge?</li>
+<li>Name three RBI mechanisms that lower or shape bank profitability.</li>
+<li>Using the case table, explain why 0.7x book can be fair value rather than a bargain.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-18-market-cycles-bubbles.html">← Chapter 18: Market Cycles, Bubbles and Crashes</a>
+<a href="finance-reference.html">Book index (Chapter 20 arrives with the next batch) →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
