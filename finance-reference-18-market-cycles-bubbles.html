@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 18. Market Cycles, Bubbles and Crashes - Finance With Vishnu</title>
+<meta name="description" content="The anatomy of market cycles, how bubbles inflate and end, crash mechanics, thirty years of Indian bull and bear markets from 1992 to 2020, and the lessons investors actually keep.">
+<meta name="keywords" content="market cycles India, stock market bubble anatomy, 1992 Harshad Mehta crash, 2000 dotcom India, 2008 sensex crash, 2020 covid crash recovery, bull bear market India, market crash lessons, investor psychology, sensex history chart">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 18. Market Cycles, Bubbles and Crashes", "description": "Cycles run four acts: disbelief, acceptance, euphoria, decline, driven by a price-belief feedback loop. Bubbles add displacement, leveraged new buyers, and a narrative that prices perfection; they end on exhausted buyers, not bad news. Crashes are forced selling feeding on itself, which is why quality falls first and reserves decide who buys the bottom. Thirty years of Indian history, 1992, 2000, 2008, 2020, draw a staircase: each cycle's low above the last. Cases: the two costume dramas and the crash-coiled-spring contrast.", "keywords": ["market cycles India", "stock market bubble anatomy", "1992 Harshad Mehta crash", "2000 dotcom India", "2008 sensex crash", "2020 covid crash recovery", "bull bear market India", "market crash lessons", "investor psychology", "sensex history chart"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div id="fwv-notice" role="dialog" aria-modal="true" aria-labelledby="fwv-notice-title" hidden>
+  <div class="fwv-card">
+    <h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+    <p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+    <p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+    <p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+    <p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+    <p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+    <button type="button" id="fwv-notice-accept">I understand and accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+
+<!--NOTICE_END-->
+  <header class="topbar">
+    <span class="brand">Finance With Vishnu</span>
+    <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+  </header>
+  <main>
+
+    <p class="part-tag">Part IV &middot; Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+    <h1>Chapter 18. Market Cycles, Bubbles and Crashes</h1>
+    <p class="count">Chapter 18 of 85 &middot; about 22 minutes</p>
+    <p class="lede">Every generation of Indian investors gets handed the same lesson in a different costume. In 1992 the costume was a charismatic broker and bank receipts; in 2000 it was dot-com; in 2008, global leverage; in 2020, a virus. The lesson is always the same four sentences: prices detach from value, the detachment feels like genius, it ends, and the end arrives faster than the beginning. This chapter is the history of that lesson in India, taught so the next costume does not fool you.</p>
+
+    <h3><span class="sn">18.1</span>The anatomy of a market cycle</h3>
+    <p>A full cycle has four acts, and they rhyme everywhere. <strong>Disbelief:</strong> prices recover from a bottom while the news stays bad; the few buyers are called reckless. <strong>Acceptance:</strong> earnings confirm the recovery; prices climb a wall of reasonable worry; the public reads about markets but does not yet join. <strong>Euphoria:</strong> the story simplifies to "this time is different"; valuations stop mattering because prices only go up; your barber has a portfolio. <strong>Decline:</strong> the smart money sells into the last buyers; the fall needs no villain, only the absence of new believers; and the decline ends in a disbelief that starts the next cycle. The deep driver is not economics but the feedback loop between price and belief: rising prices validate the story, the story attracts buyers, the buyers raise prices. Every cycle is that loop, wound up and then run in reverse.</p>
+
+    <h3><span class="sn">18.2</span>Bubbles: how they inflate and how they end</h3>
+    <p>A bubble is a feedback loop with three extra ingredients. A <strong>displacement</strong>: a genuinely new thing, liberalisation in 1991, the internet in 1999, cheap money in 2020, whose real promise justifies the first re-rating. <strong>Leverage and new buyers:</strong> credit and first-time investors who have never seen a fall, whose buying is the bubble's fuel and whose absence is its ending. And a <strong>narrative that prices perfection</strong>: when the story requires everything to go right, anything going wrong is a pin. The ends rhyme too. Bubbles do not pop on bad news; they exhaust themselves when the last marginal buyer has bought, and then any excuse serves. The useful skill is not predicting the pin, which nobody does reliably, but recognising the setup: parabolic price, leveraged participants, a story that admits no price as too high, and people you know quitting jobs to trade. When all four appear, your job is not to leave at the top; it is to not be the fuel.</p>
+
+    <h3><span class="sn">18.3</span>Crashes and panics: mechanics and psychology</h3>
+    <p>Crashes are bubbles' mirror: forced selling feeding falling prices feeding forced selling. The mechanics are specific. Leveraged holders meet margin calls and must sell not what they choose but what they can. Mutual funds meet redemptions and sell their liquid holdings first, which is why quality falls hardest in the first wave. And the crowd's psychology inverts: the same investors who could not imagine risk in January cannot imagine reward in March. Two facts about Indian crashes are worth memorising. They are fast: the 2020 fall compressed into about five weeks. And they have always, so far, ended: every Indian crash, 1992, 2000, 2008, 2020, was eventually a buying opportunity for the investor with cash, courage and no leverage. "So far" is doing work in that sentence; the protection is not optimism but Chapter 5's emergency fund and Part I's position sizing, which let you be brave without being ruined.</p>
+
+    <h3><span class="sn">18.4</span>Bull and bear markets across Indian history</h3>
+    <p>The thirty-year shape, approximate numbers that any chart of the Sensex confirms. The 1992 run and scam-driven collapse: the index roughly doubled into the mania and halved out of it. The 1999-2000 tech mania: software stocks multiplied and then gave back 70-90%, while the broader market merely suffered. The 2003-2007 bull: a genuine five-fold re-rating of India on earnings that actually arrived. 2008: a fall of about 60% from the January peak to the March 2009 trough, global in origin, brutal in local leverage. The 2014-2017 mid and small-cap run, ending in the 2018-19 credit stress that repriced the entire NBFC complex. And 2020: the fastest crash and the fastest recovery on record.</p>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;"><line x1="56" y1="266.0" x2="706" y2="266.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="270.0" text-anchor="end" font-size="11" fill="#7a6f62">20k</text><line x1="56" y1="195.1" x2="706" y2="195.1" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="199.1" text-anchor="end" font-size="11" fill="#7a6f62">30k</text><line x1="56" y1="124.3" x2="706" y2="124.3" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="128.3" text-anchor="end" font-size="11" fill="#7a6f62">40k</text><line x1="56" y1="53.4" x2="706" y2="53.4" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="57.4" text-anchor="end" font-size="11" fill="#7a6f62">50k</text><text x="56.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">Jan20</text><text x="148.9" y="288" text-anchor="middle" font-size="11" fill="#7a6f62"></text><text x="241.7" y="288" text-anchor="middle" font-size="11" fill="#7a6f62"></text><text x="334.6" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">Apr20</text><text x="427.4" y="288" text-anchor="middle" font-size="11" fill="#7a6f62"></text><text x="520.3" y="288" text-anchor="middle" font-size="11" fill="#7a6f62"></text><text x="613.1" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">Sep20</text><text x="706.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62"></text><polyline points="56.0,112.9 87.0,115.8 117.9,121.5 148.9,136.3 179.8,137.7 210.8,198.7 241.7,218.5 272.7,226.3 303.6,207.2 334.6,198.7 365.5,190.9 396.5,183.8 427.4,168.9 458.4,165.4 489.3,133.5 520.3,113.7 551.2,79.6 582.2,71.9 613.1,59.8 644.1,59.1" fill="none" stroke="#8a4e4e" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="644.1" cy="59.1" r="3.4" fill="#8a4e4e"/><rect x="62" y="6" width="10" height="3.4" fill="#8a4e4e"/><text x="77" y="11" font-size="11.5" fill="#332619">Sensex (thousands, approximate)</text></svg>
+    <p>Step back and the pattern is a staircase drawn by a shaky hand: each cycle's low sat far above the previous cycle's low, because the earnings under the index compounded through all of it. The permanent lesson of Indian market history is that the crashes are the tuition and the compounding is the degree.</p>
+
+    <h3><span class="sn">18.5</span>Lessons investors actually keep</h3>
+    <p>History is useless unless it becomes rules. The ones this chapter was written to install: never let a position's survival depend on a market's mood, which is the whole case against leverage; expect two meaningful falls per decade and one deep one, so a 30% drawdown is weather, not a signal; hold the reserve that makes you a buyer in the panic rather than a seller in it; and measure your returns cycle to cycle, not peak to trough, because everyone is a genius in act three. The investor who survives four cycles with these rules beats the brilliant forecaster who survives two.</p>
+
+    <h3><span class="sn">18.6</span>Worked examples and cases</h3>
+    <div class="example">
+      <p class="ex-title">Case 1: 1992 and 2000, the two costume dramas</p>
+      <p>The 1992 episode ran on a displacement, liberalisation, plus a genuine mechanical hole: bank receipts that let one operator route the banking system's money into stocks. When the hole was exposed, the fuel vanished and prices halved. The 2000 episode ran on the internet's real promise plus a roster of companies whose prices required the promise to be fully kept; when global tech cracked, the Indian version, leveraged operators included, fell further. Different costumes, identical anatomy: real displacement, leveraged fuel, narrative perfection, exhausted buyers. An investor who had internalised the four acts could not have called either top, and could have avoided being either episode's fuel.</p>
+    </div>
+    <div class="example">
+      <p class="ex-title">Case 2: 2008 and 2020, the crash and the coiled spring</p>
+      <p>In 2008 the trigger was global, but the Indian damage ran through local leverage: real-estate and infrastructure balance sheets that had borrowed against the story of endless growth. The index fell about 60%; the leveraged sectors fell more and recovered slower. In 2020 the trigger was a virus and the damage was universal and instant: about 38% in five weeks, then a recovery so fast that sellers in March locked in the loss and missed the year. The contrast teaches the deepest lesson of this chapter. You will not know the trigger in advance, and you will not act wisely inside the panic unless the decisions were made earlier: the reserve in place, the leverage absent, the shopping list written. Panics are weather events for the prepared and identity crises for the rest.</p>
+    </div>
+
+    <h3><span class="sn">18.7</span>Active-recall questions for this section</h3>
+    <ol class="recall">
+      <li>Name the four acts of a market cycle and the feedback loop that drives them.</li>
+      <li>What three ingredients turn a strong market into a bubble?</li>
+      <li>Why do quality stocks often fall hardest in the first wave of a crash?</li>
+      <li>What is the thirty-year shape of Indian market history, and what does it make of every crash so far?</li>
+      <li>Write the four rules this chapter installs, from memory.</li>
+      <li>Contrast 2008 and 2020: what differed in trigger and damage, and what single preparation mattered in both?</li>
+    </ol>
+
+    <div class="scan-nav" style="padding-top:34px;">
+      <a href="finance-reference-17-technical-analysis.html">&larr; Chapter 17: Technical Analysis and Market Behaviour</a>
+      <a href="finance-reference-19-sector-atlas-banks.html">Chapter 19: Sector Atlas: Banks, NBFCs and Financial Services &rarr;</a>
+    </div>
+
+  </main>
+  <footer>Finance With Vishnu &middot; For research and education only, not investment advice.</footer>
+</body>
+</html>
