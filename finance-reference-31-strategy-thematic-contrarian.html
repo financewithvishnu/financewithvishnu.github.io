@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 31. Stock Strategies: Thematic, Sector and Contrarian Strategies - Finance With Vishnu</title>
+<meta content="Thematic investing tests, sector rotation through the cycle, contrarian buying of the hated, special situations (demergers, buybacks, delistings, turnarounds), theme sizing, a demerger unlock and a PSU bubble case." name="description"/>
+<meta content="thematic investing India, sector rotation strategy, contrarian investing India, PSU stocks re-rating, demerger value unlocking, special situations investing, buyback delisting strategy, theme portfolio sizing, EV defence railway stocks theme, buying hated stocks" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 31. Stock Strategies: Thematic, Sector and Contrarian Strategies", "description": "Themes are structural stories that must pass four tests: measurable demand, captured economics, unspent valuation, and earliness. Sector rotation is a research compass, not a clock. Contrarian buying needs a normalisation mechanism, else it is a value trap. Special situations reprice on documents, and diversification insures their single-event risk. Size themes in tranches with written kill criteria and profit-taking rules. Cases: a demerger closing a 40% SOTP discount, and the PSU theme's three acts from truth to bubble.", "keywords": ["thematic investing India", "sector rotation strategy", "contrarian investing India", "PSU stocks re-rating", "demerger value unlocking", "special situations investing", "buyback delisting strategy", "theme portfolio sizing", "EV defence railway stocks theme", "buying hated stocks"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 31. Stock Strategies: Thematic, Sector and Contrarian Strategies</h1>
+<p class="count">Chapter 31 of 85 · about 20 minutes</p>
+<p class="lede">Every few years the Indian market falls in love: PSUs, infrastructure, defence, railways, EVs, "China plus one". The love stories are always built on something true, and they end, when they end, in the same way: the story outruns the cash flows, and the crowd discovers valuation in the hardest possible fashion. This chapter is about surfing themes without drowning in them, rotating with the economic cycle, and the oldest profitable posture of all: standing where the crowd is not.</p>
+<h3><span class="sn">31.1</span>Thematic investing: from story to portfolio</h3>
+<p>A theme is a structural story: formalisation, premiumisation, energy transition, defence indigenisation, India's capex revival. The work is converting story into portfolio without buying the brochure. Four tests separate a theme from a bubble in waiting. Is the demand real and measurable, in orders, volumes, policy budgets, rather than in PowerPoint? Do the listed companies actually capture the economics, or does the theme's profit pool sit upstream, downstream or in China? What is already priced: a true theme at 60x earnings has the story's next five years prepaid. And is the theme early or late in its public life: the time to buy a structural story is when it is boring, not when it has a hashtag. The theme investor's edge is never knowing the story; everyone knows the story. It is pricing the story's arrival in actual cash flows.</p>
+<h3><span class="sn">31.2</span>Sector rotation through the economic cycle</h3>
+<div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Recovery</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">rates low, growth returning: financials, autos, discretionary</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Expansion</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">earnings broad: capital goods, industrials, mid-caps</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Late cycle</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">inflation, tight money: energy, materials, IT exporters</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Slowdown / recession</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">defensives: FMCG, pharma, quality lenders</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">Sector rotation: the market's habit of moving leadership as the economy turns. A compass, not a clock.</p>
+<p>The compass above is the theory: different sectors' earnings peak at different phases of the cycle, so leadership rotates predictably in outline. The practice is humbler. The cycle's phases are only visible in the rear-view mirror; India-specific forces, monsoons, election budgets, global liquidity, routinely scramble the sequence; and by the time the rotation is obvious, the market has rotated. Used well, the compass is a checklist for what to <em>research next</em>, not a trading signal: when rates have fallen and growth is turning, you should already understand the financials and autos you might soon want. Rotation rewards the prepared and punishes the reactive, which makes it a reading discipline more than a strategy.</p>
+<h3><span class="sn">31.3</span>Contrarian investing: buying what is hated</h3>
+<p>Contrarianism is value investing's temperamental cousin: where value buys cheap, contrarian buys despised. The logic is that prices embed expectations, and expectations about hated things are so low that mediocrity beats them. India's history is rich with the pattern: PSU banks in 2020, priced as permanently impaired, tripled as credit costs merely normalised; IT stocks in early 2023, abandoned as ex-growth, re-rated when the feared collapse proved ordinary. The discipline that keeps contrarianism from becoming a death wish: hate alone is not a signal, because some things are hated for terminal reasons (Chapter 27's traps). The contrarian needs a thesis for <em>normalisation</em>: what specifically will be less bad, and what would prove that wrong? Buy the hated with a mechanism, size it for the possibility that the hate is early rather than wrong, and let Chapter 10's checklist certify that the accounts are honest enough to recover at all.</p>
+<h3><span class="sn">31.4</span>Special situations: demergers, buybacks, delistings, turnarounds</h3>
+<p>Between the strategies live the events, corporate actions that force repricing. <strong>Demergers</strong> unlock value when a sum-of-the-parts discount (Chapter 16) collapses as the parts list separately; the market habitually underprices the tail of the distribution, the small spun-off entity dumped by index funds. <strong>Buybacks at deep discounts</strong> are the company itself buying the bargain. <strong>Delistings</strong> offer a negotiated exit where the game is the reverse book-building price discovery. <strong>Turnarounds</strong>, new management, cleaned balance sheets, are the riskiest: most fail, and the ones that work pay for all. The common skill is reading the specific document, the scheme, the offer, the letter, rather than the commentary about it, and sizing each situation as one bet among several, because special situations are single-event risks that diversification genuinely insures.</p>
+<h3><span class="sn">31.5</span>How to size a theme without betting the house</h3>
+<p>The sizing rules that keep themes as seasoning rather than the meal. Cap any theme at a fixed share of the portfolio, a tenth to a fifth depending on its proof level, so that total failure is a bruise. Enter in tranches: themes are early or wrong, and you will not know which for a year. Write the theme's kill criteria before buying: which evidence, subsidy rollback, order-book stalls, unit economics refusing to appear, ends the position. And take profits on the way up when the story goes parabolic, because a theme that doubles your allocation through price is silently doubling your risk. These are Chapter 17's position-sizing rules pointed at stories: the theme supplies the excitement, the sizing supplies the survival.</p>
+<h3><span class="sn">31.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case 1: an Indian demerger that unlocked value</p>
+<p>The recurring pattern, composite of several real Indian demergers, numbers illustrative: a diversified group trades at ₹100, its SOTP says ₹140, and the discount persists for years because nothing forces it to close. The announcement of a split into a listed lender and a listed manufacturer changes the arithmetic: within eighteen months of the scheme, the two separately traded parts sum to ₹160, as each attracts its own shareholders, its own coverage, its own honest multiple. The lessons: the discount needed a mechanism, and the demerger supplied it; the easy money was made by holders of the boring pre-split parent, not by chasers of the hot spun-off listing; and the scheme document, read on announcement day, contained everything except the word "opportunity".</p>
+</div>
+<div class="example">
+<p class="ex-title">Case 2: a PSU theme, from story to bubble</p>
+<p>Trace the anatomy with the 2020-2024 PSU re-rating as the template, numbers illustrative. Act one, the true story: balance sheets cleaned, credit costs normalised, dividends restored, valuations at half of book. The early buyers were paid extravagantly as the index of PSUs tripled. Act two, the simplification: "PSUs are back" became a blanket story, and prices detached from the chapter-by-chapter arithmetic: railways and defence PSUs priced decades of orders, financiers priced as if credit cycles were abolished. Act three: earnings stayed good but stopped surprising, and the most extended names fell 30-40% from peaks while the genuinely re-rated compounders held. The theme was right; the late price was wrong. Both things are almost always true at once, and the investor's job is never to pick between them, it is to know which one they are currently trading.</p>
+</div>
+<h3><span class="sn">31.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Name the four tests that separate a theme from a bubble in waiting.</li>
+<li>Why is the rotation compass a research checklist rather than a trading signal?</li>
+<li>What distinguishes a contrarian position from a value trap?</li>
+<li>Rank the four special situations by risk and name the common skill.</li>
+<li>Write the four theme-sizing rules from memory.</li>
+<li>Using Case 2, explain how a theme can be right and its late price wrong at the same time.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-30-strategy-momentum.html">← Chapter 30: Stock Strategies: Momentum and Trend-Based Investing</a>
+<a href="finance-reference-32-strategy-smallcap-multibagger.html">Chapter 32: Stock Strategies: Small-Cap and Multibagger Hunting →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
