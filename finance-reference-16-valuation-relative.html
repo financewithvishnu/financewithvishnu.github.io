@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 16. Valuation II: Relative and Asset-Based Methods - Finance With Vishnu</title>
+<meta name="description" content="P/E variants, EV/EBITDA, P/S and P/B matched to the right business, PEG's promises and traps, liquidation, replacement cost and sum-of-the-parts, and bank valuation by justified P/B with Indian cases.">
+<meta name="keywords" content="PE ratio explained, forward PE vs trailing PE, EV EBITDA when to use, price to book banks India, PEG ratio, sum of the parts valuation, holding company discount India, justified PB formula, how to value banks, relative valuation India">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 16. Valuation II: Relative and Asset-Based Methods", "description": "Relative valuation is the market's favourite shortcut; the discipline is matching the multiple to where the value lives. Trailing, forward and cyclically adjusted P/E each fix a different sin. EV/EBITDA compares capital structures, P/S values hope, P/B fits financial firms. PEG is a second screen, never a verdict. Asset-based methods, liquidation, replacement cost, SOTP, price the floor and the conglomerate discount. Banks run on justified P/B = (ROE-g)/(r-g). Cases: a quality private bank at 2.3x justified vs a PSU at 0.4x, and a conglomerate SOTP with a 40% discount decomposed.", "keywords": ["PE ratio explained", "forward PE vs trailing PE", "EV EBITDA when to use", "price to book banks India", "PEG ratio", "sum of the parts valuation", "holding company discount India", "justified PB formula", "how to value banks", "relative valuation India"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div id="fwv-notice" role="dialog" aria-modal="true" aria-labelledby="fwv-notice-title" hidden>
+  <div class="fwv-card">
+    <h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+    <p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+    <p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+    <p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+    <p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+    <p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+    <button type="button" id="fwv-notice-accept">I understand and accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+
+<!--NOTICE_END-->
+  <header class="topbar">
+    <span class="brand">Finance With Vishnu</span>
+    <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+  </header>
+  <main>
+
+    <p class="part-tag">Part IV &middot; Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+    <h1>Chapter 16. Valuation II: Relative and Asset-Based Methods</h1>
+    <p class="count">Chapter 16 of 85 &middot; about 22 minutes</p>
+    <p class="lede">Nobody prices a flat by discounting its future rents; they ask what the flat next door sold for, and adjust. Relative valuation is the market's favourite shortcut for the same reason: fast, intuitive, and wrong in ways that are entirely predictable. This chapter teaches the shortcut properly: which multiple fits which business, what each one silently assumes, and how to know when "cheap versus peers" means a bargain and when it means a warning the market has already read.</p>
+
+    <h3><span class="sn">16.1</span>P/E and its variants: trailing, forward, cyclically adjusted</h3>
+    <p>The price-to-earnings ratio asks one question: how many rupees do you pay for one rupee of annual profit? <strong>Trailing P/E</strong> uses the last twelve months: factual, but backward-looking, and distorted by one-off quarters. <strong>Forward P/E</strong> uses next year's forecast: relevant, but built on an analyst's hope. <strong>Cyclically adjusted P/E</strong>, averaging earnings across a decade, fixes the specific sin of valuing a cyclical on peak earnings, the Chapter 11 trap where the lowest P/E marks the top. Every P/E also inherits the accounting: a P/E of 12 on manufactured earnings is expensive at any number. And a P/E compares equity value to equity profit, ignoring debt completely, which is exactly the hole the next section's multiple patches.</p>
+
+    <h3><span class="sn">16.2</span>EV/EBITDA, P/S, P/B: when each multiple is the right one</h3>
+    <ul class="plain">
+      <li><strong>EV/EBITDA:</strong> enterprise value (market cap + debt - cash) over operating earnings before interest, tax, depreciation. Capital-structure-neutral, so it compares a leveraged company with an unleveraged one honestly. Its blind spot: depreciation is a real economic cost in heavy industry, so EBITDA flatters capital-hungry businesses. Best for comparing industrial peers.</li>
+      <li><strong>P/S, price to sales:</strong> the multiple of last resort, for companies with no earnings yet: young tech, turnaround stories. It values the hope, not the business, and a P/S of 10 says "grow fast and fat or fall". Use it only when the path from revenue to profit is visible and mapped.</li>
+      <li><strong>P/B, price to book:</strong> price over net asset value per share. Meaningful where the balance sheet <em>is</em> the business: banks, NBFCs, insurers, where assets are financial and marked near reality. Meaningless where value lives in intangibles the balance sheet never booked: brands, networks, code. A consumer franchise at 12x book can be cheap; a lender at 12x book is a bubble symptom.</li>
+    </ul>
+    <p>The discipline: the multiple must match where the value lives, earnings, assets, or revenue-on-the-way-to-earnings. Choosing the multiple to fit the story you want is the most common valuation error in Indian research, sell-side and self-side alike.</p>
+
+    <h3><span class="sn">16.3</span>PEG and growth-adjusted valuation</h3>
+    <p>The PEG ratio, P/E divided by the earnings growth rate, promises to make expensive stocks comparable: a 40 P/E growing 40% has a PEG of 1, as does a 12 P/E growing 12%. It is a useful thumb rule and a dangerous formula. Growth compounds for a few years, not forever, so dividing by this year's growth rate prices a temporary state as a permanent one; and PEG treats all growth as equal, whether earned at 25% ROCE or bought with dilution at 8%. Use PEG as a second screen, never a verdict: below 1 invites a look, above 2 invites scepticism, and the look and the scepticism are both done with Chapters 9-11, not with more ratios.</p>
+
+    <h3><span class="sn">16.4</span>Asset-based value: liquidation, replacement, sum-of-the-parts</h3>
+    <p>Sometimes the right question is not "what will it earn?" but "what is it made of?". <strong>Liquidation value</strong>, assets sold piecemeal minus liabilities, prices the floor: relevant for distressed companies and for the cigar-butt style of deep value. <strong>Replacement cost</strong> asks what a competitor would spend to rebuild the capacity: when market value sits far below replacement cost, new supply stops arriving, which is how commodity cycles bottom. <strong>Sum-of-the-parts</strong> values each business separately and adds: the standard tool for India's conglomerates, where one listed company may hold a bank, a cement plant and three listed subsidiaries. SOTP almost always produces a number above the market price, the famous holding-company discount, and the analyst's real work is deciding how much of that discount is bad capital allocation, how much is tax leakage, and how much is simply permanent.</p>
+
+    <h3><span class="sn">16.5</span>Valuing banks, NBFCs and insurers: a special case</h3>
+    <p>Financial firms break the standard toolkit: debt is their raw material, not their capital structure, so EV/EBITDA and debt-to-equity say nothing. The working model is the <strong>justified P/B</strong>: a lender earning an ROE above its cost of equity deserves a price above book; earning below it, below book. The logic is pure first principles: book value is the capital; ROE is what the capital earns; the multiple is the market's price for that spread, sustained and growing. The full sector treatment is Chapter 19; the valuation identity belongs here because it is the cleanest example in all of finance of a multiple with an actual formula behind it rather than a habit.</p>
+
+    <h3><span class="sn">16.6</span>Worked examples and cases</h3>
+    <div class="example">
+      <p class="ex-title">Case 1: an Indian bank by P/B and ROE</p>
+      <p>The justified P/B formula, from the dividend discount model: P/B = (ROE - g) / (r - g), where g is sustainable growth and r the cost of equity. Take a quality private bank, composite but typical: ROE 17%, growth 10%, cost of equity 13%. Justified P/B = (0.17 - 0.10) / (0.13 - 0.10) = 2.3x. Now a recovering PSU lender: ROE 10%, growth 7%, cost of equity 14% for its weaker book and governance history. Justified P/B = (0.10 - 0.07) / (0.14 - 0.07) = 0.4x.</p>
+      <svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;"><line x1="52" y1="240.0" x2="706" y2="240.0" stroke="#e7dfd3" stroke-width="1"/><text x="44" y="244.0" text-anchor="end" font-size="11" fill="#7a6f62">0x P/B</text><line x1="52" y1="128.0" x2="706" y2="128.0" stroke="#e7dfd3" stroke-width="1"/><text x="44" y="132.0" text-anchor="end" font-size="11" fill="#7a6f62">1.4x P/B</text><line x1="52" y1="16.0" x2="706" y2="16.0" stroke="#e7dfd3" stroke-width="1"/><text x="44" y="20.0" text-anchor="end" font-size="11" fill="#7a6f62">2.8x P/B</text><rect x="180.5" y="56.0" width="70" height="184.0" rx="4" fill="#4e8a67"/><text x="215.5" y="50.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#332619">2.3x P/B</text><text x="215.5" y="256" text-anchor="middle" font-size="11.5" fill="#7a6f62">Quality private bank (justified)</text><rect x="507.5" y="208.0" width="70" height="32.0" rx="4" fill="#8a4e4e"/><text x="542.5" y="202.0" text-anchor="middle" font-size="11.5" font-weight="600" fill="#332619">0.4x P/B</text><text x="542.5" y="256" text-anchor="middle" font-size="11.5" fill="#7a6f62">Recovering PSU bank (justified)</text></svg>
+      <p>The market's habitual prices, around 2-2.5x for the first and 0.5-0.9x for the second in recent years, are this formula wearing clothes. And the formula tells you what would change the price: not hope, but a sustained two-point change in ROE, which on a leveraged balance sheet is an enormous operational fact. When someone calls a PSU bank "cheap at 0.7x book", they are forecasting ROE; make them say so.</p>
+    </div>
+    <div class="example">
+      <p class="ex-title">Case 2: a sum-of-the-parts on an Indian conglomerate</p>
+      <p>Composite, numbers illustrative: a holding company whose listed subsidiaries, at market prices, are worth &#8377;80,000 crore for its stakes, whose unlisted businesses earn &#8377;2,000 crore and might deserve &#8377;24,000 crore, minus &#8377;10,000 crore of holding-level debt: SOTP says &#8377;94,000 crore against a market cap of &#8377;56,000 crore, a 40% discount. Is it cheap? The decomposition: perhaps 10 points are structural (tax on any actual sale or spin-off), 10 are capital allocation history (cash has gone into the weakest businesses), and 20 are the market's standing scepticism that the discount ever closes. The catalyst question decides the investment: a demerger, a listing, a buyback at the holdco level turns "cheap" into "closing"; without one, a discount can outlive your patience, as decades of Indian holding companies have proven in both directions.</p>
+    </div>
+
+    <h3><span class="sn">16.7</span>Active-recall questions for this section</h3>
+    <ol class="recall">
+      <li>What problem does cyclically adjusted P/E fix, and which chapter's trap does it spring from?</li>
+      <li>Match the multiple to the business: young tech, industrial peer comparison, lender, brand-led consumer.</li>
+      <li>Why does PEG mislead about growth that is bought with dilution?</li>
+      <li>When is replacement cost the right lens, and what does it tell you about commodity cycles?</li>
+      <li>Derive the justified P/B formula's logic in two sentences.</li>
+      <li>A holding company trades at a 40% SOTP discount. What three questions decide whether it is a bargain?</li>
+    </ol>
+
+    <div class="scan-nav" style="padding-top:34px;">
+      <a href="finance-reference-15-valuation-absolute.html">&larr; Chapter 15: Valuation I: Absolute Methods</a>
+      <a href="finance-reference-17-technical-analysis.html">Chapter 17: Technical Analysis and Market Behaviour &rarr;</a>
+    </div>
+
+  </main>
+  <footer>Finance With Vishnu &middot; For research and education only, not investment advice.</footer>
+</body>
+</html>
