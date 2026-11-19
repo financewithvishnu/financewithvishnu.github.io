@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 7. Loans, Credit Scores and Borrowing Wisely - Finance With Vishnu</title>
+<meta name="description" content="Good debt vs bad debt, how EMI interest really works with an amortisation chart, credit score building blocks, home vs vehicle vs personal loans, the credit card minimum-due trap, and prepay-vs-invest logic.">
+<meta name="keywords" content="EMI calculation India, home loan prepayment, credit score CIBIL, good debt bad debt, credit card minimum due trap, personal loan interest rate, amortisation schedule, loan against securities, credit utilisation, home loan balance transfer">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 7. Loans, Credit Scores and Borrowing Wisely", "description": "Debt pulls money from your future; it helps only when the asset outearns the rate and the EMI survives a six-month income stop. EMIs pay mostly interest early, so early prepayment and small rate cuts matter most. Credit scores are built by on-time payment, low utilisation and few applications, and they move loan rates by a full percentage point. Cards are tools at full payment and traps at 42% revolving. Cases: prepay vs invest, and the true cost of a Rs 60,000 card balance.", "keywords": ["EMI calculation India", "home loan prepayment", "credit score CIBIL", "good debt bad debt", "credit card minimum due trap", "personal loan interest rate", "amortisation schedule", "loan against securities", "credit utilisation", "home loan balance transfer"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div id="fwv-notice" role="dialog" aria-modal="true" aria-labelledby="fwv-notice-title" hidden>
+  <div class="fwv-card">
+    <h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+    <p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+    <p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+    <p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+    <p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+    <p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+    <button type="button" id="fwv-notice-accept">I understand and accept</button>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+
+<!--NOTICE_END-->
+  <header class="topbar">
+    <span class="brand">Finance With Vishnu</span>
+    <nav class="file-nav"><a href="index.html">Home</a><a href="products.html" aria-current="page">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+  </header>
+  <main>
+
+    <p class="part-tag">Part II &middot; Personal Finance Before Investing</p>
+    <h1>Chapter 7. Loans, Credit Scores and Borrowing Wisely</h1>
+    <p class="count">Chapter 7 of 85 &middot; about 18 minutes</p>
+    <p class="lede">A home loan at 8.5% builds a family an asset over twenty years. A credit card rolling at 42% eats the same family's future in eighteen months. Both are "loans", the way a ladder and a trapdoor are both "openings". This chapter gives you the maths to tell them apart, the truth about how EMIs actually split your money, and the one three-digit number that decides what every lender in the country will charge you.</p>
+
+    <h3><span class="sn">7.1</span>Good debt vs bad debt</h3>
+    <p>From first principles: debt is <strong>money pulled from your future</strong>. Whether that is wise depends on what the money does next. Debt that buys an appreciating or income-producing asset, at a rate below what the asset earns, can make you richer: a home loan below rental-plus-growth value, an education loan that raises lifetime income, a business loan that returns more than its interest. Debt that funds consumption at a rate far above any plausible return makes you poorer with certainty: cards, personal loans for holidays, BNPL for gadgets.</p>
+    <p>The honest test is two questions. Does this loan buy something that will be worth more, or earn more, than its total cost? And if income stops for six months, does the EMI still get paid? The first sorts good from bad; the second keeps good debt from turning bad.</p>
+
+    <h3><span class="sn">7.2</span>How interest on loans really works: EMI maths</h3>
+    <p>An EMI looks like one flat payment. Inside, it is two payments that change shape every month: the month's interest on the outstanding balance, plus whatever is left over going to principal. Early in a long loan, the balance is huge, so interest eats most of the EMI and the principal barely dents. Watch a &#8377;50,00,000 home loan at 8.5% for 20 years (EMI about &#8377;43,400):</p>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;"><line x1="56" y1="266.0" x2="706" y2="266.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="270.0" text-anchor="end" font-size="11" fill="#7a6f62">0L</text><line x1="56" y1="216.4" x2="706" y2="216.4" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="220.4" text-anchor="end" font-size="11" fill="#7a6f62">10L</text><line x1="56" y1="166.8" x2="706" y2="166.8" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="170.8" text-anchor="end" font-size="11" fill="#7a6f62">20L</text><line x1="56" y1="117.2" x2="706" y2="117.2" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="121.2" text-anchor="end" font-size="11" fill="#7a6f62">30L</text><line x1="56" y1="67.6" x2="706" y2="67.6" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="71.6" text-anchor="end" font-size="11" fill="#7a6f62">40L</text><line x1="56" y1="18.0" x2="706" y2="18.0" stroke="#e7dfd3" stroke-width="1"/><text x="48" y="22.0" text-anchor="end" font-size="11" fill="#7a6f62">50L</text><text x="56.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">2</text><text x="121.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">4</text><text x="186.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">6</text><text x="251.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">8</text><text x="316.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">10</text><text x="381.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">12</text><text x="446.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">14</text><text x="511.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">16</text><text x="576.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">18</text><text x="641.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">20</text><text x="706.0" y="288" text-anchor="middle" font-size="11" fill="#7a6f62">20</text><polyline points="56.0,28.4 121.0,40.3 186.0,55.2 251.0,72.1 316.0,92.4 381.0,116.7 446.0,145.0 511.0,178.7 576.0,218.9 641.0,266.0" fill="none" stroke="#4e8a67" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="641.0" cy="266.0" r="3.4" fill="#4e8a67"/><rect x="62" y="6" width="10" height="3.4" fill="#4e8a67"/><text x="77" y="11" font-size="11.5" fill="#332619">Loan outstanding (Rs lakh)</text></svg>
+    <p style="color:var(--ink-2);font-size:13px;">Outstanding principal by year. After 10 years, half the EMIs paid, roughly &#8377;34,00,000 of the &#8377;50,00,000 is still owed. Total interest over the full term: about &#8377;54,00,000, more than the loan itself.</p>
+    <p>Two practical consequences. Prepaying early is worth far more than prepaying late, because early rupees kill the balance that the interest is charged on. And a 0.5% lower rate is worth real money: on this loan it saves about &#8377;1,700 a month and over &#8377;4,00,000 across the term, which is why existing borrowers should always ask about a rate reset or balance transfer when rates fall.</p>
+
+    <h3><span class="sn">7.3</span>Credit scores: what builds and breaks them</h3>
+    <p>Every lender you will ever meet reads your repayment past before pricing your future. In India that past is summarised by credit scores such as CIBIL's, a 300-900 number built from your actual behaviour; the American cousin is the FICO score. The recipe is boring, which is the point:</p>
+    <ul class="plain">
+      <li><strong>Pay every EMI and card bill on time, every time.</strong> Payment history is the largest ingredient, and one 30-day late mark lingers for years.</li>
+      <li><strong>Keep card utilisation low.</strong> Routinely using most of your limit reads as stress even when you pay in full; staying under about a third keeps the signal clean.</li>
+      <li><strong>Do not apply everywhere at once.</strong> Each application leaves a hard enquiry; a cluster of them reads as desperation.</li>
+      <li><strong>Keep old accounts open and mixed.</strong> A long, clean history plus a mix of loan types builds the score slowly, the way reputation is built.</li>
+    </ul>
+    <p>The payoff is concrete: the same home loan can price a full percentage point apart for a strong score and a weak one, over &#8377;8,00,000 on the loan above. Check your report once a year, free, and dispute errors in writing; wrong loans on reports are more common than they should be.</p>
+
+    <h3><span class="sn">7.4</span>Home, vehicle and personal loans compared</h3>
+    <table class="num">
+<tr><th>Loan</th><th>Typical rate band</th><th>Secured by</th><th>Honest use</th></tr>
+<tr><td>Home loan</td><td>8-9.5%</td><td>The house</td><td>Long asset, tax angles, cheapest big money</td></tr>
+<tr><td>Vehicle loan</td><td>8.5-11%</td><td>The vehicle</td><td>A depreciating asset; borrow less, shorter</td></tr>
+<tr><td>Personal loan</td><td>11-24%</td><td>Nothing</td><td>Emergencies only, when the fund is not enough</td></tr>
+<tr><td>Credit card revolve</td><td>36-45%</td><td>Nothing</td><td>Never a loan; a payment tool only</td></tr>
+<tr><td>Loan against securities/FD</td><td>9-11%</td><td>Your investments</td><td>Short bridge without selling in a bad market</td></tr>
+</table>
+    <p>The pattern is the collateral: the less the lender can seize, the more it charges for the risk, straight from Chapter 3's grammar. Gold loans and loans against securities sit low because the lender holds your asset; the unsecured personal loan prices the lender's fear.</p>
+
+    <h3><span class="sn">7.5</span>Credit cards: tool or trap</h3>
+    <p>A credit card is two products sharing a piece of plastic. As a <strong>payment tool</strong>, paid in full every month, it gives you free credit for up to about 50 days, rewards, dispute protection and a credit history. As a <strong>loan</strong>, it is the most expensive mainstream money in India at roughly 3-3.8% a month, over 42% a year before compounding. The minimum-due button is the hinge between the two products, and it is engineered to feel like relief while converting you from the first product to the second.</p>
+    <div class="example">
+      <p class="ex-title">Worked example: the minimum-due spiral</p>
+      <p>Spend &#8377;1,00,000 on a card at 3.5% a month and pay only the 5% minimum. Interest is charged from day one, on the full amount, with no free period on new spends. Paying the minimum alone, the balance takes well over a decade to die and the interest paid exceeds the original &#8377;1,00,000. The bank's favourite customer is the one who never defaults and never escapes. The rule that keeps a card a tool: <strong>full payment, every month, no exceptions</strong>; if a month cannot be paid in full, convert it to a cheaper EMI or personal loan the same week, not the same year.</p>
+    </div>
+
+    <h3><span class="sn">7.6</span>Worked examples and cases</h3>
+    <div class="example">
+      <p class="ex-title">Case 1: prepay the home loan or invest the surplus?</p>
+      <p>Same &#8377;50,00,000 loan at 8.5%, and a &#8377;20,000 monthly surplus. Prepaying saves a guaranteed, tax-free 8.5% (the loan's effective cost after any tax benefit you actually use). Investing in equity might earn 11-12% over long periods, with no guarantee and full volatility. The first-principles answer: compare guaranteed with guaranteed. If the loan costs 8.5% certain, only invest the surplus if you would also borrow at 8.5% to buy equity, which is what not-prepaying quietly is. Most families do both: prepay aggressively in the early years when the interest share is fattest, then let investing take over as the balance thins.</p>
+    </div>
+    <div class="example">
+      <p class="ex-title">Case 2: the true cost of a "small" card balance</p>
+      <p>A &#8377;60,000 card balance at 42% a year, paid at &#8377;3,000 a month, needs about 32 months and roughly &#8377;36,000 of interest, 60% on top of the spending. The same &#8377;3,000 a month toward a 12% personal loan clearing the card instantly costs about &#8377;7,000 of interest over 23 months. The swap is one phone call and saves &#8377;29,000. High-interest debt is the only fire in personal finance that pays you to put it out early.</p>
+    </div>
+
+    <h3><span class="sn">7.7</span>Active-recall questions for this section</h3>
+    <ol class="recall">
+      <li>State the two-question test that sorts good debt from bad, and apply it to a car loan and an education loan.</li>
+      <li>Why does a 20-year home loan still owe most of its principal at year 5? What does that imply about when prepayment helps most?</li>
+      <li>Name four behaviours that build a credit score and two that break it.</li>
+      <li>Why is a personal loan priced above a gold loan, in the language of Chapter 3's grammar?</li>
+      <li>What are the two products inside a credit card, and which button converts one into the other?</li>
+      <li>You have a 9% home loan and cash earning 6% in an FD. What is the guaranteed-return argument for breaking the FD and prepaying?</li>
+    </ol>
+
+    <div class="scan-nav" style="padding-top:34px;">
+      <a href="finance-reference-06-insurance-risk-transfer.html">&larr; Chapter 6: Insurance as Risk Transfer</a>
+      <a href="finance-reference-08-three-financial-statements.html">Chapter 8: The Three Financial Statements &rarr;</a>
+    </div>
+
+  </main>
+  <footer>Finance With Vishnu &middot; For research and education only, not investment advice.</footer>
+</body>
+</html>
