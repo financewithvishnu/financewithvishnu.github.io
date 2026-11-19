@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 54. Systematic and Algorithmic Trading - Finance With Vishnu</title>
+<meta content="Systematic and algorithmic trading honestly: from hypothesis to rules to code, the three back-test sins of look-ahead survivorship and overfitting, execution APIs co-location and latency, retail algos and SEBI's rules, ML's promise and graveyard, with a wrong-vs-right back-test case." name="description"/>
+<meta content="algorithmic trading India retail, backtesting overfitting look-ahead bias survivorship, SEBI algo trading rules, broker API trading, co-location latency explained, machine learning trading pitfalls, momentum backtest India, systematic trading strategy design" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 54. Systematic and Algorithmic Trading", "description": "A strategy is a falsifiable claim with an economic reason, written as rules precise enough to be wrong. Honest back-testing fights three sins: look-ahead, survivorship and overfitting, with out-of-sample data, full universes, real costs and a count of every variant tried. Execution splits into retail APIs and the co-location speed race, where slower strategies compete on horizon, not speed. SEBI holds brokers accountable for client algos. Machine learning faces non-stationarity, data snooping and crowding. Case: one momentum strategy, 22% tested wrong, 9% tested right, against 13% for the index.", "keywords": ["algorithmic trading India retail", "backtesting overfitting look-ahead bias survivorship", "SEBI algo trading rules", "broker API trading", "co-location latency explained", "machine learning trading pitfalls", "momentum backtest India", "systematic trading strategy design"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
+<h1>Chapter 54. Systematic and Algorithmic Trading</h1>
+<p class="count">Chapter 54 of 85 · about 19 minutes</p>
+<p class="lede">Strip a trading idea of its drama and a claim remains: "when X happens, prices tend to do Y." A systematic trader writes that claim as rules precise enough for a machine, tests it against history honestly enough to trust it a little, and then discovers that the hard part was never the code. This chapter is about that pipeline, idea, test, execution, and about why most back-tests that look like fortunes are fiction.</p>
+<h3><span class="sn">54.1</span>From idea to algorithm: hypothesis, rules, code</h3>
+<p>A strategy begins as a hypothesis with an economic reason to exist: momentum persists because investors underreact to news; value works because fear overprices the recent past; the basis converges because settlement forces it. The reason matters more than the pattern, because a pattern without a reason is a coincidence waiting for its obituary. The hypothesis then becomes <strong>rules</strong>: exact definitions of the signal, the universe, the entry, the exit, the size, and, most neglected, what happens when things go wrong. Only then does it become code. The discipline in this order is that vagueness cannot survive it: "buy strength" becomes "buy the stocks in the top decile of six-month returns, rebalanced monthly, equal-weighted, subject to a liquidity floor", and at that precision the idea can finally be tested, because it can finally be wrong.</p>
+<h3><span class="sn">54.2</span>Back-testing honestly: overfitting, look-ahead bias, survivorship</h3>
+<p>The back-test is where strategies go to be flattered, and three sins do most of the flattering. <strong>Look-ahead bias:</strong> the test uses information that did not exist at the decision time, year-end fundamentals applied to January trades, an index's current constituents applied to 2010, a signal computed with the day's close used to trade at that same close. <strong>Survivorship bias:</strong> the universe contains today's living companies, so the test silently deletes the delisted, the failed and the acquired, inflating every equity strategy. And <strong>overfitting:</strong> with enough parameters and enough trials, noise becomes law; test a hundred variants and the best will look brilliant in-sample, because you selected it for looking brilliant. The defences are procedural, not clever: reserve an untouched out-of-sample period and test once; include delisted stocks and real costs, brokerage, impact, STT, slippage; count every variant you tried, because the number of attempts is the significance level's silent divisor; and distrust elegance, because a rule with eleven parameters that "works" is eleven ways to be fooled.</p>
+<h3><span class="sn">54.3</span>Execution: APIs, co-location and latency in plain terms</h3>
+<p>A tested strategy still has to meet the market. The retail path runs through broker APIs: your program reads prices, sends orders, manages positions, and the constraints are practical, rate limits, order-per-second caps, the reliability of a connection at 9:15 on a busy morning. The institutional path adds speed as a business: <strong>co-location</strong>, renting rack space inside the exchange's data centre so orders travel metres instead of kilometres, and latency measured in microseconds, because when a stale price lasts a millisecond, the fastest program owns it. Understand what the speed race is and is not. It is the business of market-making and short-horizon arbitrage, where edge decays in milliseconds and the rent goes to hardware, and it is a business retail cannot enter, any more than a cyclist enters Formula One. Slower strategies, days to months, do not compete with the machines on speed; they compete on horizon, capacity and patience, the dimensions where speed buys nothing.</p>
+<h3><span class="sn">54.4</span>Retail algo platforms in India and SEBI's rules</h3>
+<p>India's retail algo scene grew on broker APIs and platforms that let non-programmers chain conditions into orders, and SEBI's regulatory response has settled into a clear shape: strategies that route orders automatically must run through brokers, who are responsible for them; algos above defined speed thresholds need exchange registration and a unique identifier on every order, so the audit trail reaches the strategy, not just the client; and platforms selling "algo trading" as a product face the rules that apply to anyone promising returns. The intent is the same fence as Chapter 51's: automation is welcome, unaccountable automation is not. For the individual, the practical reading is modest. A rule-based rebalancing script, an SIP with logic, a disciplined exit rule executed by machine, these take the emotion out of decisions worth automating. A rented black box promising 4% a month is the same old product with an API attached, and Section 50.5's question applies unchanged: if you cannot state what it does, the complexity is not working for you.</p>
+<h3><span class="sn">54.5</span>Machine learning in trading: promise and graveyard</h3>
+<p>Machine learning is pattern-finding machinery, and markets are the most seductive and most hostile place to point it. The promise is real: ML digests unstructured data, filings, calls, satellite images, finds interactions no linear model sees, and adapts as relationships shift. The graveyard is larger, and its tombstones share three inscriptions. <strong>Non-stationarity:</strong> markets learn, so the pattern your model found in history is being traded away by the time it is found; the data-generating process is an adversary, not a mountain. <strong>Data snooping at scale:</strong> a model flexible enough to find real structure is flexible enough to memorise noise, and financial time series are short, noisy and few, decades, not billions of clean examples. And <strong>crowding:</strong> the discoverable signals are discovered by many at once, and the same capital that validates a signal arbitrages it away. The survivors, and they exist, share humility: small edges, enormous investment in data and execution, and a permanent suspicion that this year's model is next year's noise. The amateur version, a weekend model on free data beating professionals with proprietary everything, is Chapter 2's free lunch wearing a neural network.</p>
+<h3><span class="sn">54.6</span>Worked examples and cases</h3>
+<div class="example">
+<p class="ex-title">Case: one strategy, tested wrong and right, side by side</p>
+<p>Take a plausible idea: monthly momentum in mid-caps, buy last six months' winners, rotate monthly. <strong>Tested wrong:</strong> run it on today's Nifty Midcap 150 constituents, applied back to 2015, signals computed from the same close you trade at, variants tuned until the equity curve pleases, no costs. Result: a 22% CAGR fantasy, drawdowns politely small, a strategy you would mortgage the house for. Every sin was in the recipe: today's survivors applied to the past, look-ahead in the fills, thirty variants with the best reported, and friction assumed away. <strong>Tested right:</strong> the full historical universe including delisted stocks, signals lagged to the next day's open, one variant chosen in advance, brokerage, impact and STT on every rotation, and a reserved out-of-sample window touched once. Result: 9%, with the drawdowns restored to their real depth, against 13% for simply holding the Nifty, before the tax the monthly rotation generates. The strategy did not change; the honesty did, and it cost thirteen percentage points of fantasy. This is the chapter in one exhibit: the distance between a back-test and a back-test you can trust is where most trading dreams live, and the honest test is the only due diligence that cannot be outsourced.</p>
+</div>
+<svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 280" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="240.0" y2="240.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="244.0">0%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="128.0" y2="128.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="132.0">13%</text><line stroke="#e7dfd3" stroke-width="1" x1="52" x2="706" y1="16.0" y2="16.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="44" y="20.0">26%</text><rect fill="#b0633c" height="189.5" rx="4" width="70" x="126.0" y="50.5"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="161.0" y="44.5">22%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="161.0" y="256">In-sample, no costs</text><rect fill="#4e8a67" height="77.5" rx="4" width="70" x="344.0" y="162.5"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="379.0" y="156.5">9%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="379.0" y="256">Out-of-sample, costs</text><rect fill="#7a6f62" height="112.0" rx="4" width="70" x="562.0" y="128.0"></rect><text fill="#332619" font-size="11.5" font-weight="600" text-anchor="middle" x="597.0" y="122.0">13%</text><text fill="#7a6f62" font-size="11.5" text-anchor="middle" x="597.0" y="256">Nifty buy-and-hold</text></svg>
+<h3><span class="sn">54.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Why must a strategy's economic reason precede its pattern?</li>
+<li>Define look-ahead bias, survivorship bias and overfitting, with one example of each.</li>
+<li>What four defences make a back-test honest?</li>
+<li>Why is the latency race unwinnable for retail, and on which dimensions can slower strategies still compete?</li>
+<li>What shape have SEBI's rules given retail algo trading?</li>
+<li>Name the three inscriptions on the ML-in-trading graveyard.</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-53-derivative-strategies-arbitrage.html">← Chapter 53: Derivative Strategies: Arbitrage and Event-Driven Trading</a>
+<a href="finance-reference.html">Book index (Chapter 55 arrives with the next batch) →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
