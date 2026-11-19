@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Chapter 36. Trading Stocks: Intraday and Scalping - Finance With Vishnu</title>
+<meta content="Intraday trading in India with open eyes: the competition, opening-range and first-hour strategies, scalping economics, VWAP and institutional footprints, daily loss limits, and a narrated Nifty futures session." name="description"/>
+<meta content="intraday trading India, opening range breakout, scalping Nifty futures, VWAP trading strategy, daily loss limit trading, intraday risk management, first hour trading strategy, retail vs institutional trading, day trading reality India, trading costs breakeven" name="keywords"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Chapter 36. Trading Stocks: Intraday and Scalping", "description": "Intraday is the most practised and least profitable retail format; know the table: prop desks, quants, algos and you. Edges for retail live in slower daily structures, the opening range, the first hour, the close. Scalping needs two-thirds win rates just to break even after costs; it is a profession, not a side hustle. VWAP is the day's fair price and the institutions' benchmark. Survival is engineered: daily loss limits, small per-trade risk, trade-count caps, flat by close. Case: one setup, half an R, and a declined 3 pm spike.", "keywords": ["intraday trading India", "opening range breakout", "scalping Nifty futures", "VWAP trading strategy", "daily loss limit trading", "intraday risk management", "first hour trading strategy", "retail vs institutional trading", "day trading reality India", "trading costs breakeven"], "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en"}</script>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
+<h1>Chapter 36. Trading Stocks: Intraday and Scalping</h1>
+<p class="count">Chapter 36 of 85 · about 20 minutes</p>
+<p class="lede">Intraday trading is the most practised and least profitable form of Indian retail trading, and those two facts are connected: it is the format where the structural disadvantages, costs, speed, better-equipped counterparties, bite hardest and the seduction, action all day, every day, bites hardest too. This chapter will not pretend the game is fair. It will show you the game as it is, so that if you play, you play with open eyes and hard limits.</p>
+<h3><span class="sn">36.1</span>The intraday landscape: who the competition is</h3>
+<p>Know the table you are sitting at. On the other side of your intraday trades sit: proprietary desks of brokers trading their own capital with exchange-colocated servers; foreign quant funds whose cost per trade is a fraction of yours and whose signals are computed in microseconds; institutions executing large orders with algorithms built to hide; and thousands of other retail traders, most of whom are, like you, the product being harvested. Your structural disadvantages are speed (you see prices milliseconds late), cost (Chapter 34's stack per round trip, paid many times a day), and information (you react to news others positioned for). The honest consequence: intraday edges for a retail trader exist only where speed does not decide, in the slower structural patterns of the day, the opening imbalance, the lunchtime drift, the closing auction, and even there, the edge is small and the discipline must be total.</p>
+<h3><span class="sn">36.2</span>Opening-range and first-hour strategies</h3>
+<p>The first hour is when the day prices the overnight information, and its patterns are the most studied in intraday trading. The <strong>opening range</strong>, the high-low band of the first 15-30 minutes, frames the day: a decisive break of the range on volume often runs, because the market has found its first balance and left it. The refinements that separate the setup from the coin flip: trade the break only in the direction of the larger context (a gap-down opening that breaks lower is different from a gap-up that breaks lower); demand the volume confirmation, because a quiet break is a trap; and know that the first hour's second most common pattern is the <em>failure</em>, the break that snaps back through the range, which is a stop-out, accepted instantly. The first hour pays the prepared; everyone else is the preparation's cost.</p>
+<h3><span class="sn">36.3</span>Scalping: small edges, many repetitions</h3>
+<p>Scalping is intraday at maximum frequency: targets of a few points, holds of seconds to minutes, dozens of trades a day, the whole game reduced to spread, flow and reflex. Its economics are brutal and worth computing before attempting: a 3-point target on Nifty futures with 1.5 points of total cost and slippage needs a win rate above two-thirds just to break even, and the only humans who sustain that are specialists with years of screen time and institutional-grade costs. The retail verdict, stated plainly: scalping is a profession, not a side hustle. If you are drawn to it, apprentice properly: smallest possible size, a hundred logged practice trades, an expectancy computed before a single rupee is sized up, and Chapter 34's journal as the gatekeeper. The market will still be there when you are ready; your capital may not be, if you start before you are.</p>
+<h3><span class="sn">36.4</span>VWAP and institutional footprints</h3>
+<p>The volume-weighted average price is the day's fairest price, and it matters because the institutions are benchmarked against it: a desk that buys below the day's VWAP has demonstrably done its job. That creates structure you can use. VWAP acts as a magnet and a referee: in trend days price rides one side of it and pullbacks to it are entries; in range days price crosses it repeatedly and it fades into uselessness. Other institutional footprints: the day's volume profile, where business actually got done; large prints at the close, the auction where funds must trade; and the persistent pattern that the last hour's direction often continues into the next open. None of this is a crystal ball. It is the scoreboard of the game's actual players, visible to anyone, and trading without looking at it is playing without knowing the score.</p>
+<h3><span class="sn">36.5</span>Intraday risk controls and daily loss limits</h3>
+<p>Intraday compresses Chapter 34's survival maths into hours, so the controls must be harder. The non-negotiables: a <strong>daily loss limit</strong>, two or three R, at which the terminal closes, no appeal, because the day's revenge trade is the account's most dangerous trade; a per-trade risk smaller than swing trading's, since frequency multiplies exposure; a written maximum number of trades per day, because overtrading is the shape of tilt; and the flat-by-close rule, because intraday margin is borrowed time, and overnight events, a Budget, a war, a Fed surprise, are unpriceable from inside a leveraged day position. The trader who survives intraday is not the one with the best signals. It is the one whose worst day is, by construction, a normal day.</p>
+<h3><span class="sn">36.6</span>Worked example: a Nifty futures session, decision by decision</h3>
+<div class="example">
+<p class="ex-title">Case: one quiet Tuesday, narrated honestly</p>
+<table class="num">
+<tr><th>Time</th><th>Event</th><th>Decision</th></tr>
+<tr><td>9:07</td><td>Pre-open indicates a flat-to-weak open; overnight US markets fell 0.8%</td><td>Bias mildly short; no position yet</td></tr>
+<tr><td>9:15-9:30</td><td>Opening range forms, 22,480-22,520 on Nifty futures</td><td>Mark the range; the plan is its break</td></tr>
+<tr><td>9:34</td><td>Range breaks down through 22,480 on a volume burst</td><td>Short one lot at 22,476; stop 22,508 (range mid); risk 32 points</td></tr>
+<tr><td>9:50</td><td>Price reaches VWAP from above, stalls</td><td>Cover half at 22,455 (+21 pts); stop to breakeven</td></tr>
+<tr><td>10:20</td><td>Price grinds sideways above VWAP; momentum gone</td><td>Cover rest at 22,462 (+14 pts); trade over, 24 minutes</td></tr>
+<tr><td>11:00-2:30</td><td>Chop both sides of VWAP; three setups considered, none qualify</td><td>Nothing. The discipline is the position</td></tr>
+<tr><td>3:00</td><td>News-driven spike, 40 points in ten minutes</td><td>Not chased; the plan's day was done at 10:20</td></tr>
+<tr><td>Day's ledger</td><td>+17.5 points average on one lot, costs ₹80</td><td>About +0.55R before costs; logged, graded, closed</td></tr>
+</table>
+<p>Read the ledger's shape, not its size. One qualified setup all day, taken; three hours of nothing, survived; one exciting spike, declined. The day made half an R, and the professional knows that ten such days plus two good ones are the month. What the table cannot show: the itch at 3:00, and the journal's quiet question that evening, "did I follow the plan?", answered yes. Intraday success looks exactly this boring from the outside. The exciting version is the one being harvested.</p>
+</div>
+<h3><span class="sn">36.7</span>Active-recall questions for this section</h3>
+<ol class="recall">
+<li>Name the four categories of counterparty in intraday and your three structural disadvantages.</li>
+<li>Describe the opening-range setup and the refinement that keeps it from being a coin flip.</li>
+<li>Run the breakeven arithmetic of scalping a 3-point target with 1.5 points of cost.</li>
+<li>Why does VWAP create usable structure, and in which kind of day does it go useless?</li>
+<li>List the four non-negotiable intraday risk controls.</li>
+<li>From the case: what was the day's most profitable decision, and why was it a non-trade?</li>
+</ol>
+<div class="scan-nav" style="padding-top:34px;">
+<a href="finance-reference-35-trading-swing.html">← Chapter 35: Trading Stocks: Swing and Positional Trading</a>
+<a href="finance-reference-37-trading-trend-mean-reversion.html">Chapter 37: Trading Stocks: Trend Following and Mean Reversion →</a>
+</div>
+</main>
+<footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
+</body>
+</html>
