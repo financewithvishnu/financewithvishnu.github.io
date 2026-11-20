@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-15-valuation-absolute.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 15. Valuation I: Absolute Methods - Finance With Vishnu" property="og:title"/><meta content="Intrinsic value from first principles, a DCF step by step, free cash flow pitfalls, dividend discount models, terminal value discipline, and a full worked DCF with sensitivity table on an Indian consumer company." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-15-valuation-absolute.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-15-valuation-absolute.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 15. Valuation I: Absolute Methods - Finance With Vishnu" property="og:title"/><meta content="Intrinsic value from first principles, a DCF step by step, free cash flow pitfalls, dividend discount models, terminal value discipline, and a full worked DCF with sensitivity table on an Indian consumer company." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-15-valuation-absolute.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
 <h1>Chapter 15. Valuation I: Absolute Methods</h1>
 <p class="count">Chapter 15 of 85 · about 24 minutes</p>
 <p class="lede">Ask what any asset is worth and first principles give a single answer: the cash it will hand you, adjusted for when it arrives and how sure you are. Everything else, multiples, targets, market moods, is a shortcut around that answer. This chapter builds the full version, the discounted cash flow, slowly enough that you can run one yourself by the end, and honestly enough that you will also know exactly where it lies to you.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,28 +148,27 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Absolute valuation</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s15-1">Intrinsic value</a>
-    <a href="#s15-2">DCF step by step</a>
-    <a href="#s15-3">Free cash flow</a>
-    <a href="#s15-4">Dividend discount</a>
-    <a href="#s15-5">Terminal value</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-16-valuation-relative.html">Ch 16 &middot; Relative Valuation</a>
-    <a href="finance-reference-82-master-investors.html">Ch 82 &middot; Master Investors</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Absolute valuation</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s15-1">Intrinsic value</a>
+<a href="#s15-2">DCF step by step</a>
+<a href="#s15-3">Free cash flow</a>
+<a href="#s15-4">Dividend discount</a>
+<a href="#s15-5">Terminal value</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-16-valuation-relative.html">Ch 16 · Relative Valuation</a>
+<a href="finance-reference-82-master-investors.html">Ch 82 · Master Investors</a>
+</div>
 </div>
 <h3 id="s15-1"><span class="sn">15.1</span>What is intrinsic value?</h3>
 <p>Chapter 2 established that a rupee today outranks a rupee next year. Valuation is that idea pointed at a business. A company's intrinsic value is the sum of all future free cash it can pay its owners, each year's cash discounted by the return you demand for waiting and for the risk that the cash never shows. Three levers, and only three, set the value: <strong>how much cash</strong>, <strong>how fast it grows</strong>, and <strong>how risky the stream is</strong>. When two investors disagree about a stock's worth, they are disagreeing about one of these three, whether they know it or not. The DCF's great service is not the number it prints; it is that it forces the disagreement into the open, into named assumptions you can argue with.</p>
 <h3 id="s15-2"><span class="sn">15.2</span>How does discounted cash flow valuation work, step by step?</h3>
-    <p>A DCF forecasts a company&#8217;s free cash flows year by year, discounts each back at the cost of capital, and adds a discounted terminal value for the years beyond; the sum is what the business is worth today.</p>
+<p>A DCF forecasts a company’s free cash flows year by year, discounts each back at the cost of capital, and adds a discounted terminal value for the years beyond; the sum is what the business is worth today.</p>
 <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Forecast FCF</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">10 years, driver by driver</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Terminal value</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">growth a shade under GDP</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Discount at WACC</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">the opportunity cost of capital</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Equity value</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">minus debt, plus cash</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Per share</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">divided by shares, compared with price</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">The DCF in five moves. Each move is a place to be wrong; Chapter 15 teaches you where.</p>
 <p>Forecast free cash flow explicitly for about ten years, because that is the horizon over which your knowledge of the drivers means anything. Beyond it, assume the company grows like the economy it lives in: that is the terminal value. Discount everything at the weighted average cost of capital, the blended rate the company's lenders and shareholders demand, for an Indian listed company typically somewhere in the 10-13% range. What you have then is enterprise value; subtract debt, add cash, divide by shares, and compare with the price on your screen. The comparison, not the number, is the decision.</p>
 <h3 id="s15-3"><span class="sn">15.3</span>What is free cash flow, and where do definitions go wrong?</h3>
