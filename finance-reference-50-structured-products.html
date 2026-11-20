@@ -135,17 +135,48 @@
 <h1>Chapter 50. Structured Products and Exotic Derivatives</h1>
 <p class="count">Chapter 50 of 85 · about 18 minutes</p>
 <p class="lede">Take one government bond, add one option, wrap them in a term sheet with a reassuring name, and you have a structured product, the most profitable retail instrument ever invented, mostly for the people selling it. None of its parts is beyond you after Part VII, and that is the point of this chapter: once you can take the wrapper apart, the magic, and most of the markup, disappears.</p>
-<h3><span class="sn">50.1</span>What structured products are: bonds plus options in one wrapper</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Structured products</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s50-1">Bonds plus options</a>
+    <a href="#s50-2">Two families</a>
+    <a href="#s50-3">Exotic options</a>
+    <a href="#s50-4">MLDs in India</a>
+    <a href="#s50-5">Who complexity serves</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-47-options-i.html">Ch 47 &middot; Options I</a>
+    <a href="finance-reference-44-corporate-credit.html">Ch 44 &middot; Corporate Credit</a>
+  </div>
+</div>
+<h3 id="s50-1"><span class="sn">50.1</span>What are structured products: bonds plus options in one wrapper?</h3>
 <p>Every structured product is the same recipe: a <strong>bond part</strong> that grows back to your principal, and an <strong>option part</strong> that manufactures whatever exotic payoff the brochure promises, equity upside with a floor, enhanced yield, a payout if an index stays in a range. The issuer buys both parts wholesale, staples them together, adds a fee you will not find printed anywhere, and sells the package retail. The design answers a real desire, participation in risk assets without the terror of loss, and that desire is legitimate. The question is never whether the payoff is possible; the bond-plus-option recipe can build almost anything. The question is what the package costs against building it yourself, and the answer is usually 3-6% of notional, hidden in terms no term sheet itemises.</p>
-<h3><span class="sn">50.2</span>Capital-protected and yield-enhancement notes</h3>
+<h3 id="s50-2"><span class="sn">50.2</span>What are capital-protected and yield-enhancement notes?</h3>
 <p>The two families to recognise. A <strong>capital-protected note</strong> promises your principal back at maturity plus some fraction, the <strong>participation rate</strong>, of an index's gain. Under the wrapper: a zero-coupon bond funds the protection, and the leftover buys call options; the participation rate is simply how many calls the leftover could afford after fees. Read the fine print and the protection usually has conditions: hold to maturity, and the issuer must still be standing, because the "protection" is the issuer's own promise, a lesson Lehman note-holders learned in 2008. A <strong>yield-enhancement note</strong>, often a reverse convertible, pays a fat coupon but hands you the underlying shares if the market falls past a barrier: under the wrapper, you have sold a put option and the coupon is the premium, plus fees. Nothing is enhanced; you are being paid, retail price, for insurance the issuer lays off wholesale. When someone offers you yield in a world of known yields, ask which option you just sold.</p>
-<h3><span class="sn">50.3</span>Exotic options: barriers, Asians, lookbacks</h3>
+<h3 id="s50-3"><span class="sn">50.3</span>What are exotic options: barriers, Asians and lookbacks?</h3>
 <p>Beyond vanilla calls and puts lies a zoo of options whose payoffs depend on the path, not just the destination. <strong>Barrier options</strong> switch on or off when the price touches a level: a knock-out dies when the barrier is hit, a knock-in comes alive. They are cheaper than vanilla options precisely because they can fail you on the path, and they are the moving parts inside most structured notes and autocallables. <strong>Asian options</strong> settle on the average price over a period, smoothing away expiry-day games and suiting commodity buyers who consume steadily. <strong>Lookback options</strong> pay on the best price over the life, selling the fantasy of buying at the low, at a premium so fat it prices the fantasy accurately. The pattern across the zoo: every exotic saves or earns premium by moving risk somewhere less visible, into the path, into averaging, into a barrier you may not watch. Cheaper is a feature list, not a bargain.</p>
-<h3><span class="sn">50.4</span>Market-linked debentures in India</h3>
+<h3 id="s50-4"><span class="sn">50.4</span>What are market-linked debentures in India?</h3>
 <p>India's homegrown structured product is the <strong>market-linked debenture</strong>: a listed, SEBI-regulated bond whose coupon or redemption is linked to an index, typically the Nifty or G-sec yields, sold largely to wealthy individuals and family offices. The typical issue is principal-protected at maturity, linked to Nifty upside with a participation rate and a cap, and rated, which tells you about the issuer's promise, not the market outcome. Two cautions deserve underlining. Liquidity is theoretical: the issue is listed, but the secondary market is a showroom, and in practice you hold to maturity, so early-exit "protection" is not yours. And the tax advantage that once made MLDs irresistible was closed in 2023: gains on new issues are now taxed at your slab rate like any debt instrument, which removed the one argument that did not depend on the structure's economics. Judge a new MLD the way this chapter teaches: strip it to bond plus options, price both parts, and count the difference.</p>
-<h3><span class="sn">50.5</span>Why complexity usually serves the seller</h3>
+<h3 id="s50-5"><span class="sn">50.5</span>Why does complexity usually serve the seller?</h3>
 <p>Ask who benefits from a product you cannot price, and the question answers itself. Complexity does three jobs for the issuer. It hides the fee: no line item, only a payoff formula whose fair price you cannot compute at the kitchen table. It disables comparison: every note has a different index, barrier, averaging window and participation rate, so no two are ever comparable and the market never becomes competitive. And it recruits your own biases as sales staff: the floor soothes loss aversion, the participation rate flatters greed, the cap is the part nobody reads. The retail defence is not to boycott structured products; a plain capital-protected note, fairly priced, can suit a genuinely loss-intolerant investor. The defence is the rule of this chapter: if you cannot decompose it into bond plus options and price both parts to within a percent, you are not the customer of the complexity, you are its product.</p>
-<h3><span class="sn">50.6</span>Worked examples and cases</h3>
+<h3 id="s50-6"><span class="sn">50.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: deconstructing a five-year Nifty-linked debenture</p>
 <p>A bank offers a five-year MLD: invest ₹100, get back at least ₹100 at maturity plus 80% of any Nifty gain, no upside cap, Nifty at 24,000. Price the parts. The protection: ₹100 in five years costs about ₹77 today in a zero-coupon instrument yielding 5.5%, leaving ₹23 for the option part. The option: a five-year at-the-money Nifty call at 12% volatility and a 6.5% rate costs roughly ₹6,958 per index unit, about 29% of spot; buying ₹23 worth per ₹100 notional delivers a participation rate of about 81% at wholesale prices. The bank offers 80%. The gap, plus the bank's own borrowing advantage and the sales commission baked into the issue price, is the fee you could not see. The exercise generalises to every note you will ever be shown: protection is a bond, upside is options, participation is arithmetic, and the difference between wholesale and retail is the business model.</p>
@@ -154,7 +185,7 @@
 <p class="ex-title">Case 2: the barrier that knocked out in March 2020</p>
 <p>Consider the investor who bought a principal-protected-style note whose protection was conditional: full principal back unless the Nifty ever fell 40% below the starting level, a knock-in barrier that "would take a once-in-a-generation crash" to reach. March 2020 reached it in weeks. The index breached the barrier intraday, the put embedded in the structure came alive, and the note that had been marketed as protected became plain equity exposure into the teeth of the crash, down a third while plain fixed deposits yawned. Two lessons outlast the episode. A barrier is not a technicality; it is the location of your risk, and "it has to fall 40% first" is a description of a bear market, not a safety feature, because the protection vanishes in exactly the scenario it was bought for. And conditional protection is a put you have sold, which connects this product to Chapter 47: the investor was an option seller who never knew it, collecting a slightly better coupon as premium. Every structure you are offered deserves the same question: show me the option I am short, and then tell me the price.</p>
 </div>
-<h3><span class="sn">50.7</span>Active-recall questions for this section</h3>
+<h3 id="s50-7"><span class="sn">50.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>State the two-part recipe of every structured product and where the fee hides.</li>
 <li>In a reverse convertible, which option has the investor sold, and what is the coupon?</li>
@@ -170,4 +201,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-                                                                   </html>
+</html>
