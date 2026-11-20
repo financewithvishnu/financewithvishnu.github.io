@@ -135,18 +135,49 @@
 <h1>Chapter 51. Clearing, Margining and Derivatives Risk in India</h1>
 <p class="count">Chapter 51 of 85 · about 19 minutes</p>
 <p class="lede">Every futures and options trade in India is a promise between strangers who will never meet, and yet defaults almost never reach the public. The machinery that makes strangers safe to trade with, the clearing corporation, the margin waterfall, the daily cash settlement, is the least visible and most successful part of the market. It is also the machinery that decides, in a crash, whether you exit a losing position or the position exits you.</p>
-<h3><span class="sn">51.1</span>The clearing corporation: the counterparty to everyone</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Clearing and margining</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s51-1">The clearing corporation</a>
+    <a href="#s51-2">SPAN and exposure</a>
+    <a href="#s51-3">MTM and margin calls</a>
+    <a href="#s51-4">Leverage both ways</a>
+    <a href="#s51-5">Limits and guardrails</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-46-forwards-futures.html">Ch 46 &middot; Forwards and Futures</a>
+    <a href="finance-reference-04-investors-toolkit.html">Ch 4 &middot; The Investor&#8217;s Toolkit</a>
+  </div>
+</div>
+<h3 id="s51-1"><span class="sn">51.1</span>What does the clearing corporation do?</h3>
 <p>The moment your trade executes, the exchange's clearing corporation, NSCCL for the NSE, ICCL for the BSE, steps between buyer and seller through <strong>novation</strong>: your contract is legally torn in two, and each side now faces only the clearing corporation. The stranger's creditworthiness stops mattering; the corporation guarantees every trade, and stands behind the guarantee with a waterfall of defences: member margins, a settlement guarantee fund built from contributions, its own capital, and insurance. The design has survived every Indian crisis of the modern era without a public default, through 2008, 2020 and every scam and crash between. When you hear that Indian settlement "works", this invisible institution is what works, and the cost of running it is embedded in the margins the rest of this chapter describes.</p>
-<h3><span class="sn">51.2</span>SPAN and exposure margins under SEBI's framework</h3>
+<h3 id="s51-2"><span class="sn">51.2</span>What are SPAN and exposure margins?</h3>
 <p>Margin is priced catastrophe insurance, and India prices it with two layers. <strong>SPAN margin</strong>, the standard portfolio analysis of risk, simulates your whole portfolio against a grid of price and volatility shocks, sixteen standard scenarios, and sets the requirement at roughly the worst plausible one-day loss, tuned to cover a 99% move. It is portfolio-aware: a hedged position genuinely needs less margin than a naked one, because the scenarios see the hedge. <strong>Exposure margin</strong> adds a second, blunt layer, an additional percentage of contract value, as a buffer against the day the scenarios underprice reality, gap moves beyond the 99th percentile. Together they set the upfront cost of a derivative position, roughly an eighth of contract value for index futures in calm times, more when volatility rises, because the margins themselves reprice with the market's own fear.</p>
-<h3><span class="sn">51.3</span>Mark-to-market, peak margin and margin calls in practice</h3>
+<h3 id="s51-3"><span class="sn">51.3</span>How do mark-to-market, peak margin and margin calls work in practice?</h3>
 <p>Three operational rules govern your cash. <strong>Daily mark-to-market:</strong> futures losses leave your account the same evening; the position cannot be nurtured on hope. <strong>Peak margin:</strong> SEBI's phased rule, fully effective since 2021, requires your broker to collect the full margin based on your <em>highest intraday</em> exposure, not just end-of-day, which ended the era of brokers quietly granting 30x intraday leverage on day trades. And <strong>margin calls:</strong> if losses push your balance below requirement, you fund the shortfall by the deadline or the broker liquidates, at market, without asking, exactly as their terms say. The gap that catches traders is speed: margins are recalculated intraday in volatile markets, so a position that was fully funded at 9:15 can be under-margined by 10:30 and squared off by 1:00. Leverage does not wait for you to check your phone.</p>
 <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Gap down 6% at open</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Nifty futures position Rs 24 lakh, margin Rs 2.9 lakh</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">MTM loss Rs 1.44 lakh</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Half the margin gone in the first tick</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Margin call at 10am</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Fund it by 1pm or the broker squares off</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Forced exit at the low</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">Market recovers by close; you are already out</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">The spiral: leverage converts a bad open into a forced sale, and the recovery belongs to someone else.</p>
-<h3><span class="sn">51.4</span>Leverage: how derivatives amplify both ways</h3>
+<h3 id="s51-4"><span class="sn">51.4</span>How does leverage in derivatives amplify gains and losses?</h3>
 <p>The arithmetic deserves one explicit line. A Nifty futures contract worth about ₹24 lakh requires perhaps ₹2.9 lakh of margin, leverage of roughly 8.6 times. A 2% index move is ₹48,000 on that contract: against the margin posted, a 17% gain or loss in a day, on a two-percent index move. Options multiply further: the buyer risks 100% of a small premium for a large notional, and the seller collects small premiums against the same leveraged notional. Leverage itself is morally neutral, it is how a farmer hedges a crop without paying for it twice, but it converts every property of the market into a property of your account at multiplied scale: volatility into equity swings, gaps into margin calls, and time pressure into forced exits. The first question in any derivative position is not "how much can I make?" but "at what price am I forced out?"</p>
-<h3><span class="sn">51.5</span>Position limits, lot sizes and regulatory guardrails</h3>
+<h3 id="s51-5"><span class="sn">51.5</span>What are position limits, lot sizes and other regulatory guardrails?</h3>
 <p>Around the margin machinery sits a fence of limits, all aimed at the same end: keeping leveraged bets small relative to the market and the bettor. <strong>Lot sizes</strong> set the minimum ticket, and SEBI raised the minimum index-derivative contract value to ₹15 lakh in late 2024, an explicit decision to price out the smallest punters after the regulator's own studies showed what the product was doing to them. <strong>Market-wide position limits</strong> cap the total derivative open interest on any single stock, and a stock that breaches the limit enters the ban period where only position reduction is allowed, a circuit breaker against cornering. <strong>Broker and client-level limits</strong> cap how much any one entity can hold. Read the fence's design intention and it is consistent: derivatives exist for risk transfer, they are priced and sized so that hedging stays cheap and speculation stays expensive, and every time the fence is lowered, the losses concentrate exactly where the studies said they would.</p>
-<h3><span class="sn">51.6</span>Worked examples and cases</h3>
+<h3 id="s51-6"><span class="sn">51.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: anatomy of a margin spiral</p>
 <p>A trader holds ten Nifty futures bought the previous evening, contract value ₹2.4 crore, margin posted ₹29 lakh, funds in account ₹31 lakh. Overnight, a global shock; the index opens down 6%. The mark-to-market loss is ₹14.4 lakh the moment the opening tick prints. The account is now below maintenance, the margin system recalculates requirements upward because volatility has jumped, and the broker's risk engine issues a call for several lakh by early afternoon, funds the trader does not have liquid. The engine does what it is programmed to do: it sells the position into the falling market at 10:47. By 3:30 the index has recovered half the fall. The trader's loss is locked at the day's worst prices, the recovery belongs to whoever bought the forced sale, and none of it involved a default, a fraud or a broken rule. The machinery worked exactly as designed, and that is the lesson: at 8x leverage, you do not choose your exit; your margin balance chooses it. Position size is the only risk control that survives a gap.</p>
@@ -155,7 +186,7 @@
 <p class="ex-title">Case 2: Nick Leeson and the bank that trusted one man</p>
 <p>In 1995, Barings Bank, 233 years old, banker to queens, collapsed in days. The cause was one trader in Singapore, Nick Leeson, who was allowed to run both the trading desk and the back office that was supposed to check it. When his Nikkei futures arbitrage lost money, he booked the losses into a hidden account, 88888, and reported profits; to cover the growing hole he sold straddles on the Nikkei, collecting premiums that assumed calm; and he requested ever more margin from London, which head office wired, flattered by the reported profits. Then the Kobe earthquake of January 1995 gapped the Nikkei exactly against both positions, the hidden losses surfaced at over £800 million, and there was nothing left to wire. Every control in this chapter exists because of stories like this: novation and margin would have contained the market risk, but nothing contains a firm that lets the trader audit himself. The derivatives did not destroy Barings; the absence of the machinery around them did. Separate the doer from the checker, fund margin with money you can actually wire, and treat any reported profit that arrives without visible risk as the first clue, not the reward.</p>
 </div>
-<h3><span class="sn">51.7</span>Active-recall questions for this section</h3>
+<h3 id="s51-7"><span class="sn">51.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>What does novation do, and what stands behind the clearing corporation's guarantee?</li>
 <li>Distinguish SPAN margin from exposure margin in method and purpose.</li>
