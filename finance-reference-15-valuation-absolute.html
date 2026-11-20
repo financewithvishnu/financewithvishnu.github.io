@@ -135,18 +135,50 @@
 <h1>Chapter 15. Valuation I: Absolute Methods</h1>
 <p class="count">Chapter 15 of 85 · about 24 minutes</p>
 <p class="lede">Ask what any asset is worth and first principles give a single answer: the cash it will hand you, adjusted for when it arrives and how sure you are. Everything else, multiples, targets, market moods, is a shortcut around that answer. This chapter builds the full version, the discounted cash flow, slowly enough that you can run one yourself by the end, and honestly enough that you will also know exactly where it lies to you.</p>
-<h3><span class="sn">15.1</span>The logic of intrinsic value: cash, growth, risk</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Absolute valuation</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s15-1">Intrinsic value</a>
+    <a href="#s15-2">DCF step by step</a>
+    <a href="#s15-3">Free cash flow</a>
+    <a href="#s15-4">Dividend discount</a>
+    <a href="#s15-5">Terminal value</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-16-valuation-relative.html">Ch 16 &middot; Relative Valuation</a>
+    <a href="finance-reference-82-master-investors.html">Ch 82 &middot; Master Investors</a>
+  </div>
+</div>
+<h3 id="s15-1"><span class="sn">15.1</span>What is intrinsic value?</h3>
 <p>Chapter 2 established that a rupee today outranks a rupee next year. Valuation is that idea pointed at a business. A company's intrinsic value is the sum of all future free cash it can pay its owners, each year's cash discounted by the return you demand for waiting and for the risk that the cash never shows. Three levers, and only three, set the value: <strong>how much cash</strong>, <strong>how fast it grows</strong>, and <strong>how risky the stream is</strong>. When two investors disagree about a stock's worth, they are disagreeing about one of these three, whether they know it or not. The DCF's great service is not the number it prints; it is that it forces the disagreement into the open, into named assumptions you can argue with.</p>
-<h3><span class="sn">15.2</span>Discounted cash flow, step by step</h3>
+<h3 id="s15-2"><span class="sn">15.2</span>How does discounted cash flow valuation work, step by step?</h3>
+    <p>A DCF forecasts a company&#8217;s free cash flows year by year, discounts each back at the cost of capital, and adds a discounted terminal value for the years beyond; the sum is what the business is worth today.</p>
 <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Forecast FCF</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">10 years, driver by driver</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Terminal value</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">growth a shade under GDP</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Discount at WACC</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">the opportunity cost of capital</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Equity value</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">minus debt, plus cash</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Per share</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">divided by shares, compared with price</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">The DCF in five moves. Each move is a place to be wrong; Chapter 15 teaches you where.</p>
 <p>Forecast free cash flow explicitly for about ten years, because that is the horizon over which your knowledge of the drivers means anything. Beyond it, assume the company grows like the economy it lives in: that is the terminal value. Discount everything at the weighted average cost of capital, the blended rate the company's lenders and shareholders demand, for an Indian listed company typically somewhere in the 10-13% range. What you have then is enterprise value; subtract debt, add cash, divide by shares, and compare with the price on your screen. The comparison, not the number, is the decision.</p>
-<h3><span class="sn">15.3</span>Free cash flow: definitions and pitfalls</h3>
+<h3 id="s15-3"><span class="sn">15.3</span>What is free cash flow, and where do definitions go wrong?</h3>
 <p>Free cash flow is the cash a business generates after paying to maintain and grow itself: operating cash flow minus capital expenditure, roughly. The pitfalls are all in the "roughly". CFO includes working-capital swings, so a company stretching its suppliers shows temporarily beautiful FCF. Capex splits into maintenance, the cost of standing still, and growth, which you hope earns more than its cost, and companies rarely disclose the split; a safe convention treats most capex as maintenance in a growing business. And Chapter 10's warnings apply with full force: FCF built on manipulated accounts is a precise valuation of fictitious cash. This is why the checklist chapters come before the valuation chapters in this book.</p>
-<h3><span class="sn">15.4</span>Dividend discount models and when they fit</h3>
+<h3 id="s15-4"><span class="sn">15.4</span>What is the dividend discount model, and when does it fit?</h3>
 <p>The DDM values a share as the sum of its future dividends, discounted at the cost of equity. It is the cleanest model ever built and the narrowest: it fits companies whose dividends are stable, meaningful and connected to earning power, mature banks, utilities, consumer staples, and it fits nothing else. A growth company paying no dividend is not worthless; the DDM is simply the wrong lens, because its value rides on cash flows reinvested today and paid out later. Use the DDM where dividends are the genuine return mechanism, check it with the payout ratio's sustainability, and treat its output as a floor of conservatism rather than a target.</p>
-<h3><span class="sn">15.5</span>Terminal value: where most DCFs go wrong</h3>
+<h3 id="s15-5"><span class="sn">15.5</span>Why does terminal value break most DCF valuations?</h3>
 <p>In a typical ten-year DCF, the terminal value, the single number standing in for every year after year ten, is 60-80% of the entire answer. Small changes in its two inputs, the terminal growth rate and the discount rate, swing the valuation by half. The disciplines that keep this honest: terminal growth should sit at or below long-run nominal GDP growth, because no company outgrows its economy forever; the gap between your terminal growth and your discount rate should be wide enough that you are not capitalising perpetuity at a hair-trigger; and every DCF should ship with a sensitivity table, so the reader sees the range the model really claims rather than the point it pretends to. A DCF without a sensitivity table is a horoscope with arithmetic.</p>
-<h3><span class="sn">15.6</span>Worked example: a full DCF on an Indian consumer company</h3>
+<h3 id="s15-6"><span class="sn">15.6</span>Worked example: a full DCF on an Indian consumer company</h3>
 <div class="example">
 <p class="ex-title">Case: ten lines of arithmetic on a consumer franchise</p>
 <p>Composite of the breed, numbers illustrative. Free cash flow next year: ₹100 crore. The drivers support 12% growth for five years, then 8% for five more as the category matures; after that, 5%, a shade under long-run nominal GDP. Discount at 11%. The arithmetic: year-five FCF is about ₹157 crore, year-ten about ₹231 crore; the ten explicit years discount to roughly ₹889 crore. The terminal value, year-eleven FCF divided by (11% - 5%), is about ₹4,046 crore, discounted back to roughly ₹1,425 crore, 62% of the total. Enterprise value about ₹2,314 crore; with ₹150 crore of net cash and 10 crore shares, equity value is about ₹246 a share. And the sensitivity table, which is the honest version of this paragraph:</p>
@@ -158,7 +190,7 @@
 </table>
 <p>Same company, same decade of forecasts, enterprise values from ₹1,815 to ₹3,296 crore on two small assumptions. The table does not weaken the DCF; it is the DCF telling the truth about itself. Use the middle as your estimate, the corners as your margin-of-safety arithmetic, and never quote a single value without its range.</p>
 </div>
-<h3><span class="sn">15.7</span>Active-recall questions for this section</h3>
+<h3 id="s15-7"><span class="sn">15.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>What three levers, and only three, set any asset's intrinsic value?</li>
 <li>List the five moves of a DCF and the characteristic error of each.</li>
