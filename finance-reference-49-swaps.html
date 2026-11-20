@@ -135,17 +135,48 @@
 <h1>Chapter 49. Swaps: Interest Rate, Currency and Credit</h1>
 <p class="count">Chapter 49 of 85 · about 19 minutes</p>
 <p class="lede">The most important derivatives on earth are ones no retail investor ever sees. Interest rate swaps exist in greater volume than every stock market combined, and they decide what your home loan costs, what your government pays to borrow, and what your employer pays on its debt. The idea is disarmingly simple, two parties exchanging one kind of payment for another, and the applications run from mundane corporate hedging to the instrument that nearly ended the financial system in 2008.</p>
-<h3><span class="sn">49.1</span>The swap idea: exchanging cash flows</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Swaps</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s49-1">The swap idea</a>
+    <a href="#s49-2">Interest rate swaps</a>
+    <a href="#s49-3">Currency swaps</a>
+    <a href="#s49-4">Credit default swaps</a>
+    <a href="#s49-5">Swaps in India</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-42-bonds-pricing-yields-duration.html">Ch 42 &middot; Bonds and Duration</a>
+    <a href="finance-reference-58-forex-markets.html">Ch 58 &middot; The Rupee and FX</a>
+  </div>
+</div>
+<h3 id="s49-1"><span class="sn">49.1</span>What is a swap: exchanging cash flows?</h3>
 <p>A swap is a series of forward contracts stitched into one agreement: two parties commit to exchange payments on a notional amount, at set dates, for years. Two features define the species. Only the <strong>net difference</strong> settles each period: if I owe you 8% fixed and you owe me a floating 7%, one cheque for 1% changes hands, which keeps the credit exposure small. And the <strong>notional</strong> itself usually never moves; it is a measuring stick, not a loan, which is why swap volumes sound so terrifying in headlines. The economic engine is comparative advantage: one party borrows cheap in the fixed market but wants floating, another borrows cheap floating but wants fixed, and the swap lets each keep its cheap borrowing while wearing the other's payment pattern. Nobody's loan changes; only the cash flows do.</p>
-<h3><span class="sn">49.2</span>Interest rate swaps: fixed for floating, and who uses them</h3>
+<h3 id="s49-2"><span class="sn">49.2</span>What is an interest rate swap, and who uses it?</h3>
 <p>The vanilla interest rate swap exchanges a fixed rate for a floating benchmark on the same currency and notional. The users are everyone with rate-shaped problems. A company with a floating-rate loan that wants certainty swaps to fixed. A bank whose deposits reprice faster than its loans uses swaps to close the mismatch. An insurer holding fixed-rate bonds that must pay floating-linked annuities swaps the other way. The swap rate quoted in the market, say a five-year swap at 6.2% against overnight MIBOR, is a live poll of where the market expects short rates to average, which makes the swap curve one of the cleanest readings of monetary expectations available, purer than G-sec yields because swaps carry no sovereign supply distortions. When you read that "markets are pricing two rate cuts", it is this curve doing the pricing.</p>
-<h3><span class="sn">49.3</span>Currency swaps and cross-currency basis</h3>
+<h3 id="s49-3"><span class="sn">49.3</span>What are currency swaps and the cross-currency basis?</h3>
 <p>A currency swap goes further: the parties exchange principal and interest in <em>different currencies</em>, usually exchanging the principal back at the end at a rate fixed today. An Indian company that borrowed dollars because the coupon looked cheap, 5% against 9% at home, but earns rupees, has not found free money; it has bought a currency bet. The cure is the swap: it pays its dollars to a counterparty and receives dollars at maturity in exchange for rupee payments, converting the foreign loan into a domestic one synthetically. In efficient theory, swapped and unswapped funding should cost the same across currencies; in practice they differ by the <strong>cross-currency basis</strong>, a persistent few tenths of a percent that measures the world's hunger for dollars. Even the RBI uses the instrument: its dollar buy-sell swaps inject rupees while handing banks dollars for a term, a tool for managing both liquidity and the rupee.</p>
-<h3><span class="sn">49.4</span>Credit default swaps: insurance on default, and its dark side</h3>
+<h3 id="s49-4"><span class="sn">49.4</span>What is a credit default swap, and what is its dark side?</h3>
 <p>A credit default swap is default insurance with the parts unbundled: the buyer pays an annual premium, quoted in basis points of the notional, and the seller pays out if the named borrower defaults. Legitimate uses abound: a bank hedges a loan it cannot sell, a bondholder buys protection on an issuer it worries about. The dark side is structural. You can buy CDS protection on debt you do not own, "naked" protection, which is insurance on your neighbour's house and multiplies the bets on each borrower far beyond the debt itself. The premium is only as good as the insurer: CDS are private contracts, and if the seller cannot pay, the protection is paper. And CDS prices move faster than ratings, which makes them both an early-warning system and an accelerant, since a widening CDS spread itself frightens lenders away from the borrower, a feedback loop that can help push a weak firm over. India has kept its CDS market small and tightly hedged, one of the wiser acts of regulatory timidity.</p>
-<h3><span class="sn">49.5</span>Swaps in India: the OIS and MIBOR markets and corporate hedging</h3>
+<h3 id="s49-5"><span class="sn">49.5</span>How do swaps work in India: OIS, MIBOR and corporate hedging?</h3>
 <p>India's workhorse is the <strong>overnight indexed swap</strong>: fixed against the overnight MIBOR, traded interbank and onshore, with tenors out to ten years. The OIS curve is the market's running forecast of RBI policy: when the five-year OIS sits below the current repo rate, the market expects cuts; above, hikes. Corporates enter the market under RBI hedging rules that permit swaps for genuine exposures rather than speculation, typically to fix floating loans or to hedge foreign-currency borrowings raised abroad. The practical counsel for any company that hedges is borrowed straight from Chapter 46's farmer: the hedge that "lost money" when rates fell was not a mistake but a premium, and firms that judge their treasury by whether the swap won will eventually be talked out of hedging, usually just before the storm. A treasury is an insurance desk, not a profit centre.</p>
-<h3><span class="sn">49.6</span>Worked examples and cases</h3>
+<h3 id="s49-6"><span class="sn">49.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: swapping a floating loan to fixed</p>
 <p>An Indian company owes ₹100 crore on a loan at 6-month MIBOR plus 2.5%. MIBOR is 5.6%, so it currently pays 8.1%, but the CFO's project economics assume nothing above 9%. She enters a five-year swap: the company pays 5.85% fixed and receives 6-month MIBOR on the same notional. Stack the two positions: loan cost MIBOR + 2.5%, swap adds (5.85% − MIBOR), and the MIBORs cancel, leaving a fixed all-in cost of 8.35%, whatever the RBI does. If MIBOR climbs to 7%, the unhedged rival pays 9.5% while our CFO still pays 8.35%. If MIBOR falls to 4.5%, she pays 8.35% while the rival enjoys 7%, and the swap shows a paper loss, which the board should read as an insurance claim that did not happen, not a trading error. Note also what the swap did not hedge: the 2.5% spread is credit, the bank's price of the company's own risk, and no interest rate swap touches it. Hedging is surgery; name the organ first.</p>
@@ -154,7 +185,7 @@
 <p class="ex-title">Case 2: CDS and the 2008 crisis</p>
 <p>By 2007, AIG's financial-products arm had sold CDS protection on roughly half a trillion dollars of debt, much of it bundles of American mortgages, booking the premiums as near-free income because its models said joint defaults were remote. The contracts required AIG to post collateral as the protected securities fell in price; the fall came; the collateral calls reached tens of billions in weeks; and the insurer of the financial system had to be nationalised to avoid pulling its counterparties, half the world's banks, down with it. Every structural flaw of Section 49.4 appeared at scale: protection sold by a seller that could not pay, notional bets dwarfing the underlying debt, and prices feeding back into panic. The post-crisis repairs, central clearing, mandatory margin, reporting, are the CDS market growing the same safety machinery futures got in Section 46.3. The durable lesson for any user of insurance, financial or otherwise: before paying the premium, underwrite the insurer. Protection you cannot collect is the most expensive kind there is.</p>
 </div>
-<h3><span class="sn">49.7</span>Active-recall questions for this section</h3>
+<h3 id="s49-7"><span class="sn">49.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Why does net settlement keep swap credit exposure small, and why is the notional a misleading headline number?</li>
 <li>What does the swap curve forecast, and why is it a cleaner read on rate expectations than G-sec yields?</li>
@@ -170,4 +201,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-                                                                                                    </html>
+  </html>
