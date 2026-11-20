@@ -135,17 +135,48 @@
 <h1>Chapter 37. Trading Stocks: Trend Following and Mean Reversion</h1>
 <p class="count">Chapter 37 of 85 · about 19 minutes</p>
 <p class="lede">All systematic trading divides into two faiths. Trend following says the move continues; mean reversion says it snaps back. Both are right, in different regimes, on different timeframes, and each faith's faithful are bankrupted by the other's market. This chapter puts both systems on the table, rules, statistics and failure modes, because the choice between them is really a choice about which kind of pain you can endure without breaking your own rules.</p>
-<h3><span class="sn">37.1</span>Trend following: the oldest systematic edge</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Trend following and mean reversion</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s37-1">Trend following</a>
+    <a href="#s37-2">System designs</a>
+    <a href="#s37-3">Mean reversion</a>
+    <a href="#s37-4">OB/OS tools</a>
+    <a href="#s37-5">Why styles fail at size</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-30-strategy-momentum.html">Ch 30 &middot; Momentum</a>
+    <a href="finance-reference-34-trading-discipline.html">Ch 34 &middot; Trading Discipline</a>
+  </div>
+</div>
+<h3 id="s37-1"><span class="sn">37.1</span>What is trend following, the oldest systematic edge in markets?</h3>
 <p>Trend following is momentum (Chapter 30) made into machinery: define the trend, enter in its direction, exit when it ends, never predict. Its intellectual pedigree runs from the Turtle traders of the 1980s through modern CTAs managing billions, and its evidence base is long: mechanical trend rules have made money across decades, asset classes and countries, Indian indices included. The edge's shape is psychologically engineered to be hard to hold: the system loses small, often, in choppy markets, wrong two trades out of three, and then catches one move so large it pays for everything. The trend follower is paid, in the end, for enduring a long sequence of small humiliations without improvising. Almost nobody can, which is precisely why the edge persists.</p>
-<h3><span class="sn">37.2</span>Moving-average and channel-breakout systems</h3>
+<h3 id="s37-2"><span class="sn">37.2</span>How do moving-average and channel-breakout systems work?</h3>
 <p>The two classic constructions. <strong>Moving-average systems</strong>: trade in the direction of the slope, enter on the shorter average crossing the longer (Chapter 17's cross), exit on the reverse cross. Smooth, always defined, and whipsawed to death in ranges. <strong>Channel breakouts</strong>, the Donchian construction: buy the N-day high, exit on the M-day low. Cruder, and historically tougher, because it buys strength itself rather than a smoothed average of it. Both share the design truths: the exit matters more than the entry; the parameters matter less than their consistency, the difference between a 19-day and a 21-day channel is noise, while the difference between following and skipping is the whole return; and the system's statistics, win rate, payoff, longest losing streak, must be known <em>before</em> capital is committed, because you will meet that losing streak personally.</p>
-<h3><span class="sn">37.3</span>When prices snap back: the logic of mean reversion</h3>
+<h3 id="s37-3"><span class="sn">37.3</span>What is mean reversion, and when do prices snap back?</h3>
 <p>The opposing faith rests on equally solid observation: over short horizons, in range-bound markets, prices overreact and then return toward their average. The reversion trader sells strength and buys weakness against the local mean, harvesting the market's habit of round-tripping its own excitement. The style's virtues are seductive: high win rates, frequent payoffs, the warm feeling of being right most of the time. Its danger is structural and absolute: the losses, when they come, are the trend days, the crashes, the gap-throughs, where the thing that "always comes back" does not come back. Mean reversion is selling insurance on regime change. The premiums are real; so is the occasional catastrophe; and the strategy lives or dies entirely on whether the catastrophe is priced, capped and survived.</p>
-<h3><span class="sn">37.4</span>Overbought/oversold tools, used properly</h3>
+<h3 id="s37-4"><span class="sn">37.4</span>How should overbought and oversold indicators be used properly?</h3>
 <p>RSI above 70, price above the upper Bollinger band, an oscillator at extremes: the retail reflex reads each as "sell". The professional reading is conditional. In a <strong>range</strong>, overbought genuinely marks the top of the distribution, and fading it is the strategy. In a <strong>trend</strong>, overbought is the description of strength, and fading it is stepping in front of the train; RSI can pin above 70 for weeks in a real bull leg, and Chapter 17 said so. The tools are not signals; they are regime instruments. The sequence that makes them honest: first classify the regime, trending or ranging, by the trend's own evidence (slope, structure, ADX-style measures), then let the oscillator time entries <em>within</em> that verdict. Used in that order, the tools are genuinely useful. Used in the retail order, oscillator first, they are a systematic way to short bull markets.</p>
-<h3><span class="sn">37.5</span>Why each style fails exactly when size is biggest</h3>
+<h3 id="s37-5"><span class="sn">37.5</span>Why does each trading style fail exactly when the money in it is biggest?</h3>
 <p>The deepest and least-taught symmetry in trading: both styles attract maximum capital at maximum danger. Trend following shines in long trending years; the money pours in after them, and arrives for the choppy year that follows. Mean reversion shines in long quiet ranges; the money pours into the calm, and the crash, which is when reversion systems die, is statistically born from that same calm, as low volatility lulls everyone into leverage. The defence is not prediction but construction: run both styles together, since their bad regimes are opposite; size each so that its historical worst case is a survivable event, not a terminal one; and distrust the equity curve most when it has been smoothest. In systematic trading, comfort is the risk report.</p>
-<h3><span class="sn">37.6</span>Worked example: two systems on Indian indices, honestly compared</h3>
+<h3 id="s37-6"><span class="sn">37.6</span>Worked example: two systems on Indian indices, honestly compared</h3>
 <div class="example">
 <p class="ex-title">Case: the turtle and the fader, same decade</p>
 <p>Run both constructions on Nifty and Bank Nifty daily data across a representative decade, costs included, illustrative statistics of the shape such tests reliably show:</p>
@@ -160,7 +191,7 @@
 </table>
 <p>Neither row is the answer; the pair is. The trend system's 38%-win-rate equity curve looks like a mistake for eighteen months and then doubles; the reversion system's smooth 68% looks like genius until one October takes back two years. The portfolio that holds both, sized so each can survive its own hell, produces something neither delivers alone: a return stream whose worst years are merely bad. That construction, not any indicator, is what "systematic" actually buys.</p>
 </div>
-<h3><span class="sn">37.7</span>Active-recall questions for this section</h3>
+<h3 id="s37-7"><span class="sn">37.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>State the two faiths of systematic trading and the regime in which each is right.</li>
 <li>What is trend following's payoff shape, and why does that shape protect the edge from arbitrage?</li>
