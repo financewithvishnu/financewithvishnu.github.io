@@ -135,17 +135,48 @@
 <h1>Chapter 52. Derivative Strategies: Hedging and Income</h1>
 <p class="count">Chapter 52 of 85 · about 20 minutes</p>
 <p class="lede">Part VII has given you the instruments; this chapter and the next assemble them into what traders actually do. There are only three honest businesses in options: insuring what you own, selling insurance to others, and, in Chapter 53, exploiting mispricing. Each can be done well. Each has a failure mode that looks, for months or years, exactly like success.</p>
-<h3><span class="sn">52.1</span>Hedging a portfolio: futures, puts and collars with Indian instruments</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Derivative strategies: hedging and income</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s52-1">Hedging a portfolio</a>
+    <a href="#s52-2">Selling premium</a>
+    <a href="#s52-3">Expiry-day trades</a>
+    <a href="#s52-4">Event buying</a>
+    <a href="#s52-5">Greeks in management</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-48-options-ii.html">Ch 48 &middot; Options II</a>
+    <a href="finance-reference-03-risk-return.html">Ch 3 &middot; Risk and Return</a>
+  </div>
+</div>
+<h3 id="s52-1"><span class="sn">52.1</span>How do you hedge a portfolio with futures, puts and collars?</h3>
 <p>Three hedges, three prices. <strong>Short index futures</strong> against the portfolio: the cheapest hedge to run, near-perfect against beta risk, but you surrender the upside too and fund daily margin through the fall, Chapter 46's treasurer problem. <strong>Protective puts</strong>: the only hedge that keeps the upside, paid for with a premium that runs 1.5-2% a quarter for sensible strikes, so permanent put protection costs 6-8% a year and turns an equity portfolio into a mediocre one; the craft is buying puts selectively, when implied volatility is cheap or a specific event genuinely threatens. The <strong>collar</strong> splits the difference: buy the put, sell a call above the market to fund it, often for near-zero net premium. You keep the range between the strikes and give away everything above the call. For most long-term Indian investors the honest answer is hierarchical: the first hedge is asset allocation, the second is time horizon, and derivatives are the third, for the specific windows when the first two cannot help.</p>
-<h3><span class="sn">52.2</span>Selling premium: strangles, iron condors and the risk behind the income</h3>
+<h3 id="s52-2"><span class="sn">52.2</span>What is selling premium: strangles, iron condors and the risk behind the income?</h3>
 <p>The mirror business is selling insurance. The <strong>short strangle</strong>, selling an out-of-the-money call and put, collects two premiums and wins if the index stays between the strikes; the <strong>iron condor</strong> buys further-out wings to cap the catastrophe, converting unlimited risk into a bounded, marginable trade. The economics are real: implied volatility usually exceeds realised volatility, so sellers harvest a genuine risk premium, on average, over time. The distribution is the catch: small, steady, monthly wins punctuated by losses that can erase a year or more of premiums in days. This is not a flaw in the strategy; it is the strategy. You are being paid a salary to carry tail risk, and the tail arrives on its own schedule, not yours. The practitioners who survive share three rules: size so the worst case is a bad quarter, never a career; buy the wings, because unlimited-risk income is a contradiction; and keep some premium in reserve for the month the market gaps, because that month is when the best fills of the year appear, if you still have capital and nerve.</p>
-<h3><span class="sn">52.3</span>Expiry-day and weekly option strategies</h3>
+<h3 id="s52-3"><span class="sn">52.3</span>What are expiry-day and weekly option strategies?</h3>
 <p>Weekly expiries created a cottage industry of expiry-day trades, and the honest description is a game of extreme theta and extreme gamma. On expiry morning, options carry hours of life and prices that move 50% on a hiccup: sellers farm the terminal decay, buyers punt on the final pin or breakout. The maths is unforgiving. Terminal gamma means the underlying can outrun any premium in minutes; a 0.5% index move in the last hour routinely pays or takes five times the day's collected theta. Add brokerage, exchange charges and the STT on exercised options, and the structural edge belongs to whoever has the lowest costs and the fastest execution, which is not the retail screen. SEBI's 2024 curbs, one weekly expiry per exchange, larger lot sizes, higher expiry-day margins, were aimed precisely here. Treat expiry day as what it is: the casino's busiest floor, where the house edge is wearing a risk premium's clothes.</p>
-<h3><span class="sn">52.4</span>Buying options around events: results, budget, elections</h3>
+<h3 id="s52-4"><span class="sn">52.4</span>Should you buy options around events like results, budgets and elections?</h3>
 <p>The seductive mirror: if sellers bleed on event days, should buyers feast? Buy the straddle before results, before the budget, before the verdict, and harvest the gap. Sometimes, spectacularly: the 2024 election-count day moved the Nifty through ranges that paid straddle buyers multiples. But the market prices the event in advance: implied volatility doubles into the date, so the straddle already costs the expected move, and the instant the news lands, IV collapses, the <strong>vol crush</strong>, and the buyer who got a 2% move off a 3%-priced event loses money on a correct call. Event buying pays only when the outcome lies outside what IV priced, the genuinely surprising result, which is by definition the case you cannot schedule. The professional version is therefore selective and small: events with a real two-sided tail, sized as lottery tickets, and never funded by the rent money. If the premium assumes the surprise, you are not buying the surprise.</p>
-<h3><span class="sn">52.5</span>Greeks in live trade management</h3>
+<h3 id="s52-5"><span class="sn">52.5</span>How are the Greeks used in live trade management?</h3>
 <p>Chapter 48 defined the Greeks; live management is their grammar. Every open position should be readable in one line: "I am short 200 delta, short 4 vega, long theta 800 a day, gamma risk to 24,600." Three management habits follow. <strong>Manage delta, not hope:</strong> decide in advance the delta at which you adjust or exit, because a strangle whose short strike is being approached is a position changing character, from income trade to directional bet, whether or not you re-label it. <strong>Respect gamma near expiry:</strong> the same position that felt gentle at three weeks is a different animal at three days, and rolling early is cheaper than learning why. <strong>Watch vega, not just price:</strong> after a scare, implied vol falls as price recovers, and short-premium positions can profit from the decline even while the price moves against you, and lose while moving for you. The Greeks are not diagnostics to run after the trade goes wrong; they are the trade's dashboard while it is going right.</p>
-<h3><span class="sn">52.6</span>Worked examples and cases</h3>
+<h3 id="s52-6"><span class="sn">52.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: an iron condor, month by month, until the tail</p>
 <p>A trader sells a monthly Nifty iron condor: strikes 4% either side of spot, wings 2% beyond that, collecting about ₹10,000 a month on ₹1.5 lakh of margin, risking at most ₹1 lakh on the bounded structure. The chart shows two years of the trade. Eighteen months of premiums compound to about ₹182 thousand, a beautiful, smooth, 6%-a-month-looking equity curve, the kind that fills social media. Then a month with a genuine gap: the index blows through the short strike to the wing, the bounded loss of roughly ₹92 thousand lands, and in one month eighteen months of income halve. The two-year total is still positive, about ₹142 thousand on the margin posted, because this trader sized the worst case at survivable. The lesson is not that selling premium fails; it is that the P&amp;L of an option seller is an annuity with a deductible that comes due at random. Judge it over five years and a full cycle, never over a smooth year, and never by the monthly win rate, which in this trade was 96% and still nearly ended the story.</p>
@@ -155,7 +186,7 @@
 <p class="ex-title">Case 2: the true P&amp;L curve of an option seller</p>
 <p>Aggregate the Indian index-option seller's economics and a shape emerges: win rate 75-85%, average win small and capped by the premium, average loss several times the win, worst loss bounded only if wings were bought. Before costs, the expectancy is modestly positive, the market does pay for carried risk. After brokerage, STT, exchange fees, stamp duty and the bid-ask spread on four legs a month, a large slice of that expectancy transfers to the infrastructure, which is why the same SEBI study that counted the buyers' losses found persistent profits concentrated among a thin layer of institutions and proprietary desks with the lowest costs. The practical translation for an individual. If you sell premium, do it with wings, at sizes where the worst month is a line item, with costs you have actually summed, and with the written expectation of giving back a year of income in a bad month without flinching. If any clause of that sentence is unacceptable, the income was never really on offer to you.</p>
 </div>
-<h3><span class="sn">52.7</span>Active-recall questions for this section</h3>
+<h3 id="s52-7"><span class="sn">52.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Compare futures, puts and collars as hedges on cost, upside retention and cash demands.</li>
 <li>What risk premium do premium sellers harvest, and what is the shape of its distribution?</li>
@@ -171,4 +202,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-  </html>
+</html>
