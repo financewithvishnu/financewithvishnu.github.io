@@ -135,17 +135,48 @@
 <h1>Chapter 58. Foreign Exchange Markets</h1>
 <p class="count">Chapter 58 of 85 · about 20 minutes</p>
 <p class="lede">The foreign exchange market is the largest market in the world, several trillion dollars a day, and the one every investor already trades in, whether they sign a ticket or not. Buy a US index fund, invoice a client in dollars, pay a foreign university, and you have taken a currency position. This chapter makes the invisible position visible, and then prices the decision to hedge it.</p>
-<h3><span class="sn">58.1</span>How exchange rates are quoted and what moves them</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Currency markets and the rupee</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s58-1">Quotes and drivers</a>
+    <a href="#s58-2">Spot, forwards, carry</a>
+    <a href="#s58-3">Currency risk</a>
+    <a href="#s58-4">The managed rupee</a>
+    <a href="#s58-5">Hedging choices</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-49-swaps.html">Ch 49 &middot; Swaps</a>
+    <a href="finance-reference-20-sector-atlas-it.html">Ch 20 &middot; IT Services</a>
+  </div>
+</div>
+<h3 id="s58-1"><span class="sn">58.1</span>How are exchange rates quoted, and what moves them?</h3>
 <p>A quote like USD/INR 86.50 is a price: rupees per one dollar, so a rising number is a weakening rupee. Behind the price sit the slow forces and the fast ones. The slow: inflation differentials, a currency whose home inflation runs hotter must cheapen over time, which is why the rupee's multi-decade drift against the dollar, a few percent a year on average, is arithmetic more than failure; and productivity and growth differentials, which pull the other way when the economy outperforms. The fast: interest rates and the flows they attract, risk appetite washing in and out of emerging markets, oil, given India's import bill, and the current account, the ongoing scoreboard of what the country earns versus spends abroad. Over any horizon that matters to a saver, the rupee's dollar path has been a managed, orderly decline; over any horizon that matters to a treasurer, it can move 5% in a quarter and ruin an unhedged year.</p>
-<h3><span class="sn">58.2</span>Spot, forwards and the carry trade</h3>
+<h3 id="s58-2"><span class="sn">58.2</span>What are spot and forward currency markets, and what is the carry trade?</h3>
 <p>Three instruments price time in currency. The <strong>spot</strong> market settles now. The <strong>forward</strong> market settles at a date, at a price set not by prophecy but by interest rates, covered interest parity: the forward premium on the dollar equals, roughly, the gap between Indian and US rates, because any other price would hand out free money to anyone with two bank accounts. The rupee's higher rates mean the dollar always trades at a forward premium in India; hedging a dollar receivable locks in that premium, and hedging a dollar payable pays it. The <strong>carry trade</strong> is the deliberate exploitation of the same gap: borrow in a low-rate currency, hold a high-rate one, and collect the differential, a strategy that earns steady small returns and then loses them violently when the funding currency suddenly strengthens, the famous "up the escalator, down the elevator". Every era has its carry pair, and every carry era ends the same way; the forward premium is not a free lunch but the market's price for a crash risk someone must hold.</p>
-<h3><span class="sn">58.3</span>Currency risk for investors and companies</h3>
+<h3 id="s58-3"><span class="sn">58.3</span>What is currency risk for investors and companies?</h3>
 <p>Currency risk has three costumes. <strong>Transaction exposure</strong> is a known future flow: the exporter's dollar invoice, the importer's payable, the student's tuition, a certain amount of uncertainty arriving on a certain date. <strong>Translation exposure</strong> is accounting: the foreign subsidiary's results converted into rupees at whatever rate prevails when the books close. And <strong>economic exposure</strong> is the deepest: how the exchange rate changes the business itself, the IT company whose entire cost base is in rupees and revenue in dollars, the domestic manufacturer competing against imports that cheapen with every rupee rally. Investors carry the same three in miniature: your US fund holding is a transaction waiting to happen, your foreign assets translate every day, and your own career, if it is paid in export earnings, is an economic exposure. The management rule is proportionate to the costume: hedge transactions by policy, accept translation as cosmetic, and respect economic exposure as strategy, the reason a CFO loses sleep and a diversified investor mostly should not.</p>
-<h3><span class="sn">58.4</span>The rupee: RBI management, convertibility, NDF markets</h3>
+<h3 id="s58-4"><span class="sn">58.4</span>How is the rupee managed: RBI policy, convertibility and NDF markets?</h3>
 <p>The rupee floats, but it floats with a lifeguard. The RBI's stated doctrine is to damp volatility rather than defend a level, smoothing the path with intervention on both sides, and its toolkit is deep: a large reserve stockpile, forward and swap operations, and rule changes that widen or narrow the taps on flows. <strong>Convertibility</strong> is partial by design: the current account is free, trade and dividends move without permission, while the capital account is gated, with quotas and routes governing how foreign money enters bonds, equities and deposits, a fence that has repeatedly spared India the sudden-stop crises of freer peers at the cost of some efficiency. And offshore, beyond the lifeguard's reach, runs the <strong>NDF market</strong>, non-deliverable forwards settling in dollars, where global money prices the rupee's future without touching onshore rules; the gap between onshore and NDF pricing is a running poll on how credible the market finds the management. Understanding this architecture explains the rupee's personality: fewer headlines than its emerging-market cousins, a steady drift instead of sudden cliffs, and tail risks that live offshore and in oil rather than in the exchange's own plumbing.</p>
-<h3><span class="sn">58.5</span>Hedging currency exposure: costs and choices</h3>
+<h3 id="s58-5"><span class="sn">58.5</span>How do you hedge currency exposure, and what does it cost?</h3>
 <p>The hedging menu is short, and the choice is about cost, not cleverness. A <strong>forward</strong> locks the rate: zero optionality, zero premium beyond the forward points, the treasurer's default. An <strong>option</strong> keeps the favourable side: real protection with a real premium, justified when the exposure itself is uncertain, a bid not yet won, a remittance not yet promised. Doing <strong>nothing</strong> is also a policy, defensible when flows are small, diversified across currencies, or naturally offset, the exporter who also imports, the investor whose foreign assets are a decades-long position against a rupee liability far away. The discipline that separates treasurers from gamblers is policy: a written rule, hedge 70% of committed flows, never hedge forecasts, review quarterly, that survives both the rally that makes hedges look wasteful and the slide that makes their absence look criminal. Hedging decided ad hoc is speculation with a finance department's letterhead.</p>
-<h3><span class="sn">58.6</span>Worked examples and cases</h3>
+<h3 id="s58-6"><span class="sn">58.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: an IT exporter's unhedged year</p>
 <p>A mid-size IT exporter bills $10 million a year, costs almost entirely in rupees. The budget is struck at 83. In a calm year at 86, the windfall is ₹3 crore of margin the firm did nothing to earn, and the board congratulates the treasury. Two years later the rupee strengthens to 80 on a dollar glut, and the same passivity is a ₹3 crore hole the firm did nothing to deserve. Nothing about the business changed; the exchange rate wrote the P&amp;L three years running. Now compare the hedged twin: forwards booked each quarter at the prevailing premium, converting 83 into 84-plus locked rates, the forward points themselves adding a percent or two because Indian rates exceed American ones. Its results are dull in all three years, missing the windfall and the hole alike, and its planning, pricing and salary budgets are built on rates it actually knows. That dullness is the product treasurers are paid to manufacture. The unhedged exporter was not running an IT firm with a currency side-effect; it was running a leveraged currency fund with an IT division attached, and so is every exporter, and every investor, who leaves a concentrated currency position to chance.</p>
@@ -154,7 +185,7 @@
 <p class="ex-title">Case 2: what a falling rupee does to a US index fund in INR terms</p>
 <p>You invest ₹8.2 lakh, $10,000 at 82, in a US index fund. The S&amp;P climbs 12% over the year, a good year. The rupee slides from 82 to 86.50, about 5.5%. Your dollar holding is now $11,200, and in rupees: $11,200 × 86.50 = ₹9.69 lakh, a return of 18.1%, the equity gain multiplied by the currency gain. Run the mirror: S&amp;P up 12%, rupee strengthening to 79, and your rupee return shrinks to about 7.9%, a good year abroad becoming a mediocre one at home. Two rules for the Indian global investor follow. Your return is the product of asset and currency, never the asset alone, so a "US market return" is a number you cannot spend until translated. And the translation runs both ways across decades: the rupee's long drift downward has historically <em>added</em> a few percent a year to unhedged foreign equity returns for the Indian holder, a quiet tailwind that is real, unspectacular, and no substitute for the asset being worth owning in the first place.</p>
 </div>
-<h3><span class="sn">58.7</span>Active-recall questions for this section</h3>
+<h3 id="s58-7"><span class="sn">58.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Read USD/INR 86.50 aloud correctly, and name the slow and fast forces behind the number.</li>
 <li>What sets the forward premium on the dollar in India, and what risk does the carry trade actually hold?</li>
