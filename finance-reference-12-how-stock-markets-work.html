@@ -135,16 +135,47 @@
 <h1>Chapter 12. How India's Stock Markets Work</h1>
 <p class="count">Chapter 12 of 85 · about 22 minutes</p>
 <p class="lede">You tap "buy" on your phone and, about one working day later, shares sit in your demat account while the money sits in someone else's. Between those two moments runs one of the most elegant machines in Indian finance: exchanges, clearing corporations, depositories and a regulator, moving crores of property between strangers who will never meet, with near-zero failures. Part IV begins here, with the machine itself, because an investor who understands the plumbing stops fearing it and starts reading it.</p>
-<h3><span class="sn">12.1</span>Exchanges and indices: what an index really measures</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>How stock markets work</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s12-1">Exchanges and indices</a>
+    <a href="#s12-2">Order types</a>
+    <a href="#s12-3">The order book</a>
+    <a href="#s12-4">Circuits and halts</a>
+    <a href="#s12-5">Shorts, buybacks, delisting</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-04-investors-toolkit.html">Ch 4 &middot; The Investor&#8217;s Toolkit</a>
+    <a href="finance-reference-13-ipos-new-listings.html">Ch 13 &middot; IPOs</a>
+  </div>
+</div>
+<h3 id="s12-1"><span class="sn">12.1</span>What does a stock market index actually measure?</h3>
 <p>India's two major exchanges, the NSE and the BSE, are electronic order-matching platforms where members (brokers) route client orders. Most liquidity in large stocks sits on the NSE; prices on the two converge within paise because arbitrageurs profit from any gap. The famous indices are statistical shortcuts. The <strong>Nifty 50</strong> is a free-float market-cap-weighted basket of fifty large NSE stocks; the <strong>Sensex</strong> does the same for thirty on the BSE. "Weighted by free-float market cap" means the biggest companies move the index most, and only shares actually available for trading count. The deep point: an index is not the market's mood, it is a portfolio with published rules, and its level tells you how that particular portfolio, dominated by a few heavyweights, is doing. Broader indices (Nifty 500, midcap and smallcap indices) often tell a different story on the same day, which is why "the market rose" is always an incomplete sentence.</p>
-<h3><span class="sn">12.2</span>Order types: market, limit, stop-loss</h3>
+<h3 id="s12-2"><span class="sn">12.2</span>What are market, limit and stop-loss orders?</h3>
 <ul class="plain">
 <li><strong>Market order:</strong> buy or sell now at the best available price. In a liquid large-cap this is fine; in an illiquid small-cap it is an invitation to overpay, because "best available" may be far from "last traded".</li>
 <li><strong>Limit order:</strong> trade only at your price or better. You control price and give up certainty of execution. For anything thinly traded, this is the default; Chapter 12's order book shows you why.</li>
 <li><strong>Stop-loss order:</strong> a resting order that converts to a live sell when price falls to your trigger. It caps losses mechanically and, used without thought, also guarantees you sell at the worst moments of noise. A stop is a plan made in advance; whether that plan belongs in your investing, as opposed to trading, is a question Part IV returns to.</li>
 </ul>
 <p>Order types are instructions to a matching engine, nothing more. The engine has no mercy and no memory; every regret in market mechanics is a conversation between an investor and a rule he set himself.</p>
-<h3><span class="sn">12.3</span>The order book and how prices actually form</h3>
+<h3 id="s12-3"><span class="sn">12.3</span>How do stock prices actually form in the order book?</h3>
 <p>Forget the ticker for a moment. A stock's price is the last handshake inside a live auction that never closes. Buyers queue their limit bids, highest first; sellers queue their offers, lowest first; a trade prints whenever a new order crosses the spread. The queue, visible on any broker terminal, looks like this (illustrative):</p>
 <table class="num">
 <tr><th class="r">Bid qty</th><th class="r">Bid ₹</th><th class="r">Ask ₹</th><th class="r">Ask qty</th></tr>
@@ -156,16 +187,16 @@
 <tr><td class="r">3,000</td><td class="r">99.80</td><td class="r"></td><td class="r"></td></tr>
 </table>
 <p>Read it as supply and demand you can see. The best bid is ₹100.05, the best ask ₹100.10, and the five-paisa spread is the toll for immediacy: a market buy pays 100.10, a market sell receives 100.05. The depth at each level tells you how far your own order would push the price: 800 shares trade at the touch, 80,000 shares walk the book down several levels. Price formation is nothing mystical: it is the last trade in this queue, and "liquidity" is the queue's thickness. Thin queues are why small-caps gap, why market orders cost, and why position size is a risk decision, not just a return decision.</p>
-<h3><span class="sn">12.4</span>Circuit limits, auctions and market-wide halts</h3>
+<h3 id="s12-4"><span class="sn">12.4</span>What are circuit limits and market-wide trading halts?</h3>
 <p>Indian markets run with brakes fitted. Individual stocks trade within <strong>price bands</strong>, commonly 5%, 10% or 20% around the previous close depending on the stock; hit the band and the stock can trade only inside it, freezing at the limit when the move is one-sided. Index-wide moves trigger <strong>market-wide circuit breakers</strong> at 10%, 15% and 20%, halting all trading for escalating pauses, a design imported after past crashes to force cooling-off. Shares that fail delivery go to <strong>auction</strong>, where the exchange buys them in the market at the defaulter's expense. These brakes matter to the investor for one practical reason: on a limit-down day in a small-cap you cannot exit at any price, which is a risk to size for in advance, not discover on the day.</p>
-<h3><span class="sn">12.5</span>Short selling, SLB, buybacks and delisting</h3>
+<h3 id="s12-5"><span class="sn">12.5</span>How do short selling, buybacks and delisting work in India?</h3>
 <ul class="plain">
 <li><strong>Short selling</strong> (selling first, buying back) is permitted for institutions with delivery; for individuals it effectively lives in derivatives, covered in Part VI. Naked shorting without delivery is banned; the settlement auction makes failing expensive.</li>
 <li><strong>SLB, stock lending and borrowing,</strong> lets holders lend shares for a fee and borrowers short with delivery. It is the legitimate plumbing behind genuine two-sided markets.</li>
 <li><strong>Buybacks</strong> return cash to shareholders through the tender or open-market route, tax-efficient relative to dividends since the 2019 and later budget changes; read the acceptance-ratio arithmetic before tendering.</li>
 <li><strong>Delisting</strong> is the exit door: a promoter buying out public shareholders through a reverse book-building process. The discovered price, not the announced floor, is what matters.</li>
 </ul>
-<h3><span class="sn">12.6</span>Worked examples and cases</h3>
+<h3 id="s12-6"><span class="sn">12.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: reading a live NSE order book</p>
 <p>Open any liquid stock's market-depth screen and narrate it: "Best bid 100.05 for 800, best ask 100.10 for 1,200, total visible bids roughly three times the asks." Now watch it for ten minutes. You will see large orders appear and vanish before execution, iceberg orders showing a fraction of their size, and the queue rebuilding after every sweep. The lessons that stick: displayed depth is intention, not commitment; the spread is a real cost you pay every round trip; and in a stock where one level holds 3,000 shares, a 50,000-share market order is not a purchase, it is a price move you author and pay for.</p>
@@ -174,7 +205,7 @@
 <p class="ex-title">Case 2: anatomy of a 10% circuit day</p>
 <p>A mid-sized company announces after hours that its auditor has resigned with unresolved questions. At 9:15 the next morning the sell queue is fifty times the buy queue; the stock opens down 10%, locks at its lower circuit, and stays there. No trades, no exits, only a widening queue of unsold shares. Day two repeats. By the time ordinary selling is possible, the price is a third lower. The mechanics taught by the episode: circuits do not protect you from losses, they only schedule them; a stock that can lock limit-down is a stock whose position size must assume a multi-day exit; and the auditor-resignation flag, check 3 of Chapter 10's checklist, was worth more than any chart pattern on that morning.</p>
 </div>
-<h3><span class="sn">12.7</span>Active-recall questions for this section</h3>
+<h3 id="s12-7"><span class="sn">12.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>What exactly does "free-float market-cap weighted" mean, and why does it make "the market rose" an incomplete sentence?</li>
 <li>When is a market order acceptable and when is it an invitation to overpay?</li>
