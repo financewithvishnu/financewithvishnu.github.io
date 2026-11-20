@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-51-clearing-margining.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 51. Clearing, Margining and Derivatives Risk in India - Finance With Vishnu" property="og:title"/><meta content="How Indian derivatives stay safe: the clearing corporation and novation, SPAN and exposure margins, daily mark-to-market and SEBI's peak margin rule, leverage arithmetic, lot sizes and position limits, with a margin-spiral case and the Barings collapse." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-51-clearing-margining.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-51-clearing-margining.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 51. Clearing, Margining and Derivatives Risk in India - Finance With Vishnu" property="og:title"/><meta content="How Indian derivatives stay safe: the clearing corporation and novation, SPAN and exposure margins, daily mark-to-market and SEBI's peak margin rule, leverage arithmetic, lot sizes and position limits, with a margin-spiral case and the Barings collapse." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-51-clearing-margining.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
 <h1>Chapter 51. Clearing, Margining and Derivatives Risk in India</h1>
 <p class="count">Chapter 51 of 85 · about 19 minutes</p>
 <p class="lede">Every futures and options trade in India is a promise between strangers who will never meet, and yet defaults almost never reach the public. The machinery that makes strangers safe to trade with, the clearing corporation, the margin waterfall, the daily cash settlement, is the least visible and most successful part of the market. It is also the machinery that decides, in a crash, whether you exit a losing position or the position exits you.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,23 +148,22 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Clearing and margining</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s51-1">The clearing corporation</a>
-    <a href="#s51-2">SPAN and exposure</a>
-    <a href="#s51-3">MTM and margin calls</a>
-    <a href="#s51-4">Leverage both ways</a>
-    <a href="#s51-5">Limits and guardrails</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-46-forwards-futures.html">Ch 46 &middot; Forwards and Futures</a>
-    <a href="finance-reference-04-investors-toolkit.html">Ch 4 &middot; The Investor&#8217;s Toolkit</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Clearing and margining</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s51-1">The clearing corporation</a>
+<a href="#s51-2">SPAN and exposure</a>
+<a href="#s51-3">MTM and margin calls</a>
+<a href="#s51-4">Leverage both ways</a>
+<a href="#s51-5">Limits and guardrails</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-46-forwards-futures.html">Ch 46 · Forwards and Futures</a>
+<a href="finance-reference-04-investors-toolkit.html">Ch 4 · The Investor’s Toolkit</a>
+</div>
 </div>
 <h3 id="s51-1"><span class="sn">51.1</span>What does the clearing corporation do?</h3>
 <p>The moment your trade executes, the exchange's clearing corporation, NSCCL for the NSE, ICCL for the BSE, steps between buyer and seller through <strong>novation</strong>: your contract is legally torn in two, and each side now faces only the clearing corporation. The stranger's creditworthiness stops mattering; the corporation guarantees every trade, and stands behind the guarantee with a waterfall of defences: member margins, a settlement guarantee fund built from contributions, its own capital, and insurance. The design has survived every Indian crisis of the modern era without a public default, through 2008, 2020 and every scam and crash between. When you hear that Indian settlement "works", this invisible institution is what works, and the cost of running it is embedded in the margins the rest of this chapter describes.</p>
