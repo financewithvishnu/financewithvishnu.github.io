@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-47-options-i.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 47. Options I: Payoffs and Basic Strategies - Finance With Vishnu" property="og:title"/><meta content="Options basics for Indian markets: calls and puts as rights without obligations, payoff diagrams, strike premium and moneyness, covered calls protective puts and spreads, European cash-settled index options vs physical stock options, with worked cases." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-47-options-i.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-47-options-i.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 47. Options I: Payoffs and Basic Strategies - Finance With Vishnu" property="og:title"/><meta content="Options basics for Indian markets: calls and puts as rights without obligations, payoff diagrams, strike premium and moneyness, covered calls protective puts and spreads, European cash-settled index options vs physical stock options, with worked cases." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-47-options-i.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
 <h1>Chapter 47. Options I: Payoffs and Basic Strategies</h1>
 <p class="count">Chapter 47 of 85 · about 20 minutes</p>
 <p class="lede">A future binds both parties; an option binds only one. That asymmetry, the right to walk away, is the most useful and the most mis-sold idea in the derivatives market. Used as designed, an option is an insurance policy with a quoted premium. Used as most Indian retail traders use it, it is a lottery ticket with a stock-exchange code. This chapter is about the design: payoffs, the language of strikes and premiums, and the three basic strategies that cover most legitimate needs.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,24 +148,23 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Options I: payoffs and basic strategies</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s47-1">Calls and puts</a>
-    <a href="#s47-2">Payoffs and language</a>
-    <a href="#s47-3">Three basic strategies</a>
-    <a href="#s47-4">Settlement in India</a>
-    <a href="#s47-5">Index vs stock options</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-46-forwards-futures.html">Ch 46 &middot; Forwards and Futures</a>
-    <a href="finance-reference-48-options-ii.html">Ch 48 &middot; Options II</a>
-    <a href="finance-reference-17-technical-analysis.html">Ch 17 &middot; Technical Analysis</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Options I: payoffs and basic strategies</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s47-1">Calls and puts</a>
+<a href="#s47-2">Payoffs and language</a>
+<a href="#s47-3">Three basic strategies</a>
+<a href="#s47-4">Settlement in India</a>
+<a href="#s47-5">Index vs stock options</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-46-forwards-futures.html">Ch 46 · Forwards and Futures</a>
+<a href="finance-reference-48-options-ii.html">Ch 48 · Options II</a>
+<a href="finance-reference-17-technical-analysis.html">Ch 17 · Technical Analysis</a>
+</div>
 </div>
 <h3 id="s47-1"><span class="sn">47.1</span>What are call and put options?</h3>
 <p>A <strong>call</strong> is the right to buy at a fixed price; a <strong>put</strong> is the right to sell at a fixed price. The buyer pays a premium upfront and in exchange owns a one-sided payoff: the call buyer profits without limit as the price rises and loses only the premium as it falls; the put buyer, mirror-image. The seller (or "writer") collects the premium and accepts the mirror-image obligation: small certain income now, potentially large payment later. Keep the two archetypes in mind. The option buyer is the insured: pays rent, owns the tail. The option seller is the insurance company: collects rent, carries the tail. Both are honourable businesses. What is not a business is buying options because they are cheap, the way most retail money does it, because cheap things that expire worthless in a fortnight are expensive per unit of hope.</p>
