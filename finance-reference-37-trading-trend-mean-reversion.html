@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-37-trading-trend-mean-reversion.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 37. Trading Stocks: Trend Following and Mean Reversion - Finance With Vishnu" property="og:title"/><meta content="The two faiths of systematic trading compared: trend following and mean reversion, moving-average vs Donchian systems, overbought/oversold tools by regime, and why each style fails at maximum size." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-37-trading-trend-mean-reversion.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-37-trading-trend-mean-reversion.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 37. Trading Stocks: Trend Following and Mean Reversion - Finance With Vishnu" property="og:title"/><meta content="The two faiths of systematic trading compared: trend following and mean reversion, moving-average vs Donchian systems, overbought/oversold tools by regime, and why each style fails at maximum size." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-37-trading-trend-mean-reversion.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part IV · Stocks: The Indian Market, Its Sectors and Its Strategies</p>
 <h1>Chapter 37. Trading Stocks: Trend Following and Mean Reversion</h1>
 <p class="count">Chapter 37 of 85 · about 19 minutes</p>
 <p class="lede">All systematic trading divides into two faiths. Trend following says the move continues; mean reversion says it snaps back. Both are right, in different regimes, on different timeframes, and each faith's faithful are bankrupted by the other's market. This chapter puts both systems on the table, rules, statistics and failure modes, because the choice between them is really a choice about which kind of pain you can endure without breaking your own rules.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,23 +148,22 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Trend following and mean reversion</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s37-1">Trend following</a>
-    <a href="#s37-2">System designs</a>
-    <a href="#s37-3">Mean reversion</a>
-    <a href="#s37-4">OB/OS tools</a>
-    <a href="#s37-5">Why styles fail at size</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-30-strategy-momentum.html">Ch 30 &middot; Momentum</a>
-    <a href="finance-reference-34-trading-discipline.html">Ch 34 &middot; Trading Discipline</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Trend following and mean reversion</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s37-1">Trend following</a>
+<a href="#s37-2">System designs</a>
+<a href="#s37-3">Mean reversion</a>
+<a href="#s37-4">OB/OS tools</a>
+<a href="#s37-5">Why styles fail at size</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-30-strategy-momentum.html">Ch 30 · Momentum</a>
+<a href="finance-reference-34-trading-discipline.html">Ch 34 · Trading Discipline</a>
+</div>
 </div>
 <h3 id="s37-1"><span class="sn">37.1</span>What is trend following, the oldest systematic edge in markets?</h3>
 <p>Trend following is momentum (Chapter 30) made into machinery: define the trend, enter in its direction, exit when it ends, never predict. Its intellectual pedigree runs from the Turtle traders of the 1980s through modern CTAs managing billions, and its evidence base is long: mechanical trend rules have made money across decades, asset classes and countries, Indian indices included. The edge's shape is psychologically engineered to be hard to hold: the system loses small, often, in choppy markets, wrong two trades out of three, and then catches one move so large it pays for everything. The trend follower is paid, in the end, for enduring a long sequence of small humiliations without improvising. Almost nobody can, which is precisely why the edge persists.</p>
