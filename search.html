@@ -149,11 +149,15 @@ document.body.classList.remove('fwv-locked');
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 <script>
 (async function(){
-const indexResponse=await fetch('search-index.b64');
-if(!indexResponse.ok)throw new Error('Search index could not be loaded');
-const compressed=Uint8Array.from(atob(await indexResponse.text()),c=>c.charCodeAt(0));
+const loadIndex=async file=>{
+const response=await fetch(file);
+if(!response.ok)throw new Error('Search index could not be loaded');
+const compressed=Uint8Array.from(atob(await response.text()),c=>c.charCodeAt(0));
 const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'));
-const pages=JSON.parse(await new Response(stream).text());
+return JSON.parse(await new Response(stream).text());
+};
+const [basePages,supplementPages]=await Promise.all([loadIndex('search-index.b64'),loadIndex('search-supplement.b64')]);
+const pages=basePages.concat(supplementPages);
 const form=document.getElementById('site-search'), input=document.getElementById('query'), results=document.getElementById('results'), status=document.getElementById('search-status');
 const norm=s=>s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,' ').trim();
 function search(){
@@ -168,4 +172,4 @@ input.value=new URLSearchParams(location.search).get('q')||'';input.addEventList
 })();
 </script>
 </body>
-  </html>
+</html>
