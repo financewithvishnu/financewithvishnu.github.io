@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Wafer-fabrication equipment: the businesses that build the chip factory - Finance With Vishnu</title>
+<meta content="How chipmaking tools work, why yield and installed-base service matter, and how to test semiconductor-equipment economics, cyclicality and Indian supplier claims." name="description"/>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<meta content="Finance With Vishnu" name="author"/><style>
+.review-banner{background:#eee3ce;padding:14px 18px;color:#493c2b;font-size:14px;line-height:1.6;border-bottom:1px solid #ddcda9}
+.article-map{padding:22px;background:#f1ebe3;border:1px solid #e7dfd3;border-radius:12px;margin:30px 0}
+.article-map h2{margin:0 0 12px;font-size:24px}.article-map ol{padding-left:22px;margin:0}.article-map a{display:block;min-height:44px;line-height:1.5;padding:8px 0;color:#365c45;font-size:15px}
+h2[id]{scroll-margin-top:24px} .article-chart{background:white;border:1px solid #e7dfd3;padding:20px;border-radius:12px;max-width:760px;margin:28px 0}.article-chart h3{margin:0 0 8px;font-family:inherit;font-weight:600;font-size:18px;line-height:1.4}.chart-unit{font-size:13px!important;color:#7a6f62!important;margin:0 0 18px}.chart-row{margin:15px 0}.chart-label{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5}.chart-label strong{white-space:normal;text-align:right;flex-shrink:0;max-width:48%;color:#365c45}.chart-track{height:11px;background:#f1ebe3;border-radius:3px;margin-top:6px;overflow:hidden}.chart-bar{height:11px;background:#4e8a67;border-radius:3px;min-width:2px}.chart-bar.negative{background:#9b5c4b}.article-chart figcaption{font-size:13px;line-height:1.6;color:#7a6f62;margin-top:16px}.flow-list{list-style:none;padding:0;margin:18px 0 0;counter-reset:step}.flow-list li{counter-increment:step;background:#f1ebe3;padding:12px 14px;border-radius:6px;margin:10px 0;font-size:15px}.flow-list li:before{content:counter(step) '. ';font-weight:600;color:#4e8a67}.source-list a,main a,main p,main li{overflow-wrap:anywhere;color:inherit}main a{color:#365c45}.article-meta{color:#7a6f62;font-size:14px;margin:12px 0 20px}.article-deck{max-width:720px}.article-deck p{font-size:17px;line-height:1.8}main{max-width:900px}main h2{max-width:760px;font-size:28px;line-height:1.3}main h3{line-height:1.35}.source-list p{font-size:14px}.draft-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}.draft-nav a{min-height:44px;padding:10px 0}.article-cards{display:grid;gap:18px;margin:28px 0}.article-card{padding:22px;background:white;border:1px solid #e7dfd3;border-radius:12px}.article-card h2{margin:0 0 12px;font-size:25px}.article-card p{margin:0 0 12px}.article-card a{display:inline-block;min-height:44px;padding-top:10px;font-weight:600}@media(max-width:600px){.article-chart{padding:16px 14px}.chart-label{display:block}.chart-label strong{display:block;max-width:none;text-align:left}.article-chart h3{font-size:17px}main h2{font-size:25px}.article-map{padding:18px}nav.file-nav{gap:16px;flex-wrap:wrap}.article-deck p{font-size:16px}}
+</style><link href="https://financewithvishnu.github.io/article-wafer-fabrication-equipment.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Wafer-fabrication equipment: the businesses that build the chip factory - Finance With Vishnu" property="og:title"/><meta content="How chipmaking tools work, why yield and installed-base service matter, and how to test semiconductor-equipment economics, cyclicality and Indian supplier claims." property="og:description"/><meta content="https://financewithvishnu.github.io/article-wafer-fabrication-equipment.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Wafer-fabrication equipment: the businesses that build the chip factory", "description": "How chipmaking tools work, why yield and installed-base service matter, and how to test semiconductor-equipment economics, cyclicality and Indian supplier claims.", "url": "https://financewithvishnu.github.io/article-wafer-fabrication-equipment.html", "author": {"@type": "Person", "name": "Finance With Vishnu"}, "publisher": {"@type": "Organization", "name": "Finance With Vishnu"}, "datePublished": "2026-11-21", "dateModified": "2026-11-21", "about": {"@type": "Thing", "name": "Wafer-fabrication equipment"}, "temporalCoverage": "2026-10-11", "inLanguage": "en"}</script><script defer="" src="site-analytics.js"></script>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="https://financewithvishnu.github.io/index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="https://financewithvishnu.github.io/contact.html">Contact</a><a href="https://financewithvishnu.github.io/search.html">Search</a></nav>
+</header>
+<main><p class="part-tag">Learn / Articles / Sector studies</p>
+<h1>Wafer-fabrication equipment: the businesses that build the chip factory</h1>
+<p class="article-meta">By Finance With Vishnu · Class date: 11 October 2026 · Sector study</p>
+<p>A wafer-fabrication-equipment business sells the machines used to make semiconductor devices on a wafer. It does not need to design the next popular processor or own the factory producing it. Its customer pays for the ability to deposit material, print patterns, remove material, clean surfaces and measure the result, repeatedly and with very little room for error.</p>
+<p>This is the attraction behind the familiar idea of selling tools during a gold rush. But that analogy can hide the difficult part. A large chip-factory announcement does not immediately become an equipment order. An order does not immediately become revenue. And a supplier to an equipment maker does not automatically earn the equipment maker's margins.</p>
+<p>My starting question is therefore simple: what does this company actually supply, why does the customer need it, and how does that need turn into cash? This study moves from the physical process to the business model, then to the risks and the Indian supplier opportunity.</p>
+<p><strong>Study window:</strong> the 11 October 2026 sector topic, supported by the dated primary sources listed below. The financial examples use reported 2025 results, not estimates of November 2026 earnings. A December 2025 industry forecast is used only to explain market definitions, not as today's forecast. Technology pages were checked in November 2026. This is an educational business study, not a stock recommendation or a complete latest-results update.</p>
+<aside class="article-map"><h2>Explore this article</h2><ol><li><a href="#wfe-section-1">What is WFE, and what is it not?</a></li><li><a href="#wfe-section-2">What do the machines actually do?</a></li><li><a href="#wfe-section-3">Why are lithography, etch and inspection different businesses?</a></li><li><a href="#wfe-section-4">Why can a very expensive tool still save the customer money?</a></li><li><a href="#wfe-section-5">Where can an equipment maker build an advantage?</a></li><li><a href="#wfe-section-6">Why does the installed base matter after a machine is sold?</a></li><li><a href="#wfe-section-7">Why does AI spending not flow straight into equipment revenue?</a></li><li><a href="#wfe-section-8">How should we read a market forecast?</a></li><li><a href="#wfe-section-9">What do the financial statements need to prove?</a></li><li><a href="#wfe-section-10">Where does India fit without turning every supplier into a chip champion?</a></li><li><a href="#wfe-section-11">Which risks can break the thesis?</a></li><li><a href="#wfe-section-12">How would I study a company in this chain?</a></li><li><a href="#wfe-section-13">Sources and reading notes</a></li></ol></aside>
+<h2 id="wfe-section-1">1. What is WFE, and what is it not?</h2>
+<p>WFE means wafer-fabrication equipment. A fab is a factory in which semiconductor devices are made on wafers through many carefully controlled steps. A chip designer specifies what a device should do. A foundry manufactures devices for customers. An integrated device manufacturer can design and manufacture its own products. An equipment maker sells the tools used by those manufacturers. These are different positions in the same chain.</p>
+<p>A further distinction matters: making devices on a wafer is not the same as packaging and testing finished chips. Packaging provides connections and protection and can bring several chips together. Testing checks whether devices meet the required performance. The boundaries are becoming more connected as advanced packaging grows, but the spending categories are still not interchangeable.</p>
+<p>SEMI's December 2025 forecast defined its WFE segment to include wafer processing, mask/reticle and fab-facilities equipment, while reporting test and assembly/packaging equipment separately. Its methodology also distinguishes a project-level fab-investment view from an equipment-supplier sales view. Before comparing two market-size figures, I want the definition, date and measurement basis beside each number. [W1, W2]</p>
+<figure class="article-chart"><h3>Follow the customer and the product</h3><ol class="flow-list"><li>Chip design: the device architecture and circuit design.</li><li>Wafer fabrication: manufacturers buy tools to build devices on wafers.</li><li>Equipment and subsystems: tool makers buy precision components, controls and assemblies.</li><li>Packaging and testing: devices are connected, protected and checked.</li><li>Electronic systems: chips become part of servers, phones, vehicles and other products.</li></ol><figcaption>Original simplified business map. It is a chain of roles, not a statement that every company performs only one role or that every rupee passes through each stage unchanged.</figcaption></figure>
+<p>The first filter for a supposed semiconductor company is therefore a plain sentence: it supplies a named product to a named part of this chain. If that sentence cannot be written from disclosures, the investment story is ahead of the evidence.</p>
+<h2 id="wfe-section-2">2. What do the machines actually do?</h2>
+<p>A chip is not assembled by placing each microscopic transistor on a board. Structures are formed on the wafer through repeated processing. KLA's FY2025 annual report describes advanced chip designs as requiring hundreds of individual steps, many performed more than once. [W3]</p>
+<p><strong>Deposition adds material.</strong> Conducting or insulating films are laid down with controlled thickness and properties. Different processes suit different materials and structures. Lam Research describes chemical-vapour deposition, atomic-layer deposition and electrochemical deposition among the techniques used. [W4]</p>
+<p><strong>Lithography defines a pattern.</strong> Light is used to transfer a pattern onto light-sensitive material. The point is to specify where later processing should act. The patterning system, the materials and the surrounding process must work together. [W5, W6]</p>
+<p><strong>Etching removes selected material.</strong> It creates features by removing films or materials in the required places. The difficulty is not merely removing something; it is removing the right material, to the right depth and shape, while preserving what must remain. <strong>Strip and cleaning</strong> remove photoresist, residues and contamination between steps. Lam describes these as complementary steps repeated throughout manufacturing. [W4]</p>
+<p><strong>Inspection and metrology check the result.</strong> Inspection looks for defects; metrology measures relevant dimensions or properties. KLA's inspection, measurement, software and related services help customers detect process problems and improve yields from development through volume production. [W3]</p>
+<p>This is a loop, not a single conveyor belt in which each machine is used only once. A change in device structure can change the number and difficulty of processing steps. That is why equipment demand can change even when the number of wafers processed does not rise at the same rate.</p>
+<figure class="article-chart"><h3>The repeated manufacturing loop</h3><ol class="flow-list"><li>Add a film with the required properties.</li><li>Define the pattern that later processing must follow.</li><li>Remove or modify selected material.</li><li>Clean and prepare the surface.</li><li>Inspect and measure, then adjust the process and repeat.</li></ol><figcaption>Original explanatory diagram, simplified from the process descriptions in W3-W6. Actual process flows include many other operations and vary by device.</figcaption></figure>
+<h2 id="wfe-section-3">3. Why are lithography, etch and inspection different businesses?</h2>
+<p>A company can have a strong position in one tool category without dominating the entire equipment market. Lithography, deposition, etch, cleaning and process control solve different problems. Their customers overlap, but their intellectual property, specialist suppliers and product-development work are not identical.</p>
+<p>ASML's EUV systems use extreme-ultraviolet light at a wavelength of 13.5 nanometres. Its technology explanation describes a light source produced by laser pulses striking tin droplets. EUV uses mirrors and a vacuum environment. This is a very different engineering task from controlling the chemistry inside an etch chamber. [W5, W6]</p>
+<p>ASML also says that EUV prints the most intricate layers while DUV systems print other layers, and that both technologies are required in parallel. More advanced technology does not mean every older tool category disappears. Nor should a light wavelength be confused with the marketing name of a chip-manufacturing node. [W6]</p>
+<p>Lam's process descriptions centre on deposition, etch, strip and clean. KLA's disclosures centre on process control and process-enabling solutions, including inspection, metrology and software. Applied Materials reports a Semiconductor Systems business separately from its services business. These descriptions are a better starting point than putting all equipment companies into one table and assuming the one with the highest margin is automatically the best investment. [W3, W4, W7]</p>
+<p>I would compare firms first within the problem they solve. Does the next device architecture increase demand for their process? Can a competing technique reduce the number of steps? Is their advantage a particular tool, a broad platform, process knowledge, software, service coverage or a combination? The answers determine what growth could reasonably mean.</p>
+<h2 id="wfe-section-4">4. Why can a very expensive tool still save the customer money?</h2>
+<p>The customer ultimately wants working chips at a competitive cost. A machine's purchase price is only one part of that calculation. Throughput, uptime, yield, consumables, maintenance, energy, floor space and process integration all affect the cost of useful output.</p>
+<p>Yield means the proportion of output that meets the required standard, using the particular yield definition being discussed. KLA describes the role of process control in helping customers improve yields and reduce waste, risk and cost. That provides a useful economic lens: a measurement tool can matter because it prevents expensive processing from being spent on defective output. [W3]</p>
+<figure class="article-chart"><h3>A small yield change can matter</h3><p class="chart-unit">Hypothetical example: 600 candidate chips per wafer; unchanged processing cost of 12,000 currency units per wafer.</p><div class="chart-row"><div class="chart-label"><span>70% yield: 420 good chips</span><strong>Cost per good chip: 28.57</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div><div class="chart-row"><div class="chart-label"><span>80% yield: 480 good chips</span><strong>Cost per good chip: 25.00</strong></div><div class="chart-track"><div class="chart-bar" style="width:87.5%"></div></div></div><figcaption>Original arithmetic, not a company forecast. 12,000 / (600 × yield). At the assumed unchanged wafer cost, the cost per good chip falls 12.5%. A real investment decision must add the cost of achieving the higher yield and any changes in throughput, reliability or product quality.</figcaption></figure>
+<p>The example explains willingness to pay, not a blank cheque for suppliers. The customer will still compare alternatives and negotiate. A technologically impressive machine may be uneconomic if it is unreliable or too slow. A supplier's task is to deliver value after the customer has paid the full operating cost.</p>
+<h2 id="wfe-section-5">5. Where can an equipment maker build an advantage?</h2>
+<p>The strongest advantage is often a combination rather than one patent. A tool must meet the process specification, work reliably in production, integrate with the customer's other tools and be supported when something goes wrong. Equipment and process-control disclosures show how closely product performance, process knowledge, software and service are connected. [W3-W6]</p>
+<p>A supplier that helps a customer develop a process can accumulate knowledge that is difficult to reproduce quickly. Switching later may involve testing, qualification, changes to recipes and a risk to production. The potential loss from a failed process can be much larger than the saving from buying a cheaper tool.</p>
+<p>But switching cost is not permanent immunity. The next architecture can create a new competitive contest. A customer can develop a second source, a rival can improve productivity, or a new technique can remove a process step. Concentration also works both ways: a specialist supplier may be important to a small number of very powerful customers.</p>
+<p>My research questions are specific. Is the company winning new process positions or only serving an old installed base? Does it need rising research spending just to stand still? Are customers buying because the tool improves their economics or because there is temporarily no available alternative? A large historical market share does not answer those questions.</p>
+<h2 id="wfe-section-6">6. Why does the installed base matter after a machine is sold?</h2>
+<p>The installed base is the population of equipment already at customer sites. Those tools can require service, spare parts, field upgrades and support over time. This creates a second revenue stream alongside new-system sales. It is important to read each company's definition rather than calling all such revenue a subscription.</p>
+<p>ASML reported 2025 total net sales of €32.667 billion, including €8.193 billion of Installed Base Management sales. It defines that category as net service and field-option sales. The comparable 2024 figures were €28.263 billion and €6.494 billion. On those reported numbers, Installed Base Management represented about 25.1% of 2025 sales, versus about 23.0% in 2024. These are historical results, not a current run rate. [W8]</p>
+<figure class="article-chart"><h3>ASML: the existing fleet is a meaningful business</h3><p class="chart-unit">Reported annual sales, € billion. Components sum to the total.</p><div class="chart-row"><div class="chart-label"><span>2024 Installed Base Management</span><strong>6.494</strong></div><div class="chart-track"><div class="chart-bar" style="width:79.26%"></div></div></div><div class="chart-row"><div class="chart-label"><span>2025 Installed Base Management</span><strong>8.193</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div><p>2025 total: €32.667 billion. Other net sales, calculated: €24.474 billion.</p><figcaption>Source W8, reported in € million and divided by 1,000. Other net sales = 32.667 − 8.193. Bars compare Installed Base Management sales only, not total revenue. The category includes field options as well as service.</figcaption></figure>
+<p>KLA, using its own definition and fiscal year ended June 2025, reported that services accounted for approximately 22% of revenue. That is evidence that support is economically important, but it is not a directly comparable product mix to ASML's category. [W3]</p>
+<p>A growing fleet can support repeat business, but service is not independent of the semiconductor cycle. Utilisation, upgrade decisions, customer budgets and restrictions on servicing particular equipment can all matter. I would examine renewal behaviour, service profitability and cash conversion rather than attaching a software-style valuation to every revenue line labelled recurring.</p>
+<h2 id="wfe-section-7">7. Why does AI spending not flow straight into equipment revenue?</h2>
+<p>AI-related demand can encourage investment in advanced logic, memory and packaging. SEMI's December 2025 industry discussion identified those as drivers. KLA's FY2025 report similarly describes demand for advanced logic, memory and packaging alongside continuing investment in legacy nodes. The opportunity is real enough to study, but the chain between a data-centre budget and a supplier's revenue has several gates. [W1, W3]</p>
+<p>A cloud company's capital spending can include buildings, power, networking and servers. A semiconductor manufacturer's capital spending can include land, construction and infrastructure as well as equipment. An equipment order can then require manufacturing, shipment, installation and the relevant revenue-recognition conditions. Adding all those headline budgets together would count different layers of spending as though they were independent sales opportunities.</p>
+<p>Capacity expansion and technology migration are also different. A customer can upgrade a process without adding an equivalent amount of wafer capacity. Conversely, a mature-node expansion need not require the same tool mix as a leading-edge logic fab. Memory, logic and packaging can be at different points in their spending cycles.</p>
+<p>The practical question is not whether the entire technology industry is spending more. It is which customer's project requires this supplier's tool, in what quantity, when, and under what commercial conditions. Until that bridge is built, a large spending figure remains context rather than a revenue model.</p>
+<h2 id="wfe-section-8">8. How should we read a market forecast?</h2>
+<p>A forecast needs a date attached to it. In December 2025, SEMI projected 2025 total semiconductor-manufacturing-equipment sales of about $133 billion, including $115.7 billion of WFE. It separately projected $11.2 billion of test equipment and $6.0 billion of assembly/packaging equipment. Those rounded components approximately reconcile to the total. They were forecasts published at that time, not audited 2025 outcomes or a November 2026 outlook. [W1]</p>
+<p>The same release projected total equipment sales of $156 billion in 2027, while its WFE projection for 2027 was $135.2 billion. Using the larger total as a WFE-only number would overstate the market before any growth calculation even began. A later forecast can also differ because assumptions changed, not because one source made an arithmetic mistake.</p>
+<p>This study deliberately does not combine the source lesson's different market-size estimates into one smooth chart. The periods and definitions must be reconciled first. A precise-looking growth rate built from mismatched figures is less useful than a clearly bounded range.</p>
+<p>For any forecast I would record the publisher, publication date, market definition, starting base, end year, device mix and main assumptions. Then I would ask what the company can realistically capture. A market growing at 15% does not mean every participant grows at 15%, and revenue growth does not establish an attractive return on the capital required.</p>
+<h2 id="wfe-section-9">9. What do the financial statements need to prove?</h2>
+<p>Reported growth should be separated into new systems, services or upgrades, price/mix effects and acquisitions where disclosed. Applied Materials, for example, reported FY2025 revenue of $28.368 billion versus $27.176 billion in FY2024, a reported increase of about 4%. Its release also provides separate segment information. Group growth is a starting point, not proof that every activity grew at that rate. [W7]</p>
+<p>Next comes the quality of profit. Gross margin must pay for research, selling costs, administration and other operating costs before becoming operating profit. A gross-margin comparison with another company's operating margin is not meaningful. GAAP and adjusted figures also need to be kept separate.</p>
+<p>Then follow cash. Inventory can increase ahead of shipments, customer acceptance can affect the timing of revenue or collection, and supplier commitments can remain when demand slows. KLA's risk disclosures discuss industry cyclicality, customer concentration and trade restrictions, illustrating why a strong product position does not remove financial risk. [W3]</p>
+<p>My bridge is: revenue, operating profit, operating cash flow, capital expenditure, free cash flow, and finally the claims on that cash. Research is a real cost of remaining competitive. Share-based compensation and dilution matter. A business can generate cash while still being a poor investment if the purchase price assumes more growth than it can deliver.</p>
+<h2 id="wfe-section-10">10. Where does India fit without turning every supplier into a chip champion?</h2>
+<p>India's semiconductor opportunity contains several distinct businesses: device manufacturing, assembly and testing, equipment, components, materials, engineering services and supporting infrastructure. Exposure to one does not establish exposure to all of them.</p>
+<p>The government's February 2026 description of India Semiconductor Mission 2.0 explicitly included semiconductor-equipment design and manufacture, materials, design capability and talent. It stated a provision of Rs 1,000 crore for FY2026-27. That is evidence of policy intent and an allocation, not proof that a particular listed supplier has received orders or earned an acceptable return. [W9]</p>
+<p>For a precision-component supplier, the evidence ladder should run from capability to customer qualification, then to a disclosed order, serial supply, recognised revenue and collected cash. A development sample is not the same as a production programme. A memorandum of understanding is not the same as an enforceable purchase order.</p>
+<figure class="article-chart"><h3>The evidence ladder for an emerging supplier</h3><ol class="flow-list"><li>Capability: what exact component, material or assembly can it make?</li><li>Qualification: has a customer approved the product and process?</li><li>Commercial order: what is committed, and what remains only a possibility?</li><li>Execution: can it supply consistently, with acceptable rejection rates and margins?</li><li>Economic proof: how much revenue, cash and return on capital does the programme produce?</li></ol><figcaption>Original research checklist, not a universal vendor-approval process. Each stage requires evidence; one announcement does not establish all five.</figcaption></figure>
+<p>There is a further denominator problem. A supplier can report fast growth from a very small semiconductor-related base while most group revenue comes from other activities. The right questions are the disclosed revenue share, incremental capital needed, customer concentration, pricing terms and time to useful scale.</p>
+<p>I have therefore not reproduced a list of Indian beneficiaries from uncertain spoken company names or assumed customer links. A credible opportunity can be worth watching before it is large, but the uncertainty belongs in the analysis. It should not be hidden behind the word semiconductor.</p>
+<h2 id="wfe-section-11">11. Which risks can break the thesis?</h2>
+<p><strong>The spending cycle.</strong> Customers can delay capacity additions or technology transitions. A supplier may have excellent technology and still face a weak order period. Separate the long-term need for chips from the timing of equipment spending.</p>
+<p><strong>Customer and geography concentration.</strong> A limited number of large manufacturers can have considerable bargaining power. Regional concentration can connect sales to trade rules, geopolitical events and local investment cycles. KLA's FY2025 filing discusses these risks, including export restrictions. [W3]</p>
+<p><strong>Technology change.</strong> More complex chips do not guarantee that every existing process becomes more valuable. A change can create demand for one tool and reduce demand for another. Product-roadmap claims need to be tested against customer adoption and commercial economics.</p>
+<p><strong>Execution and supply constraints.</strong> A supplier may need specialist components, skilled people and extensive testing. An order pipeline can be attractive but difficult to fulfil profitably. Faster growth can require working capital and investment before cash arrives.</p>
+<p><strong>Valuation.</strong> The market may already expect years of strong results. Paying for peak margins as though they were a permanent floor can overwhelm the benefit of selecting a good company. The business thesis and the price paid for it are separate decisions.</p>
+<h2 id="wfe-section-12">12. How would I study a company in this chain?</h2>
+<p>I would begin with a one-page business map: the product, process step, customer, competing solution and reason the customer pays. Then I would separate reported facts, management plans and my own assumptions. If a customer identity or revenue contribution is not disclosed, I would leave that gap visible.</p>
+<p>The operating sheet would track new-system demand, the installed base, service/upgrade revenue, research spending, gross and operating margins, inventory, customer advances where relevant, receivables, cash flow and capital expenditure. Definitions should remain consistent through time. A backlog is not equivalent to cash already earned.</p>
+<p>For an emerging Indian supplier, I would add the proportion of semiconductor-related sales, qualification status, development costs, committed capacity and the economics of a realistic ramp. For a global equipment maker, I would focus more closely on process position, customer roadmaps, technology transitions and service economics. The same valuation shortcut does not fit both.</p>
+<p>A scenario model should show what happens if revenue grows more slowly, margins normalise or capital needs rise. It should also show what genuinely better performance would look like. The aim is not to manufacture a target price. It is to identify which assumptions carry the result and which evidence would change the conclusion.</p>
+<p>The central lesson is that the physical bottleneck and the economic bottleneck are connected. A company can become valuable by solving a hard manufacturing problem repeatedly, but the investor still has to follow the money. I want the machine, the customer need, the commercial evidence and the cash return to tell the same story.</p>
+<h2 id="wfe-section-13">Sources and reading notes</h2>
+<div class="source-list">
+<p>Primary sources support the technology, historical figures and policy descriptions. Analytical questions and hypothetical calculations are original explanatory work. Source dates differ; none of the historical forecasts below is presented as a current consensus estimate.</p>
+<p>W1. SEMI, 16 December 2025 equipment forecast. Market boundaries, dated forecast figures and demand drivers.<br><a href="https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-projected-to-reach-a-record-of-156-billion-dollars-in-2027-semi-reports">SEMI: year-end 2025 equipment forecast</a></p>
+<p>W2. SEMI, Equipment Forecast Methodologies. Project-investment and equipment-supplier perspectives.<br><a href="https://www.semi.org/en/products-services/market-data/equipment/equipment-related-forecast-definitions">SEMI: forecast definitions</a></p>
+<p>W3. KLA, Form 10-K for the fiscal year ended 30 June 2025. Business descriptions, manufacturing sequence, service contribution and risk factors.<br><a href="https://ir.kla.com/sec-filings/all-sec-filings/content/0000319201-25-000024/klac-20250630.htm">KLA: FY2025 annual filing</a></p>
+<p>W4. Lam Research, Our Processes. Deposition, etch, strip, clean and mass-metrology explanations.<br><a href="https://www.lamresearch.com/products/our-processes/">Lam Research: manufacturing processes</a></p>
+<p>W5. ASML, Light and Lasers. Wavelengths and generation of EUV light.<br><a href="https://www.asml.com/en/technology/lithography-principles/light-and-lasers">ASML: light and lasers</a></p>
+<p>W6. ASML, EUV Lithography Systems. EUV/DUV roles, mirror optics and product explanation.<br><a href="https://www.asml.com/en/products/euv-lithography-systems">ASML: EUV systems</a></p>
+<p>W7. Applied Materials, FY2025 results release. Historical group revenue and segment reporting; no current guidance inferred.<br><a href="https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-fourth-quarter-and-fiscal-year-2025/">Applied Materials: FY2025 results</a></p>
+<p>W8. ASML, 28 January 2026 results release. Reported 2024/2025 total sales and Installed Base Management, including its definition. The January 2026 outlook in that release is not used as today's guidance.<br><a href="https://investor.asml.com/news-releases/news-release-details/q4-2025-financial-results">ASML: 2025 results</a></p>
+<p>W9. Press Information Bureau, 1 February 2026. ISM 2.0 policy focus and FY2026-27 provision.<br><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2221894&amp;lang=1&amp;reg=3">Government of India: semiconductor-ecosystem policy</a></p>
+<p>Diagrams are newly prepared explanations, not copied slides. Company names identify business models, not recommended investments. For research and education only, not investment advice.</p>
+</div>
+<div class="draft-nav"><a href="articles.html">All sector articles</a><a href="article-cdmo.html">Also study: pharmaceutical manufacturing</a><a href="products.html">Back to Learn</a></div>
+</main>
+<footer>For research and education only, not investment advice.</footer>
+</body>
+                                                                                                                                     </html>
