@@ -135,7 +135,39 @@
 <h1>Chapter 2. Interest Rates, Inflation and the Time Value of Money</h1>
 <p class="count">Chapter 2 of 85 · about 20 minutes</p>
 <p class="lede">Which would you rather have: ₹1,00,000 today or ₹1,00,000 five years from now? Everyone picks today, and almost nobody can say exactly why, or by how much. That "why and by how much" is the single most used idea in this entire book. Master this chapter and you can price an FD, see through a loan offer, and understand why the Reserve Bank's six meetings a year move every market you will ever touch.</p>
-<h3><span class="sn">2.1</span>What is the difference between simple and compound interest?</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Interest rates, inflation and the time value of money</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s2-1">Simple vs compound</a>
+    <a href="#s2-2">PV and FV</a>
+    <a href="#s2-3">Inflation in India</a>
+    <a href="#s2-4">Real vs nominal</a>
+    <a href="#s2-5">The risk-free rate</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-01-money-banking.html">Ch 1 &middot; Money and Banking</a>
+    <a href="finance-reference-42-bonds-pricing-yields-duration.html">Ch 42 &middot; Bonds and Yields</a>
+    <a href="finance-reference-78-retirement-estate.html">Ch 78 &middot; Retirement Planning</a>
+  </div>
+</div>
+<h3 id="s2-1"><span class="sn">2.1</span>What is the difference between simple and compound interest?</h3>
 <p>From first principles: interest is the rent paid for money over <strong>time</strong>. Simple interest computes the rent on the original sum only. Compound interest computes it on the original sum plus all past rent, so the money itself starts earning alongside you.</p>
 <div class="example">
 <p class="ex-title">The two, side by side</p>
@@ -146,23 +178,23 @@
 <svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="266.0" y2="266.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="270.0">0L</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="204.0" y2="204.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="208.0">7L</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="142.0" y2="142.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="146.0">14L</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="80.0" y2="80.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="84.0">21L</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="18.0" y2="18.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="22.0">28L</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">0</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="153.5" y="288">3</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="251.0" y="288">6</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="348.5" y="288">9</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="446.0" y="288">12</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="543.5" y="288">15</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="641.0" y="288">18</text><polyline fill="none" points="56.0,257.1 88.5,256.6 121.0,256.1 153.5,255.5 186.0,254.8 218.5,254.1 251.0,253.4 283.5,252.7 316.0,251.9 348.5,251.0 381.0,250.1 413.5,249.2 446.0,248.2 478.5,247.1 511.0,246.0 543.5,244.7 576.0,243.5 608.5,242.2 641.0,240.8 673.5,239.2 706.0,237.6" stroke="#7a6f62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="237.6" fill="#7a6f62" r="3.4"></circle><polyline fill="none" points="56.0,257.1 88.5,256.1 121.0,254.9 153.5,253.6 186.0,252.1 218.5,250.4 251.0,248.6 283.5,246.4 316.0,244.0 348.5,241.5 381.0,238.5 413.5,235.2 446.0,231.5 478.5,227.4 511.0,222.7 543.5,217.6 576.0,211.7 608.5,205.2 641.0,197.9 673.5,189.7 706.0,180.5" stroke="#4e8a67" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="180.5" fill="#4e8a67" r="3.4"></circle><polyline fill="none" points="56.0,257.1 88.5,255.5 121.0,253.7 153.5,251.5 186.0,248.8 218.5,245.7 251.0,242.1 283.5,237.7 316.0,232.7 348.5,226.7 381.0,219.7 413.5,211.3 446.0,201.4 478.5,189.8 511.0,176.1 543.5,160.0 576.0,140.8 608.5,118.4 641.0,91.8 673.5,60.4 706.0,23.4" stroke="#8a5a2a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="706.0" cy="23.4" fill="#8a5a2a" r="3.4"></circle><rect fill="#7a6f62" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">6% a year</text><rect fill="#4e8a67" height="3.4" width="10" x="163.8" y="6"></rect><text fill="#332619" font-size="11.5" x="178.8" y="11">12% a year</text><rect fill="#8a5a2a" height="3.4" width="10" x="272.8" y="6"></rect><text fill="#332619" font-size="11.5" x="287.8" y="11">18% a year</text></svg>
 <p style="color:var(--ink-2);font-size:13px;">Growth of ₹1 lakh at 6%, 12% and 18% a year, compounded annually. Illustrative, before tax and inflation.</p>
 <p>Read the gaps: 6% gives ₹3.2 lakh, 12% gives ₹9.6 lakh, 18% gives ₹27.4 lakh. Three times the rate is eight and a half times the money. Every fee you pay and every year you delay works on this same curve, against you.</p>
-<h3><span class="sn">2.2</span>What are present value and future value?</h3>
+<h3 id="s2-2"><span class="sn">2.2</span>What are present value and future value?</h3>
 <p>Compounding moves money forward in time: future value = present value x (1 + rate) ^ years. Discounting is the same engine in reverse: present value = future value / (1 + rate) ^ years. Between them, they are the whole grammar of pricing anything that pays later: bonds, pensions, insurance, business valuation.</p>
 <div class="example">
 <p class="ex-title">Worked example: a goal seen from both directions</p>
 <p>You want ₹20,00,000 for a child's education 10 years from now, and your investments earn 10% a year. What must you invest today? PV = 20,00,000 / 1.10^10 = 20,00,000 / 2.594 = about ₹7,71,000.</p>
 <p>Check it forward: 7,71,000 x 1.10^10 = ₹20,00,000. Two directions, one equation. Whenever someone quotes you a future number, discount it before you admire it.</p>
 </div>
-<h3><span class="sn">2.3</span>What is inflation, and how is it measured in India?</h3>
+<h3 id="s2-3"><span class="sn">2.3</span>What is inflation, and how is it measured in India?</h3>
 <p>Inflation is the leak in money's third job, storing value. India measures it mainly through the Consumer Price Index, a basket of what households actually buy, food, fuel, housing, services, priced month after month. When the RBI targets 4% inflation with a 2% band on either side, this is the number it watches.</p>
 <p>Causes, at root: too much money chasing too few goods (demand), costlier inputs like oil (supply), or a weaker rupee making imports dearer. For the saver, only one number matters: how fast the leak runs. A handy approximation is the Rule of 72: at 6% inflation, prices double in about 72 / 6 = 12 years. The ₹500 thali of today is a ₹1,000 thali by the time a newborn is in class six.</p>
-<h3><span class="sn">2.4</span>What is the difference between real and nominal returns?</h3>
+<h3 id="s2-4"><span class="sn">2.4</span>What is the difference between real and nominal returns?</h3>
 <p>Nominal return is what the statement shows. Real return is what is left after the leak: roughly nominal minus inflation. An FD paying 6% in a year of 6% inflation has a real return of zero; the balance grew and the purchasing power did not. Before tax, many Indian savers have spent entire decades running hard on this treadmill.</p>
 <p>This single idea separates savers from investors. A saver asks "is my money safe?" An investor asks "is my purchasing power growing?" The second question is the only one that pays for retirement.</p>
-<h3><span class="sn">2.5</span>What is the risk-free rate, and why is every other return measured against it?</h3>
+<h3 id="s2-5"><span class="sn">2.5</span>What is the risk-free rate, and why is every other return measured against it?</h3>
 <p>Lend to the Government of India for 91 days and the return is about as close to certain as finance allows: the government can print the rupees it owes you. That yield is the <strong>risk-free rate</strong>, the pure price of time with risk stripped out. In India the 91-day treasury bill and the 10-year government bond yield play this role; the US Treasury does it for the world.</p>
 <p>Every other return is quoted as risk-free <em>plus something</em>: plus a premium for company risk in a corporate bond, plus a bigger premium for equity, plus a splash of desperation in a chit fund. When the RBI raises the repo rate, the base of this whole stack rises, which is why its decisions reprice everything from your home loan to the Nifty within days. Over the past decade India's repo rate has spent most of its time between 4% and 7%; treat any "guaranteed" offer far above that band as carrying risk it is not mentioning.</p>
-<h3><span class="sn">2.6</span>Worked examples and cases</h3>
+<h3 id="s2-6"><span class="sn">2.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: what Rs 1 lakh becomes in 20 years</p>
 <p>From the chart above: ₹1,00,000 left alone for 20 years becomes about ₹3,21,000 at 6%, ₹9,65,000 at 12% and ₹27,39,000 at 18%. Now add behaviour: a 1% annual fee on the 12% path cuts the ending value to about ₹7,93,000, a difference of ₹1,72,000 paid for one small number in a factsheet. This is why the mutual fund chapters obsess over expense ratios.</p>
@@ -171,7 +203,7 @@
 <p class="ex-title">Case 2: the cost of holding cash through high inflation</p>
 <p>₹10,00,000 kept at home through five years of 7% inflation still counts out to ₹10,00,000, but buys what ₹7,13,000 bought at the start (10,00,000 / 1.07^5). The notes did not change; the world did. Cash is a position with a guaranteed negative real return in any year inflation runs above zero, which is why the personal-finance part of this book gives cash exactly one job: the emergency fund.</p>
 </div>
-<h3><span class="sn">2.7</span>Active-recall questions for this section</h3>
+<h3 id="s2-7"><span class="sn">2.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>In one sentence each: what does compounding do that simple interest does not, and why does its effect hide in the later years?</li>
 <li>You need ₹50 lakh in 15 years and expect 11% a year. Which direction of the time-value engine gives the monthly saving needed, and what is it roughly? (Estimate, then check with a calculator: about ₹11,000 a month.)</li>
@@ -187,4 +219,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-</html>
+                                                                                                                                                                                                       </html>
