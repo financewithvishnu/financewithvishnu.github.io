@@ -135,17 +135,48 @@
 <h1>Chapter 53. Derivative Strategies: Arbitrage and Event-Driven Trading</h1>
 <p class="count">Chapter 53 of 85 · about 19 minutes</p>
 <p class="lede">Arbitrage is the most respectable word in trading and the most abused. True arbitrage buys the same thing cheap and sells it dear at the same instant; almost everything sold under the name is actually a bet on two prices converging, with a gap where the risk lives. This chapter prices the real thing, in rupees and paise, and shows why its returns are small, steady and forever under siege.</p>
-<h3><span class="sn">53.1</span>Cash-futures arbitrage and the basis trade in India</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Derivative strategies: arbitrage</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s53-1">Cash-futures arbitrage</a>
+    <a href="#s53-2">Merger arbitrage</a>
+    <a href="#s53-3">Calendar spreads</a>
+    <a href="#s53-4">Event trades</a>
+    <a href="#s53-5">Why returns are small</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-46-forwards-futures.html">Ch 46 &middot; Forwards and Futures</a>
+    <a href="finance-reference-31-strategy-thematic-contrarian.html">Ch 31 &middot; Themes and Contrarian</a>
+  </div>
+</div>
+<h3 id="s53-1"><span class="sn">53.1</span>What is cash-futures arbitrage and the basis trade?</h3>
 <p>Chapter 46 priced a future as spot plus cost of carry. When the market quotes a future far above fair value, the arbitrage is mechanical: buy the underlying basket (or the stock), sell the future, and hold to expiry, where the two prices must, by the exchange's own settlement rule, become one. The profit is the excess of the quoted carry over your actual funding cost, and it is close to riskless, directionally flat: market up or down, the long and the short offset. In India this trade, run by institutions and arbitrage mutual funds, is the quiet engine that keeps futures honest, and it is also the reason <strong>arbitrage funds</strong> exist as a category: they run exactly this book, taxed as equity, earning roughly the short rate plus whatever richness the basis offers, with equity-market risk engineered out. When futures instead trade below spot, the reverse trade needs short selling, which Indian rules make awkward for cash stocks, so discounts persist longer than premiums: an asymmetry worth remembering whenever a "cheap" future tempts you.</p>
-<h3><span class="sn">53.2</span>Merger arbitrage and deal spreads</h3>
+<h3 id="s53-2"><span class="sn">53.2</span>What is merger arbitrage, and how do deal spreads work?</h3>
 <p>When a takeover is announced at ₹500 a share and the target trades at ₹470, the ₹30 gap is not a mispricing; it is the market's invoice for the chance the deal fails. The merger arbitrageur buys the target, and sometimes shorts the acquirer in a share-swap deal, to collect that spread if the deal completes. The economics are the economics of insurance again: many small spreads collected, occasional large losses when a deal breaks on financing, a shareholder vote, or a regulator. The skill is not finding announced deals, which is a news feed, but pricing completion probability: antitrust exposure, funding certainty, the acquirer's incentives to walk, and the downside to the pre-deal price if it all unwinds. A 6% spread on a deal with 95% completion odds and a 25% break-down loss is not obviously cheap, and that arithmetic, run honestly, is the entire craft.</p>
-<h3><span class="sn">53.3</span>Futures spreads and calendar positions</h3>
+<h3 id="s53-3"><span class="sn">53.3</span>What are futures spreads and calendar positions?</h3>
 <p>A <strong>calendar spread</strong> trades the same asset across expiries: long the near month, short the far month, or the reverse. Stripped of directional exposure, what remains is a bet on the <em>shape</em> of the futures curve, on whether the carry between months is rich or cheap, and a way to harvest the roll. When the far month trades unusually rich to the near, the spread locks in the convergence as the near expires into the far's starting point. These are the quietest trades on the exchange: low margin, because the exchange recognises the offset; small, grinding P&amp;L; and a clientele of professionals and market-makers. For the retail reader the calendar spread matters less as a trade than as a diagnostic: the spread between expiries is where the market's funding stress, dividend expectations and positioning show up first, a seismograph under the headline price.</p>
-<h3><span class="sn">53.4</span>Event trades: results, policy days, index rebalancing</h3>
+<h3 id="s53-4"><span class="sn">53.4</span>What are event trades: results, policy days and index rebalancing?</h3>
 <p>Some calendar events move prices through channels mechanical enough to trade. <strong>Index rebalancing</strong>: when the Nifty adds and drops constituents, every passive fund tracking it must buy the addition and sell the deletion at the effective date's closing auction, a predictable burst of demand and supply that front-runners position for weeks ahead, compressing the very profit they chase. <strong>Results season</strong>: options-implied moves set the hurdle, and the trade, as Chapter 52 showed, is about realised versus implied, not direction. <strong>Policy days</strong>, RBI, budget, elections: the same implied-versus-realised game at macro scale. The shared anatomy: a known date, a priced expectation, and a payoff that exists only in the gap between what was priced and what arrives. Event trading is therefore information trading, and the question to ask before any event position is brutal and simple: what do I know about this outcome that the option prices do not already contain?</p>
-<h3><span class="sn">53.5</span>Why arbitrage returns are small, steady and crowded</h3>
+<h3 id="s53-5"><span class="sn">53.5</span>Why are arbitrage returns small, steady and crowded?</h3>
 <p>Step back and the economics are almost disappointing, which is precisely the point. A near-riskless trade in a market watched by thousands of well-capitalised professionals cannot earn much more than the risk-free rate plus a thin spread for costs and the odd crisis. Arbitrage returns are <strong>small</strong>, because competition prices them down to funding plus a sliver. They are <strong>steady</strong>, because the risks are engineered away rather than borne. And they are <strong>crowded</strong>, because everyone wants them: the cash-futures basis collapses the moment too much capital chases it, merger spreads narrow when arbs are flush and gap when they are wounded, and the rebalancing trade shrinks a little every year as more money pre-positions. Capacity is the binding constraint: the rupees that fit into a genuine arbitrage are limited by the liquidity of the legs, which is why these strategies will never absorb your whole portfolio, and why anyone offering arbitrage-like returns at unlimited scale is describing something else.</p>
-<h3><span class="sn">53.6</span>Worked examples and cases</h3>
+<h3 id="s53-6"><span class="sn">53.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: a cash-futures arbitrage with real costs</p>
 <p>Nifty spot 24,000; the one-month future trades at 24,220. Fair carry at a 6.5% funding rate is about ₹130, so the future is roughly ₹90 rich. The trade: buy the index basket (or an index fund as the working leg), sell the future, hold one month to expiry convergence. Gross capture: ₹220 per unit, the full premium, since expiry settles future at spot. Now the honest ledger: brokerage and statutory charges on four legs, impact cost of buying a basket, and STT on the futures sale sum to roughly ₹36 per unit; funding the position at the short rate costs another slice already counted in fair value. Net capture: about ₹184 on ₹24,000 deployed, 0.77% for the month, roughly 9% annualised, against 6.5% risk-free. That gap is the entire economics of an arbitrage fund, and it explains the category's whole personality: returns a notch above liquid funds, volatility near zero, and no magic whatsoever. The day the basis narrows, the fund's return narrows with it, mechanically and without drama.</p>
@@ -155,7 +186,7 @@
 <p class="ex-title">Case 2: the merger arb that broke on a regulator's call</p>
 <p>A composite of real Indian episodes, numbers illustrative. An announced acquisition offers ₹500 a share in cash; the target trades at ₹470, a 6.4% gross spread for a deal expected to close in four months. An arb desk sizes the position for the visible risks: shareholder approval looks safe, financing is committed, both boards aligned. The risk that was underweighted sits in a filing with the competition regulator, which opens an extended review. Months pass; spreads widen as arbs with quarterly horizons bail; then the regulator's conditions arrive heavy enough that the parties renegotiate, and in the uncertainty the stock trades down to ₹380 before any resolution. The desk's arithmetic was: make ₹30 if right, lose ₹90 if wrong, an asymmetry that demands completion odds above 75% merely to break even, before costs, and the regulator had moved the true odds. Three lessons: the spread is the price of the specific risks, so enumerate them rather than admire the percentage; the downside in a broken deal is the pre-announcement price, not zero loss; and time is a cost, because a four-month deal that becomes a fourteen-month saga pays its 6.4% at a fraction of the annualised rate the spreadsheet promised.</p>
 </div>
-<h3><span class="sn">53.7</span>Active-recall questions for this section</h3>
+<h3 id="s53-7"><span class="sn">53.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Construct the cash-futures arbitrage and state exactly where its profit comes from.</li>
 <li>Why do futures discounts persist longer than premiums in India?</li>
@@ -171,4 +202,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-                                                                                                                                               </html>
+  </html>
