@@ -135,19 +135,57 @@
 <h1>Chapter 83. The Master Formula Sheet</h1>
 <p class="count">Chapter 83 of 85 · reference · keep by the desk</p>
 <p class="lede">Every formula this book has used, on one set of pages. Not to memorise, to find fast: when the spreadsheet asks "which formula was that", this is the sheet. Each table names the quantity, gives the formula, and translates the symbols.</p>
-<h3><span class="sn">83.1</span>Time value of money</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>The formula sheet</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s83-1">Time value</a>
+    <a href="#s83-2">Ratios</a>
+    <a href="#s83-3">Bonds</a>
+    <a href="#s83-4">Options</a>
+    <a href="#s83-5">Portfolio stats</a>
+    <a href="#s83-6">How to use it</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-79-measuring-performance.html">Ch 79 &middot; Measuring Performance</a>
+    <a href="finance-reference-02-interest-inflation.html">Ch 2 &middot; Interest and Inflation</a>
+    <a href="finance-reference-03-risk-return.html">Ch 3 &middot; Risk and Return</a>
+  </div>
+</div>
+<h3 id="s83-1"><span class="sn">83.1</span>What are the time value of money formulas?</h3>
+    <p>These are the compounding and discounting identities: how money grows forward through interest, and how future sums translate back to today&#8217;s value. Every loan, SIP and valuation in this book reduces to these.</p>
 <table class="num" style="width:100%;border-collapse:collapse;margin:14px 0;"><thead><tr><th>Quantity</th><th>Formula</th><th>Symbols / notes</th></tr></thead><tbody><tr><td>Future value (lump sum)</td><td>FV = P x (1 + r)^n</td><td>P principal, r per-period rate, n periods</td></tr><tr><td>Present value</td><td>PV = F / (1 + r)^n</td><td>F future amount</td></tr><tr><td>FV of a SIP (annuity)</td><td>FV = A x [((1 + i)^n - 1) / i] x (1 + i)</td><td>A instalment, i per-period rate; x(1+i) for month-start SIPs</td></tr><tr><td>Required SIP for a goal</td><td>A = FV x i / [((1 + i)^n - 1) x (1 + i)]</td><td>invert the annuity formula</td></tr><tr><td>Perpetuity</td><td>PV = C / r</td><td>console bonds, simple retirement math</td></tr><tr><td>Real rate from nominal</td><td>r(real) = (1 + r) / (1 + h) - 1</td><td>h inflation; 11% and 6% gives 4.7%, not 5%</td></tr><tr><td>Rule of 72</td><td>doubling years ~ 72 / rate%</td><td>6% doubles in about 12 years</td></tr></tbody></table>
-<h3><span class="sn">83.2</span>Returns, risk and valuation ratios</h3>
+<h3 id="s83-2"><span class="sn">83.2</span>What are the key return, risk and valuation ratios?</h3>
+    <p>This table collects the ratios that summarize what an investment earned, how risky the ride was, and what you pay for each unit of earnings, book value or cash flow.</p>
 <table class="num" style="width:100%;border-collapse:collapse;margin:14px 0;"><thead><tr><th>Quantity</th><th>Formula</th><th>Symbols / notes</th></tr></thead><tbody><tr><td>Holding-period return</td><td>HPR = (end - start + income) / start</td><td>one period, no flows</td></tr><tr><td>CAGR</td><td>CAGR = (end / start)^(1/yrs) - 1</td><td>lump sums only</td></tr><tr><td>XIRR</td><td>rate solving sum of CF_t / (1+r)^t = 0</td><td>dated flows; the honest SIP return</td></tr><tr><td>Volatility (std dev)</td><td>sigma = sqrt[ sum (r_t - mean)^2 / (n-1) ]</td><td>annualise: sigma(period) x sqrt(periods per year)</td></tr><tr><td>Beta</td><td>beta = cov(r_i, r_m) / var(r_m)</td><td>market sensitivity; 1.2 means 20% more swing</td></tr><tr><td>P/E, P/B, dividend yield</td><td>price/EPS; price/BVPS; DPS/price</td><td>earnings yield = 1 / P/E</td></tr><tr><td>ROE, ROCE</td><td>PAT / equity; EBIT / capital employed</td><td>dupont: ROE = margin x turnover x leverage</td></tr><tr><td>Current ratio, debt/equity</td><td>CA / CL; total debt / equity</td><td>Graham wanted 2.0 and prudence on debt</td></tr></tbody></table>
-<h3><span class="sn">83.3</span>Bond pricing and duration</h3>
+<h3 id="s83-3"><span class="sn">83.3</span>What are the bond pricing and duration formulas?</h3>
+    <p>These formulas price a bond from its cash flows and measure how far its price moves when yields change. Duration is the single most useful risk number in fixed income.</p>
 <table class="num" style="width:100%;border-collapse:collapse;margin:14px 0;"><thead><tr><th>Quantity</th><th>Formula</th><th>Symbols / notes</th></tr></thead><tbody><tr><td>Bond price</td><td>P = sum C_t / (1+y)^t + F / (1+y)^n</td><td>price is PV of coupons plus face</td></tr><tr><td>Current yield, YTM idea</td><td>C / price; y solving the price equation</td><td>premium bond: YTM &lt; coupon; discount: YTM &gt; coupon</td></tr><tr><td>Modified duration</td><td>D* = D / (1 + y)</td><td>price change ~ -D* x dy; 1% rise, duration 6, price falls ~6%</td></tr><tr><td>Convexity note</td><td>duration is a tangent; convexity is the curve's bend</td><td>matters for large yield moves</td></tr></tbody></table>
-<h3><span class="sn">83.4</span>Options: payoffs, parity and model inputs</h3>
+<h3 id="s83-4"><span class="sn">83.4</span>What are the key options formulas: payoffs, parity and model inputs?</h3>
+    <p>Here are the option payoff identities, the put-call parity relationship that ties calls and puts together, and the inputs any pricing model needs.</p>
 <table class="num" style="width:100%;border-collapse:collapse;margin:14px 0;"><thead><tr><th>Quantity</th><th>Formula</th><th>Symbols / notes</th></tr></thead><tbody><tr><td>Call payoff / P&amp;L</td><td>max(S - K, 0); minus premium</td><td>buyer right to buy at K</td></tr><tr><td>Put payoff / P&amp;L</td><td>max(K - S, 0); minus premium</td><td>buyer right to sell at K</td></tr><tr><td>Put-call parity</td><td>C + K e^(-rT) = P + S</td><td>European options on a non-dividend-paying underlying; the arbitrage identity</td></tr><tr><td>Black-Scholes inputs</td><td>S, K, T, r, sigma</td><td>spot, strike, time, rate, volatility; sensitivity rows below are all-else-equal, European, no dividends</td></tr><tr><td>Call sensitivities</td><td>rises with S, T, sigma, r; falls as K rises</td><td>higher underlying or rate helps the call; higher strike hurts it</td></tr><tr><td>Put sensitivities</td><td>rises with K and sigma; falls as S or r rises</td><td>mirror of the call; more time usually helps, deep-ITM European puts can be the exception</td></tr><tr><td>Delta, gamma, theta, vega</td><td>dPrice/dS; dDelta/dS; dPrice/dT; dPrice/dsigma</td><td>the Greeks, per Chapter 48</td></tr></tbody></table>
-<h3><span class="sn">83.5</span>Portfolio statistics and performance measures</h3>
+<h3 id="s83-5"><span class="sn">83.5</span>What are the portfolio statistics and performance measures?</h3>
+    <p>These statistics summarize a portfolio: average returns, variability, and the risk-adjusted measures that let two very different strategies be compared on one scale.</p>
 <table class="num" style="width:100%;border-collapse:collapse;margin:14px 0;"><thead><tr><th>Quantity</th><th>Formula</th><th>Symbols / notes</th></tr></thead><tbody><tr><td>Expected return</td><td>E[R] = sum w_i r_i</td><td>weights x components</td></tr><tr><td>Two-asset variance</td><td>w1^2 s1^2 + w2^2 s2^2 + 2 w1 w2 s1 s2 rho</td><td>rho below 1 is the diversification free lunch</td></tr><tr><td>Sharpe / Sortino / Treynor</td><td>(R - rf)/sigma; (R - rf)/sigma_down; (R - rf)/beta</td><td>return per unit of risk, three denominators</td></tr><tr><td>Alpha</td><td>R - [rf + beta (R_m - rf)]</td><td>return beyond what the market exposure explains</td></tr><tr><td>Maximum drawdown</td><td>min over t of (V_t / peak_t - 1)</td><td>the worst peak-to-trough fall</td></tr></tbody></table>
-<h3><span class="sn">83.6</span>How to use this sheet</h3>
+<h3 id="s83-6"><span class="sn">83.6</span>How should you use this formula sheet?</h3>
 <p>Three habits make the sheet earn its place. Check the assumptions before the arithmetic: CAGR assumes one flow, YTM assumes reinvestment at the yield, Sharpe assumes roughly symmetric returns, and the chapters listed beside each table carry the failure modes. Keep units consistent, monthly rates with monthly counts, real with real, most formula errors are unit errors wearing arithmetic's clothes. And sanity-check every output against an anchor you already own: doubling times, the 4% rule's 25x, the Chapter 78 retirement arithmetic. A formula is a lever; anchors are the ground it pushes against.</p>
-<h3><span class="sn">83.7</span>Active-recall questions for this section</h3>
+<h3 id="s83-7"><span class="sn">83.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>From memory: the SIP future-value formula and the real-rate correction.</li>
 <li>When is CAGR wrong and what replaces it?</li>
@@ -163,4 +201,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-</html>
+  </html>
