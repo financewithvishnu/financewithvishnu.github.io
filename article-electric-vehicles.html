@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Electric vehicles: follow the battery, the customer and the cash - Finance With Vishnu</title>
+<meta content="How ownership costs, cell manufacturing, battery chemicals, components and OEM cash economics shape the EV industry." name="description"/>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<meta content="Finance With Vishnu" name="author"/><style>
+.review-banner{background:#eee3ce;padding:14px 18px;color:#493c2b;font-size:14px;line-height:1.6;border-bottom:1px solid #ddcda9}
+.article-map{padding:22px;background:#f1ebe3;border:1px solid #e7dfd3;border-radius:12px;margin:30px 0}
+.article-map h2{margin:0 0 12px;font-size:24px}.article-map ol{padding-left:22px;margin:0}.article-map a{display:block;min-height:44px;line-height:1.5;padding:8px 0;color:#365c45;font-size:15px}
+h2[id]{scroll-margin-top:24px} .article-chart{background:white;border:1px solid #e7dfd3;padding:20px;border-radius:12px;max-width:760px;margin:28px 0}.article-chart h3{margin:0 0 8px;font-family:inherit;font-weight:600;font-size:18px;line-height:1.4}.chart-unit{font-size:13px!important;color:#7a6f62!important;margin:0 0 18px}.chart-row{margin:15px 0}.chart-label{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5}.chart-label strong{white-space:normal;text-align:right;flex-shrink:0;max-width:48%;color:#365c45}.chart-track{height:11px;background:#f1ebe3;border-radius:3px;margin-top:6px;overflow:hidden}.chart-bar{height:11px;background:#4e8a67;border-radius:3px;min-width:2px}.chart-bar.negative{background:#9b5c4b}.article-chart figcaption{font-size:13px;line-height:1.6;color:#7a6f62;margin-top:16px}.flow-list{list-style:none;padding:0;margin:18px 0 0;counter-reset:step}.flow-list li{counter-increment:step;background:#f1ebe3;padding:12px 14px;border-radius:6px;margin:10px 0;font-size:15px}.flow-list li:before{content:counter(step) '. ';font-weight:600;color:#4e8a67}.source-list a,main a,main p,main li{overflow-wrap:anywhere;color:inherit}main a{color:#365c45}.article-meta{color:#7a6f62;font-size:14px;margin:12px 0 20px}.article-deck{max-width:720px}.article-deck p{font-size:17px;line-height:1.8}main{max-width:900px}main h2{max-width:760px;font-size:28px;line-height:1.3}main h3{line-height:1.35}.source-list p{font-size:14px}.draft-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}.draft-nav a{min-height:44px;padding:10px 0}.article-cards{display:grid;gap:18px;margin:28px 0}.article-card{padding:22px;background:white;border:1px solid #e7dfd3;border-radius:12px}.article-card h2{margin:0 0 12px;font-size:25px}.article-card p{margin:0 0 12px}.article-card a{display:inline-block;min-height:44px;padding-top:10px;font-weight:600}@media(max-width:600px){.article-chart{padding:16px 14px}.chart-label{display:block}.chart-label strong{display:block;max-width:none;text-align:left}.article-chart h3{font-size:17px}main h2{font-size:25px}.article-map{padding:18px}nav.file-nav{gap:16px;flex-wrap:wrap}.article-deck p{font-size:16px}}
+</style><link href="https://financewithvishnu.github.io/article-electric-vehicles.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Electric vehicles: follow the battery, the customer and the cash - Finance With Vishnu" property="og:title"/><meta content="How ownership costs, cell manufacturing, battery chemicals, components and OEM cash economics shape the EV industry." property="og:description"/><meta content="https://financewithvishnu.github.io/article-electric-vehicles.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Electric vehicles: follow the battery, the customer and the cash", "description": "How ownership costs, cell manufacturing, battery chemicals, components and OEM cash economics shape the EV industry.", "url": "https://financewithvishnu.github.io/article-electric-vehicles.html", "author": {"@type": "Person", "name": "Finance With Vishnu"}, "publisher": {"@type": "Organization", "name": "Finance With Vishnu"}, "datePublished": "2026-11-21", "dateModified": "2026-11-21", "temporalCoverage": "2026-06-14", "about": {"@type": "Thing", "name": "Electric vehicle industry economics"}, "inLanguage": "en"}</script><script defer="" src="site-analytics.js"></script>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="https://financewithvishnu.github.io/index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="https://financewithvishnu.github.io/contact.html">Contact</a><a href="https://financewithvishnu.github.io/search.html">Search</a></nav>
+</header>
+<main><p class="part-tag">Learn / Articles / Sector studies</p>
+<h1>Electric vehicles: follow the battery, the customer and the cash</h1>
+<p class="article-meta">By Finance With Vishnu · Class date: 14 June 2026 · Sector study</p>
+<div class="article-deck">
+<p>An electric scooter, a battery chemical plant and a charging network can all benefit from electrification. That does not make them the same business. One has to win a consumer, another has to qualify a material and the third has to keep expensive equipment working often enough to earn its cost.</p>
+<p>I would study the EV industry by following two journeys. First, follow the customer's money from purchase to running costs and resale. Then follow the supplier's money from research and plant construction to approved production, collections and reinvestment.</p>
+<p>The question is not whether more vehicles will become electric. It is where demand can become durable profit, how much capital that requires and what could break the link.</p>
+</div>
+<p><strong>Study window:</strong> the sector topic from the source class dated 14 June 2026. Company cases below use explicitly dated FY2024-25 reports and a May 2025 presentation. Industry context uses the IEA's Global EV Outlook 2026. A separate policy check includes the August 2026 PM E-DRIVE amendment. These periods are not interchangeable. This is an educational business-model study, not a current stock valuation, vehicle recommendation or forecast of company profits.</p>
+<aside class="article-map"><h2>Explore this article</h2><ol><li><a href="#ev-section-1">Why does adoption differ so much between vehicle types?</a></li><li><a href="#ev-section-2">What does total cost of ownership actually include?</a></li><li><a href="#ev-section-3">How can a simple payback example mislead us?</a></li><li><a href="#ev-section-4">What is inside the value chain?</a></li><li><a href="#ev-section-5">Why are a cell and a battery pack different businesses?</a></li><li><a href="#ev-section-6">What should we understand about battery chemistry?</a></li><li><a href="#ev-section-7">Does global growth guarantee attractive supplier margins?</a></li><li><a href="#ev-section-8">How should we read Indian cell-capacity announcements?</a></li><li><a href="#ev-section-9">Where do battery chemicals fit, and what can go wrong?</a></li><li><a href="#ev-section-10">Are components a simpler way to study electrification?</a></li><li><a href="#ev-section-11">How do we judge the OEM&#x27;s path to profitability?</a></li><li><a href="#ev-section-12">What about charging, recycling and policy?</a></li><li><a href="#ev-section-13">What would I put on the tracking sheet?</a></li><li><a href="#ev-sources">Sources and study notes</a></li></ol></aside>
+
+<h2 id="ev-section-1">1. Why does adoption differ so much between vehicle types?</h2>
+<p>An EV uses an electric motor for propulsion. A battery electric vehicle stores its driving energy in a rechargeable battery; a plug-in hybrid also has a combustion engine. A conventional hybrid is a different category again. Any penetration or sales figure needs to state which of these it includes.</p>
+<p>Next, separate scooters, three-wheelers, cars, buses and trucks. Their customers drive different distances, carry different loads and have different opportunities to charge. A city delivery vehicle returning to the same depot is not facing the same operating problem as a truck travelling unpredictable long-distance routes.</p>
+<p>Adoption becomes easier when the vehicle meets the use case, charging fits the routine, financing is available and the full ownership cost is acceptable. Lower electricity expense cannot compensate for a vehicle that cannot complete the required journey or spend enough time earning revenue.</p>
+<p>This is why I would not apply a single adoption curve to the whole industry. Study the particular customer and route first. Then ask whether the product, energy supply and service network solve that customer's problem together.</p>
+<figure class="article-chart">
+<h3>One industry, different adoption tests</h3>
+<p class="chart-unit">Original use-case framework, not adoption forecasts</p>
+<ol class="flow-list"><li><strong>Personal scooter:</strong> purchase price, home charging, daily range and service access.</li><li><strong>Commercial three-wheeler:</strong> paid kilometres, finance cost, charging or swapping time and uptime.</li><li><strong>Family car:</strong> parking, convenient charging, longer journeys and confidence in resale.</li><li><strong>Bus or truck:</strong> route suitability, payload, depot power, fleet availability and contract economics.</li></ol>
+<figcaption>Compare vehicles that perform the same job. A cheaper cost per kilometre is useful only if the vehicle can deliver the required service.</figcaption>
+</figure>
+
+<h2 id="ev-section-2">2. What does total cost of ownership actually include?</h2>
+<p>Total cost of ownership, or TCO, adds the economic costs of buying and using a vehicle over a defined period. It includes purchase cost, financing, energy, maintenance, insurance and other relevant charges, less the amount recovered at sale. A battery lease or subscription belongs in the calculation if it is part of the chosen product.</p>
+<p>The denominator matters as much as the numerator. An owner driving 3,000 kilometres a year spreads the initial purchase premium over far fewer kilometres than a commercial operator driving 30,000. A five-year comparison also says little about an owner intending to sell after two years.</p>
+<p>Charging assumptions need the same care. Home electricity, workplace charging and public fast charging can have different prices. Energy bought from the socket can exceed energy delivered to the battery. Time spent waiting and business lost during downtime can matter to a fleet even when they do not appear on a fuel receipt.</p>
+<p>Resale and battery replacement are uncertain inputs, not facts we can choose to make the answer attractive. A warranty may reduce some risks but comes with its own conditions. I would run several cases rather than announce that every EV is cheaper than every petrol or diesel vehicle.</p>
+
+<h2 id="ev-section-3">3. How can a simple payback example mislead us?</h2>
+<p>Suppose an EV costs ₹30,000 more upfront than a comparable alternative. Assume it saves ₹1.50 per kilometre in energy and maintenance combined. The simple operating-cost payback is 20,000 kilometres: ₹30,000 divided by ₹1.50. That is arithmetic, not a vehicle quotation.</p>
+<p>At 10,000 kilometres a year, those assumed savings recover the premium in two years. At 4,000 kilometres, the same calculation takes five years. If the saving falls to ₹1 per kilometre, the required distance rises to 30,000 kilometres. The result changes without changing the vehicle's badge.</p>
+<figure class="article-chart">
+<h3>The same upfront premium can have very different paybacks</h3>
+<p class="chart-unit">Hypothetical ₹30,000 premium; simple payback distance, not discounted TCO</p>
+<div class="chart-row"><div class="chart-label"><span>Saving ₹1.00 per km</span><strong>30,000 km</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Saving ₹1.50 per km</span><strong>20,000 km</strong></div><div class="chart-track"><div class="chart-bar" style="width:66.667%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Saving ₹2.00 per km</span><strong>15,000 km</strong></div><div class="chart-track"><div class="chart-bar" style="width:50%"></div></div></div>
+<figcaption>Original illustration. It excludes financing differences, the time value of money, resale differences, battery replacement and downtime. Change these assumptions before using it for a real purchase.</figcaption>
+</figure>
+<p>The lesson is to ask what drives the saving. Is it genuine product efficiency, a temporary subsidy, cheap captive electricity or an optimistic maintenance assumption? Economics that work without favourable policy are different from economics that disappear when support changes.</p>
+
+<h2 id="ev-section-4">4. What is inside the value chain?</h2>
+<p>The battery is important, but the EV opportunity extends beyond the battery. Upstream suppliers provide minerals and processed materials. Chemical companies make active materials, salts, solvents, additives and other inputs. Cell manufacturers turn qualified materials into electrochemical cells. Pack makers combine cells with electrical connections, protection, controls and thermal design.</p>
+<p>The vehicle also needs motors, power electronics, controllers, wiring, structural parts, brakes and software. The original equipment manufacturer, or OEM, integrates the product and sells it through a distribution and service system. Charging, financing and recycling add further business models.</p>
+<p>These boundaries can overlap. An OEM may design its own pack while buying cells. A supplier may sell a complete system rather than one part. Some newer battery architectures reduce or remove intermediate modules. The important point is to identify what the particular company actually makes, buys and guarantees.</p>
+<p>A list of products is only the beginning. For each business, I want to know the customer, selling unit, price mechanism, approval process, capital required and liability if the product fails. That is how an industry map becomes an investing framework.</p>
+
+<h2 id="ev-section-5">5. Why are a cell and a battery pack different businesses?</h2>
+<p>A cell is the electrochemical building block. A pack is the engineered system that makes cells usable in a particular application. Buying imported cells and assembling a pack does not establish domestic cell manufacturing. Equally, a pack can contain useful engineering even when its cells come from another producer.</p>
+<p>A battery management system monitors and manages operating conditions. Current sensing, temperature information and protective controls help the system operate within its design limits. The commercial value depends on reliability and integration, not on simply calling the product software or electronics.</p>
+<p>Cell production needs process consistency, equipment expertise and acceptable yields. Pack production adds its own integration, testing, packaging and warranty questions. Compare the right activities: a cell factory's GWh capacity and a pack assembly line's GWh capacity are not independent pools of end demand if the same cells pass through both.</p>
+<p>The IEA explains that building capacity is only the first step. Production ramp-up can take years, including for experienced firms entering a less mature local ecosystem. I would therefore distinguish installed equipment, trial output, qualified production and sustained commercial shipments. <a href="#ev-source-1">[1]</a></p>
+
+<h2 id="ev-section-6">6. What should we understand about battery chemistry?</h2>
+<p>Lithium iron phosphate, or LFP, is a lithium-ion chemistry. Nickel manganese cobalt, or NMC, is another family within lithium-ion batteries. They are not synonyms for all batteries, and LFP is not an alternative to lithium-ion. Cell chemistry is also different from cell shape: cylindrical, pouch and prismatic describe physical formats.</p>
+<p>Chemistry involves trade-offs in cost, energy density, performance and the system needed around the cell. A chemistry suitable for a stationary installation may not be the best choice for a vehicle where weight and space are costly. Sodium-ion uses a different chemistry again; it should not be described as simply an LFP battery with a different label.</p>
+<p>The IEA reports that LFP accounted for over 55% of global EV battery deployment in 2025. Its accompanying chemistry analysis measures battery capacity in newly registered vehicles and excludes two- and three-wheelers. That is not a claim that 55% of every vehicle category used LFP. <a href="#ev-source-1">[1]</a></p>
+<p>For a chemical supplier, ask which exact material it makes and which chemistries need that material. A product may serve several chemistries without being immune to specification changes. Technical compatibility, customer qualification and selling price still need evidence.</p>
+
+<h2 id="ev-section-7">7. Does global growth guarantee attractive supplier margins?</h2>
+<p>No. The IEA puts EV battery deployment at 1.2 TWh in 2025, almost 30% above 2024. It also describes losses among several battery-material producers and large differences in profitability between cell manufacturers. Growing industry volumes and attractive shareholder returns are separate questions. <a href="#ev-source-1">[1]</a></p>
+<p>Price declines can help the vehicle buyer while hurting a supplier's revenue or margin. A manufacturer whose input costs fall faster than selling prices may benefit. Another may be left with expensive inventory or underused new capacity. We need to trace the price mechanism rather than assume lower battery prices benefit everyone.</p>
+<p>China accounted for over 80% of global battery production in 2025 in the IEA's analysis. This supports the case for studying geographic concentration. But the location of a factory, the headquarters of its owner and the origin of its materials are different facts. <a href="#ev-source-1">[1]</a></p>
+<p>Customers seeking alternative supply may create an opening for a new manufacturer. They do not remove the need for quality, competitive costs and dependable delivery. Nor does non-Chinese ownership automatically satisfy every country's sourcing or incentive rules. Policy advantages should be tested under the relevant current rule, not treated as permanent pricing power.</p>
+
+<h2 id="ev-section-8">8. How should we read Indian cell-capacity announcements?</h2>
+<p>Start with the unit. One GWh equals one million kWh of energy. Annual cell-manufacturing capacity describes how much rated cell energy a factory could produce over a year under its stated assumptions. It is not electricity generation, a count of vehicles or proof that the factory is shipping at that rate.</p>
+<p>Exide's May 2025 presentation provides a useful historical example. It separately described a 1.5 GWh pack assembly facility and a planned 12 GWh cell project in two phases, with 6 GWh in phase one. The cell project used technical collaboration with SVOLT; the presentation anticipated commercial production in FY26. That was a plan at that date, not verification of today's commissioning status. <a href="#ev-source-5">[5]</a></p>
+<p>The research task is to follow the next disclosures. Has equipment been installed? Has the line made acceptable cells? Have customers qualified them? Are shipments recurring? What is the yield, utilisation and cash cost? Announced capacity should not receive the economics of a mature plant before those steps are visible.</p>
+<figure class="article-chart">
+<h3>The evidence ladder for a new factory</h3>
+<p class="chart-unit">Original execution checklist, not a fixed timetable</p>
+<ol class="flow-list"><li><strong>Announced:</strong> land, funding plan, technology and intended capacity.</li><li><strong>Installed:</strong> equipment and utilities ready for trials.</li><li><strong>Qualified:</strong> repeatable product accepted for the customer's application.</li><li><strong>Commercial:</strong> sustained shipments at acceptable yields and prices.</li><li><strong>Economic:</strong> collections and operating cash justify the capital invested.</li></ol>
+<figcaption>A technology agreement is not a guaranteed order. An order is not a guarantee of profitable output. Check the evidence at each stage.</figcaption>
+</figure>
+
+<h2 id="ev-section-9">9. Where do battery chemicals fit, and what can go wrong?</h2>
+<p>Electrolyte helps ions move inside the cell. Its formulation can contain a salt, solvents and additives. Cathode and anode active materials have other roles. Treating every supplier as a generic battery-chemical company hides both the technical requirements and the available market.</p>
+<p>A particularly useful distinction is the customer. A pack assembler buying finished cells does not create the same local demand for electrolyte as a factory making cells. Vehicle sales can grow through imported cells while local electrolyte demand develops more slowly.</p>
+<p>Neogen's FY2024-25 report described a planned Pakhajan facility with 30,000 tonnes of electrolytes and 3,000 tonnes of lithium electrolyte salts and additives. It identified a technology licence from MU Ionic Solutions and described discussions with Morita for electrolyte salts. Those are dated company disclosures, not proof that all capacity, approvals or forecast sales have since arrived. <a href="#ev-source-6">[6]</a></p>
+<p>The same report described planned project expenditure of ₹1,500 crore and ₹470 crore deployed during FY25. This is the right place to ask about funding, delays and returns. How long can the balance sheet support a slow ramp? Are prices protected? How much working capital is needed? What happens if the customer's own factory is late?</p>
+<p>A strong technology partner can reduce some execution risks. It does not guarantee customer orders or the margin on those orders. I would not turn a supplier's addressable market into its future revenue without a bridge through qualification, contracts, output and collections.</p>
+
+<h2 id="ev-section-10">10. Are components a simpler way to study electrification?</h2>
+<p>Sometimes, but only after separating exposure from dependence. Some parts disappear with the combustion engine. Others remain necessary across powertrains. Certain products may gain content per vehicle, while other suppliers face redesign, competition or insourcing by the OEM.</p>
+<p>Current-sensing components, connectors, motors and power electronics have specific functions. A reliable component can be small in cost but important to the system. That can support a difficult qualification process, but difficulty alone does not establish a durable commercial advantage.</p>
+<p>I would ask what the customer cannot easily replace: the design, manufacturing consistency, cost, application knowledge or delivery record. Then test concentration. If one customer represents most of the business, a successful product can still leave the supplier exposed to a sourcing change.</p>
+<p>Lifetime order books need care too. They may represent management estimates across programmes expected to run for years, not fixed near-term sales. Compare their assumptions with launch dates, customer production, annual price reductions and cancellation terms. Content per vehicle only becomes revenue when the relevant vehicles are actually built.</p>
+
+<h2 id="ev-section-11">11. How do we judge the OEM's path to profitability?</h2>
+<p>The OEM has to make a product customers want and support it after the sale. Distribution, spare parts, service capacity, software and warranty costs are part of the business. Fast retail expansion without reliable service can create obligations faster than it creates durable customer trust.</p>
+<p>Ather's FY2024-25 annual report records volume rising from 109,577 units in FY24 to 155,394 in FY25. Its audited results report revenue from operations of ₹22,550 million and a net loss of ₹8,123 million for FY25, equivalent to ₹2,255 crore and ₹812.3 crore respectively. These historical figures show why volume growth and company profitability must be assessed separately. <a href="#ev-source-3">[3]</a> <a href="#ev-source-4">[4]</a></p>
+<p>Unit contribution, gross profit, EBITDA, net profit and operating cash flow answer different questions. A positive contribution on one extra scooter does not pay all research, employee, store, interest and depreciation costs. An improving margin does not eliminate the cash needed for inventory or a new factory.</p>
+<p>For a loss-making OEM, I would build scenarios for units, realised revenue per vehicle, variable costs, warranty and fixed expenses. Include the capital and potential dilution needed before profitability. A revenue multiple without a view on eventual margins and reinvestment is an incomplete valuation framework.</p>
+<figure class="article-chart">
+<h3>Growth is not the same as profit</h3>
+<p class="chart-unit">Ather FY2024-25, historical audited figures in ₹ crore</p>
+<div class="chart-row"><div class="chart-label"><span>Revenue from operations</span><strong>2,255.0</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Net loss, magnitude</span><strong>812.3</strong></div><div class="chart-track"><div class="chart-bar negative" style="width:36.022%"></div></div></div>
+<figcaption>Source: audited results for the year ended 31 March 2025. The loss bar shows magnitude, not positive earnings. This is not a gross-margin bridge or a forecast.</figcaption>
+</figure>
+
+<h2 id="ev-section-12">12. What about charging, recycling and policy?</h2>
+<p>A charging-hardware manufacturer and a charging-network operator have different economics. The first needs orders, manufacturing quality, collections and service capability. The second also needs suitable sites, power connections, uptime and enough paid usage to cover costs. Counting installed chargers is not the same as measuring profitable charging sessions.</p>
+<p>Recycling needs accessible feedstock, collection arrangements, a workable process and buyers for recovered outputs. Capacity alone does not secure old batteries. The chemistry mix and the cost of acquiring feedstock can change what a recycler earns. Avoid assigning mature-industry utilisation to a plant before the input supply is clear.</p>
+<p>Policy can affect vehicle affordability, factory economics and sourcing decisions. PM E-DRIVE's August 2026 amendment raised the scheme outlay to ₹11,900 crore and set a terminal date of 31 March 2028, with category-specific provisions and earlier closure when relevant funding is exhausted. The amendment also records the earlier closure of the e-three-wheeler L5 segment. A scheme headline is not confirmation that every vehicle qualifies. <a href="#ev-source-2">[2]</a></p>
+<p>This policy update postdates the source class. For a real vehicle or project, check the latest applicable notification, category, funding availability and eligibility at the decision date. I would also calculate what happens when support is reduced. An investment case should not quietly assume that today's rules last forever.</p>
+
+<h2 id="ev-section-13">13. What would I put on the tracking sheet?</h2>
+<p>I would give every company its own operating dashboard. For an OEM: retail demand, realised prices, discounting, service performance, warranty cost, inventory and cash burn. For a cell maker: qualified output, yields, utilisation, customer concentration and cash cost. For a chemical supplier: approvals, contracted demand, realised spreads, working capital and funding.</p>
+<p>For a component supplier, track content per vehicle alongside customer production and sourcing risk. For charging, separate hardware shipments from network usage and collections. For recycling, start with secured feedstock and actual recoveries rather than the announced plant size.</p>
+<p>Across all of them, reconcile profit with cash. Expansion can absorb money through construction, inventory and receivables long before it produces returns. A company that reports growth while repeatedly needing more capital deserves a different analysis from one funding expansion through operating cash.</p>
+<p>My conclusion is simple. Electrification creates several markets, each with its own bottleneck. The attractive business is not automatically the one with the biggest capacity announcement or the strongest industry story. It is the one that solves a real customer problem, gets paid for it and earns enough after the full cost of capital and failure risk.</p>
+
+<h2 id="ev-sources">Sources and study notes</h2>
+<p>Primary company disclosures are used as dated illustrations, not independent endorsements of management forecasts. Technical and industry context comes from the IEA. The original numerical example is explicitly hypothetical. No current stock price, target return or unverified customer relationship is used.</p>
+<ol class="source-list">
+<li id="ev-source-1"><a href="https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-batteries">IEA, Global EV Outlook 2026, Electric vehicle batteries. Deployment, chemistry definitions and scope, manufacturing concentration, prices, profitability and ramp-up risks.</a></li>
+<li id="ev-source-2"><a href="https://pmedrive.heavyindustries.gov.in/docs/policy_document/Gazette%20Notification%2010%2008%202026%20on%20enhancement%20of%20Outlay%2011900%20cr.pdf">Ministry of Heavy Industries, Gazette notification S.O.4424(E), 10 August 2026. PM E-DRIVE outlay, terminal date, category provisions and funding limits. This policy update postdates the class.</a></li>
+<li id="ev-source-3"><a href="https://media.atherenergy.com/Annual-Report-FY-24-25.pdf">Ather Energy, Annual Report FY2024-25. Historical sales volumes, product ecosystem, distribution and manufacturing context. Management expectations are not treated as completed outcomes.</a></li>
+<li id="ev-source-4"><a href="https://media.atherenergy.com/Ather-Financials-FY-24-25.pdf">Ather Energy, audited financial results for the year ended 31 March 2025, released 12 May 2025. Revenue and net loss. Original units are INR millions; divided by ten for crore.</a></li>
+<li id="ev-source-5"><a href="https://docs.exideindustries.com/pdf/investor-presentation-may-25.pdf">Exide Industries, investor presentation, May 2025, pages27–30. Separate pack and planned cell facilities, phases and SVOLT collaboration. Historical plans, not current commissioning verification.</a></li>
+<li id="ev-source-6"><a href="https://neogenchem.com/wp-content/uploads/Neogen-Chemicals_AR25_Final.pdf">Neogen Chemicals, Annual Report FY2024-25. Pakhajan plans, capacity, project expenditure, MU Ionic Solutions licence and the then status of Morita discussions. Not a current capacity or sales assertion.</a></li>
+</ol>
+<p class="article-meta">Educational study only. Read the original filings, current policies and product terms before making any financial or purchase decision.</p>
+</main>
+<footer>For research and education only, not investment advice.</footer>
+</body>
+  </html>
