@@ -135,17 +135,48 @@
 <h1>Chapter 36. Trading Stocks: Intraday and Scalping</h1>
 <p class="count">Chapter 36 of 85 · about 20 minutes</p>
 <p class="lede">Intraday trading is the most practised and least profitable form of Indian retail trading, and those two facts are connected: it is the format where the structural disadvantages, costs, speed, better-equipped counterparties, bite hardest and the seduction, action all day, every day, bites hardest too. This chapter will not pretend the game is fair. It will show you the game as it is, so that if you play, you play with open eyes and hard limits.</p>
-<h3><span class="sn">36.1</span>The intraday landscape: who the competition is</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Intraday trading</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s36-1">The competition</a>
+    <a href="#s36-2">Opening range</a>
+    <a href="#s36-3">Scalping</a>
+    <a href="#s36-4">VWAP</a>
+    <a href="#s36-5">Risk controls</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-34-trading-discipline.html">Ch 34 &middot; Trading Discipline</a>
+    <a href="finance-reference-35-trading-swing.html">Ch 35 &middot; Swing Trading</a>
+  </div>
+</div>
+<h3 id="s36-1"><span class="sn">36.1</span>Who are you actually competing against in intraday trading?</h3>
 <p>Know the table you are sitting at. On the other side of your intraday trades sit: proprietary desks of brokers trading their own capital with exchange-colocated servers; foreign quant funds whose cost per trade is a fraction of yours and whose signals are computed in microseconds; institutions executing large orders with algorithms built to hide; and thousands of other retail traders, most of whom are, like you, the product being harvested. Your structural disadvantages are speed (you see prices milliseconds late), cost (Chapter 34's stack per round trip, paid many times a day), and information (you react to news others positioned for). The honest consequence: intraday edges for a retail trader exist only where speed does not decide, in the slower structural patterns of the day, the opening imbalance, the lunchtime drift, the closing auction, and even there, the edge is small and the discipline must be total.</p>
-<h3><span class="sn">36.2</span>Opening-range and first-hour strategies</h3>
+<h3 id="s36-2"><span class="sn">36.2</span>What are opening-range and first-hour strategies?</h3>
 <p>The first hour is when the day prices the overnight information, and its patterns are the most studied in intraday trading. The <strong>opening range</strong>, the high-low band of the first 15-30 minutes, frames the day: a decisive break of the range on volume often runs, because the market has found its first balance and left it. The refinements that separate the setup from the coin flip: trade the break only in the direction of the larger context (a gap-down opening that breaks lower is different from a gap-up that breaks lower); demand the volume confirmation, because a quiet break is a trap; and know that the first hour's second most common pattern is the <em>failure</em>, the break that snaps back through the range, which is a stop-out, accepted instantly. The first hour pays the prepared; everyone else is the preparation's cost.</p>
-<h3><span class="sn">36.3</span>Scalping: small edges, many repetitions</h3>
+<h3 id="s36-3"><span class="sn">36.3</span>What is scalping, and why is it so hard?</h3>
 <p>Scalping is intraday at maximum frequency: targets of a few points, holds of seconds to minutes, dozens of trades a day, the whole game reduced to spread, flow and reflex. Its economics are brutal and worth computing before attempting: a 3-point target on Nifty futures with 1.5 points of total cost and slippage needs a win rate above two-thirds just to break even, and the only humans who sustain that are specialists with years of screen time and institutional-grade costs. The retail verdict, stated plainly: scalping is a profession, not a side hustle. If you are drawn to it, apprentice properly: smallest possible size, a hundred logged practice trades, an expectancy computed before a single rupee is sized up, and Chapter 34's journal as the gatekeeper. The market will still be there when you are ready; your capital may not be, if you start before you are.</p>
-<h3><span class="sn">36.4</span>VWAP and institutional footprints</h3>
+<h3 id="s36-4"><span class="sn">36.4</span>What is VWAP, and why do institutions trade around it?</h3>
 <p>The volume-weighted average price is the day's fairest price, and it matters because the institutions are benchmarked against it: a desk that buys below the day's VWAP has demonstrably done its job. That creates structure you can use. VWAP acts as a magnet and a referee: in trend days price rides one side of it and pullbacks to it are entries; in range days price crosses it repeatedly and it fades into uselessness. Other institutional footprints: the day's volume profile, where business actually got done; large prints at the close, the auction where funds must trade; and the persistent pattern that the last hour's direction often continues into the next open. None of this is a crystal ball. It is the scoreboard of the game's actual players, visible to anyone, and trading without looking at it is playing without knowing the score.</p>
-<h3><span class="sn">36.5</span>Intraday risk controls and daily loss limits</h3>
+<h3 id="s36-5"><span class="sn">36.5</span>Which risk controls and daily loss limits does intraday trading need?</h3>
 <p>Intraday compresses Chapter 34's survival maths into hours, so the controls must be harder. The non-negotiables: a <strong>daily loss limit</strong>, two or three R, at which the terminal closes, no appeal, because the day's revenge trade is the account's most dangerous trade; a per-trade risk smaller than swing trading's, since frequency multiplies exposure; a written maximum number of trades per day, because overtrading is the shape of tilt; and the flat-by-close rule, because intraday margin is borrowed time, and overnight events, a Budget, a war, a Fed surprise, are unpriceable from inside a leveraged day position. The trader who survives intraday is not the one with the best signals. It is the one whose worst day is, by construction, a normal day.</p>
-<h3><span class="sn">36.6</span>Worked example: a Nifty futures session, decision by decision</h3>
+<h3 id="s36-6"><span class="sn">36.6</span>Worked example: a Nifty futures session, decision by decision</h3>
 <div class="example">
 <p class="ex-title">Case: one quiet Tuesday, narrated honestly</p>
 <table class="num">
@@ -161,7 +192,7 @@
 </table>
 <p>Read the ledger's shape, not its size. One qualified setup all day, taken; three hours of nothing, survived; one exciting spike, declined. The day made half an R, and the professional knows that ten such days plus two good ones are the month. What the table cannot show: the itch at 3:00, and the journal's quiet question that evening, "did I follow the plan?", answered yes. Intraday success looks exactly this boring from the outside. The exciting version is the one being harvested.</p>
 </div>
-<h3><span class="sn">36.7</span>Active-recall questions for this section</h3>
+<h3 id="s36-7"><span class="sn">36.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Name the four categories of counterparty in intraday and your three structural disadvantages.</li>
 <li>Describe the opening-range setup and the refinement that keeps it from being a coin flip.</li>
