@@ -135,18 +135,50 @@
 <h1>Chapter 79. Measuring Performance and Reviewing the Plan</h1>
 <p class="count">Chapter 79 of 85 · about 18 minutes</p>
 <p class="lede">What gets measured gets managed, but only if measured correctly. Most investors track the wrong numbers, absolute profit, last year's return, the fund's advertised CAGR, and reach wrong conclusions with great confidence. This chapter installs the right dashboard: XIRR for your money, benchmarks for your choices, risk-adjusted ratios for the truth, and a review ritual that changes only what should change.</p>
-<h3><span class="sn">79.1</span>CAGR, XIRR and the money you actually made</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Measuring performance</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s79-1">CAGR and XIRR</a>
+    <a href="#s79-2">Benchmarks</a>
+    <a href="#s79-3">Risk-adjusted returns</a>
+    <a href="#s79-4">The annual review</a>
+    <a href="#s79-5">Dashboard pictured</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-75-asset-allocation.html">Ch 75 &middot; Asset Allocation</a>
+    <a href="finance-reference-03-risk-return.html">Ch 3 &middot; Risk and Return</a>
+    <a href="finance-reference-38-mutual-funds-basics.html">Ch 38 &middot; Mutual Funds</a>
+  </div>
+</div>
+<h3 id="s79-1"><span class="sn">79.1</span>What are CAGR and XIRR, and which shows the money you actually made?</h3>
 <p><strong>CAGR</strong> answers one question: at what single rate did a lump sum grow between two dates? It is exact for a fixed deposit and wrong for almost everything else, because real portfolios have flows. The SIP investor who computes CAGR on total invested against final value mixes money that worked for three years with money that worked for three weeks, and produces a number with no meaning. <strong>XIRR</strong> is the fix: the single rate that makes every dated cash flow, each SIP instalment, each redemption, each dividend, consistent with today's value. It is the only honest answer to "what did my money earn", and it lives in every spreadsheet as a one-line formula fed with dates and amounts. Two habits follow: record every flow with its date, the portfolio app does this automatically, the spreadsheet disciple must, and never compare an XIRR with a fund's CAGR without remembering they answer different questions, the fund's discipline versus your timing.</p>
-<h3><span class="sn">79.2</span>Benchmarks: the uncomfortable mirror</h3>
+<h3 id="s79-2"><span class="sn">79.2</span>Which benchmark should you measure against?</h3>
 <p>A return without a benchmark is a number without a question. The right benchmark is the <strong>portfolio you would otherwise have held</strong>: for the large-cap fund, the Nifty 50 or BSE 100 total-return index; for the flexi-cap, the Nifty 500; for the whole equity allocation, the blended index that matches the actual mix. Three disciplines follow. Benchmark over full periods, three to five years minimum, because one year measures weather, not climate. Benchmark after costs, yours and the index's zero-cost perfection, remembering the hurdle active management must clear. And benchmark the <strong>portfolio</strong>, not just each fund: a collection of individually fine funds can overlap into an expensive index clone, visible only when the aggregate is compared with the index it secretly tracks. The mirror is uncomfortable precisely because it works: most of what flatters, selection skill, timing skill, the clever tilt, dissolves against the right benchmark, and what remains is either real alpha or an error to fix.</p>
-<h3><span class="sn">79.3</span>Risk-adjusted returns: Sharpe, Sortino and maximum drawdown</h3>
+<h3 id="s79-3"><span class="sn">79.3</span>What are risk-adjusted returns: Sharpe, Sortino and maximum drawdown?</h3>
 <p>Two portfolios can show the same CAGR and be entirely different experiences, the chart's steady line A and violent line B end within touching distance, and no holder of B slept through it. Risk-adjusted metrics put the path into the number. <strong>Sharpe ratio:</strong> excess return over the risk-free rate, divided by total volatility, the standard workhorse, fair when returns are roughly symmetric. <strong>Sortino ratio:</strong> the same numerator but only downside volatility in the denominator, kinder to portfolios whose wildness is upward, fairer to equity generally. <strong>Maximum drawdown:</strong> the worst peak-to-trough fall, the number your gut actually experiences, and the one most predictive of whether you will hold the strategy through its test, Chapter 77's behaviour gap lives in the distance between what the Sharpe ratio tolerates and what the drawdown feels like. Use all three together: return says what you earned, the ratios say what it cost in turbulence, and the drawdown says whether you, specifically, would have survived to collect it.</p>
-<h3><span class="sn">79.4</span>The annual review: a ritual with rules</h3>
+<h3 id="s79-4"><span class="sn">79.4</span>How should you run an annual portfolio review?</h3>
 <p>The review that works is scheduled, scripted and rare. <strong>Annual, not monthly:</strong> monthly reviews measure noise and invite the trades of Chapter 77; quarterly for the statement, annually for decisions. <strong>The agenda:</strong> goals first, is the plan still on its required savings rate and timeline; then allocation, has drift crossed the rebalancing band; then performance, XIRR against benchmark over the full period; then costs and taxes, expense ratios unchanged, any churn creating taxable events; last, life changes, income, family, health, that change the plan itself. <strong>The rule of restraint:</strong> a review that ends with no change is a success, not a failure; the correct output of most reviews is the confirmation that the plan still fits. Document each review in a few dated lines, the decision log becomes the discipline, readable in the next panic as proof of who you were when you were calm. And the asymmetry to remember: portfolios die of tinkering far more often than of neglect.</p>
-<h3><span class="sn">79.5</span>The measurement dashboard in one picture</h3>
+<h3 id="s79-5"><span class="sn">79.5</span>What does a measurement dashboard look like in one picture?</h3>
 <p>Both portfolios below compound over the same decade to nearly the same place, A at 10.4%, B at 9.9%, yet A's worst peak-to-trough was 5% and B's was 30%. The CAGR line on a factsheet cannot tell them apart; the Sharpe ratio suspects; the drawdown confesses. Measure the path, not just the destination.</p>
 <svg role="img" style="width:100%;max-width:720px;display:block;background:#fff;border:1px solid #e7dfd3;border-radius:10px;margin:14px 0;" viewbox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="266.0" y2="266.0"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="270.0">60</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="208.8" y2="208.8"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="212.8">120</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="151.5" y2="151.5"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="155.5">180</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="94.3" y2="94.3"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="98.3">240</text><line stroke="#e7dfd3" stroke-width="1" x1="56" x2="706" y1="37.1" y2="37.1"></line><text fill="#7a6f62" font-size="11" text-anchor="end" x="48" y="41.1">300</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="56.0" y="288">0</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="121.0" y="288">1</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="186.0" y="288">2</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="251.0" y="288">3</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="316.0" y="288">4</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="381.0" y="288">5</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="446.0" y="288">6</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="511.0" y="288">7</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="576.0" y="288">8</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="641.0" y="288">9</text><text fill="#7a6f62" font-size="11" text-anchor="middle" x="706.0" y="288">10</text><polyline fill="none" points="56.0,210.7 121.0,199.4 186.0,182.1 251.0,189.1 316.0,167.7 381.0,153.7 446.0,133.3 511.0,112.5 576.0,95.6 641.0,66.0" stroke="#4e8a67" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="641.0" cy="66.0" fill="#4e8a67" r="3.4"></circle><polyline fill="none" points="56.0,184.9 121.0,226.4 186.0,192.5 251.0,218.7 316.0,176.8 381.0,140.2 446.0,167.7 511.0,121.0 576.0,110.9 641.0,79.1" stroke="#b0633c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></polyline><circle cx="641.0" cy="79.1" fill="#b0633c" r="3.4"></circle><rect fill="#4e8a67" height="3.4" width="10" x="62" y="6"></rect><text fill="#332619" font-size="11.5" x="77" y="11">Steady compounding (A)</text><rect fill="#b0633c" height="3.4" width="10" x="257.4" y="6"></rect><text fill="#332619" font-size="11.5" x="272.4" y="11">Same era, violent path (B)</text></svg>
-<h3><span class="sn">79.6</span>Worked examples and cases</h3>
+<h3 id="s79-6"><span class="sn">79.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: XIRR on a real SIP</p>
 <p>₹10,000 invested on the first of every month for three years, thirty-six instalments totalling ₹3.6 lakh, and the corpus today reads ₹4.6 lakh. The naive calculation, (4.6/3.6)^(1/3), produces 8.5% and is wrong twice over: it pretends all ₹3.6 lakh worked for all three years, when the average rupee worked barely eighteen months. The XIRR, every instalment at its date, the final value today, computes to <strong>about 16.6% annualised</strong>, the honest rate at which the actual money actually grew. The same spreadsheet now answers the questions that matter: against the benchmark's XIRR over the identical dates, was the fund choice adding anything; against the plan's assumed 11 to 12%, is the corpus ahead or behind; against the fixed deposit's 7%, is the equity risk being paid. One formula, dated flows, and the fog of "roughly, I think it's doing well" becomes a number that can be acted on.</p>
@@ -155,7 +187,7 @@
 <p class="ex-title">Case 2: the annual review that changed nothing, correctly</p>
 <p>A couple runs the Section 79.4 agenda on their December review. Goals: child's education corpus on track, retirement at 62% of the required trajectory, the savings-rate answer is a step-up next increment, noted, scheduled. Allocation: equity has drifted from 70% to 76% on the year's rally, past the five-point band, so one rebalance, new money redirected to debt rather than selling, no tax event. Performance: portfolio XIRR 13.1% over five years against the blended benchmark's 12.4%, the small edge traced to the mid-cap allocation working as intended; the one underperformer, a flexi-cap fund trailing by 2 points for three years, checked against its category, its peers, its process, found ordinary, not broken. Costs: unchanged. Life: no changes. Total actions: one redirect of next month's SIP split, one diary note. The review took ninety minutes and changed almost nothing, which is the proof it worked: the plan was already the answer, and the ritual's product is the confidence to ignore the other 364 days.</p>
 </div>
-<h3><span class="sn">79.7</span>Active-recall questions for this section</h3>
+<h3 id="s79-7"><span class="sn">79.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Why is CAGR wrong for a SIP, and what does XIRR answer instead?</li>
 <li>State the three benchmark disciplines: period, costs, and what third aggregation?</li>
@@ -171,4 +203,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-  </html>
+</html>
