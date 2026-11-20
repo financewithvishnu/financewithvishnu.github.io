@@ -16,6 +16,8 @@
     });
   }
   function enable() {
+    // Fail closed: do not load Google on pages or referrals containing URL extras.
+    if (location.search || location.hash || /[?#]/.test(document.referrer)) return;
     window['ga-disable-' + id] = false;
     if (loaded) return;
     loaded = true;
