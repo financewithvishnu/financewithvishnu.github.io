@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Watches: the business behind the brand, the boutique and the component - Finance With Vishnu</title>
+<meta content="How brand ownership, precision components, licensing, retail inventory and group structure shape the watch business." name="description"/>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<meta content="Finance With Vishnu" name="author"/><style>
+.review-banner{background:#eee3ce;padding:14px 18px;color:#493c2b;font-size:14px;line-height:1.6;border-bottom:1px solid #ddcda9}
+.article-map{padding:22px;background:#f1ebe3;border:1px solid #e7dfd3;border-radius:12px;margin:30px 0}
+.article-map h2{margin:0 0 12px;font-size:24px}.article-map ol{padding-left:22px;margin:0}.article-map a{display:block;min-height:44px;line-height:1.5;padding:8px 0;color:#365c45;font-size:15px}
+h2[id]{scroll-margin-top:24px} .article-chart{background:white;border:1px solid #e7dfd3;padding:20px;border-radius:12px;max-width:760px;margin:28px 0}.article-chart h3{margin:0 0 8px;font-family:inherit;font-weight:600;font-size:18px;line-height:1.4}.chart-unit{font-size:13px!important;color:#7a6f62!important;margin:0 0 18px}.chart-row{margin:15px 0}.chart-label{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5}.chart-label strong{white-space:normal;text-align:right;flex-shrink:0;max-width:48%;color:#365c45}.chart-track{height:11px;background:#f1ebe3;border-radius:3px;margin-top:6px;overflow:hidden}.chart-bar{height:11px;background:#4e8a67;border-radius:3px;min-width:2px}.chart-bar.negative{background:#9b5c4b}.article-chart figcaption{font-size:13px;line-height:1.6;color:#7a6f62;margin-top:16px}.flow-list{list-style:none;padding:0;margin:18px 0 0;counter-reset:step}.flow-list li{counter-increment:step;background:#f1ebe3;padding:12px 14px;border-radius:6px;margin:10px 0;font-size:15px}.flow-list li:before{content:counter(step) '. ';font-weight:600;color:#4e8a67}.source-list a,main a,main p,main li{overflow-wrap:anywhere;color:inherit}main a{color:#365c45}.article-meta{color:#7a6f62;font-size:14px;margin:12px 0 20px}.article-deck{max-width:720px}.article-deck p{font-size:17px;line-height:1.8}main{max-width:900px}main h2{max-width:760px;font-size:28px;line-height:1.3}main h3{line-height:1.35}.source-list p{font-size:14px}.draft-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}.draft-nav a{min-height:44px;padding:10px 0}.article-cards{display:grid;gap:18px;margin:28px 0}.article-card{padding:22px;background:white;border:1px solid #e7dfd3;border-radius:12px}.article-card h2{margin:0 0 12px;font-size:25px}.article-card p{margin:0 0 12px}.article-card a{display:inline-block;min-height:44px;padding-top:10px;font-weight:600}@media(max-width:600px){.article-chart{padding:16px 14px}.chart-label{display:block}.chart-label strong{display:block;max-width:none;text-align:left}.article-chart h3{font-size:17px}main h2{font-size:25px}.article-map{padding:18px}nav.file-nav{gap:16px;flex-wrap:wrap}.article-deck p{font-size:16px}}
+</style><link href="https://financewithvishnu.github.io/article-watches.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Watches: the business behind the brand, the boutique and the component - Finance With Vishnu" property="og:title"/><meta content="How brand ownership, precision components, licensing, retail inventory and group structure shape the watch business." property="og:description"/><meta content="https://financewithvishnu.github.io/article-watches.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Watches: the business behind the brand, the boutique and the component", "description": "How brand ownership, precision components, licensing, retail inventory and group structure shape the watch business.", "url": "https://financewithvishnu.github.io/article-watches.html", "author": {"@type": "Person", "name": "Finance With Vishnu"}, "publisher": {"@type": "Organization", "name": "Finance With Vishnu"}, "datePublished": "2026-11-21", "dateModified": "2026-11-21", "temporalCoverage": "2026-06-21", "about": {"@type": "Thing", "name": "Watch industry economics"}, "inLanguage": "en"}</script><script defer="" src="site-analytics.js"></script>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="https://financewithvishnu.github.io/index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="https://financewithvishnu.github.io/contact.html">Contact</a><a href="https://financewithvishnu.github.io/search.html">Search</a></nav>
+</header>
+<main><p class="part-tag">Learn / Articles / Sector studies</p>
+<h1>Watches: the business behind the brand, the boutique and the component</h1>
+<p class="article-meta">By Finance With Vishnu · Class date: 21 June 2026 · Sector study</p>
+<div class="article-deck">
+<p>A watch tells the time. A watch business can sell something quite different: dependable everyday use, fashion, a gift, engineering, a luxury identity or access to a desirable collection. The customer need determines which part of the value chain has a chance to earn attractive returns.</p>
+<p>That is why I would not analyse a component supplier, a licensed-brand business and a luxury retailer as if they were the same company. They may all benefit when watch spending rises, but they own different assets, carry different risks and keep different parts of the customer's payment.</p>
+<p>My starting point is simple. Who owns the brand? Who makes the product? Who carries the inventory? Who has the customer relationship? And after paying everyone else, how much cash belongs to the shareholder?</p>
+</div>
+<p><strong>Study window:</strong> the watch-industry topic from the source class dated 21 June 2026. Company illustrations use FY2024-25 disclosures; the Swiss export example uses calendar 2025. These are dated business-model studies, not current stock valuations, product recommendations or an assurance that collectible watches will rise in price.</p>
+<aside class="article-map"><h2>Explore this article</h2><ol><li><a href="#watches-section-1">Why is the watch industry several businesses rather than one?</a></li><li><a href="#watches-section-2">Why might customers pay more than the cost of telling time?</a></li><li><a href="#watches-section-3">How much technical detail do we need to understand?</a></li><li><a href="#watches-section-4">What can Swiss export data tell us, and what can it not tell us?</a></li><li><a href="#watches-section-5">What does Swiss made actually mean?</a></li><li><a href="#watches-section-6">Where can a component manufacturer build an advantage?</a></li><li><a href="#watches-section-7">How does a watch retailer create value without owning the brand?</a></li><li><a href="#watches-section-8">Why can store growth consume more cash than expected?</a></li><li><a href="#watches-section-9">Is pre-owned retail an automatic high-margin opportunity?</a></li><li><a href="#watches-section-10">How do licensing and distribution change the profit pool?</a></li><li><a href="#watches-section-11">How should we read a parent with a listed retail subsidiary?</a></li><li><a href="#watches-section-12">What does the India–EFTA agreement change?</a></li><li><a href="#watches-section-13">What would I track before forming a view?</a></li><li><a href="#watches-sources">Sources and definitions</a></li></ol></aside>
+
+<h2 id="watches-section-1">1. Why is the watch industry several businesses rather than one?</h2>
+<p>The word watch covers a wide range of products and price points. A low-priced everyday watch, a fashion accessory and an expensive mechanical watch can compete for different budgets and occasions. A smartwatch adds another set of uses and a different technology cycle.</p>
+<p>We should therefore separate the consumer category from the company's role. A brand owner may control design, marketing and pricing while outsourcing parts of production. A manufacturer may supply components that carry someone else's name. A retailer may own the customer relationship without owning the watch brand.</p>
+<p>Some groups combine these roles. That can create useful coordination, but it also complicates the accounts. A consolidated group can include manufacturing, retail, distribution and investments. Calling the whole group a precision-engineering company or a luxury brand can hide important differences.</p>
+<figure class="article-chart">
+<h3>Follow one watch through four economic roles</h3>
+<p class="chart-unit">An original value-chain map</p>
+<ol class="flow-list"><li><strong>Components:</strong> dials, hands, cases, bracelets and other parts require design and manufacturing capability.</li><li><strong>Product and brand:</strong> a business assembles or sources the watch and builds a reason for customers to want it.</li><li><strong>Distribution:</strong> products reach the relevant country, channel and stores under agreed commercial terms.</li><li><strong>Retail and service:</strong> customers choose, buy, authenticate, maintain or resell the watch.</li></ol>
+<figcaption>A company can occupy several roles. Identify the revenue, costs and capital tied to each one before comparing profit margins.</figcaption>
+</figure>
+
+<h2 id="watches-section-2">2. Why might customers pay more than the cost of telling time?</h2>
+<p>Timekeeping is only one source of customer value. Design, comfort, materials, service, identity and the pleasure of owning a well-made object can influence demand. A luxury watch can also function as a gift or a visible association with a brand.</p>
+<p>This does not mean every expensive watch has pricing power. The business still needs customers willing to pay the price repeatedly. A high price supported only by promotion or temporary excitement is different from a price supported by a durable customer preference.</p>
+<p>I would look for evidence in realised prices, discounting, repeat purchases, returns and the cost of attracting customers. A product can look desirable on social media while requiring expensive advertising and heavy inventory to sell.</p>
+<p>The useful investing question is not whether I personally like watches. It is why a defined customer group chooses this product, what alternatives it has and how much of that preference the business can retain as cash.</p>
+
+<h2 id="watches-section-3">3. How much technical detail do we need to understand?</h2>
+<p>A movement is the mechanism that keeps time. Mechanical and quartz watches use different mechanisms, and the commercial product includes much more than its movement. The dial, hands, case, bracelet or strap, finishing, testing and service all contribute to the customer's experience.</p>
+<p>Technical language should help us understand value, not substitute for evidence. A chronometer is not simply an expensive watch. COSC describes its certification as precision testing under specified criteria, with the relevant framework differing by instrument category. It mainly certifies mechanical wristwatches but also covers other instruments, including quartz watches. <a href="#watches-source-1">[1]</a></p>
+<p>Certification also does not establish brand strength, a resale premium or an investment return. It answers a defined quality question. The commercial questions remain: does the customer value that attribute, what does it cost to provide and how easily can competitors match it?</p>
+<p>I would avoid universal accuracy claims for every mechanical or quartz watch. The product's own specification and test conditions are better evidence than an industry generalisation. In the same way, a technically difficult component is commercially valuable only when a customer pays enough to cover its production and investment costs.</p>
+
+<h2 id="watches-section-4">4. What can Swiss export data tell us, and what can it not tell us?</h2>
+<p>The Federation of the Swiss Watch Industry reports that Swiss watchmaking exports totalled CHF25.6 billion in 2025, down 1.7% from 2024. Within that total, wristwatch exports were CHF24.4 billion and 14.6 million units. Wristwatch volume fell 4.8%. <a href="#watches-source-2">[2]</a></p>
+<p>These figures describe exports, not spending by final retail customers. FH explicitly states that its values are export prices rather than retail prices. Its international trade comparisons are also not global production data; re-exports can cause the same product to appear more than once.</p>
+<p>That distinction matters when someone compares a Swiss export total with a global retail-market estimate or a retailer's revenue. The figures may use different prices, boundaries and currencies. Dividing one by another can create a neat but misleading market-share claim.</p>
+<figure class="article-chart">
+<h3>Swiss wristwatches: value and volume did not move equally</h3>
+<p class="chart-unit">Calendar 2025 change from 2024. Both bars show decline magnitude on a 0–6% scale.</p>
+<div class="chart-row"><div class="chart-label"><span>Wristwatch export value: CHF24.4 billion</span><strong>−1.7%</strong></div><div class="chart-track"><div class="chart-bar negative" style="width:28.333%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Wristwatch export volume: 14.6 million units</span><strong>−4.8%</strong></div><div class="chart-track"><div class="chart-bar negative" style="width:80%"></div></div></div>
+<figcaption>Source: FH, World Watchmaking Industry in 2025. These are export measures, not retail sell-through or a forecast. Different movements in value and volume can reflect prices and product mix as well as demand.</figcaption>
+</figure>
+<p>I would use export data as one part of a cycle dashboard. It should be read alongside brand orders, distributor inventory and retail sell-through. Shipments to a market can rise while stock accumulates in the channel.</p>
+
+<h2 id="watches-section-5">5. What does Swiss made actually mean?</h2>
+<p>Swiss made is a defined origin designation, not a loose statement that more than half the parts are Swiss. The Swiss ordinance includes requirements around technical development, a Swiss movement, casing-up and final inspection in Switzerland, and at least 60% of manufacturing costs incurred in Switzerland. The movement has its own criteria. <a href="#watches-source-3">[3]</a></p>
+<p>This creates two useful distinctions. First, the relevant cost and process requirements are not a simple count of components. Second, an origin designation is not the same thing as ownership of the brand or proof that every element was manufactured in one country.</p>
+<p>The ordinance's definition of the watch also excludes the component that enables it to be worn. Even so, an overseas supplier should not assume that every possible product or process is automatically acceptable to every customer. Legal origin requirements and customer sourcing standards are separate checks.</p>
+<p>For an Indian component manufacturer, the opportunity therefore needs company-specific evidence: which products it can make, which customers have approved them, what orders exist and what returns those orders can generate. A broad statement about Swiss sourcing rules cannot complete that research.</p>
+
+<h2 id="watches-section-6">6. Where can a component manufacturer build an advantage?</h2>
+<p>A dial or hand may be physically small while demanding careful finishing, consistency and reliable delivery. The customer is buying parts that must fit a product specification and a brand's visual identity. Manufacturing capability can matter more than the size of the machine shop.</p>
+<p>KDDL's FY2024-25 report describes manufacturing watch dials, hands, indexes, appliques, precision-stamped components and bracelets. It also describes the Estima watch-hand business, the EIGEN precision-stamping activity and ornamental packaging. These are disclosed activities, not a claim that each has the same economics. <a href="#watches-source-4">[4]</a></p>
+<p>I would test the advantage through customer approvals, accepted quality, repeat orders, rejection costs, delivery performance and returns on added capacity. A long qualification process can make entry difficult, but it can also delay the supplier's own revenue. Qualification is not an order, and an order is not collected cash.</p>
+<p>Capacity announcements need the same discipline. A new process can expand the range of products a company can make without translating into a simple number of additional units. Conversely, more machines do not guarantee customer acceptance or profitable utilisation.</p>
+<p>The evidence I want is a bridge from capability to qualified demand, then to revenue and cash. I would not assume a guaranteed growth rate or name a customer relationship merely because it appeared in an uncertain narration.</p>
+
+<h2 id="watches-section-7">7. How does a watch retailer create value without owning the brand?</h2>
+<p>A retailer helps customers discover, compare and buy products. In luxury watches, authorised access, product knowledge, authenticity, service and the buying experience can all matter. The retailer's role is different from owning the global brand and controlling its worldwide production.</p>
+<p>Ethos's FY2024-25 report describes an authorised portfolio of more than 70 luxury watch brands and a boutique network of 73 stores across 26 cities at that reporting period. It also discusses exclusive partnerships, customer relationships, service and pre-owned watches. Those are historical disclosures, not a statement of its store count today. <a href="#watches-source-5">[5]</a></p>
+<p>The research question is what the retailer keeps after paying for stock, stores, people, marketing and service. Brand access can be valuable while still leaving the retailer exposed to allocation decisions, commercial terms and the supplier's distribution strategy.</p>
+<p>A strong relationship with customers may reduce acquisition costs and support repeat purchases. But a large customer database is not itself proof of loyalty. I would look for productive repeat business, healthy realised margins and collections rather than equating registrations or social-media followers with economic value.</p>
+
+<h2 id="watches-section-8">8. Why can store growth consume more cash than expected?</h2>
+<p>A new boutique needs more than interiors. It also needs stock. If the assortment is expensive and broad, inventory can be a much larger cash commitment than the fit-out. Revenue growth may therefore arrive with substantial working-capital investment.</p>
+<p>The distinction between store payback and total cash payback is important. A company might discuss how quickly store profit covers the fit-out while continuing to carry inventory for as long as the store operates. That does not make the measure wrong, but its scope must be clear.</p>
+<figure class="article-chart">
+<h3>The display can cost more than the fit-out</h3>
+<p class="chart-unit">Original hypothetical boutique. ₹ crore, not actual company data.</p>
+<div class="chart-row"><div class="chart-label"><span>Fit-out and opening equipment</span><strong>1.5</strong></div><div class="chart-track"><div class="chart-bar" style="width:30%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Opening inventory at cost</span><strong>5.0</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div>
+<figcaption>Total initial cash is ₹6.5 crore before deposits and other working capital, assuming no supplier credit. A hypothetical ₹0.75 crore annual store operating surplus covers the ₹1.5 crore fit-out in two years, but not the entire cash investment. This is not a discounted-cash-flow or actual payback forecast.</figcaption>
+</figure>
+<p>I would ask whether suppliers provide credit, whether stock is owned or on consignment, how old the inventory is and what happens to slow-moving pieces. A valuable watch is not the same as a liquid inventory balance at its full carrying value.</p>
+<p>Same-store growth also needs definition. Does it reflect more customers, more watches, higher prices or a richer mix? A rise in average selling price can support revenue while the number of units stays flat. None of those outcomes should be confused with the others.</p>
+
+<h2 id="watches-section-9">9. Is pre-owned retail an automatic high-margin opportunity?</h2>
+<p>Pre-owned watches add a different service: confidence in condition, authenticity, pricing and after-sales support. Ethos describes its pre-owned activity in its annual report. The existence of that activity is not proof that every watch is easy to buy, authenticate or resell profitably. <a href="#watches-source-5">[5]</a></p>
+<p>The economics depend on sourcing terms, whether the retailer owns the watch, refurbishment costs, warranty obligations, selling time and the spread between purchase and sale. A wide gross spread can narrow after those costs.</p>
+<p>There is also price risk. A watch bought into stock during a strong market may need to be sold after demand weakens. High asking prices on online listings do not establish completed transaction prices or the cash a dealer will pay immediately.</p>
+<p>I would therefore treat pre-owned operations as a separate business to understand. They can strengthen trust and customer relationships, but they also introduce valuation, inventory and execution questions. Collectibility is not a guarantee of capital protection for either the consumer or the retailer.</p>
+
+<h2 id="watches-section-10">10. How do licensing and distribution change the profit pool?</h2>
+<p>A business can sell products under a brand it does not own. The arrangement may provide useful recognition and access to designs, but part of the economics belongs to the owner of that intellectual property. Renewal terms, territorial rights, royalties and related-party dealings matter.</p>
+<p>Timex Group India's FY2024-25 report discusses its mix of Timex and fashion or luxury brands, manufacturing and sales channels. Its board's February 2024 filing separately disclosed an intellectual-property licence with Timex Group USA effective from April 2024. The filing includes a royalty rate, exclusions and turnover-based limits. <a href="#watches-source-6">[6]</a> <a href="#watches-source-7">[7]</a></p>
+<p>The lesson is not to apply one headline royalty percentage to every rupee of sales. The applicable products, exclusions, calculation base and caps determine the charge. A related-party agreement needs to be read, not reduced to a slogan about a multinational parent.</p>
+<p>Channel mix matters too. Online sales can extend reach without opening an owned boutique, but platform fees, advertising, fulfilment, returns and discounting remain costs. An asset-light route to the customer is not a cost-free route.</p>
+<p>I would compare contribution and capital employed by activity where disclosure permits. Higher sales are useful only if the company retains an adequate share after brand owners, channels and service providers have been paid.</p>
+
+<h2 id="watches-section-11">11. How should we read a parent with a listed retail subsidiary?</h2>
+<p>KDDL's FY2024-25 report identifies Ethos as a subsidiary and reports a 50.12% interest together with its wholly owned subsidiary. It also describes manufacturing and other businesses. That makes the difference between standalone and consolidated accounts important. <a href="#watches-source-4">[4]</a></p>
+<p>In consolidated accounts, a controlled subsidiary's business is combined under the applicable accounting rules, with the share belonging to other shareholders reflected separately. Adding the full value of that same business again can double-count it.</p>
+<p>A sum-of-the-parts approach can help organise the analysis, but only if the pieces do not overlap. Parent-level debt, cash, tax, cross-holdings, minority interests and costs need consistent treatment. Standalone profit can itself contain investment income that should not be capitalised twice.</p>
+<figure class="article-chart">
+<h3>A look-through stake is not extra revenue</h3>
+<p class="chart-unit">Original hypothetical structure, not a valuation of KDDL or Ethos</p>
+<ol class="flow-list"><li><strong>Listed subsidiary value:</strong> suppose the entire equity is valued at ₹1,000 crore.</li><li><strong>Parent ownership:</strong> a hypothetical 50% stake has a simple look-through value of ₹500 crore before adjustments.</li><li><strong>Other parent businesses:</strong> assess them separately, excluding the subsidiary already counted.</li><li><strong>Adjustments:</strong> consider parent debt, cash, taxes, costs and other claims without counting anything twice.</li></ol>
+<figcaption>A holding-company discount is not a fixed law or an automatic 50% deduction. The reasons for a discount and the path for value to reach shareholders need their own analysis.</figcaption>
+</figure>
+<p>The framework is a way to avoid mistakes, not permission to assign an arbitrary earnings multiple and forecast that profits will double. Assumptions should be visible and tested against cash generation.</p>
+
+<h2 id="watches-section-12">12. What does the India–EFTA agreement change?</h2>
+<p>The Swiss government's September 2025 announcement states that the India–EFTA trade agreement entered into force on 1 October 2025 and includes improved access for watches, with transition periods for tariff concessions. That supports a policy change, not an immediate identical price cut on every Swiss watch sold in India. <a href="#watches-source-8">[8]</a></p>
+<p>The effect on a particular product depends on its classification, origin eligibility, the applicable tariff stage and other taxes or charges. Exchange rates, brand pricing, distribution terms and the retailer's commercial decisions also influence the final ticket price.</p>
+<p>A lower import cost can be shared among the customer, the brand, the distributor and the retailer. We should not assume the whole benefit becomes a retailer's margin. Nor does lower duty guarantee that domestic prices will exactly match prices in every overseas market.</p>
+<p>I would treat policy as a variable in the model, then check realised prices, sales volumes and margins as the changes flow through. An attractive direction of travel is not a substitute for the relevant customs schedule or operating evidence.</p>
+
+<h2 id="watches-section-13">13. What would I track before forming a view?</h2>
+<p>I would build separate scorecards for components, brands and retail. The same headline growth rate can mean stronger customer demand, higher prices, more stores, inventory accumulation or a new consolidation boundary. The bridge matters more than the label.</p>
+<ul><li><strong>Brand:</strong> customer preference, realised prices, discounting, service and the cost of staying relevant.</li><li><strong>Manufacturing:</strong> qualification, repeat orders, accepted quality, utilisation, capital spending and customer concentration.</li><li><strong>Retail:</strong> same-store growth, new-store productivity, inventory age, supplier terms and cash tied up in stock.</li><li><strong>Licensing:</strong> rights, duration, royalty base, related-party terms and renewal risk.</li><li><strong>Industry cycle:</strong> exports, channel inventory and actual retail sell-through, with consistent units and periods.</li><li><strong>Shareholder economics:</strong> cash flow, capital returns, ownership and the avoidance of double-counting.</li></ul>
+<p>The appeal of watches is visible on the wrist. The economics are less visible. A desirable product can support a brand, a well-run retailer or a qualified supplier, but each earns its return through different work.</p>
+<p>That is the discipline I would keep: admire the product if you like it, then analyse the business on its own terms. A compelling story becomes useful investment research only when it connects to customers, contracts, capital and cash.</p>
+
+<h2 id="watches-sources">Sources and definitions</h2>
+<p>Company examples are based on dated primary disclosures, not current trading updates. Industry export data are not retail-market estimates. Original hypothetical examples do not describe the named companies' unit economics or fair values.</p>
+<ol class="source-list"><li id="watches-source-1"><a href="https://www.cosc.swiss/certified-chronometer">COSC, Chronometer Certified. Definition and scope of certification and different instrument categories.</a></li><li id="watches-source-2"><a href="https://www.fhs.swiss/documents/statistics/eng/world-watchmaking-2025.pdf">Federation of the Swiss Watch Industry FH, World Watchmaking Industry in 2025. Swiss wristwatch and total export values, volumes and definitions. Export prices, not retail spending.</a></li><li id="watches-source-3"><a href="https://www.fedlex.admin.ch/eli/cc/1971/1908_1915_1915/en">Swiss Federal Council, ordinance on the use of Switzerland or Swiss for watches, Articles 1, 1a and 2. Origin criteria, manufacturing-cost threshold and movement requirements.</a></li><li id="watches-source-4"><a href="https://www.kddl.com/wp-content/uploads/PDF/announcement/AnnualReport25.pdf">KDDL, Annual Report FY2024-25. Manufacturing activities, group structure and historical Ethos interest held with a wholly owned subsidiary.</a></li><li id="watches-source-5"><a href="https://www.kddl.com/wp-content/uploads/PDF/Ethos_AR25.pdf">Ethos, Annual Report FY2024-25. Historical brand portfolio, store network, retail model and pre-owned activity.</a></li><li id="watches-source-6"><a href="https://www.timexindia.com/wp-content/uploads/2025/07/TIMEX-AR-2025_Final.pdf">Timex Group India, Annual Report FY2024-25. Product and brand strategy, manufacturing and channel mix.</a></li><li id="watches-source-7"><a href="https://timexindia.com/wp-content/uploads/2024/01/Reg_30_intimation_Royalty%20agreement_.pdf">Timex Group India, stock-exchange disclosure dated 1 February 2024. Intellectual-property licence effective April2024, related-party scope, rate, exclusions and turnover limits. Historical terms, not confirmation of no subsequent amendment.</a></li><li id="watches-source-8"><a href="https://www.admin.ch/en/newnsb/O8hG66Fgv1j36OLRRz0Ud">Swiss Federal Council, 3 September2025 announcement of India–EFTA entry into force on 1 October2025. Market access and transition periods. This article does not calculate a product-specific customs liability.</a></li></ol>
+<p><strong>Definitions:</strong> a movement is a watch's timekeeping mechanism; sell-in is supply into a distribution channel, while sell-through is sale to the final customer. A royalty pays for specified intellectual-property rights. A look-through stake value is an ownership calculation before the further adjustments needed to assess the parent. None of these measures is a stock recommendation.</p>
+<p><a href="articles.html">← Back to all sector articles</a></p>
+</main>
+<footer>For research and education only, not investment advice.</footer>
+</body>
+  </html>
