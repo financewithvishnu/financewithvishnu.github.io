@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-54-algo-trading.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 54. Systematic and Algorithmic Trading - Finance With Vishnu" property="og:title"/><meta content="Systematic and algorithmic trading honestly: from hypothesis to rules to code, the three back-test sins of look-ahead survivorship and overfitting, execution APIs co-location and latency, retail algos and SEBI's rules, ML's promise and graveyard, with a wrong-vs-right back-test case." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-54-algo-trading.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-54-algo-trading.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 54. Systematic and Algorithmic Trading - Finance With Vishnu" property="og:title"/><meta content="Systematic and algorithmic trading honestly: from hypothesis to rules to code, the three back-test sins of look-ahead survivorship and overfitting, execution APIs co-location and latency, retail algos and SEBI's rules, ML's promise and graveyard, with a wrong-vs-right back-test case." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-54-algo-trading.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
 <h1>Chapter 54. Systematic and Algorithmic Trading</h1>
 <p class="count">Chapter 54 of 85 · about 19 minutes</p>
 <p class="lede">Strip a trading idea of its drama and a claim remains: "when X happens, prices tend to do Y." A systematic trader writes that claim as rules precise enough for a machine, tests it against history honestly enough to trust it a little, and then discovers that the hard part was never the code. This chapter is about that pipeline, idea, test, execution, and about why most back-tests that look like fortunes are fiction.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,23 +148,22 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Algorithmic trading</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s54-1">Idea to algorithm</a>
-    <a href="#s54-2">Honest back-tests</a>
-    <a href="#s54-3">Execution plumbing</a>
-    <a href="#s54-4">Retail algos in India</a>
-    <a href="#s54-5">Machine learning</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-37-trading-trend-mean-reversion.html">Ch 37 &middot; Trend and Mean Reversion</a>
-    <a href="finance-reference-17-technical-analysis.html">Ch 17 &middot; Technical Analysis</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Algorithmic trading</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s54-1">Idea to algorithm</a>
+<a href="#s54-2">Honest back-tests</a>
+<a href="#s54-3">Execution plumbing</a>
+<a href="#s54-4">Retail algos in India</a>
+<a href="#s54-5">Machine learning</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-37-trading-trend-mean-reversion.html">Ch 37 · Trend and Mean Reversion</a>
+<a href="finance-reference-17-technical-analysis.html">Ch 17 · Technical Analysis</a>
+</div>
 </div>
 <h3 id="s54-1"><span class="sn">54.1</span>How do you go from a trading idea to an algorithm?</h3>
 <p>A strategy begins as a hypothesis with an economic reason to exist: momentum persists because investors underreact to news; value works because fear overprices the recent past; the basis converges because settlement forces it. The reason matters more than the pattern, because a pattern without a reason is a coincidence waiting for its obituary. The hypothesis then becomes <strong>rules</strong>: exact definitions of the signal, the universe, the entry, the exit, the size, and, most neglected, what happens when things go wrong. Only then does it become code. The discipline in this order is that vagueness cannot survive it: "buy strength" becomes "buy the stocks in the top decile of six-month returns, rebalanced monthly, equal-weighted, subject to a liquidity floor", and at that precision the idea can finally be tested, because it can finally be wrong.</p>
@@ -173,7 +171,7 @@
 <p>The back-test is where strategies go to be flattered, and three sins do most of the flattering. <strong>Look-ahead bias:</strong> the test uses information that did not exist at the decision time, year-end fundamentals applied to January trades, an index's current constituents applied to 2010, a signal computed with the day's close used to trade at that same close. <strong>Survivorship bias:</strong> the universe contains today's living companies, so the test silently deletes the delisted, the failed and the acquired, inflating every equity strategy. And <strong>overfitting:</strong> with enough parameters and enough trials, noise becomes law; test a hundred variants and the best will look brilliant in-sample, because you selected it for looking brilliant. The defences are procedural, not clever: reserve an untouched out-of-sample period and test once; include delisted stocks and real costs, brokerage, impact, STT, slippage; count every variant you tried, because the number of attempts is the significance level's silent divisor; and distrust elegance, because a rule with eleven parameters that "works" is eleven ways to be fooled.</p>
 <h3 id="s54-3"><span class="sn">54.3</span>What do APIs, co-location and latency mean in plain terms?</h3>
 <p>A tested strategy still has to meet the market. The retail path runs through broker APIs: your program reads prices, sends orders, manages positions, and the constraints are practical, rate limits, order-per-second caps, the reliability of a connection at 9:15 on a busy morning. The institutional path adds speed as a business: <strong>co-location</strong>, renting rack space inside the exchange's data centre so orders travel metres instead of kilometres, and latency measured in microseconds, because when a stale price lasts a millisecond, the fastest program owns it. Understand what the speed race is and is not. It is the business of market-making and short-horizon arbitrage, where edge decays in milliseconds and the rent goes to hardware, and it is a business retail cannot enter, any more than a cyclist enters Formula One. Slower strategies, days to months, do not compete with the machines on speed; they compete on horizon, capacity and patience, the dimensions where speed buys nothing.</p>
-<h3 id="s54-4"><span class="sn">54.4</span>Which retail algo platforms exist in India, and what are SEBI&#8217;s rules?</h3>
+<h3 id="s54-4"><span class="sn">54.4</span>Which retail algo platforms exist in India, and what are SEBI’s rules?</h3>
 <p>India's retail algo scene grew on broker APIs and platforms that let non-programmers chain conditions into orders, and SEBI's regulatory response has settled into a clear shape: strategies that route orders automatically must run through brokers, who are responsible for them; algos above defined speed thresholds need exchange registration and a unique identifier on every order, so the audit trail reaches the strategy, not just the client; and platforms selling "algo trading" as a product face the rules that apply to anyone promising returns. The intent is the same fence as Chapter 51's: automation is welcome, unaccountable automation is not. For the individual, the practical reading is modest. A rule-based rebalancing script, an SIP with logic, a disciplined exit rule executed by machine, these take the emotion out of decisions worth automating. A rented black box promising 4% a month is the same old product with an API attached, and Section 50.5's question applies unchanged: if you cannot state what it does, the complexity is not working for you.</p>
 <h3 id="s54-5"><span class="sn">54.5</span>Does machine learning work in trading: the promise and the graveyard?</h3>
 <p>Machine learning is pattern-finding machinery, and markets are the most seductive and most hostile place to point it. The promise is real: ML digests unstructured data, filings, calls, satellite images, finds interactions no linear model sees, and adapts as relationships shift. The graveyard is larger, and its tombstones share three inscriptions. <strong>Non-stationarity:</strong> markets learn, so the pattern your model found in history is being traded away by the time it is found; the data-generating process is an adversary, not a mountain. <strong>Data snooping at scale:</strong> a model flexible enough to find real structure is flexible enough to memorise noise, and financial time series are short, noisy and few, decades, not billions of clean examples. And <strong>crowding:</strong> the discoverable signals are discovered by many at once, and the same capital that validates a signal arbitrages it away. The survivors, and they exist, share humility: small edges, enormous investment in data and execution, and a permanent suspicion that this year's model is next year's noise. The amateur version, a weekend model on free data beating professionals with proprietary everything, is Chapter 2's free lunch wearing a neural network.</p>
