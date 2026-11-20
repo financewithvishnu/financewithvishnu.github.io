@@ -135,22 +135,53 @@
 <h1>Chapter 55. Commodity Markets: The Indian Ecosystem</h1>
 <p class="count">Chapter 55 of 85 · about 19 minutes</p>
 <p class="lede">Commodities are the oldest markets on earth and the least sentimental: a tonne of copper pays no dividend, owes you nothing, and is worth exactly what the next industrial cycle says it is. India runs one of the world's larger commodity exchanges, and yet most Indian investors meet commodities only through gold. This chapter maps the ecosystem, and Part VIII then teaches its major commodities and strategies.</p>
-<h3><span class="sn">55.1</span>Physical vs paper commodities: spot and futures</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Commodity markets</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s55-1">Physical vs paper</a>
+    <a href="#s55-2">MCX and NCDEX</a>
+    <a href="#s55-3">Contract specs</a>
+    <a href="#s55-4">Contango and roll</a>
+    <a href="#s55-5">Who uses them</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-56-gold-energy-agriculture.html">Ch 56 &middot; Gold, Energy, Agriculture</a>
+    <a href="finance-reference-57-commodity-strategies.html">Ch 57 &middot; Commodity Strategies</a>
+  </div>
+</div>
+<h3 id="s55-1"><span class="sn">55.1</span>What is the difference between physical and paper commodity markets?</h3>
 <p>Two markets trade every commodity. The <strong>spot</strong> market is the physical thing: wheat in the mandi, gold at the bullion dealer, crude at the refinery gate, with trucks, assays, warehouses and GST invoices. The <strong>futures</strong> market is a paper promise about that thing, standardised and exchange-traded, settled mostly in cash because almost nobody wants the truck. The two are chained together by delivery: a futures contract that drifts too far from spot invites delivery arbitrage, which is why, at expiry, the paper price must equal the physical one, the convergence every commodity strategy ultimately leans on. The investor's first decision is which market they belong in. Buying physical gold is a savings decision with storage and purity problems; buying gold futures is a leveraged price bet with daily cash settlement; conflating the two is how people end up accidentally owning, or margin-called out of, a kilogram of metal.</p>
-<h3><span class="sn">55.2</span>MCX, NCDEX and the regulators; global mirrors</h3>
+<h3 id="s55-2"><span class="sn">55.2</span>Where do commodities trade in India: MCX, NCDEX and the regulators?</h3>
 <p>India's commodity derivatives trade mainly on two exchanges. The <strong>MCX</strong> dominates metals and energy: gold, silver, copper, crude oil and natural gas, with Indian volumes in bullion among the world's largest. <strong>NCDEX</strong> is the agricultural exchange: guar, spices, oilseeds, chana and the like, where the farmer economy meets the futures market. Since 2015 both answer to <strong>SEBI</strong>, which absorbed the old Forward Markets Commission, one regulator now watching securities and commodity derivatives alike, which is why the margining, position-limit and surveillance machinery of Chapter 51 reads the same here. Indian prices do not float free: MCX gold is the international price translated through the rupee and import duty, MCX crude shadows NYMEX WTI and Brent, and base metals take their cue from the <strong>LME</strong>, with the <strong>CME</strong> group hosting the global benchmarks. An Indian commodity trader is always, whether they know it or not, trading a global price plus a currency plus a tax.</p>
-<h3><span class="sn">55.3</span>How a commodity futures contract is specified</h3>
+<h3 id="s55-3"><span class="sn">55.3</span>How is a commodity futures contract specified?</h3>
 <p>Everything about a commodity future is written down in its specification, and reading one is a core skill. The MCX gold contract specifies the unit, one kilogram of 995-purity gold; the quotation, rupees per 10 grams; the tick, ₹1, worth ₹100 per contract; the expiry calendar and settlement, delivery into exchange-accredited vaults in specified cities; and the delivery logic, including quality standards and the option most traders take, squaring off in cash. Around the flagship sit the family: Gold Mini at 100 grams, and smaller retail denominations, because a one-kilogram contract at ₹72 lakh is wholesale money, and the mini contracts are how ordinary participants trade the same price. The specification answers, before you trade, the questions that matter: what exactly am I promising, in what quantity, quoted how, settled which way, and delivered where, if it comes to that.</p>
-<h3><span class="sn">55.4</span>Contango, backwardation and the roll cost</h3>
+<h3 id="s55-4"><span class="sn">55.4</span>What are contango, backwardation and the roll cost?</h3>
 <p>A commodity's futures curve, prices across expiries, tells the market's physical story. In <strong>contango</strong>, later months cost more: storage, insurance and funding are real, so future delivery costs more than today's, the normal state of gold and well-supplied markets. In <strong>backwardation</strong>, later months cost less: someone wants the physical now and will pay a premium for immediacy, the signature of shortage, common in oil and agricultural squeezes. The curve is not trivia for the investor, because a futures position must be <strong>rolled</strong>, the expiring contract sold and the next month bought, to stay exposed. In contango you sell cheap and buy dear, every month, a slow bleed called the <strong>roll cost</strong>; in backwardation the roll pays you. This is why "gold futures returned less than gold" is not a scandal but arithmetic, and why long-only commodity indices can bleed for years through quiet contango while spot prices look fine. Before holding any commodity on paper, ask what the curve charges you to wait.</p>
-<h3><span class="sn">55.5</span>Who uses these markets: hedgers, traders, arbitrageurs</h3>
+<h3 id="s55-5"><span class="sn">55.5</span>Who uses commodity markets: hedgers, traders and arbitrageurs?</h3>
 <p>The cast mirrors Chapter 46's triangle, with commodity colours. <strong>Hedgers</strong> are the reason the market exists: the jeweller fixing the gold price of next season's inventory, the refiner locking the crude-to-product margin, the farmer selling the harvest forward, the airline capping fuel. <strong>Traders and speculators</strong> take the other side, providing the liquidity hedgers pay for, and in Indian bullion they dominate volumes. <strong>Arbitrageurs</strong> stitch the markets together: spot against futures when the basis strays from fair carry, MCX against international prices through the import-parity calculation, one month against another along the curve. For a household, the usable version of this whole chapter is short: commodity futures are tools for those with commodity exposure, and exposure without a hedging need is speculation, a legitimate activity that should be entered knowingly, sized like the leveraged instrument it is, and never confused with owning the thing itself.</p>
-<h3><span class="sn">55.6</span>Worked examples and cases</h3>
+<h3 id="s55-6"><span class="sn">55.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case: tracing one MCX gold contract from margin to settlement</p>
 <p>Follow the flow above with numbers. Gold trades at ₹72,000 per 10 grams; one MCX contract is a kilogram, so the contract value is ₹72 lakh. You post about ₹4.3 lakh of margin, leverage of about 17 times, and from that moment every ₹1 tick in the price moves your account ₹100, so an ordinary ₹500-per-10g day, 0.7% in the metal, is ₹50,000, an 11.6% swing on your margin, settled in cash that night. Three paths now. You square off a week later at ₹73,200: profit ₹1,20,000, margin released, no gold anywhere in the story. You hold a losing position and watch the margin machinery of Chapter 51 operate on you. Or you hold to expiry and take delivery: you pay the full ₹72 lakh and a one-kilogram, 995-purity bar moves to your name in an accredited vault, assay certificate and all, at which point you have become the physical market, with storage and resale now your problem. Every commodity position is one of these three endings, chosen or forced, and the time to choose is before the margin is posted, not at expiry.</p>
 </div>
-<h3><span class="sn">55.7</span>Active-recall questions for this section</h3>
+<h3 id="s55-7"><span class="sn">55.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>What chains a futures price to the physical price at expiry?</li>
 <li>Which exchange dominates which commodities in India, and who regulates them since 2015?</li>
@@ -166,4 +197,4 @@
 </main>
 <footer>Finance With Vishnu · For research and education only, not investment advice.</footer>
 </body>
-                                                      </html>
+</html>
