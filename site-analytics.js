@@ -22,13 +22,16 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
+    window.gtag('set', {page_location: location.origin + location.pathname, page_referrer: document.referrer ? document.referrer.split('?')[0].split('#')[0] : ''});
     window.gtag('config', id, {
+      send_page_view: false,
       page_location: location.origin + location.pathname,
       page_referrer: document.referrer ? document.referrer.split('?')[0].split('#')[0] : '',
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       cookie_flags: 'SameSite=Lax;Secure'
     });
+    window.gtag('event', 'page_view', {page_location: location.origin + location.pathname, page_referrer: document.referrer ? document.referrer.split('?')[0].split('#')[0] : ''});
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
