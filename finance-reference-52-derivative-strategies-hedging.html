@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-52-derivative-strategies-hedging.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 52. Derivative Strategies: Hedging and Income - Finance With Vishnu" property="og:title"/><meta content="Derivative strategies for hedging and income: futures puts and collars compared, short strangles and iron condors and the tail behind the income, expiry-day and event option trades, Greeks in live management, with a 24-month iron condor P&amp;L case." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-52-derivative-strategies-hedging.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-52-derivative-strategies-hedging.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 52. Derivative Strategies: Hedging and Income - Finance With Vishnu" property="og:title"/><meta content="Derivative strategies for hedging and income: futures puts and collars compared, short strangles and iron condors and the tail behind the income, expiry-day and event option trades, Greeks in live management, with a 24-month iron condor P&amp;L case." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-52-derivative-strategies-hedging.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
 <h1>Chapter 52. Derivative Strategies: Hedging and Income</h1>
 <p class="count">Chapter 52 of 85 · about 20 minutes</p>
 <p class="lede">Part VII has given you the instruments; this chapter and the next assemble them into what traders actually do. There are only three honest businesses in options: insuring what you own, selling insurance to others, and, in Chapter 53, exploiting mispricing. Each can be done well. Each has a failure mode that looks, for months or years, exactly like success.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,23 +148,22 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Derivative strategies: hedging and income</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s52-1">Hedging a portfolio</a>
-    <a href="#s52-2">Selling premium</a>
-    <a href="#s52-3">Expiry-day trades</a>
-    <a href="#s52-4">Event buying</a>
-    <a href="#s52-5">Greeks in management</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-48-options-ii.html">Ch 48 &middot; Options II</a>
-    <a href="finance-reference-03-risk-return.html">Ch 3 &middot; Risk and Return</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Derivative strategies: hedging and income</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s52-1">Hedging a portfolio</a>
+<a href="#s52-2">Selling premium</a>
+<a href="#s52-3">Expiry-day trades</a>
+<a href="#s52-4">Event buying</a>
+<a href="#s52-5">Greeks in management</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-48-options-ii.html">Ch 48 · Options II</a>
+<a href="finance-reference-03-risk-return.html">Ch 3 · Risk and Return</a>
+</div>
 </div>
 <h3 id="s52-1"><span class="sn">52.1</span>How do you hedge a portfolio with futures, puts and collars?</h3>
 <p>Three hedges, three prices. <strong>Short index futures</strong> against the portfolio: the cheapest hedge to run, near-perfect against beta risk, but you surrender the upside too and fund daily margin through the fall, Chapter 46's treasurer problem. <strong>Protective puts</strong>: the only hedge that keeps the upside, paid for with a premium that runs 1.5-2% a quarter for sensible strikes, so permanent put protection costs 6-8% a year and turns an equity portfolio into a mediocre one; the craft is buying puts selectively, when implied volatility is cheap or a specific event genuinely threatens. The <strong>collar</strong> splits the difference: buy the put, sell a call above the market to fund it, often for near-zero net premium. You keep the range between the strikes and give away everything above the call. For most long-term Indian investors the honest answer is hierarchical: the first hedge is asset allocation, the second is time horizon, and derivatives are the third, for the specific windows when the first two cannot help.</p>
