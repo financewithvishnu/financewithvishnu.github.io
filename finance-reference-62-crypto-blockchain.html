@@ -135,17 +135,49 @@
 <h1>Chapter 62. Cryptoassets and Blockchain Finance</h1>
 <p class="count">Chapter 62 of 85 · about 20 minutes</p>
 <p class="lede">No corner of finance separates the curious from the careful faster than crypto. The technology is genuinely new; the fraud is genuinely old; and the honest evaluation of either requires holding two thoughts at once: that a decentralised ledger is a real invention, and that most of what has been sold on top of it is the same old story, unbacked promises and other people's money, in a new vocabulary.</p>
-<h3><span class="sn">62.1</span>Blockchain: what the technology does and does not do</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>Crypto and blockchain</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s62-1">What blockchain does</a>
+    <a href="#s62-2">Bitcoin and Ethereum</a>
+    <a href="#s62-3">Stablecoins and DeFi</a>
+    <a href="#s62-4">Custody failures</a>
+    <a href="#s62-5">Regulation and tax</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-59-digital-money-payments.html">Ch 59 &middot; Digital Payments</a>
+    <a href="finance-reference-73-taxation-investments.html">Ch 73 &middot; Taxation</a>
+    <a href="finance-reference-72-market-abuse-scams.html">Ch 72 &middot; Frauds and Scams</a>
+  </div>
+</div>
+<h3 id="s62-1"><span class="sn">62.1</span>What does blockchain technology do, and what does it not do?</h3>
 <p>A blockchain solves exactly one problem: maintaining a shared ledger among parties who do not trust each other, without a central administrator, by making history expensive to rewrite. Every block of transactions is sealed with a cryptographic reference to the one before, and the network's consensus, miners or validators spending real resources, makes forgery costlier than honesty. That is a real capability, and it has a real price: the ledger is slow, energy- or stake-hungry, and hard to change, so it makes sense only where the absence of a trusted intermediary is the binding constraint. It does not make data true, a blockchain records whatever it is told, garbage included; it does not remove the need for trust at the edges, where the chain meets the world through exchanges, oracles and custodians; and it does not confer value on a token, any more than the invention of double-entry bookkeeping conferred value on every ledger ever opened. When a project pitches "blockchain", the correct first question is which trusted intermediary it removes, and the correct follow-up is whether that intermediary was actually the problem.</p>
-<h3><span class="sn">62.2</span>Bitcoin, Ethereum and the major asset classes of crypto</h3>
+<h3 id="s62-2"><span class="sn">62.2</span>What are Bitcoin, Ethereum and the major crypto asset classes?</h3>
 <p>The asset side of the ledger divides into a few genuinely different species. <strong>Bitcoin</strong> is the original: a fixed-supply, non-sovereign asset whose investment case is digital gold, scarcity plus censorship resistance, and whose honest accounting is that it produces no cash flow and is priced purely by the next buyer's conviction, with volatility to match, drawdowns of 70-80% arriving roughly once a cycle. <strong>Ethereum</strong> is a platform: its token pays for computation on a global smart-contract machine, and its case rests on that machine being used. The <strong>platform tokens</strong> that followed are variations on the same bet with different engineering trade-offs. And then there is the vast tail of tokens whose issuance is limited only by imagination, where the base rate of the outcome, worthless within a few years, should anchor every allocation decision. The portfolio translation, for one who chooses exposure at all: the two majors are a speculation with a thesis; the tail is a lottery with a whitepaper; size accordingly, from money whose total loss changes nothing about your life.</p>
-<h3><span class="sn">62.3</span>Stablecoins, DeFi and tokenisation of real-world assets</h3>
+<h3 id="s62-3"><span class="sn">62.3</span>What are stablecoins, DeFi and the tokenisation of real-world assets?</h3>
 <p>Three developments carry real financial content beneath the vocabulary. <strong>Stablecoins</strong>, tokens pegged to the dollar, became crypto's actual payment rail and its largest source of systemic questions, because a stablecoin is a money-market fund wearing a token: its quality is entirely the quality of its reserves and its attestations, and the collapse of an "algorithmic" stablecoin in 2022, TerraUSD, tens of billions evaporating in days, demonstrated what a peg without assets is worth. <strong>DeFi</strong> rebuilds lending, exchange and derivatives as smart contracts, genuinely new machinery that replaces institutional risk with code risk, hacks, oracle failures, governance capture, and whose yields, when traced, come from leverage, token subsidies and the greater fool, in varying proportions. <strong>Tokenisation of real-world assets</strong>, T-bills, funds and bonds issued as tokens, is the least glamorous and most durable: the same instrument, new plumbing, with settlement and access gains that incumbents are adopting precisely because it changes the rails, not the asset.</p>
-<h3><span class="sn">62.4</span>Exchanges, wallets and custody: where crypto actually fails</h3>
+<h3 id="s62-4"><span class="sn">62.4</span>Where does crypto actually fail: exchanges, wallets and custody?</h3>
 <p>The ledger has never been hacked; the buildings around it collapse routinely. The catastrophic losses in crypto's history, Mt. Gox, FTX, a dozen lending platforms, are custody failures: tokens left with an intermediary that lent them, pledged them or stole them. "Not your keys, not your coins" is the industry's own admission that exchange balances are unsecured loans to the exchange. Self-custody moves the risk rather than removing it: the seed phrase becomes the single point of failure, lost, phished or stolen, with no recourse and no helpline, by design. The practical hierarchy for anyone holding crypto: an exchange is a place to trade, not to store; a hardware wallet is the sensible middle for meaningful amounts; and every yield offered on custody is credit exposure to a counterparty you cannot audit, Chapter 44's lesson in a new wallet. The ecosystem keeps proving the same theorem: the trust the protocol removed returns, wearing a hoodie, at the interface where humans hold other humans' keys.</p>
-<h3><span class="sn">62.5</span>Regulation and tax: India and the world</h3>
+<h3 id="s62-5"><span class="sn">62.5</span>How is crypto regulated and taxed in India and the world?</h3>
 <p>India's stance is taxation without endorsement. Since 2022, crypto gains are taxed at a flat 30% plus cess, losses cannot be set off against anything, not even other crypto losses, and 1% is deducted at source on every sale, a regime deliberately designed to be the world's least inviting while stopping short of prohibition. The structural consequences: high-frequency or leveraged crypto trading is nearly impossible to run profitably after TDS and the no-set-off rule, and the honest holder faces a punitive but navigable tax. Exchanges serving Indians must register with the financial-intelligence unit under anti-money-laundering law, which pushed volume offshore and then brought enforcement to the offshore majors. Globally, the arc runs from wild west toward perimeter: the EU's MiCA framework, US enforcement-driven rule-making, and a general convergence on treating stablecoins, exchanges and lending platforms as financial institutions, because that is what they are. For the Indian investor the operational rules are plain: assume 30% flat with no set-off, track every transaction for TDS credit, use FIU-registered platforms, and treat any scheme promising to dodge these as the tax crime it is.</p>
-<h3><span class="sn">62.6</span>Worked examples and cases</h3>
+<h3 id="s62-6"><span class="sn">62.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: the FTX collapse, an old fraud on a new ledger</p>
 <p>FTX was the world's second-largest crypto exchange, valued at $32 billion, fronted by a billionaire who lobbied for regulation in Washington. In November 2022 it was revealed that customer deposits had been quietly lent to its sibling trading firm, Alameda, against collateral consisting largely of a token FTX itself had printed. A report, a rival's tweet, a bank run, and within ten days the empire was bankrupt, customer money short by billions, and its founder on his way to a fraud conviction and 25 years in prison. Not one element was new. The misappropriation of client funds is the oldest exchange crime there is; the self-dealing with an affiliated trading firm is an ancient conflict; the in-house token as collateral is leveraged circularity from a nineteenth-century railway bubble. The blockchain worked perfectly throughout, which is the deepest lesson: the failure was at the trusted edge, the custodian, exactly where this chapter said the risk lives. Technology cannot abolish the need for honest intermediaries; it can only change who you must trust. Choose that party as if your money depends on it, because it does.</p>
@@ -154,7 +186,7 @@
 <p class="ex-title">Case 2: tokenised US Treasuries, the bridge that is actually being built</p>
 <p>While the headlines chased dog tokens, a quieter product crossed billions in assets: US Treasury bills and money-market funds issued as blockchain tokens, held by institutions and crypto firms that want dollar yield with 24/7 transferability. Examine the structure and the future is visible: the asset is utterly conventional, T-bills at a custodian; the innovation is the rail, fractional units, programmable transfers, collateral that moves at the speed of software. Major asset managers now run such funds, and the direction of travel is clear, regulated securities adopting blockchain settlement because it is better plumbing, while the unregulated casino continues separately. For the Indian reader, the significance is twofold. This is the realistic shape of "blockchain finance": the assets your grandfather would recognise on rails he would not. And it separates the question "is the technology useful?", increasingly yes, from "is this token an investment?", which remains exactly as hard as any other claim on future cash flows, scarcity or belief, and no easier for being cryptographically sealed.</p>
 </div>
-<h3><span class="sn">62.7</span>Active-recall questions for this section</h3>
+<h3 id="s62-7"><span class="sn">62.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>What single problem does a blockchain solve, and what three things does it not do?</li>
 <li>Distinguish the investment cases of Bitcoin, Ethereum and the token tail.</li>
