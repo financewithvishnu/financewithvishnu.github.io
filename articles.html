@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Articles - Finance With Vishnu</title>
+<meta content="Detailed, original sector studies from Finance With Vishnu." name="description"/>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<meta content="Finance With Vishnu" name="author"/><style>
+.review-banner{background:#eee3ce;padding:14px 18px;color:#493c2b;font-size:14px;line-height:1.6;border-bottom:1px solid #ddcda9}
+.article-map{padding:22px;background:#f1ebe3;border:1px solid #e7dfd3;border-radius:12px;margin:30px 0}
+.article-map h2{margin:0 0 12px;font-size:24px}.article-map ol{padding-left:22px;margin:0}.article-map a{display:block;min-height:44px;line-height:1.5;padding:8px 0;color:#365c45;font-size:15px}
+h2[id]{scroll-margin-top:24px} .article-chart{background:white;border:1px solid #e7dfd3;padding:20px;border-radius:12px;max-width:760px;margin:28px 0}.article-chart h3{margin:0 0 8px;font-family:inherit;font-weight:600;font-size:18px;line-height:1.4}.chart-unit{font-size:13px!important;color:#7a6f62!important;margin:0 0 18px}.chart-row{margin:15px 0}.chart-label{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5}.chart-label strong{white-space:normal;text-align:right;flex-shrink:0;max-width:48%;color:#365c45}.chart-track{height:11px;background:#f1ebe3;border-radius:3px;margin-top:6px;overflow:hidden}.chart-bar{height:11px;background:#4e8a67;border-radius:3px;min-width:2px}.chart-bar.negative{background:#9b5c4b}.article-chart figcaption{font-size:13px;line-height:1.6;color:#7a6f62;margin-top:16px}.flow-list{list-style:none;padding:0;margin:18px 0 0;counter-reset:step}.flow-list li{counter-increment:step;background:#f1ebe3;padding:12px 14px;border-radius:6px;margin:10px 0;font-size:15px}.flow-list li:before{content:counter(step) '. ';font-weight:600;color:#4e8a67}.source-list a,main a,main p,main li{overflow-wrap:anywhere;color:inherit}main a{color:#365c45}.article-meta{color:#7a6f62;font-size:14px;margin:12px 0 20px}.article-deck{max-width:720px}.article-deck p{font-size:17px;line-height:1.8}main{max-width:900px}main h2{max-width:760px;font-size:28px;line-height:1.3}main h3{line-height:1.35}.source-list p{font-size:14px}.draft-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}.draft-nav a{min-height:44px;padding:10px 0}.article-cards{display:grid;gap:18px;margin:28px 0}.article-card{padding:22px;background:white;border:1px solid #e7dfd3;border-radius:12px}.article-card h2{margin:0 0 12px;font-size:25px}.article-card p{margin:0 0 12px}.article-card a{display:inline-block;min-height:44px;padding-top:10px;font-weight:600}@media(max-width:600px){.article-chart{padding:16px 14px}.chart-label{display:block}.chart-label strong{display:block;max-width:none;text-align:left}.article-chart h3{font-size:17px}main h2{font-size:25px}.article-map{padding:18px}nav.file-nav{gap:16px;flex-wrap:wrap}.article-deck p{font-size:16px}}
+</style><link href="https://financewithvishnu.github.io/articles.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Articles - Finance With Vishnu" property="og:title"/><meta content="Detailed, original sector studies from Finance With Vishnu." property="og:description"/><meta content="https://financewithvishnu.github.io/articles.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Articles - Finance With Vishnu", "url": "https://financewithvishnu.github.io/articles.html", "description": "Detailed, original sector studies from Finance With Vishnu."}</script></head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="https://financewithvishnu.github.io/index.html">Home</a><a aria-current="page" href="products.html">Products</a><a href="https://financewithvishnu.github.io/contact.html">Contact</a><a href="https://financewithvishnu.github.io/search.html">Search</a></nav>
+</header>
+<main><p class="part-tag">Products / Articles</p><h1>Understand the business before the stock.</h1><p class="lede">Detailed sector studies, with plain-language explanations, worked examples, company cases and charts. Start with the way the business earns money, then test what could go wrong.</p><p class="count">2 sector articles · FY25 study editions</p><div class="article-cards"><article class="article-card"><h2>Pre-engineered buildings: the business behind the factory shed</h2><p>How pre-engineered buildings work, why order quality and steel pass-through matter, and what FY25 company cases teach about cash, capacity and returns.</p><a href="article-pre-engineered-buildings.html">Read the article</a></article><article class="article-card"><h2>CDMO: how to understand the business behind a medicine</h2><p>An original guide to pharmaceutical contract research, development and manufacturing, using FY25 cases, pipeline analysis, economics, cash flow and risk.</p><a href="article-cdmo.html">Read the article</a></article></div><a class="back" href="products.html">Back to Products</a></main>
+<footer>For research and education only, not investment advice.</footer>
+</body>
+</html>
