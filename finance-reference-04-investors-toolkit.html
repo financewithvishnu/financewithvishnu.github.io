@@ -135,7 +135,38 @@
 <h1>Chapter 4. The Investor's Toolkit: Accounts and Market Plumbing</h1>
 <p class="count">Chapter 4 of 85 · about 15 minutes</p>
 <p class="lede">You tap Buy on your phone at 9:20 in the morning and 100 shares appear in your account. It feels like an app trick. It is actually one of the most reliable machines ever built: five institutions, some handling lakhs of crores a day, handing your order to each other in sequence so that a trade with a total stranger settles without you ever knowing their name. This chapter walks the machine. When you finish, you will know exactly what you own, where it actually sits, and what happens to it if your broker disappears tomorrow.</p>
-<h3><span class="sn">4.1</span>What is the difference between a demat account, a trading account and a bank account?</h3>
+
+<style>
+.chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
+.chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
+.chmap-hub { display: flex; justify-content: center; }
+.chmap-hub span { background: var(--accent); color: #fff; font-weight: 700; font-size: 13.5px; padding: 8px 16px; border-radius: 999px; text-align: center; line-height: 1.35; }
+.chmap-line { width: 1px; height: 12px; background: var(--hairline); margin: 0 auto; }
+.chmap-grid { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 12px; }
+.chmap-grid a { font-size: 13px; line-height: 1.35; color: var(--ink); text-decoration: none; background: var(--page); border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 12px; }
+.chmap-grid a:hover { border-color: var(--accent); color: var(--accent); }
+.chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
+.chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
+</style>
+
+<div class="chmap">
+  <p class="chmap-cap">Chapter map</p>
+  <div class="chmap-hub"><span>The investor&#8217;s toolkit: accounts and institutions</span></div>
+  <div class="chmap-line"></div>
+  <div class="chmap-grid">
+    <a href="#s4-1">Demat, trading, bank</a>
+    <a href="#s4-2">Brokers to clearing corps</a>
+    <a href="#s4-3">T+1 settlement</a>
+    <a href="#s4-4">Custodians and RTAs</a>
+    <a href="#s4-5">The US mirror</a>
+  </div>
+  <p class="chmap-sub">Connected chapters</p>
+  <div class="chmap-grid chmap-rel">
+    <a href="finance-reference-12-how-stock-markets-work.html">Ch 12 &middot; How Stock Markets Work</a>
+    <a href="finance-reference-38-mutual-funds-basics.html">Ch 38 &middot; Mutual Fund Basics</a>
+  </div>
+</div>
+<h3 id="s4-1"><span class="sn">4.1</span>What is the difference between a demat account, a trading account and a bank account?</h3>
 <p>Investing in India runs on three linked accounts, and the confusion between them is worth killing early:</p>
 <ul class="plain">
 <li><strong>Demat account:</strong> holds your <em>securities</em> in electronic form, shares, bonds, ETFs, with a depository (NSDL or CDSL). Think of it as the godown where your certificates would once have sat.</li>
@@ -143,7 +174,7 @@
 <li><strong>Bank account:</strong> holds the <em>money</em>. Funds move from here when you buy and return here when you sell.</li>
 </ul>
 <p>One transaction touches all three: money leaves the bank account, the order goes through the trading account, the shares land in the demat account. Your broker is the courier between them, never the owner of any of it.</p>
-<h3><span class="sn">4.2</span>What do brokers, depositories, exchanges and clearing corporations each do?</h3>
+<h3 id="s4-2"><span class="sn">4.2</span>What do brokers, depositories, exchanges and clearing corporations each do?</h3>
 <p>Four institutions stand between you and a stranger on the other side of every trade:</p>
 <ul class="plain">
 <li><strong>The broker</strong> (Zerodha, Groww, ICICI Direct and the like): your licensed doorway to the exchange. It routes orders, collects margins and answers to SEBI.</li>
@@ -151,15 +182,15 @@
 <li><strong>The clearing corporation</strong> (NSE Clearing, ICCL): after the match, it inserts itself between the two parties and guarantees both sides, becoming the buyer to every seller and the seller to every buyer. This is why you never worry about who sold to you.</li>
 <li><strong>The depository</strong> (NSDL, CDSL): the registry that actually records who owns which securities, like a land records office for shares.</li>
 </ul>
-<h3><span class="sn">4.3</span>How does a trade actually settle in India under T+1?</h3>
+<h3 id="s4-3"><span class="sn">4.3</span>How does a trade actually settle in India under T+1?</h3>
     <p>A trade settles when the buyer&#8217;s money and the seller&#8217;s shares are exchanged through the clearing corporation; in India this happens on T+1, the next working day after the trade.</p>
 <div style="display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0;max-width:720px;"><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">You tap Buy</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">100 shares on your broker's app, 9:20 am</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Broker routes it</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">order reaches the NSE order book</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Exchange matches it</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">your buy meets someone's sell, trade done</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Clearing corporation steps in</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">becomes buyer to the seller and seller to you</div></div><div style="flex:1 1 130px;min-width:120px;background:#fff;border:1px solid #e7dfd3;border-radius:10px;padding:12px 12px;text-align:center;"><div style="font-weight:700;font-size:13.5px;color:#332619;">Settlement on T+1</div><div style="font-size:12.5px;color:#7a6f62;margin-top:5px;line-height:1.5;">shares reach your demat, money reaches the seller, next working day</div></div></div><p style="color:#7a6f62;font-size:13px;margin-top:-6px;">The 24-hour journey of one ordinary Indian trade.</p>
 <p>India moved most of its market to T+1 settlement, shares and money exchanged one working day after the trade, in January 2023, one of the fastest settlement cycles in the world, and it has been piloting same-day T+0 settlement on a growing list of stocks. The day between trade and settlement is not idle: it is when the clearing corporation collects money and shares from thousands of brokers and nets lakhs of obligations into a small number of movements. That netting is why the whole system does not need to move lakhs of crores to settle lakhs of crores.</p>
-<h3><span class="sn">4.4</span>What do custodians, registrars and transfer agents do?</h3>
+<h3 id="s4-4"><span class="sn">4.4</span>What do custodians, registrars and transfer agents do?</h3>
 <p>Behind the retail machine sit the institutions' institutions. <strong>Custodians</strong> hold the securities of large investors, FIIs, mutual funds, insurance companies, and handle their settlements and corporate actions. <strong>Registrars and transfer agents</strong> (RTAs) such as CAMS and KFin maintain the investor records for mutual funds and companies: your folio, your nomination, your address. When your dividend arrives without asking, an RTA did the paperwork.</p>
-<h3><span class="sn">4.5</span>How does the US settle trades compared with India?</h3>
+<h3 id="s4-5"><span class="sn">4.5</span>How does the US settle trades compared with India?</h3>
 <p>Every serious market runs the same machine with local labels. The United States settles through the DTCC group: its depository, DTC, holds the securities and its clearing arm nets the trades, and the US moved to T+1 in May 2024, after India. The lesson generalises: wherever you invest, ask the same four questions: who matches the trade, who guarantees it, who records ownership, and how many days until it is final.</p>
-<h3><span class="sn">4.6</span>Worked examples and cases</h3>
+<h3 id="s4-6"><span class="sn">4.6</span>Worked examples and cases</h3>
 <div class="example">
 <p class="ex-title">Case 1: tracing one NSE buy order end to end</p>
 <p>9:20 am, Monday: you buy 100 shares of a company at ₹1,000. Your broker checks you have ₹1,00,000 plus charges and routes the order. The NSE order book shows a seller at ₹1,000; matched. By evening the broker's contract note lands: price, brokerage, STT, exchange charges, GST, stamp duty, the real all-in cost. Tuesday, the clearing corporation delivers 100 shares to your demat account and your ₹1,00,000, minus charges, to the seller's broker. Total institutions touched: five. Total strangers trusted by name: zero.</p>
@@ -169,7 +200,7 @@
 <p>Your shares do not sit with the broker; they sit at the depository in <em>your</em> demat account, and your uninvested money mostly sits in the broker's client bank accounts, segregated from its own. So a broker's failure is an inconvenience, not a wipeout: the depository records still name you. If a broker is found to have misused client securities or funds, the exchange's investor protection fund compensates genuine claims up to a notified limit, and SEBI's SCORES platform is where complaints are filed and tracked.</p>
 <p>Contrast with the bank from Chapter 1: deposits there are the bank's IOU, protected by DICGC only up to ₹5 lakh. Demat holdings are not an IOU at all; they are property in your name. Same app screen, completely different legal footing, which is why the plumbing was worth a chapter.</p>
 </div>
-<h3><span class="sn">4.7</span>Active-recall questions for this section</h3>
+<h3 id="s4-7"><span class="sn">4.7</span>Active-recall questions for this section</h3>
 <ol class="recall">
 <li>Which of your three accounts actually holds your shares, and which institution runs it?</li>
 <li>Recite the five stops of a buy order from your thumb to settlement. Which stop removes the risk of the stranger on the other side?</li>
