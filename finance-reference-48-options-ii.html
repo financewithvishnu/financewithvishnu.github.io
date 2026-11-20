@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-48-options-ii.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 48. Options II: Pricing, Greeks and Advanced Strategies - Finance With Vishnu" property="og:title"/><meta content="Option pricing explained: intrinsic vs time value, the Black-Scholes idea inputs and limits, the Greeks with worked Nifty numbers, implied volatility and India VIX, straddles strangles condors and calendars, with theta-decay and event-selling cases." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-48-options-ii.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-48-options-ii.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 48. Options II: Pricing, Greeks and Advanced Strategies - Finance With Vishnu" property="og:title"/><meta content="Option pricing explained: intrinsic vs time value, the Black-Scholes idea inputs and limits, the Greeks with worked Nifty numbers, implied volatility and India VIX, straddles strangles condors and calendars, with theta-decay and event-selling cases." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-48-options-ii.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
 <h1>Chapter 48. Options II: Pricing, Greeks and Advanced Strategies</h1>
 <p class="count">Chapter 48 of 85 · about 21 minutes</p>
 <p class="lede">Chapter 47 showed what an option pays; this one shows what it costs and why. The price of an option is not mysterious: it is the price of a recipe that reproduces the payoff, and understanding that recipe, even without the mathematics, tells you what makes options expensive, what silently eats them, and why the most dangerous sentence in trading is "the market was flat and I still lost money."</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,26 +148,25 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Options II: pricing and the Greeks</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s48-1">Intrinsic and time value</a>
-    <a href="#s48-2">Black-Scholes</a>
-    <a href="#s48-3">The Greeks</a>
-    <a href="#s48-4">IV and India VIX</a>
-    <a href="#s48-5">Advanced structures</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-47-options-i.html">Ch 47 &middot; Options I</a>
-    <a href="finance-reference-52-derivative-strategies-hedging.html">Ch 52 &middot; Hedging Strategies</a>
-    <a href="finance-reference-83-formula-sheet.html">Ch 83 &middot; Formula Sheet</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Options II: pricing and the Greeks</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s48-1">Intrinsic and time value</a>
+<a href="#s48-2">Black-Scholes</a>
+<a href="#s48-3">The Greeks</a>
+<a href="#s48-4">IV and India VIX</a>
+<a href="#s48-5">Advanced structures</a>
 </div>
-<h3 id="s48-1"><span class="sn">48.1</span>What drives an option&#8217;s price: intrinsic value and time value?</h3>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-47-options-i.html">Ch 47 · Options I</a>
+<a href="finance-reference-52-derivative-strategies-hedging.html">Ch 52 · Hedging Strategies</a>
+<a href="finance-reference-83-formula-sheet.html">Ch 83 · Formula Sheet</a>
+</div>
+</div>
+<h3 id="s48-1"><span class="sn">48.1</span>What drives an option’s price: intrinsic value and time value?</h3>
 <p>Every premium splits into two parts. <strong>Intrinsic value</strong> is what exercise is worth right now: a 24,000 call with the Nifty at 24,300 is worth at least 300. <strong>Time value</strong> is everything above that, the price of the possibilities still alive before expiry. Time value is largest at the money, where the outcome is most uncertain, and shrinks as the option goes deep in or far out of the money, where the verdict is nearly in. And time value has a clock: it decays to zero at expiry, slowly at first and then violently in the final days. That decay is the seller's harvest and the buyer's headwind, and it is why an option can lose value every single day the market stands still.</p>
 <h3 id="s48-2"><span class="sn">48.2</span>What is the Black-Scholes model: the idea, the inputs and the limits?</h3>
 <p>The Black-Scholes insight, worth two Nobel prizes between its authors and Merton, is that an option's payoff can be manufactured continuously from the underlying and cash: hold the right fraction of the asset, rebalance as it moves, and you have built the option. Anything that can be built has a cost of construction, and that cost is the fair price. Five inputs run the machine: the spot price, the strike, the interest rate, the time to expiry, and volatility, the only input not directly observable, which is why all option arguments are, at bottom, arguments about volatility. For a Nifty at 24,000, a 24,000 call, 30 days, a 6.5% rate and 12% volatility, the machine says about ₹396. Respect the limits: the model assumes smooth, continuous, normally distributed moves with constant volatility, and real markets gap, crash and change their temperament. Black-Scholes is the grammar of option prices, not a promise about the world.</p>
