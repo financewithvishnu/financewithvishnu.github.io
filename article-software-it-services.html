@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Software and IT services: who keeps the gains from AI? - Finance With Vishnu</title>
+<meta content="How AI productivity, pricing units, domain knowledge and customer workflows shape software and IT-services economics." name="description"/>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<meta content="Finance With Vishnu" name="author"/><style>
+.review-banner{background:#eee3ce;padding:14px 18px;color:#493c2b;font-size:14px;line-height:1.6;border-bottom:1px solid #ddcda9}
+.article-map{padding:22px;background:#f1ebe3;border:1px solid #e7dfd3;border-radius:12px;margin:30px 0}
+.article-map h2{margin:0 0 12px;font-size:24px}.article-map ol{padding-left:22px;margin:0}.article-map a{display:block;min-height:44px;line-height:1.5;padding:8px 0;color:#365c45;font-size:15px}
+h2[id]{scroll-margin-top:24px} .article-chart{background:white;border:1px solid #e7dfd3;padding:20px;border-radius:12px;max-width:760px;margin:28px 0}.article-chart h3{margin:0 0 8px;font-family:inherit;font-weight:600;font-size:18px;line-height:1.4}.chart-unit{font-size:13px!important;color:#7a6f62!important;margin:0 0 18px}.chart-row{margin:15px 0}.chart-label{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5}.chart-label strong{white-space:normal;text-align:right;flex-shrink:0;max-width:48%;color:#365c45}.chart-track{height:11px;background:#f1ebe3;border-radius:3px;margin-top:6px;overflow:hidden}.chart-bar{height:11px;background:#4e8a67;border-radius:3px;min-width:2px}.chart-bar.negative{background:#9b5c4b}.article-chart figcaption{font-size:13px;line-height:1.6;color:#7a6f62;margin-top:16px}.flow-list{list-style:none;padding:0;margin:18px 0 0;counter-reset:step}.flow-list li{counter-increment:step;background:#f1ebe3;padding:12px 14px;border-radius:6px;margin:10px 0;font-size:15px}.flow-list li:before{content:counter(step) '. ';font-weight:600;color:#4e8a67}.source-list a,main a,main p,main li{overflow-wrap:anywhere;color:inherit}main a{color:#365c45}.article-meta{color:#7a6f62;font-size:14px;margin:12px 0 20px}.article-deck{max-width:720px}.article-deck p{font-size:17px;line-height:1.8}main{max-width:900px}main h2{max-width:760px;font-size:28px;line-height:1.3}main h3{line-height:1.35}.source-list p{font-size:14px}.draft-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}.draft-nav a{min-height:44px;padding:10px 0}.article-cards{display:grid;gap:18px;margin:28px 0}.article-card{padding:22px;background:white;border:1px solid #e7dfd3;border-radius:12px}.article-card h2{margin:0 0 12px;font-size:25px}.article-card p{margin:0 0 12px}.article-card a{display:inline-block;min-height:44px;padding-top:10px;font-weight:600}@media(max-width:600px){.article-chart{padding:16px 14px}.chart-label{display:block}.chart-label strong{display:block;max-width:none;text-align:left}.article-chart h3{font-size:17px}main h2{font-size:25px}.article-map{padding:18px}nav.file-nav{gap:16px;flex-wrap:wrap}.article-deck p{font-size:16px}}
+</style><link href="https://financewithvishnu.github.io/article-software-it-services.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Software and IT services: who keeps the gains from AI? - Finance With Vishnu" property="og:title"/><meta content="How AI productivity, pricing units, domain knowledge and customer workflows shape software and IT-services economics." property="og:description"/><meta content="https://financewithvishnu.github.io/article-software-it-services.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Software and IT services: who keeps the gains from AI?", "description": "How AI productivity, pricing units, domain knowledge and customer workflows shape software and IT-services economics.", "url": "https://financewithvishnu.github.io/article-software-it-services.html", "author": {"@type": "Person", "name": "Finance With Vishnu"}, "publisher": {"@type": "Organization", "name": "Finance With Vishnu"}, "datePublished": "2026-11-21", "dateModified": "2026-11-21", "temporalCoverage": "2026-05-31", "about": {"@type": "Thing", "name": "Software and IT-services economics"}, "inLanguage": "en"}</script><script defer="" src="site-analytics.js"></script>
+</head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="https://financewithvishnu.github.io/index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="https://financewithvishnu.github.io/contact.html">Contact</a><a href="https://financewithvishnu.github.io/search.html">Search</a></nav>
+</header>
+<main><p class="part-tag">Learn / Articles / Sector studies</p>
+<h1>Software and IT services: who keeps the gains from AI?</h1>
+<p class="article-meta">By Finance With Vishnu · Class date: 31 May 2026 · Sector study</p>
+<div class="article-deck">
+<p>If software becomes faster to build, does a software company become more valuable or less valuable? Both outcomes are possible. A customer may buy more because the product improves. It may also demand a lower price because the supplier needs fewer people to deliver the work.</p>
+<p>I would begin with the contract rather than the technology slogan. What does the customer pay for: a person's time, a completed project, a user account, computing usage or a measured business result? The answer helps us understand who keeps a productivity gain.</p>
+<p>AI can change the cost of delivery, the product itself and the customer's alternatives at the same time. Our job is to separate those effects and follow them through to revenue, margins and cash.</p>
+</div>
+<p><strong>Study window:</strong> the software-sector topic from the source class dated 31 May 2026, excluding its weekly market recap. Company illustrations use FY2024-25 disclosures, Snowflake's year ended 31 January 2025 and ServiceNow's year ended 31 December 2025. They explain business models, not current share prices or a forecast that one group of stocks will outperform. Numerical examples below are original and hypothetical.</p>
+<aside class="article-map"><h2>Explore this article</h2><ol><li><a href="#software-section-1">Why is software not one business model?</a></li><li><a href="#software-section-2">What changes when the supplier needs fewer hours?</a></li><li><a href="#software-section-3">Can we see the contract effect with simple numbers?</a></li><li><a href="#software-section-4">Are all traditional IT contracts based on headcount?</a></li><li><a href="#software-section-5">Is outcome-based pricing automatically better?</a></li><li><a href="#software-section-6">Why does domain knowledge matter, and where can we overstate it?</a></li><li><a href="#software-section-7">Why is building a demo different from replacing a system?</a></li><li><a href="#software-section-8">How can AI change subscription and usage economics?</a></li><li><a href="#software-section-9">Could cheaper software create much more demand?</a></li><li><a href="#software-section-10">Which operating metrics help us avoid the wrong conclusion?</a></li><li><a href="#software-section-11">Why can a better product still have weak shareholder economics?</a></li><li><a href="#software-section-12">What would make the AI thesis stronger or weaker?</a></li><li><a href="#software-section-13">How would I organise the research?</a></li><li><a href="#software-sources">Sources and study notes</a></li></ol></aside>
+
+<h2 id="software-section-1">1. Why is software not one business model?</h2>
+<p>A company selling a repeatable software product is different from a company implementing that product for a client. A services business may supply specialised people, run a process, maintain applications or accept responsibility for a defined result. A platform can combine software, people and services.</p>
+<p>The accounting label does not settle the economics. Subscription revenue may include substantial hosting and support costs. A service contract may use reusable intellectual property and automation. A business described as a platform may still require considerable manual work for each new customer.</p>
+<p>Start by mapping what is sold and what changes when revenue doubles. Does the supplier need twice as many delivery employees? More cloud computing? More salespeople? A larger implementation team? The answer tells us where scale might help and where costs remain tied to activity.</p>
+<p>I would also separate the customer's industry from the revenue model. A healthcare specialist is not automatically a pure software company. A large IT-services firm is not automatically paid only by employee count. We need contract evidence before assigning either label.</p>
+<figure class="article-chart">
+<h3>Four ways to turn software capability into revenue</h3>
+<p class="chart-unit">Original business-model map. Real companies can combine these models.</p>
+<ol class="flow-list"><li><strong>Time and materials:</strong> charge for agreed resources and work performed.</li><li><strong>Fixed project or managed service:</strong> agree a fee for a scope or ongoing responsibility.</li><li><strong>Software access or usage:</strong> charge for subscriptions, seats, transactions or consumption.</li><li><strong>Business outcome:</strong> link payment to a specified result, subject to measurement and contract terms.</li></ol>
+<figcaption>The pricing unit influences who benefits from automation. It does not, by itself, establish growth, pricing power or profit margins.</figcaption>
+</figure>
+
+<h2 id="software-section-2">2. What changes when the supplier needs fewer hours?</h2>
+<p>Suppose a task previously required ten hours and a new tool reduces it to seven while preserving quality. That is a productivity improvement. Its commercial effect depends on whether the supplier still receives the same payment and what it spends on the tool, review and integration.</p>
+<p>Under a simple hourly arrangement, fewer billable hours can reduce revenue for the same task. The supplier might complete more work with the freed capacity, but only if additional demand exists and the contract permits it. Higher productivity does not create a new paid assignment automatically.</p>
+<p>Under a fixed fee, the supplier may initially retain more of the saving. At renewal, the customer can ask for a share. Competitors may offer a lower price. The advantage is more durable when the supplier also improves the outcome, reliability or scope in a way the customer values.</p>
+<p>This is why I would distinguish delivery productivity from pricing power. The first is doing the work with fewer inputs. The second is retaining enough of the value in the face of customer bargaining and competition. AI can improve the first while weakening the second.</p>
+
+<h2 id="software-section-3">3. Can we see the contract effect with simple numbers?</h2>
+<p>Consider a project with ₹100 of revenue, ₹60 of delivery cost and ₹20 of other allocated operating costs. Its operating surplus is ₹20. Now assume automation reduces delivery cost to ₹45, including the new tool and review costs. Hold the other ₹20 unchanged.</p>
+<p>If the fee remains ₹100, the surplus becomes ₹35. If the customer negotiates the fee down to ₹85, the surplus stays ₹20. The supplier delivers the same work more efficiently but keeps none of the absolute saving. The percentage margin changes because the revenue denominator changes.</p>
+<figure class="article-chart">
+<h3>The same productivity gain, two commercial outcomes</h3>
+<p class="chart-unit">Hypothetical project, ₹ units. Surplus before tax and financing, not company data.</p>
+<div class="chart-row"><div class="chart-label"><span>Before: revenue 100 − delivery 60 − other 20</span><strong>20 surplus</strong></div><div class="chart-track"><div class="chart-bar" style="width:57.143%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>After, unchanged fee: 100 − 45 − 20</span><strong>35 surplus</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>After, lower fee: 85 − 45 − 20</span><strong>20 surplus</strong></div><div class="chart-track"><div class="chart-bar" style="width:57.143%"></div></div></div>
+<figcaption>Original illustration, holding scope, quality and other costs constant. It excludes transition costs and any extra demand. Cost improvement alone cannot tell us how much value shareholders retain.</figcaption>
+</figure>
+<p>A fourth outcome is possible: the supplier accepts a lower unit price but sells much more work. That can be attractive, although we must calculate the volume increase, incremental costs and capital needed. A story about cheaper delivery is not a substitute for that bridge.</p>
+
+<h2 id="software-section-4">4. Are all traditional IT contracts based on headcount?</h2>
+<p>No. Contract portfolios can include time-and-materials, fixed-price, transaction-based and other arrangements. The relevant mix can differ by customer, service line and project. A company-wide label can hide the very difference we are trying to study.</p>
+<p>Infosys's FY2024-25 Form 20-F explicitly discusses risks in completing fixed-price, fixed-timeframe and transaction-based contracts within budget and on time. This is direct evidence against treating a large services company as a single hourly-billing business. <a href="#software-source-1">[1]</a></p>
+<p>The right question is how automation changes the economics of each material contract type. Does the supplier carry delivery risk? Can scope expand without repricing? Are there service-level penalties? Who pays for the AI tools? How quickly can the customer demand efficiency savings?</p>
+<p>A diversified services company can face pressure in one activity while winning work in another. New implementation, data preparation and modernisation projects may grow while older work becomes cheaper. We need to compare their sizes and margins rather than declaring the whole business either protected or obsolete.</p>
+
+<h2 id="software-section-5">5. Is outcome-based pricing automatically better?</h2>
+<p>Outcome pricing links payment to a defined result rather than only the resources consumed. It can align incentives: the supplier wants to improve the customer's result while reducing the cost of delivering it. But the design of the result matters.</p>
+<p>If payment depends on collections, revenue, conversion or another business measure, ask what the supplier actually controls. Customer demand, product quality, regulation and the client's own execution may influence the same measure. Disputes can arise over attribution, baselines and the timing of payment.</p>
+<p>IKS Health's FY2024-25 annual report describes pricing that includes a percentage of collections and a per-month, per-physician SaaS-based model. This illustrates different charging units within a healthcare-enablement offering. It does not establish that every engagement uses the same terms or that all automation savings remain with IKS. <a href="#software-source-2">[2]</a></p>
+<p>I would look for evidence that the outcome is measurable, the fee is collectible and the supplier can repeat the delivery economically. A contract can transfer more value to the supplier, but it can also transfer more risk. The customer can still negotiate its share of future gains.</p>
+
+<h2 id="software-section-6">6. Why does domain knowledge matter, and where can we overstate it?</h2>
+<p>Domain knowledge means understanding the customer's actual work: its vocabulary, processes, exceptions, controls and commercial objectives. A useful system needs to handle these details, not merely produce plausible text or a working demonstration.</p>
+<p>Indegene's FY2024-25 report is a useful example of why careful classification matters. It describes resource-utilisation models with fixed-price or unitised billing, alongside outcome-based pricing for select omnichannel activation solutions. Calling the whole company outcome-priced would erase that qualification. <a href="#software-source-3">[3]</a></p>
+<p>Its life-sciences focus provides context for studying specialised workflows, technology and people together. The investment question is whether those capabilities produce customer value that is hard to reproduce at an attractive cost. A specialist label alone does not answer that question.</p>
+<p>Expertise can also migrate. Employees move, customers build internal teams and tools improve. I would test domain advantage through renewal quality, implementation success, expansion, delivery costs and the ability to win against alternatives. We need evidence of an advantage, not only a description of the industry's complexity.</p>
+
+<h2 id="software-section-7">7. Why is building a demo different from replacing a system?</h2>
+<p>A demo proves that an idea can work under selected conditions. A production system must work with real data, existing applications, user permissions, exceptional cases and changing requirements. It also needs support when something goes wrong.</p>
+<p>For the customer, the build-versus-buy decision includes maintenance, migration, security, testing, staff time and failure risk. Faster code generation can reduce one cost without eliminating the others. An internal tool and a system supporting a critical process may therefore face very different adoption tests.</p>
+<p>This is not proof that incumbents cannot be displaced. A simpler product, better integration or a lower total cost can change the customer's decision. The useful question is which specific costs have fallen and which obligations remain.</p>
+<p>I would ask who owns the data rights, how the system is evaluated, how errors are caught and who is accountable. NIST's AI Risk Management Framework and its generative-AI profile offer a voluntary risk-management reference. They are not a blanket legal requirement or a certification that makes a product safe. <a href="#software-source-6">[6]</a></p>
+
+<h2 id="software-section-8">8. How can AI change subscription and usage economics?</h2>
+<p>A seat-based product charges for access by a defined number of users. A consumption model charges for activity or resources used. Some products combine a subscription commitment with usage allowances and additional charges. Automation can affect these models in different ways.</p>
+<p>If fewer people perform the same work, seat demand may weaken unless the product gains new users or changes its pricing unit. If software agents generate more activity, consumption may increase. But customers can also optimise usage, negotiate prices or move workloads.</p>
+<p>ServiceNow's 2025 Form 10-K describes subscription agreements and notes that certain AI and data solutions include consumption-based pricing when usage exceeds the service credits within a subscription. That is a dated example of a hybrid model, not a statement of today's terms for every product. <a href="#software-source-4">[4]</a></p>
+<p>Snowflake's Form 10-K for the year ended 31 January 2025 describes a consumption-based model charging for resources used. That makes actual customer activity important to the revenue analysis. A large contractual opportunity and the timing of recognised usage are not the same thing. <a href="#software-source-5">[5]</a></p>
+<p>The broader point is to study the billing mechanism before predicting the impact of AI agents. More automated work may create revenue for one supplier while reducing seats or services revenue for another. Industry-wide activity is not a uniform benefit.</p>
+
+<h2 id="software-section-9">9. Could cheaper software create much more demand?</h2>
+<p>It could. If a useful activity becomes cheaper, customers may use more of it or discover uses that were previously uneconomic. This is the rebound idea often discussed alongside Jevons paradox. It is a possibility to test, not a guarantee that every supplier grows.</p>
+<p>Suppose a service's price falls 25%. To keep revenue unchanged, paid volume must rise by one-third: 0.75 multiplied by 1.333 is approximately one. A 20% increase in volume would not offset that price decline. The denominator is easy to overlook.</p>
+<figure class="article-chart">
+<h3>How much volume offsets a 25% price cut?</h3>
+<p class="chart-unit">Original revenue index, starting from price 100 × volume 100</p>
+<div class="chart-row"><div class="chart-label"><span>Price 75, volume unchanged</span><strong>Revenue 75</strong></div><div class="chart-track"><div class="chart-bar" style="width:75%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Price 75, volume up 20%</span><strong>Revenue 90</strong></div><div class="chart-track"><div class="chart-bar" style="width:90%"></div></div></div>
+<div class="chart-row"><div class="chart-label"><span>Price 75, volume up about 33⅓%</span><strong>Revenue 100</strong></div><div class="chart-track"><div class="chart-bar" style="width:100%"></div></div></div>
+<figcaption>Constant mix and no other changes. Revenue recovery does not establish profit recovery; delivery cost, compute expense and selling costs still matter.</figcaption>
+</figure>
+<p>Even if the market expands, competition decides who captures the new demand. Customers may build internally or switch providers. I would track paid activity and realised revenue rather than treating more experiments, generated code or announced AI use cases as equivalent to commercial growth.</p>
+
+<h2 id="software-section-10">10. Which operating metrics help us avoid the wrong conclusion?</h2>
+<p>Revenue per employee can improve because of productivity, but also because of acquisitions, subcontracting, pricing, currency or a change in business mix. A company can move work outside its employee count without making the underlying work more efficient.</p>
+<p>Similarly, a rise in contract value may cover a longer period or include renewals rather than entirely new business. Compare like with like. Bookings, remaining contractual commitments, annual recurring revenue and recognised revenue have different definitions and should not be used interchangeably.</p>
+<p>Retention needs definition too. Customer-count retention asks whether customers stayed. Revenue retention asks how spending from a defined cohort changed, often including expansion and contraction. A figure above 100% does not mean more than all customers renewed, and a blended figure can conceal variation between cohorts.</p>
+<p>I would use a small set of connected measures: new customer wins, expansion and contraction, realised prices, implementation time, gross margin, delivery quality and cash collections. Then reconcile them. A strong presentation metric that does not explain the financial statements needs more investigation.</p>
+
+<h2 id="software-section-11">11. Why can a better product still have weak shareholder economics?</h2>
+<p>The product can improve while the supplier spends more on cloud infrastructure, model access, research, sales and customer support. A demonstration of higher capability does not tell us what it costs to serve a customer repeatedly.</p>
+<p>For an AI-enabled feature, ask how cost changes with usage. Does each additional task incur meaningful compute or third-party charges? Is that cost covered by the pricing unit? Can a heavy user consume enough resources to erode an apparently attractive subscription margin?</p>
+<p>Then look beyond operating profit. Capitalised development, acquisitions, working capital and share-based compensation affect the shareholder's analysis in different ways. Treat cash expenditure and dilution explicitly rather than assuming an asset-light label makes them irrelevant.</p>
+<p>A company may rationally invest ahead of demand, but the thesis needs a measurable path from spending to paid adoption and cash. I would compare customer acquisition costs, implementation effort and continuing service costs with the duration and quality of customer revenue. Growth alone cannot settle that comparison.</p>
+
+<h2 id="software-section-12">12. What would make the AI thesis stronger or weaker?</h2>
+<p>The strongest evidence is a repeatable paid outcome. A customer renews or expands because the product saves money, earns revenue or reduces a costly problem. The supplier delivers that result without costs rising just as quickly.</p>
+<p>The thesis weakens if pilots do not convert, customers demand price cuts that absorb the savings, implementation remains labour-intensive or service quality deteriorates. It also weakens when growth comes mainly from acquisitions while the underlying business contracts.</p>
+<figure class="article-chart">
+<h3>Move from an AI claim to economic evidence</h3>
+<p class="chart-unit">Original tracking framework</p>
+<ol class="flow-list"><li><strong>Capability:</strong> what specific task can the product perform?</li><li><strong>Customer result:</strong> is it accurate and useful in the real workflow?</li><li><strong>Commercial result:</strong> will customers pay, renew and expand?</li><li><strong>Supplier result:</strong> do retained revenue and costs produce cash after investment?</li></ol>
+<figcaption>A partnership announcement, pilot or count of AI features can be an early signal. None substitutes for all four stages.</figcaption>
+</figure>
+<p>I would keep a counter-case beside the investment case. What can a customer build or buy elsewhere? Which contract can be repriced? Which data advantage is exclusive and legally usable? What happens if the underlying technology becomes cheaper and equally available to competitors?</p>
+
+<h2 id="software-section-13">13. How would I organise the research?</h2>
+<p>Start with one company and one important offering. Write down the customer, the problem, the billing unit, delivery costs and renewal decision. Identify what the company owns and what it rents from partners. Then map the numbers to the relevant segment or disclosure.</p>
+<p>Build scenarios rather than one confident forecast. In a favourable case, productivity improves, useful demand grows and pricing holds. In a difficult case, fees fall, adoption is slower and transition costs rise. Check the balance sheet and cash requirements under both.</p>
+<p>Do not assume scale makes a large company incapable of adapting or a small specialist naturally superior. Large firms may have distribution, relationships and implementation resources. Specialists may have focus and domain depth. Either can misprice a contract or fail to turn an attractive product into shareholder returns.</p>
+<p>My conclusion is that AI changes the questions more than it removes the need for analysis. Ask what becomes cheaper, what remains scarce, who controls the customer and who keeps the saving. The best evidence is in paid usage, renewal quality, delivery economics and cash, not in how often a company mentions AI.</p>
+
+<h2 id="software-sources">Sources and study notes</h2>
+<p>Company filings are dated primary disclosures, not independent proof of future advantages. Their descriptions are used within the scope stated above. No current stock price, performance claim or target return is used. All four figures are original explanatory frameworks or hypothetical arithmetic.</p>
+<ol class="source-list">
+<li id="software-source-1"><a href="https://www.infosys.com/investors/reports-filings/annual-report/form20f/documents/form20f-2025.pdf">Infosys, Form20-F FY2024-25. Contract-risk discussion covering fixed-price, fixed-timeframe and transaction-based arrangements. Not a statement of the current mix.</a></li>
+<li id="software-source-2"><a href="https://nsearchives.nseindia.com/annual_reports/AR_27941_IKS_2024_2025_A_11560659_30082025134401.pdf">Inventurus Knowledge Solutions, Annual Report FY2024-25. Healthcare-enablement offering and pricing examples including percentage of collections and per-month, per-physician SaaS-based arrangements.</a></li>
+<li id="software-source-3"><a href="https://ir.indegene.com/media/x2bb1sz4/indegene-ar-2024-25_29052025-final.pdf">Indegene, Annual Report FY2024-25. Delivery and revenue-model descriptions. Outcome pricing is stated for select omnichannel activation solutions, not the entire company.</a></li>
+<li id="software-source-4"><a href="https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm">ServiceNow, Form10-K for the year ended31December2025. Subscription model and consumption components for certain AI and data offerings. Historical terms, not a current product quotation.</a></li>
+<li id="software-source-5"><a href="https://www.sec.gov/Archives/edgar/data/1640147/000164014725000052/snow-20250131.htm">Snowflake, Form10-K for the year ended31January2025. Consumption-based model and resource usage. Fiscal period differs from the other company cases.</a></li>
+<li id="software-source-6"><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST, AI Risk Management Framework overview, including the2024GenerativeAIProfile. A voluntary risk-management reference, not a legal mandate or product certification.</a></li>
+</ol>
+<p class="article-meta">Educational study only. Read the original filings and the latest company disclosures before making a financial decision.</p>
+</main>
+<footer>For research and education only, not investment advice.</footer>
+</body>
+  </html>
