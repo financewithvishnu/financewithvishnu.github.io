@@ -77,7 +77,7 @@
     nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
   }
 </style>
-<link href="https://financewithvishnu.github.io/finance-reference-46-forwards-futures.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 46. Forwards and Futures - Finance With Vishnu" property="og:title"/><meta content="Forwards and futures explained: risk transfer and the hedger-speculator-arbitrageur triangle, counterparty risk vs exchange clearing, margin and daily mark-to-market, cost-of-carry pricing, NSE index and stock futures, with worked hedging cases." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-46-forwards-futures.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer src="site-analytics.js"></script>
+<link href="https://financewithvishnu.github.io/finance-reference-46-forwards-futures.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="Chapter 46. Forwards and Futures - Finance With Vishnu" property="og:title"/><meta content="Forwards and futures explained: risk transfer and the hedger-speculator-arbitrageur triangle, counterparty risk vs exchange clearing, margin and daily mark-to-market, cost-of-carry pricing, NSE index and stock futures, with worked hedging cases." property="og:description"/><meta content="https://financewithvishnu.github.io/finance-reference-46-forwards-futures.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script defer="" src="site-analytics.js"></script>
 </head>
 <body>
 <!--NOTICE_START-->
@@ -129,14 +129,13 @@
 <!--NOTICE_END-->
 <header class="topbar">
 <span class="brand">Finance With Vishnu</span>
-<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+<nav class="file-nav"><a href="index.html">Home</a><a aria-current="page" href="products.html">Learn</a><a href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
 </header>
 <main>
 <p class="part-tag">Part VII · Derivatives: Indian Markets, Instruments and Strategies</p>
 <h1>Chapter 46. Forwards and Futures</h1>
 <p class="count">Chapter 46 of 85 · about 20 minutes</p>
 <p class="lede">A derivative is a promise about a price, and like every promise it can protect or it can destroy, depending on why it was made. Futures and forwards were invented so that a farmer could sleep before harvest and an airline could budget its fuel: insurance contracts, in essence. That the same contracts now host some of the most feverish speculation on earth says something about humans and nothing against the instrument. This chapter opens Part VII with the two simplest derivatives and the one formula that prices them.</p>
-
 <style>
 .chmap { margin: 26px 0 12px; padding: 18px 16px 16px; background: #fff; border: 1px solid var(--hairline); border-radius: 12px; }
 .chmap-cap { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 12px !important; }
@@ -149,23 +148,22 @@
 .chmap-sub { font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 16px 0 2px !important; text-align: center; }
 .chmap-rel a { color: var(--accent); font-weight: 600; background: #fff; }
 </style>
-
 <div class="chmap">
-  <p class="chmap-cap">Chapter map</p>
-  <div class="chmap-hub"><span>Forwards and futures</span></div>
-  <div class="chmap-line"></div>
-  <div class="chmap-grid">
-    <a href="#s46-1">Why derivatives exist</a>
-    <a href="#s46-2">Forwards</a>
-    <a href="#s46-3">Futures and margin</a>
-    <a href="#s46-4">Cost of carry</a>
-    <a href="#s46-5">Index and stock futures</a>
-  </div>
-  <p class="chmap-sub">Connected chapters</p>
-  <div class="chmap-grid chmap-rel">
-    <a href="finance-reference-47-options-i.html">Ch 47 &middot; Options I</a>
-    <a href="finance-reference-51-clearing-margining.html">Ch 51 &middot; Clearing and Margining</a>
-  </div>
+<p class="chmap-cap">Chapter map</p>
+<div class="chmap-hub"><span>Forwards and futures</span></div>
+<div class="chmap-line"></div>
+<div class="chmap-grid">
+<a href="#s46-1">Why derivatives exist</a>
+<a href="#s46-2">Forwards</a>
+<a href="#s46-3">Futures and margin</a>
+<a href="#s46-4">Cost of carry</a>
+<a href="#s46-5">Index and stock futures</a>
+</div>
+<p class="chmap-sub">Connected chapters</p>
+<div class="chmap-grid chmap-rel">
+<a href="finance-reference-47-options-i.html">Ch 47 · Options I</a>
+<a href="finance-reference-51-clearing-margining.html">Ch 51 · Clearing and Margining</a>
+</div>
 </div>
 <h3 id="s46-1"><span class="sn">46.1</span>Why do derivatives exist: risk transfer or casino?</h3>
 <p>Risk in an economy cannot be destroyed, only moved. The farmer carries the risk that wheat prices fall; the miller carries the risk that they rise; a contract between them deletes both risks at once, at the cost of giving up the lucky outcomes too. That is a hedge, and the party who takes the other side without an underlying need, the speculator, is not a villain but a paid risk-bearer: they absorb what the hedger cannot stomach, for an expected profit. A third actor, the arbitrageur, keeps the contract's price honest against the spot price. Hold this triangle, hedger, speculator, arbitrageur, in mind through all of Part VII. The same contract is insurance in the hedger's hands, a trade in the speculator's, and a calibration tool in the arbitrageur's. Whether a derivative is a casino chip is a property of the user, not the instrument.</p>
