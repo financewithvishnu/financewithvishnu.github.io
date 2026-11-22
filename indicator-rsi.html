@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>RSI (Relative Strength Index): the indicator that measures how hard the market is pushing - Finance With Vishnu</title>
+<meta content="A plain-English guide to the Relative Strength Index: who created it and why, Wilder's formula with a worked example, the 70 and 30 levels, divergence and failure swings, and how intraday, swing and long-term traders use it. Original diagrams. Education only, not investment advice." name="description"/>
+<style>
+  :root {
+    --page: #f8f5f0; --bar: #f1ebe3; --ink: #332619; --ink-2: #7a6f62;
+    --accent: #4e8a67; --hairline: #e7dfd3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { background: var(--bar); border-bottom: 1px solid var(--hairline);
+    text-align: center; padding: 16px 16px 0; }
+  .brand { font-family: Georgia, 'Times New Roman', serif; font-size: 27px; color: #3a2e22; }
+  nav.file-nav { flex-wrap: wrap; display: flex; justify-content: center; gap: 28px; margin-top: 12px; }
+  nav.file-nav a { padding: 10px 2px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  nav.file-nav a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); font-weight: 600; }
+  nav.file-nav a:hover { color: var(--ink); }
+  main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 40px;
+    line-height: 1.15; margin: 16px 0 10px; }
+  h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 26px;
+    margin: 56px 0 8px; }
+  .lede { color: #3a2f24; font-size: 15px; line-height: 1.75; max-width: 660px; }
+  .count { color: var(--accent); font-weight: 600; font-size: 15px; margin: 0 0 20px; }
+  a.card-link { display: flex; align-items: baseline; gap: 12px; padding: 20px 4px;
+    border-bottom: 1px solid var(--hairline); text-decoration: none; color: var(--ink); }
+  a.card-link:hover { background: #f4efe7; }
+  a.card-link .date { font-weight: 700; font-size: 16px; flex: 1; }
+  a.card-link .n { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .back { display: inline-block; margin-top: 40px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+  .back:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--hairline); text-align: center; padding: 22px 16px;
+    color: var(--ink-2); font-size: 13px; }
+  .scan-head { display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px 24px; flex-wrap: wrap; }
+  .scan-nav { display: flex; gap: 12px 20px; flex-wrap: wrap; padding-top: 30px; }
+  .scan-nav a { color: var(--accent); font-weight: 600; font-size: 15px;
+    text-decoration: none; }
+  .scan-nav a:hover { text-decoration: underline; }
+  main p, main li { font-size: 15.5px; line-height: 1.8; color: #3a2f24; }
+  main p { max-width: 720px; }
+  h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 20px;
+    margin: 40px 0 6px; color: var(--ink); }
+  h3 .sn { color: var(--accent); font-weight: 600; margin-right: 10px; }
+  .example { background: #f1ebe3; border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 18px 20px; margin: 22px 0; max-width: 720px; }
+  .example .ex-title { color: var(--accent); font-weight: 700; font-size: 13.5px;
+    letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; }
+  .example p { margin: 0 0 10px; font-size: 15px; }
+  .example p:last-child { margin-bottom: 0; }
+  ol.recall { margin: 10px 0 0; padding-left: 0; list-style: none; counter-reset: q; max-width: 720px; }
+  ol.recall li { counter-increment: q; padding: 14px 0 14px 44px; position: relative;
+    border-bottom: 1px solid var(--hairline); }
+  ol.recall li::before { content: counter(q) "."; position: absolute; left: 0; top: 14px;
+    color: var(--accent); font-weight: 600; }
+  ul.plain { margin: 10px 0; padding-left: 22px; max-width: 720px; }
+  ul.plain li { margin: 8px 0; }
+  table.num { border-collapse: collapse; margin: 18px 0; max-width: 720px; width: 100%; }
+  table.num th, table.num td { text-align: left; padding: 9px 14px 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid var(--hairline); }
+  table.num th { color: var(--ink-2); font-weight: 600; }
+  table.num td.r, table.num th.r { text-align: right; padding-right: 0; }
+  .part-tag { color: var(--ink-2); font-size: 13.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; margin: 0 0 4px; }
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 30px; }
+    nav.file-nav { gap: 20px; }
+    nav.file-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  }
+</style>
+<meta content="Finance With Vishnu" name="author"/><style>
+.review-banner{background:#eee3ce;padding:14px 18px;color:#493c2b;font-size:14px;line-height:1.6;border-bottom:1px solid #ddcda9}
+.article-map{padding:22px;background:#f1ebe3;border:1px solid #e7dfd3;border-radius:12px;margin:30px 0}
+.article-map h2{margin:0 0 12px;font-size:24px}.article-map ol{padding-left:22px;margin:0}.article-map a{display:block;min-height:44px;line-height:1.5;padding:8px 0;color:#365c45;font-size:15px}
+h2[id]{scroll-margin-top:24px} .article-chart{background:white;border:1px solid #e7dfd3;padding:20px;border-radius:12px;max-width:760px;margin:28px 0}.article-chart h3{margin:0 0 8px;font-family:inherit;font-weight:600;font-size:18px;line-height:1.4}.chart-unit{font-size:13px!important;color:#7a6f62!important;margin:0 0 18px}.chart-row{margin:15px 0}.chart-label{display:flex;justify-content:space-between;gap:18px;font-size:14px;line-height:1.5}.chart-label strong{white-space:normal;text-align:right;flex-shrink:0;max-width:48%;color:#365c45}.chart-track{height:11px;background:#f1ebe3;border-radius:3px;margin-top:6px;overflow:hidden}.chart-bar{height:11px;background:#4e8a67;border-radius:3px;min-width:2px}.chart-bar.negative{background:#9b5c4b}.article-chart figcaption{font-size:13px;line-height:1.6;color:#7a6f62;margin-top:16px}.flow-list{list-style:none;padding:0;margin:18px 0 0;counter-reset:step}.flow-list li{counter-increment:step;background:#f1ebe3;padding:12px 14px;border-radius:6px;margin:10px 0;font-size:15px}.flow-list li:before{content:counter(step) '. ';font-weight:600;color:#4e8a67}.source-list a,main a,main p,main li{overflow-wrap:anywhere;color:inherit}main a{color:#365c45}.article-meta{color:#7a6f62;font-size:14px;margin:12px 0 20px}.article-deck{max-width:720px}.article-deck p{font-size:17px;line-height:1.8}main{max-width:900px}main h2{max-width:760px;font-size:28px;line-height:1.3}main h3{line-height:1.35}.source-list p{font-size:14px}.draft-nav{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}.draft-nav a{min-height:44px;padding:10px 0}.article-cards{display:grid;gap:18px;margin:28px 0}.article-card{padding:22px;background:white;border:1px solid #e7dfd3;border-radius:12px}.article-card h2{margin:0 0 12px;font-size:25px}.article-card p{margin:0 0 12px}.article-card a{display:inline-block;min-height:44px;padding-top:10px;font-weight:600}@media(max-width:600px){.article-chart{padding:16px 14px}.chart-label{display:block}.chart-label strong{display:block;max-width:none;text-align:left}.article-chart h3{font-size:17px}main h2{font-size:25px}.article-map{padding:18px}nav.file-nav{gap:16px;flex-wrap:wrap}.article-deck p{font-size:16px}}
+</style><link href="https://financewithvishnu.github.io/indicator-rsi.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="RSI (Relative Strength Index): the indicator that measures how hard the market is pushing" property="og:title"/><meta content="A plain-English guide to the Relative Strength Index: who created it and why, Wilder's formula with a worked example, the 70 and 30 levels, divergence and failure swings, and how intraday, swing and long-term traders use it. Original diagrams. Education only, not investment advice." property="og:description"/><meta content="https://financewithvishnu.github.io/indicator-rsi.html" property="og:url"/><meta content="Finance With Vishnu" property="og:site_name"/><meta content="summary" name="twitter:card"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "RSI (Relative Strength Index): the indicator that measures how hard the market is pushing", "description": "A plain-English guide to the Relative Strength Index: who created it and why, Wilder's formula with a worked example, the 70 and 30 levels, divergence and failure swings, and how intraday, swing and long-term traders use it. Original diagrams. Education only, not investment advice.", "author": {"@type": "Person", "name": "Finance With Vishnu"}, "isAccessibleForFree": true, "inLanguage": "en", "url": "https://financewithvishnu.github.io/indicator-rsi.html", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://financewithvishnu.github.io/indicator-rsi.html"}, "isPartOf": {"@type": "CollectionPage", "name": "Trading Strategies", "url": "https://financewithvishnu.github.io/trading-strategies.html"}}</script><script defer="" src="site-analytics.js"></script>
+<style>
+.hero{background:linear-gradient(135deg,#27422f,#4e8a67);color:#f8f5f0;border-radius:16px;padding:30px 26px;margin:18px 0 26px;max-width:760px}
+.hero .big{font-family:Georgia,serif;font-size:44px;line-height:1.1;margin:0 0 6px;color:#f8f5f0}
+.hero p{color:#e6efe8!important;margin:6px 0 0;font-size:15px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 0}
+.stat{flex:1 1 150px;background:rgba(255,255,255,.12);border-radius:10px;padding:12px 14px}
+.stat b{display:block;font-size:26px;font-family:Georgia,serif;color:#fff}
+.stat span{font-size:13px;color:#dfeae2}
+.fig svg{width:100%;height:auto;display:block}
+.fig .cap{font-size:13.5px;color:#7a6f62;margin:8px 0 0;line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{background:#eaf2ec;color:#2f5a42;border-radius:999px;padding:6px 12px;font-size:13.5px;font-weight:600}
+.chip.red{background:#f6e6e1;color:#8a3a28}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:18px 0;max-width:760px}
+.rule{background:#fff;border:1px solid #e7dfd3;border-radius:12px;padding:14px 16px}
+.rule .k{width:28px;height:28px;border-radius:50%;background:#4e8a67;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;margin-bottom:6px}
+.rule p{margin:0;font-size:14.5px;line-height:1.6}
+.rule b{color:#332619}
+.callout{border-left:4px solid #4e8a67;background:#f1ebe3;padding:14px 18px;border-radius:0 10px 10px 0;max-width:720px;margin:22px 0}
+.callout p{margin:0}
+.callout.warn{border-left-color:#b5532f}
+.sources li{font-size:14px!important;line-height:1.6!important}
+</style>
+<link href="site-theme-d.css" rel="stylesheet"/></head>
+<body>
+<!--NOTICE_START-->
+<style>
+  #fwv-notice { position: fixed; inset: 0; z-index: 9999; background: rgba(51, 38, 25, 0.55);
+    display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #fwv-notice[hidden] { display: none; }
+  #fwv-notice .fwv-card { background: #f8f5f0; color: #332619; max-width: 560px; width: 100%;
+    max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow-y: auto;
+    border: 1px solid #e7dfd3; border-radius: 10px; padding: 28px 26px 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); }
+  #fwv-notice h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400;
+    font-size: 24px; margin: 0 0 14px; letter-spacing: 0.02em; }
+  #fwv-notice p { font-size: 14.5px; line-height: 1.65; margin: 0 0 12px; color: #3a2f24; }
+  #fwv-notice p strong { color: #332619; }
+  #fwv-notice button { display: block; width: 100%; margin-top: 18px; padding: 13px 16px;
+    font-size: 15.5px; font-weight: 600; color: #f8f5f0; background: #4e8a67;
+    border: none; border-radius: 8px; cursor: pointer; }
+  #fwv-notice button:hover { background: #427457; }
+  body.fwv-locked { overflow: hidden; }
+</style>
+<div aria-labelledby="fwv-notice-title" aria-modal="true" hidden="" id="fwv-notice" role="dialog">
+<div class="fwv-card">
+<h2 id="fwv-notice-title">IMPORTANT NOTICE</h2>
+<p>Finance With Vishnu is an educational site. The stock lists here come from my own study scans and are only a starting point for your own research.</p>
+<p><strong>Not investment advice.</strong> Nothing here is a recommendation to buy, sell or hold any security. It is not tailored to your finances, goals or risk tolerance.</p>
+<p><strong>Not SEBI registered.</strong> I am not a SEBI-registered investment adviser or research analyst.</p>
+<p>Scans are based on past data and can contain errors. Past performance does not guarantee future results.</p>
+<p>Investing carries risk and you can lose money. Do your own research and consult a SEBI-registered investment adviser before investing.</p>
+<button id="fwv-notice-accept" type="button">I understand and accept</button>
+</div>
+</div>
+<script>
+(function () {
+  var KEY = 'fwv_notice_accepted_v1';
+  var gate = document.getElementById('fwv-notice');
+  var accepted = false;
+  try { accepted = window.localStorage.getItem(KEY) === '1'; } catch (e) {}
+  if (accepted) { gate.parentNode.removeChild(gate); return; }
+  gate.hidden = false;
+  document.body.classList.add('fwv-locked');
+  document.getElementById('fwv-notice-accept').addEventListener('click', function () {
+    try { window.localStorage.setItem(KEY, '1'); } catch (e) {}
+    gate.parentNode.removeChild(gate);
+    document.body.classList.remove('fwv-locked');
+  });
+})();
+</script>
+<!--NOTICE_END-->
+<header class="topbar">
+<span class="brand">Finance With Vishnu</span>
+<nav class="file-nav"><a href="index.html">Home</a><a href="products.html">Learn</a><a href="articles.html">Articles</a><a aria-current="page" href="trading-strategies.html">Trading Strategies</a><a href="contact.html">Contact</a><a href="search.html">Search</a></nav>
+</header>
+<main>
+<p class="part-tag">Trading Strategies / Indicators / Momentum</p>
+<h1>RSI (Relative Strength Index): the indicator that measures how hard the market is pushing</h1>
+<p class="article-meta">By Finance With Vishnu · Indicators series, Momentum · 22 November 2026</p>
+<div class="hero"><p class="big">1978</p>
+<p>The year J. Welles Wilder Jr. published the Relative Strength Index in his book New Concepts in Technical Trading Systems. It was designed before personal computers, and it is still one of the first indicators most traders add to a chart.</p>
+<div class="stats"><div class="stat"><b>0 to 100</b><span>the scale RSI always stays within</span></div><div class="stat"><b>14</b><span>default periods</span></div><div class="stat"><b>70 / 30</b><span>traditional overbought / oversold levels</span></div></div></div>
+<p>A price chart shows where a stock is. RSI shows how hard it has been pushed to get there. It compares the size of recent up moves with the size of recent down moves and squeezes the answer into a single number between 0 and 100. A high number means buyers have dominated recently. A low number means sellers have.</p>
+<p><strong>Short answer:</strong> RSI is a momentum oscillator. Over the last 14 periods it measures the average gain on up days against the average loss on down days. Above 70 is traditionally called overbought, below 30 oversold. Those words describe recent speed, not a guaranteed turn.</p>
+<div class="callout warn"><p><strong>Please read first.</strong> This is education, not advice. I am not SEBI registered. Every chart below uses made-up prices, drawn only to teach the concept. Nothing here tells you to buy or sell any stock, and most people who trade a strategy without practice lose money.</p></div>
+<aside class="article-map"><h2>Explore this article</h2><ol>
+<li><a href="#s1">Who created RSI, and why?</a></li>
+<li><a href="#s2">What exactly is RSI?</a></li>
+<li><a href="#s3">How is RSI calculated?</a></li>
+<li><a href="#s4">What do 70 and 30 really mean?</a></li>
+<li><a href="#s5">What is divergence?</a></li>
+<li><a href="#s6">What is a failure swing?</a></li>
+<li><a href="#s7">What mistakes do beginners make?</a></li>
+<li><a href="#s8">How can intraday traders use RSI?</a></li>
+<li><a href="#s9">How can swing traders use RSI?</a></li>
+<li><a href="#s10">How can long-term investors use RSI?</a></li>
+<li><a href="#s11">What can go wrong?</a></li>
+<li><a href="#s12">A simple checklist</a></li>
+<li><a href="#s13">Sources and study notes</a></li>
+</ol></aside>
+<h2 id="s1">1. Who created RSI, and why?</h2>
+<p><strong>Short answer:</strong> J. Welles Wilder Jr. created it and published it in his 1978 book, <em>New Concepts in Technical Trading Systems</em>. He wanted a way to measure the speed and change of price moves that did not depend on how high or low the price happened to be.<sup><a href="#src-sc">[1]</a></sup></p>
+<p>The same book introduced the Parabolic SAR, Average True Range and the Directional Movement concept behind ADX. Wilder worked out these tools by hand, long before charting software, which is why his formulas are simple enough to do on paper.<sup><a href="#src-sc">[1]</a></sup></p>
+<p>The problem he tackled is easy to see. A raw price chart is noisy, and a stock that has risen 30 rupees tells you little unless you know how fast it rose. Rate-of-change tools existed, but they could swing without limit, so there was no obvious line saying that a move was extreme. Wilder wanted a gauge with a fixed floor and ceiling, so that extremes would look the same on every stock and every period.</p>
+<h2 id="s2">2. What exactly is RSI?</h2>
+<p><strong>Short answer:</strong> a single line that moves between 0 and 100. It is high when recent gains have been much bigger than recent losses and low when recent losses have been much bigger than recent gains. It is based on closing prices.<sup><a href="#src-sc">[1]</a></sup><sup><a href="#src-fid">[2]</a></sup></p>
+<p>Think of two bags. One holds the sizes of the recent up days and the other holds the sizes of the recent down days. RSI asks which bag is heavier, and by how much. If both bags weigh about the same, RSI sits near 50. If the up bag is far heavier, RSI heads toward 100. If the down bag is far heavier, it heads toward 0.</p>
+<figure class="article-chart fig" id="figure-rsi"><h3>A made-up price with its RSI underneath</h3><p class="chart-unit">Made-up daily closes · RSI uses Wilder's 14-period smoothing</p><svg aria-label="A made-up price chart with its 14-period RSI below, which swings between roughly 25 and 80 as the price swings" role="img" viewbox="0 0 800 420"><rect fill="#ffffff" height="420" width="800"></rect><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="400" x="50" y="16">Made-up prices, for learning only</text><line stroke="#332619" stroke-width="2.5" x1="50" x2="72" y1="36" y2="36"></line><text fill="#332619" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" x="78" y="40">Made-up price</text><line stroke="#4e8a67" stroke-width="2.5" x1="190" x2="212" y1="36" y2="36"></line><text fill="#4e8a67" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" x="218" y="40">14-period RSI (Wilder)</text><path d="M50.0,69.6 L60.4,72.3 L70.9,77.6 L81.3,75.3 L91.7,81.9 L102.1,81.3 L112.6,83.4 L123.0,90.1 L133.4,90.0 L143.9,97.1 L154.3,98.1 L164.7,104.7 L175.1,111.0 L185.6,112.1 L196.0,107.1 L206.4,112.9 L216.9,117.1 L227.3,115.2 L237.7,108.3 L248.1,107.1 L258.6,108.7 L269.0,101.4 L279.4,108.4 L289.9,102.9 L300.3,106.1 L310.7,111.5 L321.1,122.6 L331.6,131.5 L342.0,134.6 L352.4,145.0 L362.9,150.7 L373.3,155.8 L383.7,164.0 L394.1,170.2 L404.6,176.4 L415.0,182.8 L425.4,187.0 L435.9,184.4 L446.3,185.4 L456.7,188.1 L467.1,186.9 L477.6,187.6 L488.0,190.4 L498.4,186.2 L508.9,183.3 L519.3,187.0 L529.7,179.9 L540.1,173.4 L550.6,162.9 L561.0,154.0 L571.4,150.3 L581.9,138.5 L592.3,136.7 L602.7,131.4 L613.1,122.2 L623.6,120.0 L634.0,120.2 L644.4,127.2 L654.9,124.6 L665.3,120.6 L675.7,119.5 L686.1,113.7 L696.6,116.6 L707.0,113.6 L717.4,112.1 L727.9,110.9 L738.3,111.6 L748.7,106.4 L759.1,99.6 L769.6,100.0 L780.0,97.5" fill="none" stroke="#332619" stroke-width="1.8"></path><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="299.0" y2="299.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="303.0">70</text><line stroke="#cfc4b4" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="325.0" y2="325.0"></line><text fill="#cfc4b4" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="329.0">50</text><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="351.0" y2="351.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="355.0">30</text><rect fill="none" stroke="#e3d9c8" height="130" width="730" x="50" y="260"></rect><path d="M196.0,370.6 L206.4,372.6 L216.9,373.9 L227.3,369.8 L237.7,356.5 L248.1,354.4 L258.6,355.5 L269.0,342.9 L279.4,348.5 L289.9,340.3 L300.3,343.1 L310.7,347.4 L321.1,354.5 L331.6,358.9 L342.0,360.3 L352.4,364.5 L362.9,366.4 L373.3,368.1 L383.7,370.4 L394.1,371.9 L404.6,373.4 L415.0,374.7 L425.4,375.5 L435.9,371.5 L446.3,371.8 L456.7,372.5 L467.1,370.4 L477.6,370.6 L488.0,371.5 L498.4,363.6 L508.9,358.4 L519.3,360.5 L529.7,348.7 L540.1,339.5 L550.6,327.3 L561.0,319.0 L571.4,315.9 L581.9,307.5 L592.3,306.3 L602.7,303.0 L613.1,297.9 L623.6,296.8 L634.0,297.0 L644.4,306.2 L654.9,304.5 L665.3,301.8 L675.7,301.1 L686.1,297.5 L696.6,301.6 L707.0,299.6 L717.4,298.7 L727.9,297.8 L738.3,299.0 L748.7,295.3 L759.1,291.1 L769.6,291.8 L780.0,290.3" fill="none" stroke="#4e8a67" stroke-width="2"></path><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" font-weight="400" x="50" y="408">0-100 scale. Dashed lines mark 30 and 70, the traditional oversold and overbought levels.</text><circle cx="425.4" cy="375.5" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="433.42857142857144" y="365.51941635416586" text-anchor="start">RSI dips below 30</text><circle cx="780.0" cy="290.3" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="772.0" y="280.2589036764422" text-anchor="end">RSI rises above 70</text></svg><figcaption>The RSI line is a compressed copy of recent price momentum. When the price falls hard, RSI sinks toward 30. When the price climbs hard, RSI rises toward 70. In between it wanders around the 50 line.</figcaption></figure>
+<h2 id="s3">3. How is RSI calculated?</h2>
+<p><strong>Short answer:</strong> average the gains and the losses over 14 periods, divide one by the other to get RS, then convert RS to a 0-100 number with RSI = 100 - 100 / (1 + RS).<sup><a href="#src-sc">[1]</a></sup></p>
+<p>Wilder's recipe has four steps, and losses are written as positive numbers.</p>
+<ol>
+<li>Find the change in close for each period. Separate the up changes (gains) from the down changes (losses).</li>
+<li>For the first reading, Average Gain = sum of the gains over 14 periods / 14, and Average Loss = sum of the losses over 14 periods / 14.</li>
+<li>For every period after that, smooth: Average Gain = (previous Average Gain x 13 + current gain) / 14, and the same for Average Loss.</li>
+<li>RS = Average Gain / Average Loss. RSI = 100 - 100 / (1 + RS).</li>
+</ol>
+<p>If the Average Loss is zero, RSI is 100. If the Average Gain is zero, RSI is 0. The smoothing in step 3 works like an exponential moving average, so old moves fade slowly instead of dropping out all at once. One practical result: the RSI value on your screen depends a little on how much history the platform started from, so two platforms can differ by a point or two.<sup><a href="#src-sc">[1]</a></sup></p>
+<div class="example"><p class="ex-title">A worked example with made-up closes</p><p>Start with a close of 100.0 and then 14 more closes. Each row shows the change from the day before.</p><table><thead><tr><th>Day</th><th>Close</th><th>Change</th></tr></thead><tbody><tr><td>1</td><td>101.2</td><td>+1.2</td></tr><tr><td>2</td><td>100.5</td><td>-0.7</td></tr><tr><td>3</td><td>102.0</td><td>+1.5</td></tr><tr><td>4</td><td>103.1</td><td>+1.1</td></tr><tr><td>5</td><td>102.4</td><td>-0.7</td></tr><tr><td>6</td><td>101.0</td><td>-1.4</td></tr><tr><td>7</td><td>101.8</td><td>+0.8</td></tr><tr><td>8</td><td>103.5</td><td>+1.7</td></tr><tr><td>9</td><td>104.2</td><td>+0.7</td></tr><tr><td>10</td><td>103.0</td><td>-1.2</td></tr><tr><td>11</td><td>102.2</td><td>-0.8</td></tr><tr><td>12</td><td>103.6</td><td>+1.4</td></tr><tr><td>13</td><td>104.8</td><td>+1.2</td></tr><tr><td>14</td><td>104.1</td><td>-0.7</td></tr></tbody></table><p>Sum of the up days = 9.6, so the first Average Gain = 9.6 / 14 = 0.686.<br/>Sum of the down days = 5.5, so the first Average Loss = 5.5 / 14 = 0.393.<br/>RS = 0.686 / 0.393 = 1.75.<br/>RSI = 100 - 100 / (1 + 1.75) = <strong>63.6</strong>.</p><p>Day 15 closes at 103.2, a change of -0.9. Now the smoothing starts: new Average Gain = (0.686 x 13 + 0.0) / 14 = 0.637; new Average Loss = (0.393 x 13 + 0.9) / 14 = 0.429. RSI = <strong>59.7</strong>.</p></div>
+<p>The default of 14 is the number Wilder suggested. A shorter setting such as 10 makes RSI more jumpy, so it reaches 70 and 30 more often. A longer setting such as 20 makes it calmer.<sup><a href="#src-sc">[1]</a></sup></p>
+<h2 id="s4">4. What do 70 and 30 really mean?</h2>
+<p><strong>Short answer:</strong> Wilder treated RSI above 70 as overbought and below 30 as oversold. They are zones where the recent move has been unusually fast. They are not automatic sell and buy signals.<sup><a href="#src-sc">[1]</a></sup><sup><a href="#src-fid">[2]</a></sup></p>
+<p>The words "overbought" and "oversold" invite a wrong conclusion, that a price above 70 must now fall. What RSI above 70 actually says is that buyers have been far stronger than sellers lately. In a sideways market that often precedes a pause. In a strong trend, it can persist for a long time.</p>
+<figure class="article-chart fig" id="figure-trend"><h3>Overbought can stay overbought</h3><p class="chart-unit">Made-up daily closes in a steady uptrend</p><svg aria-label="A made-up strongly rising price chart where RSI stays mostly between 55 and 85 and spends long periods above 70" role="img" viewbox="0 0 800 420"><rect fill="#ffffff" height="420" width="800"></rect><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="400" x="50" y="16">Made-up prices, for learning only</text><line stroke="#332619" stroke-width="2.5" x1="50" x2="72" y1="36" y2="36"></line><text fill="#332619" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" x="78" y="40">Made-up price</text><line stroke="#4e8a67" stroke-width="2.5" x1="190" x2="212" y1="36" y2="36"></line><text fill="#4e8a67" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" x="218" y="40">14-period RSI (Wilder)</text><path d="M50.0,193.1 L62.2,194.5 L74.3,190.2 L86.5,186.4 L98.7,179.5 L110.8,174.2 L123.0,173.6 L135.2,172.1 L147.3,168.2 L159.5,169.9 L171.7,167.7 L183.8,168.2 L196.0,169.1 L208.2,170.5 L220.3,165.6 L232.5,166.4 L244.7,166.2 L256.8,164.7 L269.0,158.9 L281.2,160.1 L293.3,158.1 L305.5,155.1 L317.7,149.2 L329.8,143.9 L342.0,138.2 L354.2,137.7 L366.3,135.9 L378.5,134.7 L390.7,128.8 L402.8,122.3 L415.0,122.9 L427.2,123.2 L439.3,123.1 L451.5,123.0 L463.7,120.6 L475.8,117.4 L488.0,117.0 L500.2,118.9 L512.3,117.1 L524.5,115.8 L536.7,112.7 L548.8,106.2 L561.0,102.0 L573.2,99.4 L585.3,95.9 L597.5,91.8 L609.7,93.3 L621.8,87.2 L634.0,82.3 L646.2,76.5 L658.3,71.3 L670.5,69.8 L682.7,68.2 L694.8,69.2 L707.0,65.5 L719.2,66.9 L731.3,68.3 L743.5,68.3 L755.7,68.8 L767.8,67.8 L780.0,69.2" fill="none" stroke="#332619" stroke-width="1.8"></path><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="299.0" y2="299.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="303.0">70</text><line stroke="#cfc4b4" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="325.0" y2="325.0"></line><text fill="#cfc4b4" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="329.0">50</text><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="351.0" y2="351.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="355.0">30</text><rect fill="none" stroke="#e3d9c8" height="130" width="730" x="50" y="260"></rect><path d="M220.3,279.6 L232.5,281.9 L244.7,281.7 L256.8,280.8 L269.0,277.5 L281.2,281.4 L293.3,280.1 L305.5,278.5 L317.7,275.7 L329.8,273.7 L342.0,271.9 L354.2,271.8 L366.3,271.3 L378.5,270.9 L390.7,269.4 L402.8,268.0 L415.0,269.7 L427.2,270.9 L439.3,270.8 L451.5,270.8 L463.7,270.1 L475.8,269.1 L488.0,269.0 L500.2,276.0 L512.3,275.1 L524.5,274.5 L536.7,273.1 L548.8,270.8 L561.0,269.6 L573.2,268.9 L585.3,268.1 L597.5,267.3 L609.7,271.9 L621.8,270.2 L634.0,269.0 L646.2,267.9 L658.3,267.1 L670.5,266.8 L682.7,266.6 L694.8,269.6 L707.0,268.7 L719.2,272.8 L731.3,276.7 L743.5,277.0 L755.7,278.6 L767.8,278.0 L780.0,283.1" fill="none" stroke="#4e8a67" stroke-width="2"></path><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" font-weight="400" x="50" y="408">0-100 scale. Dashed lines mark 30 and 70, the traditional oversold and overbought levels.</text><circle cx="500.2" cy="276.0" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="492.1666666666667" y="266.01718598474406" text-anchor="end">Above 70, price keeps rising</text></svg><figcaption>This price rises almost every week, and RSI sits above 70 on 47 of the 47 days where it can be measured. Someone who sold at the first 70 would have left a long way early. In a strong trend, RSI above 70 mostly says the trend is strong.</figcaption></figure>
+<p>Both sources agree that the levels can be adjusted. If a stock keeps touching 70, a trader may move the line to 80, and lower the oversold line to 20, to get fewer but stronger readings.<sup><a href="#src-sc">[1]</a></sup><sup><a href="#src-fid">[2]</a></sup></p>
+<p><strong>Bull and bear ranges.</strong> Analyst Constance Brown noticed that RSI does not really travel the full 0-100 range. In an uptrend it tends to hold between about 40 and 90, with the 40-50 zone acting as support. In a downtrend it tends to stay between about 10 and 60, with the 50-60 zone acting as resistance. So an RSI that dips to 45 in a strong uptrend and bounces may be a pullback ending, not a weakness. These ranges shift with the settings and the stock.<sup><a href="#src-sc">[1]</a></sup><sup><a href="#src-fid">[2]</a></sup></p>
+<h2 id="s5">5. What is divergence?</h2>
+<p><strong>Short answer:</strong> a divergence is when price and RSI disagree. Price makes a new high but RSI makes a lower high (bearish), or price makes a new low but RSI makes a higher low (bullish). It hints that momentum is fading.<sup><a href="#src-sc">[1]</a></sup></p>
+<figure class="article-chart fig" id="figure-divergence"><h3>A bearish divergence</h3><p class="chart-unit">Made-up daily closes · price new high, RSI lower high</p><svg aria-label="A made-up price makes a higher high while RSI makes a lower high, a bearish divergence" role="img" viewbox="0 0 800 420"><rect fill="#ffffff" height="420" width="800"></rect><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="400" x="50" y="16">Made-up prices, for learning only</text><line stroke="#332619" stroke-width="2.5" x1="50" x2="72" y1="36" y2="36"></line><text fill="#332619" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" x="78" y="40">Made-up price</text><line stroke="#4e8a67" stroke-width="2.5" x1="190" x2="212" y1="36" y2="36"></line><text fill="#4e8a67" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" x="218" y="40">14-period RSI (Wilder)</text><path d="M50.0,187.1 L63.0,184.3 L76.1,185.2 L89.1,186.9 L102.1,188.6 L115.2,190.4 L128.2,192.3 L141.2,191.5 L154.3,189.0 L167.3,186.9 L180.4,187.1 L193.4,186.1 L206.4,184.3 L219.5,186.8 L232.5,185.8 L245.5,183.3 L258.6,181.6 L271.6,171.9 L284.6,163.5 L297.7,156.5 L310.7,146.6 L323.8,138.9 L336.8,129.0 L349.8,118.3 L362.9,110.3 L375.9,102.3 L388.9,91.7 L402.0,96.9 L415.0,104.6 L428.0,112.5 L441.1,120.3 L454.1,124.6 L467.1,129.3 L480.2,137.2 L493.2,141.8 L506.2,135.2 L519.3,130.0 L532.3,126.2 L545.4,121.6 L558.4,118.8 L571.4,116.6 L584.5,110.0 L597.5,104.9 L610.5,100.3 L623.6,93.9 L636.6,89.7 L649.6,83.6 L662.7,77.6 L675.7,74.5 L688.8,71.2 L701.8,67.7 L714.8,73.4 L727.9,77.7 L740.9,83.2 L753.9,88.2 L767.0,94.2 L780.0,97.3" fill="none" stroke="#332619" stroke-width="1.8"></path><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="299.0" y2="299.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="303.0">70</text><line stroke="#cfc4b4" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="325.0" y2="325.0"></line><text fill="#cfc4b4" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="329.0">50</text><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="780" y1="351.0" y2="351.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="782" y="355.0">30</text><rect fill="none" stroke="#e3d9c8" height="130" width="730" x="50" y="260"></rect><path d="M232.5,321.3 L245.5,314.7 L258.6,310.6 L271.6,295.1 L284.6,287.3 L297.7,282.7 L310.7,278.2 L323.8,275.5 L336.8,272.9 L349.8,270.8 L362.9,269.6 L375.9,268.5 L388.9,267.3 L402.0,275.5 L415.0,286.6 L428.0,296.7 L441.1,305.4 L454.1,309.8 L467.1,314.6 L480.2,321.7 L493.2,325.6 L506.2,320.3 L519.3,316.5 L532.3,313.8 L545.4,310.6 L558.4,308.8 L571.4,307.3 L584.5,303.1 L597.5,300.1 L610.5,297.6 L623.6,294.3 L636.6,292.4 L649.6,289.7 L662.7,287.3 L675.7,286.1 L688.8,284.9 L701.8,283.7 L714.8,292.3 L727.9,298.3 L740.9,305.7 L753.9,311.7 L767.0,318.4 L780.0,321.5" fill="none" stroke="#4e8a67" stroke-width="2"></path><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" font-weight="400" x="50" y="408">0-100 scale. Dashed lines mark 30 and 70, the traditional oversold and overbought levels.</text><circle cx="388.9" cy="91.7" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="382.92857142857144" y="79.7134143118028" text-anchor="end">First high</text><circle cx="701.8" cy="67.7" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="701.7857142857143" y="55.72681397882144" text-anchor="middle">Higher high in price</text><circle cx="388.9" cy="267.3" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="380.92857142857144" y="257.3393463000342" text-anchor="end">RSI high: 94</text><circle cx="701.8" cy="283.7" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="701.7857142857143" y="273.66819154072624" text-anchor="middle">Lower RSI high: 82</text></svg><figcaption>The second price high is above the first, but RSI peaked at about 82 instead of 94. The rise was slower and weaker the second time. That is a warning that the push is tiring, not a promise that the price will fall.</figcaption></figure>
+<p>According to Wilder, divergences mark a potential reversal because directional momentum does not confirm the price. Treat the word "potential" seriously. In a strong trend, bearish divergences can appear again and again while the price keeps climbing, and bullish divergences can appear in a strong downtrend that continues. Many traders therefore wait for price itself to confirm, for example by breaking a recent low, before acting on a divergence.<sup><a href="#src-sc">[1]</a></sup></p>
+<h2 id="s6">6. What is a failure swing?</h2>
+<p><strong>Short answer:</strong> a failure swing is a reversal pattern that Wilder read from the RSI line alone. In a bearish one, RSI rises above 70, pulls back, bounces but fails to get back above 70, and then falls below the low of the pullback.<sup><a href="#src-sc">[1]</a></sup></p>
+<figure class="article-chart fig" id="figure-failure"><h3>The failure swing, drawn on RSI alone</h3><p class="chart-unit">Schematic only · no price shown</p><svg aria-label="A schematic RSI line showing a bearish failure swing: rise above 70, pullback, weaker bounce under 70, then a break below the pullback low" role="img" viewbox="0 0 800 300"><rect fill="#ffffff" height="300" width="800"></rect><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="400" x="50" y="16">Schematic RSI line, made-up shape for learning only</text><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="760" y1="96.0" y2="96.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="764" y="100.0">70</text><line stroke="#cfc4b4" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="760" y1="140.0" y2="140.0"></line><text fill="#cfc4b4" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="764" y="144.0">50</text><line stroke="#9b5c4b" stroke-dasharray="5 4" stroke-width="1" x1="50" x2="760" y1="184.0" y2="184.0"></line><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11" font-weight="600" x="764" y="188.0">30</text><path d="M60,201.6 L105,188.4 L150,170.8 L195,140.0 L240,111.4 L285,87.2 L330,107.0 L375,126.8 L420,104.8 L465,124.6 L510,144.4 L555,162.0 L600,177.4 L645,190.6" fill="none" stroke="#4e8a67" stroke-width="2.2"></path><circle cx="285" cy="87.2" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="285" y="75.2" text-anchor="middle">1. RSI rises above 70</text><circle cx="375" cy="126.8" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="375" y="144.8" text-anchor="middle">2. Pulls back</text><circle cx="420" cy="104.8" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="420" y="92.80000000000001" text-anchor="middle">3. Bounces but stays under 70</text><circle cx="555" cy="162.0" r="5" fill="none" stroke="#9b5c4b" stroke-width="2"></circle><text fill="#9b5c4b" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12" font-weight="600" x="555" y="148.0" text-anchor="end">4. Breaks below the pullback low</text><line stroke="#9b5c4b" stroke-dasharray="3 3" x1="375" x2="640" y1="126.8" y2="126.8"></line><text fill="#7a6f62" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" font-weight="400" x="50" y="288">Bearish failure swing: RSI fails to get back above 70, then drops below the low of its pullback.</text></svg><figcaption>Wilder treated this pattern as a sign of a coming reversal that does not depend on price at all. The mirror image, a bullish failure swing, starts below 30.</figcaption></figure>
+<p>The bullish version is the mirror image: RSI falls below 30, bounces, pulls back without making a new low under 30, and then rises above the high of the bounce. Fidelity describes the same idea as top and bottom swing failures.<sup><a href="#src-fid">[2]</a></sup> The trigger is the break of the middle point, not the first touch of 70 or 30.</p>
+<h2 id="s7">7. What mistakes do beginners make?</h2>
+<p><strong>Short answer:</strong> selling just because RSI crossed 70, buying just because it fell under 30, and ignoring the trend.</p>
+<ul>
+<li><strong>Treating 70 and 30 as orders.</strong> In the strong uptrend above, an exit at the first 70 means leaving early. Ask first whether the market is trending or ranging.</li>
+<li><strong>Using RSI alone.</strong> It says nothing about why the price moved, what news is due, or where support and resistance sit.</li>
+<li><strong>Expecting every divergence to work.</strong> Divergences are common and many fail.</li>
+<li><strong>Ignoring the setting.</strong> A 5-period RSI and a 14-period RSI are different instruments. Pick one and learn how it behaves on your stock.</li>
+<li><strong>Applying the same levels everywhere.</strong> A volatile small-cap may sit above 70 far more often than a slow large-cap.</li>
+</ul>
+<h2 id="s8">8. How can intraday traders use RSI?</h2>
+<p><strong>Short answer:</strong> as a gauge of short-term stretch inside a range, usually with a shorter setting, and always with a stop in place.</p>
+<p>RSI can be drawn on any timeframe. On a 5-minute or 15-minute chart a trader may look at how the stock behaves when RSI reaches an extreme while the price is moving sideways between clear support and resistance. The sources note that overbought and oversold readings work best when price moves sideways within a range.<sup><a href="#src-sc">[1]</a></sup> On a trending day, the same readings can stay extreme for hours. Fast charts also produce many more false signals, so costs and slippage matter.</p>
+<h2 id="s9">9. How can swing traders use RSI?</h2>
+<p><strong>Short answer:</strong> to time entries in the direction of the larger trend, and to spot weakening momentum through divergence or a failure swing.</p>
+<p>A common swing idea is to use the bull and bear ranges. In a stock that is in an uptrend, a swing trader may watch for RSI to dip into the 40-50 zone and turn back up, treating it as a pullback inside the trend rather than a reversal.<sup><a href="#src-sc">[1]</a></sup> Another is to watch for a divergence at a clear resistance level and wait for price to break its recent low before taking it seriously. Either way the stop is placed on the price chart, not on the RSI line.</p>
+<h2 id="s10">10. How can long-term investors use RSI?</h2>
+<p><strong>Short answer:</strong> as a sanity check, not a trigger. A weekly or monthly RSI shows whether the long-run trend still has force behind it.</p>
+<p>On weekly charts, RSI moves more slowly. Brown's ranges were illustrated on 14-week RSI for a long bull market, where RSI held mostly above 40 for years.<sup><a href="#src-sc">[1]</a></sup> An investor does not need to act on it. It can simply stop a person from adding to a position when the weekly reading is stretched, or remind them that a deep reading often shows fear, which is a good moment to re-check the business rather than the chart.</p>
+<h2 id="s11">11. What can go wrong?</h2>
+<ul>
+<li><strong>Strong trends break the 70 and 30 rules.</strong> Both sources warn that RSI can remain overbought or oversold for extended periods.<sup><a href="#src-sc">[1]</a></sup><sup><a href="#src-fid">[2]</a></sup></li>
+<li><strong>Divergences can mislead.</strong> They can appear many times before a trend finally turns, or never.<sup><a href="#src-sc">[1]</a></sup></li>
+<li><strong>It is a lagging, price-only tool.</strong> RSI is made from past closes. It cannot see earnings, news or liquidity.</li>
+<li><strong>Different platforms differ slightly.</strong> Smoothing and starting history change the decimals.</li>
+<li><strong>Illiquid stocks.</strong> In thinly traded stocks a single large print can swing RSI sharply.</li>
+</ul>
+<h2 id="s12">12. A simple checklist</h2>
+<ol>
+<li>Is the stock trending or moving sideways? Decide this before reading RSI.</li>
+<li>Where is RSI relative to the trend range (40-90 in an uptrend, 10-60 in a downtrend)?</li>
+<li>Is there a divergence or failure swing, and has price confirmed it?</li>
+<li>Where are the nearest support and resistance on the price chart?</li>
+<li>Where is the stop, and how much would be lost if it is hit?</li>
+<li>Would I still take this setup if RSI were hidden?</li>
+</ol>
+<h2 id="s13">Sources and study notes</h2>
+<ul class="plain sources">
+<li id="src-sc">[1] StockCharts ChartSchool, "Relative Strength Index (RSI)": <a href="https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/relative-strength-index-rsi">chartschool.stockcharts.com</a>. Source for Wilder's 1978 book, the 14-period default, the first-average and smoothing formulas, RS and the 0-100 conversion, the 70 and 30 levels, adjusting the levels, divergences, failure swings, Constance Brown's bull and bear ranges, and the warning that divergences mislead in strong trends.</li>
+<li id="src-fid">[2] Fidelity Learning Center, "What is RSI? Relative Strength Index": <a href="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/RSI">fidelity.com</a>. Source for the 70 and 30 levels, adjusting them to 80 and 20, the 40 to 90 and 10 to 60 ranges, divergence, top and bottom swing failures, and the note that RSI can stay overbought or oversold in strong trends.</li>
+<li>The intraday, swing and long-term sections are the author's plain-language study notes built on those two sources, not rules from either source.</li>
+<li>All charts and the worked example on this page are original, with made-up prices. They are not real stocks and not trade signals.</li>
+</ul>
+<p class="lede">This article is for learning only. It is not investment advice, and the author is not SEBI registered. Trading can lose money, and past results do not guarantee future results.</p>
+<a class="back" href="trading-strategies.html">← Back to Trading Strategies</a>
+</main>
+<footer>For research and education only, not investment advice.</footer>
+</body>
+</html>
